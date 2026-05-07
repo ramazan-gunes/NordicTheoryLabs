@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy — Körkortet by Nordic Theory Labs</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: #f5f5f7;
+      color: #1d1d1f;
+      line-height: 1.7;
+      padding: 0 16px;
+    }
+    .container { max-width: 760px; margin: 0 auto; padding: 56px 0 80px; }
+    .badge {
+      display: inline-block;
+      background: #0071e3;
+      color: #fff;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      padding: 4px 12px;
+      border-radius: 20px;
+      margin-bottom: 20px;
+    }
+    h1 { font-size: 36px; font-weight: 700; letter-spacing: -0.5px; margin-bottom: 8px; }
+    .meta { font-size: 14px; color: #6e6e73; margin-bottom: 40px; }
+    .intro-box {
+      background: #fff;
+      border-radius: 16px;
+      padding: 28px 32px;
+      margin-bottom: 32px;
+      border: 1px solid #e0e0e5;
+    }
+    .intro-box p { font-size: 15px; color: #3a3a3c; }
+    section {
+      background: #fff;
+      border-radius: 16px;
+      padding: 28px 32px;
+      margin-bottom: 16px;
+      border: 1px solid #e0e0e5;
+    }
+    h2 {
+      font-size: 18px;
+      font-weight: 700;
+      margin-bottom: 16px;
+      color: #1d1d1f;
+    }
+    ul { padding-left: 20px; }
+    li { font-size: 15px; color: #3a3a3c; margin-bottom: 10px; }
+    .tag {
+      display: inline-block;
+      background: #f0f0f5;
+      border-radius: 6px;
+      font-size: 12px;
+      font-weight: 600;
+      padding: 2px 8px;
+      margin-right: 6px;
+      color: #3a3a3c;
+    }
+    .tag.green { background: #d4f4e2; color: #1a7a45; }
+    .tag.blue  { background: #ddeeff; color: #0055bb; }
+    .tag.gray  { background: #ebebf0; color: #555; }
+    footer {
+      text-align: center;
+      font-size: 13px;
+      color: #8e8e93;
+      margin-top: 48px;
+      padding-top: 24px;
+      border-top: 1px solid #d2d2d7;
+    }
+    a { color: #0071e3; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    @media (max-width: 600px) {
+      h1 { font-size: 26px; }
+      section, .intro-box { padding: 20px; }
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+
+  <div class="badge">Nordic Theory Labs</div>
+  <h1>Privacy Policy</h1>
+  <p class="meta">Körkortet — Swedish Driving Licence App &nbsp;·&nbsp; Version 2026.04 &nbsp;·&nbsp; Last updated: April 14, 2026</p>
+
+  <div class="intro-box">
+    <p>
+      Nordic Theory Labs is committed to protecting your privacy. This policy explains what data
+      the Körkortet app collects, why it is collected, and how it is handled. We collect
+      the minimum amount of data necessary to provide a reliable service.
+    </p>
+  </div>
+
+  <!-- 1 -->
+  <section>
+    <h2>1. What Data We Collect</h2>
+    <ul>
+      <li>
+        <span class="tag green">On-device only</span>
+        <strong>Study progress &amp; quiz answers</strong> — your answered questions, correct/incorrect results,
+        exam sessions, flashcard mastery, and practice streaks are stored exclusively in a local SQLite
+        database on your device. This data is never transmitted to our servers.
+      </li>
+      <li>
+        <span class="tag green">On-device only</span>
+        <strong>Profile information</strong> — your name, selected exam date, and avatar are stored
+        locally on your device and never shared.
+      </li>
+      <li>
+        <span class="tag blue">Third-party</span>
+        <strong>Purchase &amp; subscription status</strong> — managed by RevenueCat, Inc.
+        RevenueCat receives a pseudonymous device identifier and your App Store purchase receipt to
+        verify active subscriptions. No personal identifiers (name, email) are shared.
+        See <a href="https://www.revenuecat.com/privacy" target="_blank">RevenueCat Privacy Policy</a>.
+      </li>
+      <li>
+        <span class="tag blue">Third-party</span>
+        <strong>Crash reports</strong> — if the app crashes, Sentry (hosted in the EU) receives a
+        crash report containing the device model, OS version, app version, and a stack trace.
+        Screenshots are <strong>not</strong> attached to crash reports. No personally identifiable
+        information is included by default.
+        See <a href="https://sentry.io/privacy/" target="_blank">Sentry Privacy Policy</a>.
+      </li>
+      <li>
+        <span class="tag gray">Optional</span>
+        <strong>Push notification token</strong> — if you enable daily study reminders, your device's
+        notification token is stored locally and used only to schedule on-device notifications via
+        iOS. No token is sent to our servers.
+      </li>
+    </ul>
+  </section>
+
+  <!-- 2 -->
+  <section>
+    <h2>2. What We Do NOT Collect</h2>
+    <ul>
+      <li>We do not require account registration or an email address.</li>
+      <li>We do not access your camera, microphone, location, or photo library.</li>
+      <li>We do not serve advertising and do not use advertising identifiers (IDFA/GAID).</li>
+      <li>We do not sell, rent, or share your data with marketing partners.</li>
+      <li>We do not collect any data from users under the age of 13.</li>
+    </ul>
+  </section>
+
+  <!-- 3 -->
+  <section>
+    <h2>3. How We Use Data</h2>
+    <ul>
+      <li>Study progress is used solely to personalise your in-app experience (wrong-answer review, streak tracking, statistics).</li>
+      <li>Crash data is used to identify and fix bugs that affect all users.</li>
+      <li>Purchase data is used only to unlock premium features you have paid for.</li>
+    </ul>
+  </section>
+
+  <!-- 4 -->
+  <section>
+    <h2>4. Data Storage &amp; Retention</h2>
+    <ul>
+      <li>All study and profile data lives on your device. Uninstalling the app deletes this data permanently.</li>
+      <li>Crash reports are retained by Sentry for 90 days and then automatically deleted.</li>
+      <li>RevenueCat retains purchase records as required to validate your subscription entitlements.</li>
+    </ul>
+  </section>
+
+  <!-- 5 -->
+  <section>
+    <h2>5. Third-Party Services</h2>
+    <ul>
+      <li><strong>RevenueCat</strong> — subscription infrastructure. <a href="https://www.revenuecat.com/privacy" target="_blank">Privacy Policy</a></li>
+      <li><strong>Sentry (EU)</strong> — crash reporting. <a href="https://sentry.io/privacy/" target="_blank">Privacy Policy</a></li>
+      <li><strong>Apple App Store</strong> — payment processing. <a href="https://www.apple.com/legal/privacy/" target="_blank">Privacy Policy</a></li>
+    </ul>
+  </section>
+
+  <!-- 6 -->
+  <section>
+    <h2>6. Your Rights (GDPR)</h2>
+    <ul>
+      <li>You can delete all on-device data at any time by uninstalling the app.</li>
+      <li>To request deletion of crash-report data held by Sentry, contact us at the address below and we will submit a deletion request on your behalf.</li>
+      <li>You may opt out of crash reporting at any time by contacting us; future app updates will respect this preference.</li>
+    </ul>
+  </section>
+
+  <!-- 7 -->
+  <section>
+    <h2>7. Children's Privacy</h2>
+    <ul>
+      <li>Körkortet is intended for users aged 16 and older (minimum age for a Swedish learner's permit). We do not knowingly collect data from children under 13.</li>
+    </ul>
+  </section>
+
+  <!-- 8 -->
+  <section>
+    <h2>8. Changes to This Policy</h2>
+    <ul>
+      <li>We may update this policy from time to time. The "Last updated" date at the top of this page will reflect any changes. Continued use of the app after an update constitutes acceptance of the revised policy.</li>
+    </ul>
+  </section>
+
+  <!-- 9 -->
+  <section>
+    <h2>9. Contact</h2>
+    <ul>
+      <li>
+        Nordic Theory Labs<br />
+        Email: <a href="mailto:gunesramazann@gmail.com">gunesramazann@gmail.com</a>
+      </li>
+    </ul>
+  </section>
+
+  <footer>
+    &copy; 2026 Nordic Theory Labs &nbsp;·&nbsp;
+    <a href="terms.html">Terms of Use</a>
+  </footer>
+
+</div>
+</body>
+</html>
