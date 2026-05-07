@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Tietosuojakäytäntö — Körkort Hero</title>
+  <style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  background: #f5f5f7; color: #1d1d1f; line-height: 1.7; padding: 0 16px;
+}
+.container { max-width: 760px; margin: 0 auto; padding: 40px 0 80px; }
+.lang-bar {
+  display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 32px;
+  padding: 12px 16px; background: #fff; border-radius: 12px;
+  border: 1px solid #e0e0e5;
+}
+.lang-bar a {
+  font-size: 12px; font-weight: 600; padding: 4px 10px;
+  border-radius: 20px; text-decoration: none; color: #555;
+  background: #f0f0f5; transition: background .15s;
+}
+.lang-bar a:hover { background: #ddeeff; color: #0055bb; }
+.lang-bar a.active { background: #0071e3; color: #fff; }
+.badge {
+  display: inline-block; background: #0071e3; color: #fff;
+  font-size: 12px; font-weight: 600; letter-spacing: .04em;
+  padding: 4px 12px; border-radius: 20px; margin-bottom: 20px;
+}
+h1 { font-size: 32px; font-weight: 700; letter-spacing: -.5px; margin-bottom: 6px; }
+.meta { font-size: 13px; color: #6e6e73; margin-bottom: 8px; }
+.summary-box {
+  background: #fff; border-radius: 14px; padding: 24px 28px;
+  margin: 24px 0 20px; border: 1px solid #e0e0e5;
+  font-size: 15px; color: #3a3a3c;
+}
+.intro-box {
+  background: #f0f6ff; border-radius: 14px; padding: 20px 28px;
+  margin-bottom: 24px; border: 1px solid #cce0ff;
+  font-size: 14px; color: #1a3a6b;
+}
+section {
+  background: #fff; border-radius: 14px; padding: 24px 28px;
+  margin-bottom: 14px; border: 1px solid #e0e0e5;
+}
+h2 { font-size: 17px; font-weight: 700; margin-bottom: 14px; }
+ul { padding-left: 20px; }
+li { font-size: 14px; color: #3a3a3c; margin-bottom: 10px; }
+footer {
+  text-align: center; font-size: 12px; color: #8e8e93;
+  margin-top: 40px; padding-top: 20px; border-top: 1px solid #d2d2d7;
+}
+a { color: #0071e3; text-decoration: none; }
+a:hover { text-decoration: underline; }
+@media (max-width: 600px) {
+  h1 { font-size: 24px; } section, .summary-box, .intro-box { padding: 18px; }
+}
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="lang-bar"><a href="../index.html">English</a>
+<a href="../privacy/tr.html">Türkçe</a>
+<a href="../privacy/sv.html">Svenska</a>
+<a href="../privacy/ar.html">العربية</a>
+<a href="../privacy/fa.html">فارسی</a>
+<a href="../privacy/so.html">Soomaali</a>
+<a href="../privacy/ku.html">Kurdî</a>
+<a href="../privacy/pl.html">Polski</a>
+<a href="../privacy/fi.html" class="active">Suomi</a>
+<a href="../privacy/bs.html">Bosanski</a>
+<a href="../privacy/es.html">Español</a>
+<a href="../privacy/ru.html">Русский</a></div>
+  <div class="badge">Nordic Theory Labs</div>
+  <h1>Tietosuojakäytäntö</h1>
+  <p class="meta">Körkort Hero &nbsp;·&nbsp; Tietosuojakäytännön versio 2026.04 &nbsp;·&nbsp; Viimeksi päivitetty: May 7, 2026</p>
+  <div class="summary-box">Körkort Hero toimii offline-tilassa, ei vaadi tiliä, ja säilyttää opintotietosi laitteellasi. Ainoa laitteeltasi lähtevä tieto on ostoihin liittyvä tieto (käsittelee RevenueCat), jos tilaat premium-version, sekä anonymisoidut kaatumisraportit (käsittelee Sentry), joiden avulla voimme korjata virheitä. Emme myy tietojasi, emme näytä mainoksia emmekä luo sinusta profiilia.</div>
+  <div class="intro-box">Tämä tietosuojakäytäntö selittää, miten Nordic Theory Labs ("me", "meitä", "meidän") käsittelee henkilötietoja, kun käytät Körkort Hero -sovellusta, joka on ruotsalainen ajokokeen teoriaharjoittelu­sovellus saatavilla iOS-, Android-, Windows- ja verkkoversioina. Olemme rakentaneet sovelluksen toimimaan ensisijaisesti offline-tilassa eikä se vaadi tiliä tai kirjautumista, mikä tarkoittaa, että keräämme mahdollisimman vähän henkilötietoja. Tämä käytäntö koskee kaikkia sovelluksen käyttäjiä, erityisesti Ruotsissa ja Euroopan unionissa olevia käyttäjiä, ja siihen sovelletaan Ruotsin lakia sekä EU:n yleistä tietosuoja-asetusta (GDPR).</div>
+  <section><h2>Keräämämme tiedot</h2><ul><li>Osto- ja tilausdata: jos ostat premium-tilauksen, RevenueCat vastaanottaa ja tallentaa ostotunnisteesi, tilauksen tilan, alustan ja maan oikeutesi vahvistamiseksi ja hallinnoimiseksi. Emme kerää tai tallenna maksukorttitietojasi — niistä huolehtivat suoraan Apple, Google tai Microsoft.</li><li>Kaatumisraportit ja diagnostiikkatiedot: kun sovellus kaatuu tai kohtaa vakavan virheen, Sentry vastaanottaa anonymisoidun raportin, joka sisältää laitteesi mallin, käyttöjärjestelmän version, sovelluksen version, anonymisoidun pinojäljen sekä toisinaan anonymisoidun kuvakaappauksen näytöstä kaatumishetkellä.</li><li>Paikalliset sovellusasetukset: valitsemasi kieli, teema, ilmoitusasetukset, tietovisojen edistyminen ja flashkorttien hallinta tallennetaan vain laitteellesi käyttöjärjestelmän standardin asetustallennuksen avulla. Nämä tiedot eivät koskaan poistu laitteeltasi eikä ne ole meille näkyvissä.</li><li>Push-ilmoitusten aikataulu: jos otat käyttöön opiskelu muistutukset, valitsemasi ajat tallennetaan paikallisesti laitteellesi ja käyttöjärjestelmä käyttää niitä ilmoitusten lähettämiseen. Me emme vastaanota tai tallenna näitä aikatauluja millekään palvelimelle.</li></ul></section>
+<section><h2>Kuinka käytämme tietojasi</h2><ul><li>Palvelun toimittamiseksi, josta olet maksanut: ostotietoja käsitellään premium-ominaisuuksien avaamiseksi ja ylläpitämiseksi sopimuksen täyttämisen oikeusperusteella (GDPR Art. 6(1)(b)).</li><li>Sovelluksen vakauden ylläpitämiseksi käsitellään kaatumis- ja diagnostiikkatietoja virheiden tunnistamiseksi, toistamiseksi ja korjaamiseksi, oikeusperusteena oikeutettu etumme tarjota luotettava tuote (GDPR Art. 6(1)(f)).</li><li>Opiskelukokemuksesi personointia varten: asetuksesi ja edistymisesi säilyvät laitteellasi ja niitä käytetään vain asetustesi muistamiseen, oppimisesi seuraamiseen sekä valitsemiesi muistutusten aikatauluttamiseen.</li><li>Noudatamme tietojen minimointia: keräämme vain sen, mikä on ehdottoman välttämätöntä yllä mainittuihin tarkoituksiin, emme käytä tietojasi mainontaan tai profilointiin, emmekä myy tai jaa niitä kenellekään muulle kuin tässä tietosuojakäytännössä mainituille käsittelijöille.</li></ul></section>
+<section><h2>Kolmannen osapuolen palvelut</h2><ul><li>RevenueCat Inc. (Yhdysvallat) toimii käsittelijänämme tilauspalveluiden hallinnassa. Heidän tietojenkäsittelynsä on kuvattu osoitteessa https://www.revenuecat.com/privacy.</li><li>Sentry, jota hallinnoi Functional Software, Inc. (Yhdysvallat), toimii käsittelijänämme kaatumis- ja virheraportoinnissa. Heidän tietojesi käsittelystä kerrotaan osoitteessa https://sentry.io/privacy/.</li><li>Molemmat käsittelijät sijaitsevat Yhdysvalloissa, joten siirtoja EU/ETA-alueen ulkopuolelle saattaa tapahtua. Nämä siirrot perustuvat EU-U.S. Data Privacy Frameworkiin ja/tai Euroopan komission hyväksymiin vakiolausekkeisiin oikeudellisena mekanismina GDPR Chapter V:n mukaisesti.</li><li>Apple, Google ja Microsoft käsittelevät varsinaisen maksusi, kun tilaat palvelun, omien tietosuojakäytäntöjensä mukaisesti. Me emme koskaan näe maksukorttisi tai pankkitietojasi.</li></ul></section>
+<section><h2>Oikeutesi GDPR:n mukaan</h2><ul><li>Sinulla on oikeus saada pääsy hallussamme oleviin henkilötietoihisi sekä oikeus saada niistä kopio jäsennellyssä, yleisesti käytetyssä ja koneellisesti luettavassa muodossa (oikeus saada tiedot ja siirtää ne järjestelmästä toiseen).</li><li>Sinulla on oikeus korjata virheelliset tiedot, pyytää tietojesi poistamista sekä pyytää meitä rajoittamaan käsittelyä GDPR Articles 16, 17, ja 18 määrittelemissä tilanteissa.</li><li>Sinulla on oikeus vastustaa käsittelyä, joka perustuu oikeutettuun etuun, mukaan lukien kaatumisraporttien käyttö, ottamalla meihin yhteyttä tai poistamalla kaatumisraportointi käytöstä sovelluksen asetuksissa, jos tämä on mahdollista.</li><li>Sinulla on oikeus tehdä valitus Ruotsin tietosuojaviranomaiselle (Integritetsskyddsmyndigheten, IMY) tai oman EU-asuinmaasi tietosuojaviranomaiselle.</li></ul></section>
+<section><h2>Tietojen säilytys ja turvallisuus</h2><ul><li>Sentry säilyttää kaatumisraportit ja diagnostiikkatiedot enintään 90 päivää, minkä jälkeen ne poistetaan automaattisesti.</li><li>Osto- ja tilausdata säilytetään RevenueCatin toimesta niin kauan kuin on tarpeen tilauksesi hallinnoimiseksi sekä lakisääteisten ja verovelvoitteiden täyttämiseksi, RevenueCatin tietosuojakäytännön mukaisesti.</li><li>Laitteellasi oleva paikallinen data (asetukset, edistyminen, korttien hallinta, ajoitetut muistutukset) säilytetään, kunnes poistat sen, palautat sovelluksen tai poistat sovelluksen asennuksen — siinä vaiheessa data poistuu, koska meillä ei koskaan ollut kopiota siitä.</li><li>Prosessoreillemme siirrettävät tiedot suojataan TLS-salauksella, ja prosessorimme käyttävät alan standardien mukaisia organisatorisia ja teknisiä turvatoimia suojatakseen levossa olevia tietoja.</li></ul></section>
+<section><h2>Yhteydenotto ja pyynnöt</h2><ul><li>Voit käyttää oikeuksiasi tai esittää kysymyksen tästä tietosuojakäytännöstä ottamalla yhteyttä osoitteeseen privacy@nordictheorylabs.com. Vastaamme 30 päivän kuluessa GDPR:n vaatimusten mukaisesti.</li><li>Koska sovellus ei vaadi tiliä, liitäthän pyyntösi mukaan riittävästi tietoja (esimerkiksi tilauskuitin tai RevenueCat-käyttäjätunnisteen), jotta voimme löytää sinuun liittyvät tiedot.</li><li>Tätä käytäntöä säätelee Ruotsin laki sekä EU:n yleinen tietosuoja-asetus (Regulation (EU) 2016/679).</li><li>Jos teemme olennaisia muutoksia tähän käytäntöön, päivitämme "Viimeksi päivitetty" -päivämäärän ja ilmoitamme käyttäjille sovelluksessa ennen muutosten voimaantuloa.</li></ul></section>
+
+  <footer>
+    &copy; 2026 Nordic Theory Labs &nbsp;·&nbsp;
+    <a href="../terms.html">Terms of Use</a>
+  </footer>
+</div>
+</body>
+</html>
