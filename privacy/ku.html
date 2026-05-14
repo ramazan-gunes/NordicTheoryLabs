@@ -4,74 +4,43 @@
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Politîkaya Taybetî — Körkort Hero</title>
-  <style>
-*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-body {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-  background: #f5f5f7; color: #1d1d1f; line-height: 1.7; padding: 0 16px;
-}
-.container { max-width: 760px; margin: 0 auto; padding: 40px 0 80px; }
-.lang-bar {
-  display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 32px;
-  padding: 12px 16px; background: #fff; border-radius: 12px;
-  border: 1px solid #e0e0e5;
-}
-.lang-bar a {
-  font-size: 12px; font-weight: 600; padding: 4px 10px;
-  border-radius: 20px; text-decoration: none; color: #555;
-  background: #f0f0f5; transition: background .15s;
-}
-.lang-bar a:hover { background: #ddeeff; color: #0055bb; }
-.lang-bar a.active { background: #0071e3; color: #fff; }
-.badge {
-  display: inline-block; background: #0071e3; color: #fff;
-  font-size: 12px; font-weight: 600; letter-spacing: .04em;
-  padding: 4px 12px; border-radius: 20px; margin-bottom: 20px;
-}
-h1 { font-size: 32px; font-weight: 700; letter-spacing: -.5px; margin-bottom: 6px; }
-.meta { font-size: 13px; color: #6e6e73; margin-bottom: 8px; }
-.summary-box {
-  background: #fff; border-radius: 14px; padding: 24px 28px;
-  margin: 24px 0 20px; border: 1px solid #e0e0e5;
-  font-size: 15px; color: #3a3a3c;
-}
-.intro-box {
-  background: #f0f6ff; border-radius: 14px; padding: 20px 28px;
-  margin-bottom: 24px; border: 1px solid #cce0ff;
-  font-size: 14px; color: #1a3a6b;
-}
-section {
-  background: #fff; border-radius: 14px; padding: 24px 28px;
-  margin-bottom: 14px; border: 1px solid #e0e0e5;
-}
-h2 { font-size: 17px; font-weight: 700; margin-bottom: 14px; }
-ul { padding-left: 20px; }
-li { font-size: 14px; color: #3a3a3c; margin-bottom: 10px; }
-footer {
-  text-align: center; font-size: 12px; color: #8e8e93;
-  margin-top: 40px; padding-top: 20px; border-top: 1px solid #d2d2d7;
-}
-a { color: #0071e3; text-decoration: none; }
-a:hover { text-decoration: underline; }
-@media (max-width: 600px) {
-  h1 { font-size: 24px; } section, .summary-box, .intro-box { padding: 18px; }
-}
-</style>
+  <link rel="stylesheet" href="../assets/styles.css">
 </head>
 <body>
-<div class="container">
-  <div class="lang-bar"><a href="../index.html">English</a>
-<a href="../privacy/tr.html">Türkçe</a>
-<a href="../privacy/sv.html">Svenska</a>
-<a href="../privacy/ar.html">العربية</a>
-<a href="../privacy/fa.html">فارسی</a>
-<a href="../privacy/so.html">Soomaali</a>
-<a href="../privacy/ku.html" class="active">Kurdî</a>
-<a href="../privacy/pl.html">Polski</a>
-<a href="../privacy/fi.html">Suomi</a>
-<a href="../privacy/bs.html">Bosanski</a>
-<a href="../privacy/es.html">Español</a>
-<a href="../privacy/ru.html">Русский</a></div>
+<header class="nav">
+  <div class="container nav-inner">
+    <a class="nav-brand" href="../">
+      <svg class="mark" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+        <circle cx="16" cy="16" r="14.25" stroke="currentColor" stroke-width="1.5"/>
+        <path d="M11 22V10.5L21 21.5V10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        <circle cx="16" cy="5.6" r="1.7" fill="currentColor"/>
+      </svg>
+      Nordic Theory Labs
+    </a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="../">Home</a>
+      <a href="../apps/korkort-hero/" class="hide-sm">Körkort Hero</a>
+      <a href="../#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+<article class="container article">
+  <div class="lang-bar">
+  <a href="index.html">English</a>
+  <a href="tr.html">Türkçe</a>
+  <a href="sv.html">Svenska</a>
+  <a href="ar.html">العربية</a>
+  <a href="fa.html">فارسی</a>
+  <a href="so.html">Soomaali</a>
+  <a href="ku.html" class="active">Kurdî</a>
+  <a href="pl.html">Polski</a>
+  <a href="fi.html">Suomi</a>
+  <a href="bs.html">Bosanski</a>
+  <a href="es.html">Español</a>
+  <a href="ru.html">Русский</a>
+</div>
   <div class="badge">Nordic Theory Labs</div>
   <h1>Politîkaya Taybetî</h1>
   <p class="meta">Körkort Hero &nbsp;·&nbsp; Guhertoya Politikaya Taybetî 2026.04 &nbsp;·&nbsp; Dûvê Nûvekirinê: May 7, 2026</p>
@@ -83,11 +52,17 @@ a:hover { text-decoration: underline; }
 <section><h2>Mafên We di bin GDPR de</h2><ul><li>Tu mafê xwe yî ku tu bi dane û zanyariyên kesayî yên em li ser te hildigirin bişîvî û kopiyekê ji wan bistînin di formatêkê ku pêşveçûnî, bi gelemperî bikaranîn, û bi makîneyê xwendinê tê xwendin (mafê gihîştin û portabilîtî).</li><li>Tu mafê xwe yê rastkirina daneyên ne rast, jêbirina daneyên xwe, û daxwaza me bikî ku me karûbarê daneyan sinor bike di rewşên ku GDPR Articles 16, 17, û 18 diyar dikin de.</li><li>Tu mafê xwe yê dijî pêvajoya li ser balê rastînê heye, di nav de bikaranîna raporên crashê yên me, bi têkiliya me re an jî bi neçalak kirina raporê crashê di mîhenganên sepanê de ku hene, tu dikarî vê mafê xwe bi kar bînî.</li><li>Tu mafê xwe yê şikayetê li Serhêlê Parastina Daneyên Şexsî ya Swêdê (Integritetsskyddsmyndigheten, IMY) an jî li serhêlê parastina daneyên şexsî ya welatê xwe ya EU-ê hene.</li></ul></section>
 <section><h2>Bergirêdan û Ewlehiya Daneyan</h2><ul><li>Raportên çewtiyan û daneyên têgihiştinê ji hêla Sentry ve di herî zêde 90 roj de têne parastin, piştî vê demê ew bi awayekî xweber têne jêbirin.</li><li>Daneyên kirîn û abone têne parastin ji hêla RevenueCat ve heta ku pêdivî ye bo rêveberiya abonetiya te û bi peymana qanûnî û bacê, di rêza siyaseta taybetiyê ya RevenueCat de.</li><li>Daneyên herêmî yên li ser cîhaza te (tercihên te, pêşveçûn, serfirazîya flashcard, bîrîndarîya plan kirî) heta ku tu wan paqij nakî, sepanê vegerî, an jî sepanê jêbirî, li cîhaza te dimînin — di vê demê de ew tê dîtin, çimkî em qet kopiyekê nehatibû girtin.</li><li>Daneyên ku di rê de digihêjin pêşwazên me, bi şîfreya TLS ve parastin dikin, û pêşwazên me tedbîrên ewlehiya organizasyonî û teknîkî yên standardên pîşesaziyê têgihîştin da ku daneyên ku di demê rawestînê de ne, parastin.</li></ul></section>
 <section><h2>Têkelî û Daxwazên</h2><ul><li>Ji bo bikaranîna her mafê te an ji bo pirsîn li ser vê siyaseta, bi me re têkilî bide li privacy@nordictheorylabs.com û em ê di nav 30 rojan de bersiv bidin wekî ku GDPR dixwaze.</li><li>Ji ber ku sepan hesabê ne hewce dike, ji kerema xwe di daxwaza xwe de agahiyên kîfayet bidin (mînakî, qebûlkirina aboneya we an nasnameya bikarhênerê RevenueCat) da ku em bikaribin her hûr data yê ku bi we re têkildar e bibînin.</li><li>Ev siyaseta bi qanûna Swêdî û Regûlasyona Giştî ya Parastina Daneyên EU (Regulation (EU) 2016/679) tê rêvebirin.</li><li>Heke em guhertinên girîng li vê siyaseta xwe bikin, em dê "Dîrokê ya Dawîn a Nûkirinê" nû bikin û bikarhêneran di serlêdana xwe de pêşî agahdar bikin berî ku guhertinê dest pê bike.</li></ul></section>
+</article>
+</main>
 
-  <footer>
-    &copy; 2026 Nordic Theory Labs &nbsp;·&nbsp;
-    <a href="../terms.html">Terms of Use</a>
-  </footer>
-</div>
+<footer class="footer">
+  <div class="container">
+    <div class="footer-bottom">
+      <span>&copy; 2026 Nordic Theory Labs</span>
+      <span><a href="../">Vegere serûpelê</a> &nbsp;·&nbsp; <a href="../terms/">Terms of Use</a></span>
+    </div>
+  </div>
+</footer>
+
 </body>
 </html>

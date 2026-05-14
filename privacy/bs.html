@@ -4,74 +4,43 @@
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Politika privatnosti — Körkort Hero</title>
-  <style>
-*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-body {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-  background: #f5f5f7; color: #1d1d1f; line-height: 1.7; padding: 0 16px;
-}
-.container { max-width: 760px; margin: 0 auto; padding: 40px 0 80px; }
-.lang-bar {
-  display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 32px;
-  padding: 12px 16px; background: #fff; border-radius: 12px;
-  border: 1px solid #e0e0e5;
-}
-.lang-bar a {
-  font-size: 12px; font-weight: 600; padding: 4px 10px;
-  border-radius: 20px; text-decoration: none; color: #555;
-  background: #f0f0f5; transition: background .15s;
-}
-.lang-bar a:hover { background: #ddeeff; color: #0055bb; }
-.lang-bar a.active { background: #0071e3; color: #fff; }
-.badge {
-  display: inline-block; background: #0071e3; color: #fff;
-  font-size: 12px; font-weight: 600; letter-spacing: .04em;
-  padding: 4px 12px; border-radius: 20px; margin-bottom: 20px;
-}
-h1 { font-size: 32px; font-weight: 700; letter-spacing: -.5px; margin-bottom: 6px; }
-.meta { font-size: 13px; color: #6e6e73; margin-bottom: 8px; }
-.summary-box {
-  background: #fff; border-radius: 14px; padding: 24px 28px;
-  margin: 24px 0 20px; border: 1px solid #e0e0e5;
-  font-size: 15px; color: #3a3a3c;
-}
-.intro-box {
-  background: #f0f6ff; border-radius: 14px; padding: 20px 28px;
-  margin-bottom: 24px; border: 1px solid #cce0ff;
-  font-size: 14px; color: #1a3a6b;
-}
-section {
-  background: #fff; border-radius: 14px; padding: 24px 28px;
-  margin-bottom: 14px; border: 1px solid #e0e0e5;
-}
-h2 { font-size: 17px; font-weight: 700; margin-bottom: 14px; }
-ul { padding-left: 20px; }
-li { font-size: 14px; color: #3a3a3c; margin-bottom: 10px; }
-footer {
-  text-align: center; font-size: 12px; color: #8e8e93;
-  margin-top: 40px; padding-top: 20px; border-top: 1px solid #d2d2d7;
-}
-a { color: #0071e3; text-decoration: none; }
-a:hover { text-decoration: underline; }
-@media (max-width: 600px) {
-  h1 { font-size: 24px; } section, .summary-box, .intro-box { padding: 18px; }
-}
-</style>
+  <link rel="stylesheet" href="../assets/styles.css">
 </head>
 <body>
-<div class="container">
-  <div class="lang-bar"><a href="../index.html">English</a>
-<a href="../privacy/tr.html">Türkçe</a>
-<a href="../privacy/sv.html">Svenska</a>
-<a href="../privacy/ar.html">العربية</a>
-<a href="../privacy/fa.html">فارسی</a>
-<a href="../privacy/so.html">Soomaali</a>
-<a href="../privacy/ku.html">Kurdî</a>
-<a href="../privacy/pl.html">Polski</a>
-<a href="../privacy/fi.html">Suomi</a>
-<a href="../privacy/bs.html" class="active">Bosanski</a>
-<a href="../privacy/es.html">Español</a>
-<a href="../privacy/ru.html">Русский</a></div>
+<header class="nav">
+  <div class="container nav-inner">
+    <a class="nav-brand" href="../">
+      <svg class="mark" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+        <circle cx="16" cy="16" r="14.25" stroke="currentColor" stroke-width="1.5"/>
+        <path d="M11 22V10.5L21 21.5V10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        <circle cx="16" cy="5.6" r="1.7" fill="currentColor"/>
+      </svg>
+      Nordic Theory Labs
+    </a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="../">Home</a>
+      <a href="../apps/korkort-hero/" class="hide-sm">Körkort Hero</a>
+      <a href="../#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+<article class="container article">
+  <div class="lang-bar">
+  <a href="index.html">English</a>
+  <a href="tr.html">Türkçe</a>
+  <a href="sv.html">Svenska</a>
+  <a href="ar.html">العربية</a>
+  <a href="fa.html">فارسی</a>
+  <a href="so.html">Soomaali</a>
+  <a href="ku.html">Kurdî</a>
+  <a href="pl.html">Polski</a>
+  <a href="fi.html">Suomi</a>
+  <a href="bs.html" class="active">Bosanski</a>
+  <a href="es.html">Español</a>
+  <a href="ru.html">Русский</a>
+</div>
   <div class="badge">Nordic Theory Labs</div>
   <h1>Politika privatnosti</h1>
   <p class="meta">Körkort Hero &nbsp;·&nbsp; Verzija Politike Privatnosti 2026.04 &nbsp;·&nbsp; Posljednje ažuriranje: May 7, 2026</p>
@@ -83,11 +52,17 @@ a:hover { text-decoration: underline; }
 <section><h2>Vaša prava prema GDPR-u</h2><ul><li>Imate pravo pristupa ličnim podacima koje posjedujemo o vama i pravo da primite njihovu kopiju u strukturiranom, uobičajeno korištenom, mašinski čitljivom formatu (pravo na pristup i prenosivost).</li><li>Imate pravo ispraviti netačne podatke, zatražiti brisanje svojih podataka i tražiti od nas da ograničimo obradu u situacijama definisanim GDPR Articles 16, 17, and 18.</li><li>Imate pravo da prigovorite obradi koja se temelji na legitimnom interesu, uključujući našu upotrebu izvještaja o padovima, tako što ćete nas kontaktirati ili onemogućiti izvještavanje o padovima u postavkama aplikacije gdje je to dostupno.</li><li>Imate pravo podnijeti žalbu Švedskoj agenciji za zaštitu privatnosti (Integritetsskyddsmyndigheten, IMY) ili tijelu za zaštitu podataka u vašoj zemlji prebivališta u EU.</li></ul></section>
 <section><h2>Zadržavanje i sigurnost podataka</h2><ul><li>Izvještaji o rušenju i dijagnostički podaci čuva Sentry najviše 90 dana, nakon čega se automatski brišu.</li><li>Podaci o kupovini i pretplati čuvaju se kod RevenueCat onoliko dugo koliko je potrebno za upravljanje vašom pretplatom i ispunjavanje zakonskih i poreskih obaveza, u skladu sa politikom privatnosti RevenueCat.</li><li>Lokalni podaci na vašem uređaju (preferencije, napredak, savladanost kartica, zakazani podsjetnici) čuvaju se dok ih ne obrišete, ne resetujete aplikaciju ili je ne deinstalirate — tada ti podaci nestaju, jer mi nikada nismo imali njihovu kopiju.</li><li>Podaci u tranzitu prema našim procesorima zaštićeni su TLS enkripcijom, a naši procesori primjenjuju organizacione i tehničke sigurnosne mjere prema industrijskim standardima kako bi zaštitili podatke u mirovanju.</li></ul></section>
 <section><h2>Kontakt i zahtjevi</h2><ul><li>Da biste ostvarili bilo koje od svojih prava ili postavili pitanje u vezi s ovom politikom, kontaktirajte nas na privacy@nordictheorylabs.com i odgovorit ćemo u roku od 30 dana, kako zahtijeva GDPR.</li><li>Budući da aplikacija ne zahtijeva korisnički račun, molimo vas da u svom zahtjevu uključite dovoljno informacija (na primjer, potvrdu o pretplati ili RevenueCat korisnički identifikator) kako bismo mogli pronaći sve podatke koji se odnose na vas.</li><li>Ova politika je regulisana švedskim zakonima i Općom uredbom o zaštiti podataka Evropske unije (Regulation (EU) 2016/679).</li><li>Ako napravimo značajne izmjene ove politike, ažurirat ćemo datum "Posljednje ažuriranje" i obavijestiti korisnike u aplikaciji prije nego što izmjene stupe na snagu.</li></ul></section>
+</article>
+</main>
 
-  <footer>
-    &copy; 2026 Nordic Theory Labs &nbsp;·&nbsp;
-    <a href="../terms.html">Terms of Use</a>
-  </footer>
-</div>
+<footer class="footer">
+  <div class="container">
+    <div class="footer-bottom">
+      <span>&copy; 2026 Nordic Theory Labs</span>
+      <span><a href="../">Nazad na početnu</a> &nbsp;·&nbsp; <a href="../terms/">Terms of Use</a></span>
+    </div>
+  </div>
+</footer>
+
 </body>
 </html>
