@@ -343,3 +343,6 @@ html[dir="rtl"] .article .lang-bar { direction: rtl; }
 .muted { color: var(--ink-3); }
 .center { text-align: center; }
 .divider { height: 1px; background: var(--line); border: 0; margin: 0; }
+
+/* ---------- App in-app browser mode ---------- */
+html.app-mode header.nav { display: none !important; }
