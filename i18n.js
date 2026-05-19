@@ -2895,10 +2895,7 @@
   const stored = (() => {
     try { return localStorage.getItem(KEY); } catch { return null; }
   })();
-  const browserGuess = (navigator.language || "en").slice(0, 2).toLowerCase();
-  let current = (LANGS[urlLang] && urlLang)
-    || stored
-    || (LANGS[browserGuess] ? browserGuess : "en");
+  let current = (LANGS[urlLang] && urlLang) || stored || "en";
 
   function apply(code) {
     const dict = LANGS[code] || LANGS.en;
