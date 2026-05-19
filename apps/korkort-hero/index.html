@@ -4,6 +4,8 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Körkort Hero — Pass your Swedish theory test, calmly · Nordic Theory Labs</title>
+<link rel="icon" type="image/png" href="../../images/kh-app-icon.png" />
+<link rel="apple-touch-icon" href="../../images/kh-app-icon.png" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
@@ -48,14 +50,16 @@
   button { font: inherit; color: inherit; background: none; border: 0; cursor: pointer; }
   img { display: block; max-width: 100%; }
 
-  /* swedish-cross subtle pattern overlay */
+  /* subtle ambient overlay — warm top spotlight + tiny grain (no cross) */
   body::before {
     content: "";
     position: fixed; inset: 0;
     background:
-      linear-gradient(90deg, transparent 36%, color-mix(in oklab, var(--cross) 50%, transparent) 36%, color-mix(in oklab, var(--cross) 50%, transparent) 40%, transparent 40%),
-      linear-gradient(0deg,  transparent 56%, color-mix(in oklab, var(--cross) 40%, transparent) 56%, color-mix(in oklab, var(--cross) 40%, transparent) 60%, transparent 60%);
-    opacity: 0.5;
+      radial-gradient(ellipse 90% 60% at 50% -10%, rgba(255, 204, 68, 0.08), transparent 55%),
+      radial-gradient(ellipse 60% 40% at 80% 100%, rgba(33, 96, 159, 0.18), transparent 60%),
+      radial-gradient(rgba(255, 255, 255, 0.045) 1px, transparent 1.2px);
+    background-size: auto, auto, 4px 4px;
+    opacity: 1;
     pointer-events: none;
     z-index: 0;
   }
@@ -83,13 +87,31 @@
   }
   .crumb a:hover { color: var(--paper); }
   .crumb-mark {
-    width: 26px; height: 26px; display: inline-grid; place-items: center;
-    border: 1px solid var(--paper); border-radius: 6px;
-    font-family: var(--serif); font-size: 16px; line-height: 1; padding-bottom: 2px;
-    background: var(--paper); color: var(--navy-deep);
+    width: 26px; height: 26px;
+    display: inline-block;
+    background: var(--paper); border-radius: 6px;
+    flex: 0 0 auto;
   }
+  .crumb-mark svg { display: block; width: 100%; height: 100%; }
+  .crumb-mark .sig-frame { stroke: var(--navy-deep); opacity: 0.55; }
+  .crumb-mark .sig-axis  { stroke: var(--navy-deep); opacity: 0.20; }
+  .crumb-mark .sig-wave  { stroke: var(--navy-deep); }
+  .crumb-mark .sig-dot   { fill: var(--yellow); }
   .crumb .sep { opacity: 0.4; }
   .crumb .cur { color: var(--paper); font-weight: 500; }
+
+  /* hero app-icon — Apple App Store style 96px lockup */
+  .hero-app-icon {
+    width: 96px; height: 96px;
+    margin-bottom: 24px;
+    border-radius: 22px;
+    overflow: hidden;
+    box-shadow:
+      0 1px 0 rgba(255,255,255,0.18) inset,
+      0 14px 32px -10px rgba(0,0,0,0.45),
+      0 4px 10px -4px rgba(0,0,0,0.35);
+  }
+  .hero-app-icon img { display: block; width: 100%; height: 100%; object-fit: cover; }
   .nav-meta {
     display: flex; align-items: center; gap: 16px;
     font-family: var(--mono); font-size: 11px; letter-spacing: 0.06em;
@@ -116,8 +138,7 @@
   }
   .nav-cta:hover { transform: translateY(-1px); }
 
-  /* ───────────────────────── HERO ───────────────────────── */
-  .hero {
+  /* ───────────────────────── HERO ───────────────────────── */  .hero {
     position: relative;
     padding: clamp(60px, 9vw, 120px) 0 0;
     overflow: hidden;
@@ -623,13 +644,20 @@
 <header class="nav">
   <div class="wrap nav-inner">
     <div class="crumb">
-      <a href="../../index.html" class="crumb-mark">N</a>
+      <a href="../../index.html" class="crumb-mark" aria-label="Nordic Theory Labs">
+        <svg viewBox="0 0 220 220" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <rect class="sig-frame" x="30" y="30" width="160" height="160" rx="22" ry="22" fill="none" stroke-width="3"></rect>
+          <line class="sig-axis" x1="50" y1="110" x2="170" y2="110" stroke-width="2"></line>
+          <path class="sig-wave" d="M 50 110 Q 70 50 90 110 Q 110 170 130 110 Q 150 50 170 110" fill="none" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"></path>
+          <circle class="sig-dot" cx="130" cy="110" r="10"></circle>
+        </svg>
+      </a>
       <a href="../../index.html">Nordic Theory Labs</a>
       <span class="sep">/</span>
       <a href="#" class="cur">Körkort Hero</a>
     </div>
     <div></div>
-    <a href="#download" class="nav-cta">Download <span>↓</span></a>
+    <a href="#download" class="nav-cta" data-i18n="kh.nav.download">Download <span>↓</span></a>
   </div>
 </header>
 
@@ -638,29 +666,32 @@
   <div class="wrap">
     <div class="hero-grid">
       <div>
-        <span class="pill"><span class="flag"></span>SWEDISH CAR LICENCE · THEORY PREP</span>
-        <h1>
+        <div class="hero-app-icon">
+          <img src="../../images/kh-app-icon.png" alt="Körkort Hero — app icon" />
+        </div>
+        <span class="pill" data-i18n="kh.hero.pill"><span class="flag"></span>SWEDISH CAR LICENCE · THEORY PREP</span>
+        <h1 data-i18n="kh.hero.title">
           Pass your <em>körkort</em> on the <span class="acc">first try.</span>
         </h1>
-        <p class="hero-sub">
+        <p class="hero-sub" data-i18n="kh.hero.sub">
           Körkort Hero is a calm, adaptive companion for the Swedish theory test.
-          <strong>823 official-format questions</strong>, a 154-chapter theory book,
+          <strong>1,287 official-format questions</strong>, a 154-chapter theory book,
           5 study modes, and a quietly engineered 8-step plan that gets you to exam day&nbsp;ready.
         </p>
         <div class="hero-cta">
           <a class="store-btn" href="https://apps.apple.com/id/app/driving-license-in-sweden/id6762642524" target="_blank" rel="noopener">
             <svg class="icn" viewBox="0 0 24 24" width="24" height="24" fill="currentColor" aria-hidden="true"><path d="M17.05 12.04c-.03-2.66 2.18-3.94 2.28-4.01-1.24-1.82-3.18-2.07-3.86-2.09-1.64-.17-3.2.97-4.04.97-.83 0-2.12-.95-3.49-.92-1.79.03-3.45 1.04-4.37 2.64-1.87 3.24-.48 8.04 1.34 10.67.89 1.29 1.95 2.74 3.32 2.69 1.34-.05 1.85-.86 3.47-.86 1.62 0 2.07.86 3.49.83 1.44-.02 2.35-1.32 3.23-2.61 1.02-1.5 1.44-2.95 1.46-3.03-.03-.01-2.8-1.07-2.83-4.28zM14.41 4.2c.74-.9 1.24-2.14 1.1-3.39-1.07.05-2.38.71-3.14 1.59-.68.78-1.28 2.05-1.12 3.26 1.2.09 2.42-.61 3.16-1.46z"/></svg>
-            <span class="lbl"><small>Download on the</small><b>App Store</b></span>
+            <span class="lbl"><small data-i18n="kh.store.appstore.small">Download on the</small><b>App Store</b></span>
           </a>
           <a class="store-btn outline disabled" href="#" aria-disabled="true" onclick="event.preventDefault()">
             <svg class="icn" viewBox="0 0 24 24" width="22" height="22" fill="currentColor" aria-hidden="true"><path d="M3.6 1.5C3.2 1.8 3 2.3 3 2.9v18.2c0 .6.2 1.1.6 1.4l10.4-10.4L3.6 1.5zm12.1 8.6L18.7 7l-12-6.7c-.4-.2-.8-.3-1.2-.2l10.2 10zM21.7 11l-3.6-2-3.4 3.4 3.4 3.4 3.7-2c.9-.5.9-1.8-.1-2.8zm-15.9 13c.4.1.9 0 1.2-.2l12-6.7-3-3.1-10.2 10z"/></svg>
-            <span class="lbl"><small>Coming soon to</small><b>Google Play</b></span>
+            <span class="lbl"><small data-i18n="kh.store.gplay.small">Coming soon to</small><b>Google Play</b></span>
           </a>
         </div>
         <div class="hero-meta">
-          <span><b>4.9 ★</b>App Store rating</span>
-          <span><b>48,000+</b>students passed</span>
-          <span><b>96%</b>first-attempt pass</span>
+          <span><b>1,287</b><span data-i18n="kh.meta.questions">practice questions</span></span>
+          <span><b>154</b><span data-i18n="kh.meta.chapters">theory chapters</span></span>
+          <span><b>12</b><span data-i18n="kh.meta.languages">languages · offline</span></span>
         </div>
       </div>
 
@@ -676,24 +707,24 @@
 <div class="stats-bar">
   <div class="wrap stats-inner">
     <div class="stat reveal">
-      <b data-count="823" data-suffix="">0</b>
-      <span class="lbl">Real questions</span>
-      <span class="sub">Modelled on Trafikverket's official format. Refreshed every term.</span>
+      <b data-count="1287" data-suffix="">0</b>
+      <span class="lbl" data-i18n="kh.stat1.lbl">Real questions</span>
+      <span class="sub" data-i18n="kh.stat1.sub">Modelled on Trafikverket's official format. Refreshed every term.</span>
     </div>
     <div class="stat reveal delay-1">
       <b data-count="154" data-suffix="">0</b>
-      <span class="lbl">Theory chapters</span>
-      <span class="sub">~6 hrs of structured reading across 10 categories.</span>
+      <span class="lbl" data-i18n="kh.stat2.lbl">Theory chapters</span>
+      <span class="sub" data-i18n="kh.stat2.sub">~6 hrs of structured reading across 10 categories.</span>
     </div>
     <div class="stat reveal delay-2">
-      <b data-count="337" data-suffix="">0</b>
-      <span class="lbl">Traffic signs</span>
-      <span class="sub">Plus 305 glossary terms — searchable, illustrated.</span>
+      <b data-count="293" data-suffix="">0</b>
+      <span class="lbl" data-i18n="kh.stat3.lbl">Traffic signs</span>
+      <span class="sub" data-i18n="kh.stat3.sub">Illustrated and searchable — every official Swedish sign series.</span>
     </div>
     <div class="stat reveal delay-3">
       <b data-count="12" data-suffix="">0</b>
-      <span class="lbl">Languages</span>
-      <span class="sub">Study in your own language. Take the exam in Swedish.</span>
+      <span class="lbl" data-i18n="kh.stat4.lbl">Languages</span>
+      <span class="sub" data-i18n="kh.stat4.sub">Study in your own language. Take the exam in Swedish.</span>
     </div>
   </div>
 </div>
@@ -703,22 +734,22 @@
   <div class="wrap">
     <div class="feature">
       <div class="reveal">
-        <div class="sec-eyebrow"><span class="bar"></span>01 · YOUR PERSONAL PLAN</div>
-        <h2 class="sec-h">An <em>8-step</em> journey, not 800 random questions.</h2>
-        <p class="sec-sub">
+        <div class="sec-eyebrow"><span class="bar"></span><span data-i18n="kh.f1.eyebrow">01 · YOUR PERSONAL PLAN</span></div>
+        <h2 class="sec-h" data-i18n="kh.f1.h">An <em>8-step</em> journey, not 800 random questions.</h2>
+        <p class="sec-sub" data-i18n="kh.f1.sub">
           The home screen quietly shows you exactly what to do today — typically 10 minutes.
           Most learners need around 700 questions before exam day; we plan backwards from yours.
         </p>
         <ul class="feat-list">
-          <li data-num="A1"><span><b>Set your exam date</b> — we count down the days and adjust today's session length.</span></li>
-          <li data-num="A2"><span><b>Pick a weekly pace</b> — Casual (20), Steady (50), or Intense (100) questions a week.</span></li>
-          <li data-num="A3"><span><b>The 8-step plan</b> — Learner permit → eye test → theory → mock → exam.</span></li>
-          <li data-num="A4"><span><b>One small nudge a day.</b> No streaks. No guilt. Just the next step.</span></li>
+          <li data-num="A1" data-i18n="kh.f1.b1"><span><b>Set your exam date</b> — we count down the days and adjust today's session length.</span></li>
+          <li data-num="A2" data-i18n="kh.f1.b2"><span><b>Pick a weekly pace</b> — Casual (20), Steady (50), or Intense (100) questions a week.</span></li>
+          <li data-num="A3" data-i18n="kh.f1.b3"><span><b>The 8-step plan</b> — Learner permit → eye test → theory → mock → exam.</span></li>
+          <li data-num="A4" data-i18n="kh.f1.b4"><span><b>One small nudge a day.</b> No streaks. No guilt. Just the next step.</span></li>
         </ul>
         <div class="feat-tags">
-          <span class="tag solid">~10 min/day</span>
-          <span class="tag">Adaptive</span>
-          <span class="tag">Exam countdown</span>
+          <span class="tag solid" data-i18n="kh.f1.t1">~10 min/day</span>
+          <span class="tag" data-i18n="kh.f1.t2">Adaptive</span>
+          <span class="tag" data-i18n="kh.f1.t3">Exam countdown</span>
         </div>
       </div>
       <div class="feat-shot reveal delay-1">
@@ -733,22 +764,22 @@
   <div class="wrap">
     <div class="feature reverse">
       <div class="reveal">
-        <div class="sec-eyebrow"><span class="bar"></span>02 · OFFICIAL-FORMAT QUIZ</div>
-        <h2 class="sec-h">Every question. <em>A real</em> Swedish road sign.</h2>
-        <p class="sec-sub">
-          823 questions written in the same format as the official Trafikverket exam.
+        <div class="sec-eyebrow"><span class="bar"></span><span data-i18n="kh.f2.eyebrow">02 · OFFICIAL-FORMAT QUIZ</span></div>
+        <h2 class="sec-h" data-i18n="kh.f2.h">Every question. <em>A real</em> Swedish road sign.</h2>
+        <p class="sec-sub" data-i18n="kh.f2.sub">
+          1,287 questions written in the same format as the official Trafikverket exam.
           Real photographs of Swedish signs, real intersections, real edge cases — not generic stock.
         </p>
         <ul class="feat-list">
-          <li data-num="B1"><span><b>10 categories</b> — from Vehicle Equipment to Stopping and Parking.</span></li>
-          <li data-num="B2"><span><b>Save anything tricky</b> for review later — bookmark icon on every question.</span></li>
-          <li data-num="B3"><span><b>Flag broken questions</b> — we read every flag and ship fixes weekly.</span></li>
-          <li data-num="B4"><span><b>Tap to zoom on signs</b> — every photo is high resolution.</span></li>
+          <li data-num="B1" data-i18n="kh.f2.b1"><span><b>10 categories</b> — from Vehicle Equipment to Stopping and Parking.</span></li>
+          <li data-num="B2" data-i18n="kh.f2.b2"><span><b>Save anything tricky</b> for review later — bookmark icon on every question.</span></li>
+          <li data-num="B3" data-i18n="kh.f2.b3"><span><b>Flag broken questions</b> — we read every flag and ship fixes weekly.</span></li>
+          <li data-num="B4" data-i18n="kh.f2.b4"><span><b>Tap to zoom on signs</b> — every photo is high resolution.</span></li>
         </ul>
         <div class="feat-tags">
-          <span class="tag solid">Trafikverket format</span>
-          <span class="tag">Real photography</span>
-          <span class="tag">Save &amp; flag</span>
+          <span class="tag solid" data-i18n="kh.f2.t1">Trafikverket format</span>
+          <span class="tag" data-i18n="kh.f2.t2">Real photography</span>
+          <span class="tag" data-i18n="kh.f2.t3">Save &amp; flag</span>
         </div>
       </div>
       <div class="feat-shot reveal delay-1">
@@ -764,18 +795,18 @@
     <div class="bn-grid">
       <div class="bn reveal">
         <b data-count="65" data-suffix="">0</b>
-        <span class="l1">Question mock exam</span>
-        <span class="l2">Same length, same time pressure as the real Trafikverket theory test.</span>
+        <span class="l1" data-i18n="kh.bn1.l1">Question mock exam</span>
+        <span class="l2" data-i18n="kh.bn1.l2">Same length, same time pressure as the real Trafikverket theory test.</span>
       </div>
       <div class="bn reveal delay-1">
         <b data-count="50" data-suffix=" min">0</b>
-        <span class="l1">Timed, no shortcuts</span>
-        <span class="l2">Pause once. End once. Just like exam day. Results analysed by category.</span>
+        <span class="l1" data-i18n="kh.bn2.l1">Timed, no shortcuts</span>
+        <span class="l2" data-i18n="kh.bn2.l2">Pause once. End once. Just like exam day. Results analysed by category.</span>
       </div>
       <div class="bn reveal delay-2">
-        <b data-count="96" data-suffix="%">0</b>
-        <span class="l1">First-attempt pass</span>
-        <span class="l2">Across 48,000+ students who finished a mock with us before taking the exam.</span>
+        <b data-count="12" data-suffix="">0</b>
+        <span class="l1" data-i18n="kh.bn3.l1">Languages supported</span>
+        <span class="l2" data-i18n="kh.bn3.l2">Study in your own language; take the official exam in Swedish with confidence.</span>
       </div>
     </div>
   </div>
@@ -786,17 +817,17 @@
   <div class="wrap">
     <div class="feature">
       <div class="reveal">
-        <div class="sec-eyebrow"><span class="bar"></span>03 · MOCK EXAM</div>
-        <h2 class="sec-h"><em>Real</em> format. Real pressure.</h2>
-        <p class="sec-sub">
+        <div class="sec-eyebrow"><span class="bar"></span><span data-i18n="kh.f3.eyebrow">03 · MOCK EXAM</span></div>
+        <h2 class="sec-h" data-i18n="kh.f3.h"><em>Real</em> format. Real pressure.</h2>
+        <p class="sec-sub" data-i18n="kh.f3.sub">
           The mock exam is bit-for-bit identical to the real test — 65 questions, 50 minutes,
           one pause allowed, results scored by category so you know exactly which chapter to revisit.
         </p>
         <ul class="feat-list">
-          <li data-num="C1"><span><b>Authentic timer</b> with a yellow warning at five minutes.</span></li>
-          <li data-num="C2"><span><b>Result analysis</b> shows weak categories ranked by impact.</span></li>
-          <li data-num="C3"><span><b>Review every mistake</b> with the right answer and a short explanation.</span></li>
-          <li data-num="C4"><span><b>Take it as often as you like.</b> Questions shuffle from a much larger pool.</span></li>
+          <li data-num="C1" data-i18n="kh.f3.b1"><span><b>Authentic timer</b> with a yellow warning at five minutes.</span></li>
+          <li data-num="C2" data-i18n="kh.f3.b2"><span><b>Result analysis</b> shows weak categories ranked by impact.</span></li>
+          <li data-num="C3" data-i18n="kh.f3.b3"><span><b>Review every mistake</b> with the right answer and a short explanation.</span></li>
+          <li data-num="C4" data-i18n="kh.f3.b4"><span><b>Take it as often as you like.</b> Questions shuffle from a much larger pool.</span></li>
         </ul>
       </div>
       <div class="feat-shot reveal delay-1">
@@ -811,16 +842,16 @@
   <div class="wrap">
     <div class="feature reverse">
       <div class="reveal">
-        <div class="sec-eyebrow"><span class="bar"></span>04 · LEARN FROM YOUR MISTAKES</div>
-        <h2 class="sec-h">Wrong once. <em>Never</em> twice.</h2>
-        <p class="sec-sub">
+        <div class="sec-eyebrow"><span class="bar"></span><span data-i18n="kh.f4.eyebrow">04 · LEARN FROM YOUR MISTAKES</span></div>
+        <h2 class="sec-h" data-i18n="kh.f4.h">Wrong once. <em>Never</em> twice.</h2>
+        <p class="sec-sub" data-i18n="kh.f4.sub">
           Every miss goes into your error pool. The app suggests a focus category each morning,
           surfaces your hardest questions, and quietly nudges them back until they stick.
         </p>
         <ul class="feat-list">
-          <li data-num="D1"><span><b>Error pool</b> — every mistake stored, organised by category.</span></li>
-          <li data-num="D2"><span><b>Suggested focus</b> — the algorithm picks the one chapter that will move your pass rate the most.</span></li>
-          <li data-num="D3"><span><b>Filter</b> by Hardest, Recent mistakes, or All — sometimes you know what you need.</span></li>
+          <li data-num="D1" data-i18n="kh.f4.b1"><span><b>Error pool</b> — every mistake stored, organised by category.</span></li>
+          <li data-num="D2" data-i18n="kh.f4.b2"><span><b>Suggested focus</b> — the algorithm picks the one chapter that will move your pass rate the most.</span></li>
+          <li data-num="D3" data-i18n="kh.f4.b3"><span><b>Filter</b> by Hardest, Recent mistakes, or All — sometimes you know what you need.</span></li>
         </ul>
       </div>
       <div class="feat-shot reveal delay-1">
@@ -834,41 +865,41 @@
 <section data-screen-label="06 Study modes">
   <div class="wrap">
     <div class="reveal">
-      <div class="sec-eyebrow"><span class="bar"></span>05 · STUDY YOUR WAY</div>
-      <h2 class="sec-h">Five ways to study. <em>One</em> goal.</h2>
-      <p class="sec-sub">Pick the mode that fits the moment — 5 minutes on the train, an hour on the sofa, or a full mock the night before.</p>
+      <div class="sec-eyebrow"><span class="bar"></span><span data-i18n="kh.modes.eyebrow">05 · STUDY YOUR WAY</span></div>
+      <h2 class="sec-h" data-i18n="kh.modes.h">Five ways to study. <em>One</em> goal.</h2>
+      <p class="sec-sub" data-i18n="kh.modes.sub">Pick the mode that fits the moment — 5 minutes on the train, an hour on the sofa, or a full mock the night before.</p>
     </div>
 
     <div class="modes-grid reveal delay-1">
       <div class="mode">
-        <span class="mode-num">M1 — BY TOPIC</span>
-        <div class="mode-desc">Drill the chapters you choose. 823 questions waiting, 10 categories.</div>
-        <div class="mode-title"><em>Topic</em> Quiz</div>
+        <span class="mode-num" data-i18n="kh.m1.num">M1 — BY TOPIC</span>
+        <div class="mode-desc" data-i18n="kh.m1.desc">Drill the chapters you choose. 1,287 questions waiting, 10 categories.</div>
+        <div class="mode-title" data-i18n="kh.m1.title"><em>Topic</em> Quiz</div>
       </div>
       <div class="mode">
-        <span class="mode-num">M2 — REAL FORMAT</span>
-        <div class="mode-desc">65 questions, 50 minutes, real pressure. Same shape as the real test.</div>
-        <div class="mode-title"><em>Mock</em> Exam</div>
+        <span class="mode-num" data-i18n="kh.m2.num">M2 — REAL FORMAT</span>
+        <div class="mode-desc" data-i18n="kh.m2.desc">65 questions, 50 minutes, real pressure. Same shape as the real test.</div>
+        <div class="mode-title" data-i18n="kh.m2.title"><em>Mock</em> Exam</div>
       </div>
       <div class="mode">
-        <span class="mode-num">M3 — FLIP &amp; LEARN</span>
-        <div class="mode-desc">Quick flashcard review of concepts, signs and rules. Mark <em>I know</em> or <em>Review</em>.</div>
-        <div class="mode-title"><em>Flashcards</em></div>
+        <span class="mode-num" data-i18n="kh.m3.num">M3 — FLIP &amp; LEARN</span>
+        <div class="mode-desc" data-i18n="kh.m3.desc">Quick flashcard review of concepts, signs and rules. Mark <em>I know</em> or <em>Review</em>.</div>
+        <div class="mode-title" data-i18n="kh.m3.title"><em>Flashcards</em></div>
       </div>
       <div class="mode">
-        <span class="mode-num">M4 — PERSONAL</span>
-        <div class="mode-desc">Every question you've ever missed, ready when you are. Suggested focus daily.</div>
-        <div class="mode-title">Wrong <em>Answers</em></div>
+        <span class="mode-num" data-i18n="kh.m4.num">M4 — PERSONAL</span>
+        <div class="mode-desc" data-i18n="kh.m4.desc">Every question you've ever missed, ready when you are. Suggested focus daily.</div>
+        <div class="mode-title" data-i18n="kh.m4.title">Wrong <em>Answers</em></div>
       </div>
       <div class="mode">
-        <span class="mode-num">M5 — PERSONAL</span>
-        <div class="mode-desc">Anything you bookmarked while drilling. The questions you marked tricky.</div>
-        <div class="mode-title"><em>Saved</em> Questions</div>
+        <span class="mode-num" data-i18n="kh.m5.num">M5 — PERSONAL</span>
+        <div class="mode-desc" data-i18n="kh.m5.desc">Anything you bookmarked while drilling. The questions you marked tricky.</div>
+        <div class="mode-title" data-i18n="kh.m5.title"><em>Saved</em> Questions</div>
       </div>
       <div class="mode">
-        <span class="mode-num">M6 — BUILD YOUR OWN</span>
-        <div class="mode-desc">Pick categories, set count, set time, hit start. Your perfect drill.</div>
-        <div class="mode-title"><em>Custom</em> Exam</div>
+        <span class="mode-num" data-i18n="kh.m6.num">M6 — BUILD YOUR OWN</span>
+        <div class="mode-desc" data-i18n="kh.m6.desc">Pick categories, set count, set time, hit start. Your perfect drill.</div>
+        <div class="mode-title" data-i18n="kh.m6.title"><em>Custom</em> Exam</div>
       </div>
     </div>
   </div>
@@ -879,16 +910,16 @@
   <div class="wrap">
     <div class="feature">
       <div class="reveal">
-        <div class="sec-eyebrow"><span class="bar"></span>06 · FLASHCARDS</div>
-        <h2 class="sec-h">Flip. Learn. <em>Pass.</em></h2>
-        <p class="sec-sub">
+        <div class="sec-eyebrow"><span class="bar"></span><span data-i18n="kh.f5.eyebrow">06 · FLASHCARDS</span></div>
+        <h2 class="sec-h" data-i18n="kh.f5.h">Flip. Learn. <em>Pass.</em></h2>
+        <p class="sec-sub" data-i18n="kh.f5.sub">
           Spaced repetition for Swedish road rules. Twenty-minute sessions, three buttons —
           Previous, I Know, Review. The cards you struggle with show up more often.
         </p>
         <ul class="feat-list">
-          <li data-num="E1"><span><b>Shuffled by default</b> so you don't memorise the order, just the answers.</span></li>
-          <li data-num="E2"><span><b>Tap to flip</b> — answer on the back, explanation underneath.</span></li>
-          <li data-num="E3"><span><b>Known cards graduate.</b> Reviewed cards come back tomorrow.</span></li>
+          <li data-num="E1" data-i18n="kh.f5.b1"><span><b>Shuffled by default</b> so you don't memorise the order, just the answers.</span></li>
+          <li data-num="E2" data-i18n="kh.f5.b2"><span><b>Tap to flip</b> — answer on the back, explanation underneath.</span></li>
+          <li data-num="E3" data-i18n="kh.f5.b3"><span><b>Known cards graduate.</b> Reviewed cards come back tomorrow.</span></li>
         </ul>
       </div>
       <div class="feat-shot reveal delay-1">
@@ -903,16 +934,16 @@
   <div class="wrap">
     <div class="feature reverse">
       <div class="reveal">
-        <div class="sec-eyebrow"><span class="bar"></span>07 · THEORY BOOK &amp; KNOWLEDGE BANK</div>
-        <h2 class="sec-h"><em>154</em> chapters. About 6 hours, read at your pace.</h2>
-        <p class="sec-sub">
+        <div class="sec-eyebrow"><span class="bar"></span><span data-i18n="kh.f6.eyebrow">07 · THEORY BOOK &amp; KNOWLEDGE BANK</span></div>
+        <h2 class="sec-h" data-i18n="kh.f6.h"><em>154</em> chapters. About 6 hours, read at your pace.</h2>
+        <p class="sec-sub" data-i18n="kh.f6.sub">
           A full, illustrated theory book is built into the app — picking up where you left off,
-          every time. Plus a knowledge bank of 337 traffic signs and 305 glossary terms.
+          every time. Plus a knowledge bank of 293 traffic signs and 590+ glossary terms.
         </p>
         <ul class="feat-list">
-          <li data-num="F1"><span><b>10 categories</b> — Vehicle Equipment, Driver Responsibility, Motorway, Traffic Signs, and more.</span></li>
-          <li data-num="F2"><span><b>Resume reading</b> from any chapter, on any device. Your progress syncs quietly.</span></li>
-          <li data-num="F3"><span><b>Searchable signs &amp; glossary</b> — never wonder what <em>last-plats</em> means again.</span></li>
+          <li data-num="F1" data-i18n="kh.f6.b1"><span><b>10 categories</b> — Vehicle Equipment, Driver Responsibility, Motorway, Traffic Signs, and more.</span></li>
+          <li data-num="F2" data-i18n="kh.f6.b2"><span><b>Resume reading</b> from any chapter, on any device. Your progress syncs quietly.</span></li>
+          <li data-num="F3" data-i18n="kh.f6.b3"><span><b>Searchable signs &amp; glossary</b> — never wonder what <em>last-plats</em> means again.</span></li>
         </ul>
       </div>
       <div class="feat-shot reveal delay-1">
@@ -927,17 +958,17 @@
   <div class="wrap">
     <div class="feature">
       <div class="reveal">
-        <div class="sec-eyebrow"><span class="bar"></span>08 · STATS &amp; PROGRESS</div>
-        <h2 class="sec-h">Your <em>progress</em>, in plain sight.</h2>
-        <p class="sec-sub">
+        <div class="sec-eyebrow"><span class="bar"></span><span data-i18n="kh.f7.eyebrow">08 · STATS &amp; PROGRESS</span></div>
+        <h2 class="sec-h" data-i18n="kh.f7.h">Your <em>progress</em>, in plain sight.</h2>
+        <p class="sec-sub" data-i18n="kh.f7.sub">
           Exam readiness, accuracy, coverage, streak — all on one screen, refreshed live.
           Twenty-eight badges to unlock if you like motivation, or you can ignore them entirely.
         </p>
         <ul class="feat-list">
-          <li data-num="G1"><span><b>Exam readiness</b> — a single number, calculated from your last 3 mocks.</span></li>
-          <li data-num="G2"><span><b>This week</b> — bar chart of questions per day, gently encouraging consistency.</span></li>
-          <li data-num="G3"><span><b>Coverage / Streak / Wrong / Pass rate</b> — the four numbers that matter.</span></li>
-          <li data-num="G4"><span><b>28 badges</b>, all optional. No popups. No confetti.</span></li>
+          <li data-num="G1" data-i18n="kh.f7.b1"><span><b>Exam readiness</b> — a single number, calculated from your last 3 mocks.</span></li>
+          <li data-num="G2" data-i18n="kh.f7.b2"><span><b>This week</b> — bar chart of questions per day, gently encouraging consistency.</span></li>
+          <li data-num="G3" data-i18n="kh.f7.b3"><span><b>Coverage / Streak / Wrong / Pass rate</b> — the four numbers that matter.</span></li>
+          <li data-num="G4" data-i18n="kh.f7.b4"><span><b>28 badges</b>, all optional. No popups. No confetti.</span></li>
         </ul>
       </div>
       <div class="feat-shot reveal delay-1">
@@ -950,98 +981,63 @@
 <!-- ─────── LANGUAGES ─────── -->
 <section class="langs" data-screen-label="10 Languages">
   <div class="wrap reveal">
-    <div class="sec-eyebrow"><span class="bar"></span>09 · 12 LANGUAGES</div>
-    <h2 class="sec-h">Study in your <em>language</em>. Take the exam in Swedish.</h2>
-    <p class="sec-sub">
+    <div class="sec-eyebrow"><span class="bar"></span><span data-i18n="kh.langs.eyebrow">09 · 12 LANGUAGES</span></div>
+    <h2 class="sec-h" data-i18n="kh.langs.h">Study in your <em>language</em>. Take the exam in Swedish.</h2>
+    <p class="sec-sub" data-i18n="kh.langs.sub">
       The exam is in Swedish — but learning a new traffic system in a foreign language
       is twice the work. Körkort Hero lets you study the rules in whichever language feels like home.
     </p>
     <div class="langs-row">
       <span class="lang primary">🇸🇪 Svenska</span>
       <span class="lang">🇬🇧 English</span>
-      <span class="lang">🇩🇪 Deutsch</span>
-      <span class="lang">🇵🇱 Polski</span>
-      <span class="lang">🇪🇸 Español</span>
-      <span class="lang">🇫🇷 Français</span>
       <span class="lang">🇹🇷 Türkçe</span>
-      <span class="lang">🇦🇪 العربية</span>
+      <span class="lang">🇸🇦 العربية</span>
       <span class="lang">🇮🇷 فارسی</span>
-      <span class="lang">🇺🇦 Українська</span>
-      <span class="lang">🇷🇴 Română</span>
       <span class="lang">🇸🇴 Soomaali</span>
+      <span class="lang">☀ Kurdî</span>
+      <span class="lang">🇵🇱 Polski</span>
+      <span class="lang">🇫🇮 Suomi</span>
+      <span class="lang">🇧🇦 Bosanski</span>
+      <span class="lang">🇪🇸 Español</span>
+      <span class="lang">🇷🇺 Русский</span>
     </div>
   </div>
 </section>
 
-<!-- ─────── REVIEWS ─────── -->
-<section class="reviews" data-screen-label="11 Reviews">
-  <div class="wrap">
-    <div class="reveal">
-      <div class="sec-eyebrow"><span class="bar"></span>10 · WHAT LEARNERS SAY</div>
-      <h2 class="sec-h">Forty-eight thousand learners. <em>4.9 stars.</em></h2>
-    </div>
-
-    <div class="rv-grid">
-      <div class="rv reveal">
-        <div class="rv-stars">★★★★★</div>
-        <p class="rv-text">"Passed on my first attempt with one mistake. The mock exam mode felt identical to the real test — same length, same pressure. Calm app, calm result."</p>
-        <div class="rv-meta">
-          <div class="rv-av">L</div>
-          <div>Linnea · Stockholm<br/>passed May 2026</div>
-        </div>
-      </div>
-      <div class="rv reveal delay-1">
-        <div class="rv-stars">★★★★★</div>
-        <p class="rv-text">"I studied in English while learning the Swedish road system. Twelve languages was the reason I bought it — the 8-step plan is the reason I finished."</p>
-        <div class="rv-meta">
-          <div class="rv-av">M</div>
-          <div>Marek · Göteborg<br/>passed April 2026</div>
-        </div>
-      </div>
-      <div class="rv reveal delay-2">
-        <div class="rv-stars">★★★★★</div>
-        <p class="rv-text">"No streaks, no XP, no notifications screaming at me. Just the questions, every day, until I was ready. Whoever designed this — thank you."</p>
-        <div class="rv-meta">
-          <div class="rv-av">A</div>
-          <div>Anna · Malmö<br/>passed March 2026</div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+<!-- Reviews section removed — no fabricated testimonials. Will re-enable when real user quotes are collected. -->
 
 <!-- ─────── FAQ ─────── -->
 <section class="faq" data-screen-label="12 FAQ">
   <div class="wrap faq-grid">
     <div class="reveal">
-      <div class="sec-eyebrow"><span class="bar"></span>11 · FAQ</div>
-      <h2 class="sec-h">Honest <em>answers</em>.</h2>
-      <p class="sec-sub">A few questions we hear most often. If yours isn't here, write to us.</p>
+      <div class="sec-eyebrow"><span class="bar"></span><span data-i18n="kh.faq.eyebrow">10 · FAQ</span></div>
+      <h2 class="sec-h" data-i18n="kh.faq.h">Honest <em>answers</em>.</h2>
+      <p class="sec-sub" data-i18n="kh.faq.sub">A few questions we hear most often. If yours isn't here, write to us.</p>
     </div>
     <div class="faq-list reveal delay-1">
       <details class="faq-item">
-        <summary>Is Körkort Hero affiliated with Trafikverket?</summary>
-        <p class="a">No. We are an independent study app. Trafikverket is the Swedish Transport Administration; they run the official exam. We model our questions on their published format.</p>
+        <summary data-i18n="kh.faq.q1">Is Körkort Hero affiliated with Trafikverket?</summary>
+        <p class="a" data-i18n="kh.faq.a1">No. We are an independent study app. Trafikverket is the Swedish Transport Administration; they run the official exam. We model our questions on their published format.</p>
       </details>
       <details class="faq-item">
-        <summary>Do questions match the real exam?</summary>
-        <p class="a">They are modelled on the official format — same length, same difficulty curve, same wording style. We refresh the pool every term as the curriculum updates.</p>
+        <summary data-i18n="kh.faq.q2">Do questions match the real exam?</summary>
+        <p class="a" data-i18n="kh.faq.a2">They are modelled on the official format — same length, same difficulty curve, same wording style. We refresh the pool every term as the curriculum updates.</p>
       </details>
       <details class="faq-item">
-        <summary>How much does it cost?</summary>
-        <p class="a">A monthly membership is the equivalent of one driving lesson. No ads, no upsells, no tracking. Cancel anytime in one tap.</p>
+        <summary data-i18n="kh.faq.q3">How much does it cost?</summary>
+        <p class="a" data-i18n="kh.faq.a3">A monthly membership is the equivalent of one driving lesson. No ads, no upsells, no tracking. Cancel anytime in one tap.</p>
       </details>
       <details class="faq-item">
-        <summary>Which licence categories are covered?</summary>
-        <p class="a">Car (B) is fully covered. BE, A, A1, AM and Truck B are in the app with progressively fewer questions — we keep expanding.</p>
+        <summary data-i18n="kh.faq.q4">Which licence categories are covered?</summary>
+        <p class="a" data-i18n="kh.faq.a4">Car (B) is fully covered — that's the focus today. Other categories are on the roadmap.</p>
       </details>
       <details class="faq-item">
-        <summary>Does it work offline?</summary>
-        <p class="a">Yes. Download once, study on the train, sync when you're home. Local-first by default.</p>
+        <summary data-i18n="kh.faq.q5">Does it work offline?</summary>
+        <p class="a" data-i18n="kh.faq.a5">Yes. Download once, study on the train, sync when you're home. Local-first by default.</p>
       </details>
       <details class="faq-item">
-        <summary>What if I fail my real exam?</summary>
-        <p class="a">Your subscription stays active. Use the wrong-answer pool to focus, take another mock, retake the exam. We don't disappear after exam day.</p>
+        <summary data-i18n="kh.faq.q6">What if I fail my real exam?</summary>
+        <p class="a" data-i18n="kh.faq.a6">Your subscription stays active. Use the wrong-answer pool to focus, take another mock, retake the exam. We don't disappear after exam day.</p>
       </details>
     </div>
   </div>
@@ -1050,8 +1046,8 @@
 <!-- ─────── DOWNLOAD CTA ─────── -->
 <section class="download" id="download" data-screen-label="13 Download">
   <div class="wrap">
-    <h2 class="reveal"><em>Twenty-four</em> days to exam day. Start tonight.</h2>
-    <p class="download-sub reveal delay-1">Free to try · No credit card · Cancel anytime.<br/>Currently available on the App Store. Google Play coming this&nbsp;summer.</p>
+    <h2 class="reveal" data-i18n="kh.dl.h">Pass your <em>körkort.</em> Start tonight.</h2>
+    <p class="download-sub reveal delay-1" data-i18n="kh.dl.sub">Free to try · No credit card · Cancel anytime.<br/>Currently available on the App Store. Google Play coming this&nbsp;summer.</p>
 
     <div class="qr-zone reveal delay-2">
       <a class="qr-card" href="https://apps.apple.com/id/app/driving-license-in-sweden/id6762642524" target="_blank" rel="noopener">
@@ -1073,9 +1069,9 @@
           </svg>
         </div>
         <div class="qr-text">
-          <span class="qr-label">SCAN TO INSTALL</span>
-          <span class="qr-app">Körkort Hero on the App Store</span>
-          <span class="qr-hint">Or tap this card on your phone</span>
+          <span class="qr-label" data-i18n="kh.qr.label">SCAN TO INSTALL</span>
+          <span class="qr-app" data-i18n="kh.qr.app">Körkort Hero on the App Store</span>
+          <span class="qr-hint" data-i18n="kh.qr.hint">Or tap this card on your phone</span>
         </div>
       </a>
     </div>
@@ -1083,11 +1079,11 @@
     <div class="hero-cta reveal delay-2" style="justify-content:center; margin-top: 28px;">
       <a class="store-btn" href="https://apps.apple.com/id/app/driving-license-in-sweden/id6762642524" target="_blank" rel="noopener">
         <svg class="icn" viewBox="0 0 24 24" width="24" height="24" fill="currentColor" aria-hidden="true"><path d="M17.05 12.04c-.03-2.66 2.18-3.94 2.28-4.01-1.24-1.82-3.18-2.07-3.86-2.09-1.64-.17-3.2.97-4.04.97-.83 0-2.12-.95-3.49-.92-1.79.03-3.45 1.04-4.37 2.64-1.87 3.24-.48 8.04 1.34 10.67.89 1.29 1.95 2.74 3.32 2.69 1.34-.05 1.85-.86 3.47-.86 1.62 0 2.07.86 3.49.83 1.44-.02 2.35-1.32 3.23-2.61 1.02-1.5 1.44-2.95 1.46-3.03-.03-.01-2.8-1.07-2.83-4.28zM14.41 4.2c.74-.9 1.24-2.14 1.1-3.39-1.07.05-2.38.71-3.14 1.59-.68.78-1.28 2.05-1.12 3.26 1.2.09 2.42-.61 3.16-1.46z"/></svg>
-        <span class="lbl"><small>Download on the</small><b>App Store</b></span>
+        <span class="lbl"><small data-i18n="kh.store.appstore.small">Download on the</small><b>App Store</b></span>
       </a>
     </div>
 
-    <p class="reveal delay-3" style="margin-top: 36px; font-family: var(--mono); font-size: 11px; letter-spacing: 0.1em; color: var(--mute); text-transform: uppercase;">
+    <p class="reveal delay-3" style="margin-top: 36px; font-family: var(--mono); font-size: 11px; letter-spacing: 0.1em; color: var(--mute); text-transform: uppercase;" data-i18n="kh.dl.requires">
       Requires iOS 16+ · iPhone &amp; iPad · Free with optional membership
     </p>
   </div>
@@ -1096,12 +1092,12 @@
 <!-- ─────── FOOTER ─────── -->
 <footer>
   <div class="wrap foot-inner">
-    <div>© 2024–2026 NORDIC THEORY LABS AB · ORG.NR 559-XXX-XXX</div>
+    <div data-i18n="footer.copy">© 2024–2026 NORDIC THEORY LABS · STOCKHOLM, SWEDEN</div>
     <div style="text-align:center;">
-      <a href="../../index.html">← Back to studio</a>
+      <a href="../../index.html" data-i18n="kh.foot.back">← Back to studio</a>
     </div>
     <div style="text-align:right; display:flex; gap:18px; justify-content:flex-end;">
-      <a href="../../privacy/">Privacy</a><a href="../../terms/">Terms</a><a href="mailto:hello@nordictheorylabs.com">Press kit</a><a href="../../support.html">Support</a>
+      <a href="../../privacy/" data-i18n="footer.privacy">Privacy</a><a href="../../terms/" data-i18n="footer.terms">Terms</a><a href="mailto:hello@nordictheorylabs.com" data-i18n="footer.press">Press kit</a><a href="../../support.html" data-i18n="footer.support">Support</a>
     </div>
   </div>
 </footer>
@@ -1175,6 +1171,7 @@
   });
 })();
 </script>
+<script src="../../i18n.js"></script>
 
 </body>
 </html>
