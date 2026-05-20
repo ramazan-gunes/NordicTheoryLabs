@@ -1,64 +1,1071 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Terms of Use and Disclaimer — Körkort Hero | Nordic Theory Labs</title>
-  <meta name="description" content="Terms of Use and Disclaimer — Körkort Hero" />
-  <link rel="icon" type="image/svg+xml" href="../assets/logo.svg" />
-  <link rel="canonical" href="https://nordictheorylabs.com/terms/" />
-  <link rel="stylesheet" href="../assets/styles.css" />
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Terms of Service — Nordic Theory Labs</title>
+<meta name="description" content="The terms that govern your use of Nordic Theory Labs' website and apps, including Körkort Hero. Swedish law." />
+<link rel="icon" type="image/svg+xml" href="../logos/exports/signal/favicon.svg" />
+<link rel="icon" type="image/png" sizes="32x32" href="../logos/exports/signal/favicon-32.png" />
+<link rel="icon" type="image/png" sizes="16x16" href="../logos/exports/signal/favicon-16.png" />
+<link rel="apple-touch-icon" href="../logos/exports/signal/png/signal-appicon-1024.png" />
+<link rel="stylesheet" href="../assets/mobile-fixes.css" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+<style>
+  :root {
+    --paper:        #F1EEE6;
+    --paper-soft:   #E9E5DA;
+    --paper-warm:   #EFEAD8;
+    --ink:          #0E1620;
+    --ink-soft:     #2A323E;
+    --ink-mute:     #6B7280;
+    --line:         rgba(14, 22, 32, 0.12);
+    --line-soft:    rgba(14, 22, 32, 0.06);
+    --accent:       oklch(0.55 0.13 220);
+    --warn:         oklch(0.55 0.14 35);
+
+    --serif: "Instrument Serif", "Times New Roman", serif;
+    --sans:  "Manrope", "Helvetica Neue", system-ui, sans-serif;
+    --mono:  "JetBrains Mono", ui-monospace, monospace;
+
+    --col-pad: clamp(20px, 4vw, 56px);
+    --max:    1320px;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; }
+  html, body { background: var(--paper); color: var(--ink); }
+  body {
+    margin: 0;
+    font-family: var(--sans);
+    font-size: 16px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    overflow-x: hidden;
+  }
+  ::selection { background: var(--ink); color: var(--paper); }
+  a { color: inherit; text-decoration: none; }
+
+  body::before {
+    content: "";
+    position: fixed; inset: 0;
+    background-image: radial-gradient(rgba(14,22,32,0.035) 1px, transparent 1.4px);
+    background-size: 3px 3px;
+    mix-blend-mode: multiply;
+    pointer-events: none;
+    z-index: 1;
+  }
+
+  .wrap { max-width: var(--max); margin: 0 auto; padding: 0 var(--col-pad); position: relative; z-index: 2; }
+
+  /* NAV */
+  .nav {
+    position: sticky; top: 0; z-index: 50;
+    backdrop-filter: blur(14px) saturate(1.1);
+    -webkit-backdrop-filter: blur(14px) saturate(1.1);
+    background: color-mix(in oklab, var(--paper) 80%, transparent);
+    border-bottom: 1px solid var(--line-soft);
+  }
+  .nav-inner {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    gap: 32px;
+    padding: 16px 0;
+  }
+  .brand { display: flex; align-items: center; gap: 10px; font-weight: 600; letter-spacing: -0.01em; }
+  .brand-mark {
+    width: 30px; height: 30px;
+    display: inline-block;
+    background: var(--ink);
+    border-radius: 7px;
+    flex: 0 0 auto;
+  }
+  .brand-mark svg { display: block; width: 100%; height: 100%; }
+  .brand-mark .sig-frame { stroke: var(--paper); opacity: 0.55; }
+  .brand-mark .sig-axis  { stroke: var(--paper); opacity: 0.18; }
+  .brand-mark .sig-wave  { stroke: var(--paper); }
+  .brand-mark .sig-dot   { fill: var(--accent); }
+  .brand-name { font-size: 15px; }
+  .brand-name em { font-family: var(--serif); font-style: italic; font-weight: 400; }
+  .crumb {
+    justify-self: center;
+    display: flex; align-items: center; gap: 10px;
+    font-family: var(--mono); font-size: 11px; letter-spacing: 0.08em;
+    color: var(--ink-mute); text-transform: uppercase;
+  }
+  .crumb a { color: var(--ink-mute); transition: color 0.18s ease; }
+  .crumb a:hover { color: var(--ink); }
+  .crumb .sep { opacity: 0.4; }
+  .crumb .cur { color: var(--ink); }
+  .nav-meta {
+    display: flex; align-items: center; gap: 14px;
+    font-family: var(--mono); font-size: 11px;
+    color: var(--ink-mute); letter-spacing: 0.04em;
+  }
+  .pulse {
+    width: 7px; height: 7px; border-radius: 50%;
+    background: oklch(0.62 0.15 145);
+    box-shadow: 0 0 0 0 oklch(0.62 0.15 145 / 0.6);
+    animation: pulse 2.4s infinite;
+  }
+  @keyframes pulse {
+    0%   { box-shadow: 0 0 0 0 oklch(0.62 0.15 145 / 0.6); }
+    70%  { box-shadow: 0 0 0 10px oklch(0.62 0.15 145 / 0); }
+    100% { box-shadow: 0 0 0 0 oklch(0.62 0.15 145 / 0); }
+  }
+
+  /* HERO */
+  .hero {
+    padding: clamp(56px, 8vw, 110px) 0 clamp(36px, 5vw, 64px);
+    border-bottom: 1px solid var(--line);
+  }
+  .hero-eyebrow {
+    display: flex; align-items: center; gap: 14px;
+    font-family: var(--mono); font-size: 11px;
+    letter-spacing: 0.16em; text-transform: uppercase;
+    color: var(--ink-mute);
+    margin-bottom: 28px;
+  }
+  .hero-eyebrow .bar { width: 32px; height: 1px; background: var(--ink); }
+  .hero-eyebrow .dot { width: 5px; height: 5px; border-radius: 50%; background: var(--accent); }
+
+  h1.hero-title {
+    margin: 0;
+    font-family: var(--sans);
+    font-weight: 600;
+    font-size: clamp(48px, 7vw, 96px);
+    line-height: 1.02;
+    letter-spacing: -0.035em;
+    max-width: 18ch;
+    text-wrap: pretty;
+  }
+  h1.hero-title em {
+    font-family: var(--serif); font-style: italic; font-weight: 400;
+    color: var(--accent); letter-spacing: -0.01em;
+  }
+
+  .hero-sub {
+    margin-top: 28px;
+    max-width: 62ch;
+    font-size: clamp(17px, 1.5vw, 19px);
+    line-height: 1.55;
+    color: var(--ink-soft);
+  }
+
+  .hero-meta {
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1px;
+    background: var(--line);
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    overflow: hidden;
+  }
+  .hero-meta .cell {
+    background: var(--paper);
+    padding: 20px 22px;
+    display: flex; flex-direction: column; gap: 8px;
+  }
+  .hero-meta .k {
+    font-family: var(--mono); font-size: 10.5px; letter-spacing: 0.14em;
+    color: var(--ink-mute); text-transform: uppercase;
+  }
+  .hero-meta .v {
+    font-size: 14.5px; font-weight: 500; color: var(--ink);
+    line-height: 1.35;
+  }
+  .hero-meta .v em { font-family: var(--serif); font-style: italic; font-weight: 400; }
+
+  /* DOC */
+  .doc { padding: clamp(56px, 7vw, 96px) 0 clamp(80px, 9vw, 140px); }
+  .doc-grid {
+    display: grid;
+    grid-template-columns: 240px 1fr;
+    gap: clamp(40px, 6vw, 88px);
+    align-items: start;
+  }
+
+  aside.toc {
+    position: sticky; top: 92px;
+    align-self: start;
+    max-height: calc(100vh - 120px);
+    overflow-y: auto;
+    padding-right: 8px;
+  }
+  .toc-label {
+    font-family: var(--mono); font-size: 10.5px; letter-spacing: 0.14em;
+    text-transform: uppercase; color: var(--ink-mute);
+    padding-bottom: 14px;
+    border-bottom: 1px solid var(--line);
+    margin-bottom: 14px;
+    display: flex; justify-content: space-between; align-items: baseline;
+  }
+  .toc-label span:last-child { font-size: 10px; }
+  .toc ol {
+    list-style: none; margin: 0; padding: 0;
+    display: flex; flex-direction: column; gap: 2px;
+  }
+  .toc ol li a {
+    display: grid;
+    grid-template-columns: 28px 1fr;
+    gap: 6px;
+    padding: 7px 4px;
+    font-size: 13px;
+    color: var(--ink-mute);
+    border-radius: 6px;
+    transition: color 0.15s ease, background 0.15s ease;
+    line-height: 1.4;
+  }
+  .toc ol li a:hover { color: var(--ink); background: var(--paper-soft); }
+  .toc ol li a.active { color: var(--ink); font-weight: 500; }
+  .toc ol li a.active .num { color: var(--accent); }
+  .toc .num {
+    font-family: var(--mono); font-size: 10.5px;
+    color: var(--ink-mute); padding-top: 2px; letter-spacing: 0.04em;
+  }
+  .toc-foot {
+    margin-top: 22px;
+    padding-top: 14px;
+    border-top: 1px solid var(--line);
+    font-family: var(--mono); font-size: 10.5px; letter-spacing: 0.06em;
+    color: var(--ink-mute);
+    display: flex; flex-direction: column; gap: 6px;
+  }
+  .toc-foot a { color: var(--ink-mute); transition: color 0.15s ease; }
+  .toc-foot a:hover { color: var(--ink); }
+  .toc-mobile { display: none; }
+
+  main.doc-main { min-width: 0; max-width: 720px; }
+
+  section.sec { padding: clamp(32px, 4vw, 56px) 0; border-top: 1px solid var(--line); }
+  section.sec:first-child { padding-top: 0; border-top: 0; }
+
+  .sec-head {
+    display: flex; align-items: flex-start; gap: 24px;
+    margin-bottom: 28px;
+  }
+  .sec-num {
+    flex: 0 0 auto;
+    font-family: var(--mono); font-size: 12px;
+    letter-spacing: 0.1em; color: var(--ink-mute);
+    padding-top: 12px;
+  }
+  .sec-num::before {
+    content: "";
+    display: block;
+    width: 28px; height: 1px;
+    background: var(--ink);
+    margin-bottom: 8px;
+  }
+  .sec h2 {
+    margin: 0;
+    font-family: var(--sans);
+    font-weight: 600;
+    font-size: clamp(28px, 3vw, 38px);
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+    text-wrap: balance;
+  }
+  .sec h2 em { font-family: var(--serif); font-style: italic; font-weight: 400; color: var(--ink-soft); }
+
+  .sec h3 {
+    margin: 32px 0 10px;
+    font-family: var(--sans);
+    font-weight: 600;
+    font-size: 16px;
+    letter-spacing: -0.005em;
+  }
+
+  .sec p {
+    margin: 14px 0;
+    font-size: 15.5px;
+    line-height: 1.7;
+    color: var(--ink-soft);
+    max-width: 64ch;
+    text-wrap: pretty;
+  }
+  .sec p strong { color: var(--ink); font-weight: 600; }
+  .sec p a { color: var(--accent); text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 3px; }
+  .sec p a:hover { color: var(--ink); }
+
+  .sec ul {
+    margin: 14px 0;
+    padding: 0;
+    list-style: none;
+    display: flex; flex-direction: column; gap: 10px;
+    max-width: 64ch;
+  }
+  .sec ul li {
+    position: relative;
+    padding-left: 22px;
+    font-size: 15.5px;
+    line-height: 1.6;
+    color: var(--ink-soft);
+  }
+  .sec ul li::before {
+    content: "";
+    position: absolute;
+    left: 0; top: 0.7em;
+    width: 12px; height: 1px;
+    background: var(--ink-mute);
+  }
+  .sec ul li strong { color: var(--ink); font-weight: 600; }
+
+  .summary {
+    margin: 0 0 32px;
+    padding: 22px 24px;
+    background: var(--paper-warm);
+    border-radius: 12px;
+    border: 1px solid var(--line);
+  }
+  .summary-label {
+    font-family: var(--mono); font-size: 10.5px;
+    letter-spacing: 0.16em; text-transform: uppercase;
+    color: var(--ink-mute);
+    display: flex; align-items: center; gap: 10px;
+    margin-bottom: 10px;
+  }
+  .summary-label::before {
+    content: ""; width: 16px; height: 1px; background: var(--ink);
+  }
+  .summary p {
+    margin: 0;
+    font-family: var(--serif);
+    font-size: clamp(18px, 1.5vw, 21px);
+    line-height: 1.5;
+    color: var(--ink);
+    font-style: italic;
+    max-width: 56ch;
+    text-wrap: pretty;
+  }
+  .summary p::first-letter { font-style: normal; }
+
+  /* Callout */
+  .callout {
+    margin: 22px 0;
+    padding: 18px 22px;
+    border: 1px solid var(--line);
+    border-left: 3px solid var(--warn);
+    border-radius: 4px;
+    background: color-mix(in oklab, var(--paper-warm) 80%, transparent);
+    display: flex; gap: 16px;
+    align-items: flex-start;
+  }
+  .callout .glyph {
+    font-family: var(--serif); font-style: italic;
+    font-size: 28px; line-height: 1; color: var(--warn);
+    padding-top: 2px;
+  }
+  .callout .body { flex: 1; }
+  .callout .body .ttl {
+    font-family: var(--mono); font-size: 10.5px;
+    letter-spacing: 0.14em; text-transform: uppercase;
+    color: var(--ink-mute);
+    margin-bottom: 6px;
+    display: block;
+  }
+  .callout .body p {
+    margin: 0;
+    font-size: 14.5px;
+    color: var(--ink);
+    line-height: 1.55;
+  }
+
+  /* Pricing */
+  .pricing {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1px;
+    background: var(--line);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    overflow: hidden;
+    margin: 24px 0;
+  }
+  .price-card {
+    background: var(--paper);
+    padding: 22px;
+    display: flex; flex-direction: column; gap: 8px;
+    min-height: 150px;
+  }
+  .price-card .pname {
+    font-family: var(--mono); font-size: 10.5px; letter-spacing: 0.14em;
+    text-transform: uppercase; color: var(--ink-mute);
+  }
+  .price-card .pamt {
+    font-family: var(--sans); font-weight: 600;
+    font-size: 28px; letter-spacing: -0.02em;
+    color: var(--ink);
+    font-variant-numeric: tabular-nums;
+    line-height: 1;
+  }
+  .price-card .pamt em { font-family: var(--serif); font-style: italic; font-weight: 400; color: var(--ink-mute); font-size: 18px; }
+  .price-card .pper {
+    font-size: 13px; color: var(--ink-mute);
+    margin-top: auto;
+  }
+
+  /* Do/Dont */
+  .duck-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    margin: 24px 0;
+  }
+  .duck {
+    padding: 22px 24px;
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    background: var(--paper);
+  }
+  .duck.dont { background: color-mix(in oklab, var(--paper-warm) 50%, var(--paper)); }
+  .duck-head {
+    display: flex; align-items: center; gap: 10px;
+    font-family: var(--mono); font-size: 10.5px; letter-spacing: 0.14em;
+    text-transform: uppercase; color: var(--ink-mute);
+    margin-bottom: 14px;
+  }
+  .duck-head .glyph {
+    width: 18px; height: 18px;
+    display: inline-grid; place-items: center;
+    border-radius: 50%;
+    font-family: var(--serif); font-size: 14px; line-height: 1;
+    background: var(--ink); color: var(--paper);
+  }
+  .duck.dont .duck-head .glyph { background: var(--warn); }
+  .duck ul { margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 8px; }
+  .duck ul li {
+    padding-left: 18px;
+    position: relative;
+    font-size: 14px; line-height: 1.5;
+    color: var(--ink-soft);
+  }
+  .duck ul li::before {
+    content: "";
+    position: absolute; left: 0; top: 0.55em;
+    width: 10px; height: 1px;
+    background: var(--ink-mute);
+  }
+
+  /* Liability ladder */
+  .liab {
+    display: grid;
+    grid-template-columns: 60px 1fr;
+    gap: 18px;
+    margin: 22px 0;
+    padding: 18px 22px;
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    background: var(--paper);
+    align-items: center;
+  }
+  .liab .step {
+    font-family: var(--serif); font-style: italic;
+    font-size: 40px; line-height: 1;
+    color: var(--ink-mute);
+  }
+  .liab .step.cap { color: var(--warn); }
+  .liab .body p { margin: 0; font-size: 14.5px; color: var(--ink-soft); line-height: 1.55; }
+  .liab .body p strong { color: var(--ink); }
+
+  /* Contact */
+  .contact-box {
+    margin: 36px 0 0;
+    padding: 28px 30px;
+    background: var(--ink); color: var(--paper);
+    border-radius: 14px;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 24px;
+    align-items: center;
+  }
+  .contact-box .label {
+    font-family: var(--mono); font-size: 10.5px; letter-spacing: 0.16em;
+    text-transform: uppercase; color: oklch(0.72 0.02 220);
+    margin-bottom: 10px;
+  }
+  .contact-box h3 {
+    margin: 0 0 4px;
+    font-family: var(--sans); font-weight: 500;
+    font-size: 24px; letter-spacing: -0.01em;
+    color: var(--paper);
+  }
+  .contact-box h3 em { font-family: var(--serif); font-style: italic; font-weight: 400; }
+  .contact-box .meta {
+    font-family: var(--mono); font-size: 11px; letter-spacing: 0.08em;
+    color: oklch(0.72 0.02 220);
+    margin-top: 6px;
+  }
+  .contact-box .meta a { color: var(--paper); border-bottom: 1px solid oklch(0.72 0.02 220); }
+  .contact-box .pill {
+    display: inline-flex; align-items: center; gap: 8px;
+    padding: 10px 16px;
+    border-radius: 999px;
+    background: var(--paper); color: var(--ink);
+    font-size: 13px; font-weight: 500;
+    transition: transform 0.18s ease;
+  }
+  .contact-box .pill:hover { transform: translateY(-2px); }
+
+  /* History */
+  .history {
+    margin: 24px 0;
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    overflow: hidden;
+  }
+  .history .row {
+    display: grid;
+    grid-template-columns: 110px 90px 1fr;
+    gap: 18px;
+    padding: 14px 18px;
+    border-bottom: 1px solid var(--line-soft);
+    align-items: baseline;
+    font-size: 13.5px;
+  }
+  .history .row:last-child { border-bottom: 0; }
+  .history .date { font-family: var(--mono); font-size: 11px; color: var(--ink-mute); letter-spacing: 0.06em; }
+  .history .ver {
+    font-family: var(--mono); font-size: 11px; color: var(--ink);
+    padding: 2px 8px; border-radius: 999px; background: var(--paper-soft);
+    justify-self: start;
+  }
+  .history .row.current .ver { background: var(--ink); color: var(--paper); }
+  .history .note { color: var(--ink-soft); line-height: 1.5; }
+
+  /* Footer */
+  footer.foot { padding: 56px 0 32px; border-top: 1px solid var(--line); }
+  .foot-grid {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr 1fr 1fr;
+    gap: 36px;
+    padding-bottom: 36px;
+  }
+  .foot-grid .col { display: flex; flex-direction: column; gap: 8px; }
+  .foot-grid h4 {
+    margin: 0 0 6px;
+    font-family: var(--mono); font-size: 10.5px;
+    letter-spacing: 0.14em; text-transform: uppercase;
+    color: var(--ink-mute); font-weight: 500;
+  }
+  .foot-grid a { font-size: 13px; color: var(--ink-soft); transition: color 0.15s ease; }
+  .foot-grid a:hover { color: var(--ink); }
+  .foot-grid .col p { margin: 0; font-size: 13px; color: var(--ink-soft); max-width: 32ch; line-height: 1.55; }
+  .foot-bottom {
+    padding-top: 24px;
+    border-top: 1px solid var(--line);
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 24px;
+    font-family: var(--mono); font-size: 11px;
+    letter-spacing: 0.04em;
+    color: var(--ink-mute);
+  }
+
+  @media (max-width: 980px) {
+    .doc-grid { grid-template-columns: 1fr; }
+    aside.toc { display: none; }
+    .toc-mobile { display: block; margin-bottom: 32px; }
+    .hero-meta { grid-template-columns: repeat(2, 1fr); }
+    .pricing { grid-template-columns: 1fr; }
+    .duck-row { grid-template-columns: 1fr; }
+    .foot-grid { grid-template-columns: 1fr 1fr; }
+    .foot-bottom { grid-template-columns: 1fr; }
+  }
+  @media (max-width: 560px) {
+    .nav-meta { display: none; }
+    .crumb { display: none; }
+    .nav-inner { grid-template-columns: 1fr; }
+    .hero-meta { grid-template-columns: 1fr; }
+    .contact-box { grid-template-columns: 1fr; }
+    .sec-head { gap: 14px; }
+    .history .row { grid-template-columns: 1fr; gap: 4px; }
+    .foot-grid { grid-template-columns: 1fr; }
+    .liab { grid-template-columns: 1fr; }
+  }
+
+  details.toc-mobile {
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    background: var(--paper);
+  }
+  details.toc-mobile summary {
+    list-style: none;
+    cursor: pointer;
+    padding: 14px 18px;
+    display: flex; justify-content: space-between; align-items: center;
+    font-family: var(--mono); font-size: 11px; letter-spacing: 0.14em;
+    text-transform: uppercase; color: var(--ink);
+  }
+  details.toc-mobile summary::-webkit-details-marker { display: none; }
+  details.toc-mobile summary .chev { transition: transform 0.2s ease; }
+  details.toc-mobile[open] summary .chev { transform: rotate(180deg); }
+  details.toc-mobile ol {
+    list-style: none; margin: 0; padding: 8px 12px 14px;
+    display: flex; flex-direction: column; gap: 2px;
+    border-top: 1px solid var(--line-soft);
+  }
+  details.toc-mobile ol li a {
+    display: grid;
+    grid-template-columns: 32px 1fr;
+    padding: 7px 6px;
+    font-size: 14px;
+    color: var(--ink-soft);
+    border-radius: 6px;
+  }
+  details.toc-mobile ol li a .num { font-family: var(--mono); font-size: 10.5px; color: var(--ink-mute); padding-top: 3px; }
+</style>
 </head>
 <body>
 
 <header class="nav">
-  <div class="container nav-inner">
-    <a class="nav-brand" href="../">
-      <svg class="mark" viewBox="0 0 32 32" fill="none" aria-hidden="true">
-        <circle cx="16" cy="16" r="14.25" stroke="currentColor" stroke-width="1.5"/>
-        <path d="M11 22V10.5L21 21.5V10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-        <circle cx="16" cy="5.6" r="1.7" fill="currentColor"/>
-      </svg>
-      Nordic Theory Labs
+  <div class="wrap nav-inner">
+    <a href="../index.html" class="brand" aria-label="Nordic Theory Labs">
+      <span class="brand-mark" aria-hidden="true">
+        <svg viewBox="0 0 220 220" xmlns="http://www.w3.org/2000/svg">
+          <rect class="sig-frame" x="30" y="30" width="160" height="160" rx="22" ry="22" fill="none" stroke-width="3"></rect>
+          <line class="sig-axis" x1="50" y1="110" x2="170" y2="110" stroke-width="2"></line>
+          <path class="sig-wave" d="M 50 110 Q 70 50 90 110 Q 110 170 130 110 Q 150 50 170 110" fill="none" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"></path>
+          <circle class="sig-dot" cx="130" cy="110" r="10"></circle>
+        </svg>
+      </span>
+      <span class="brand-name">Nordic Theory <em>Labs</em></span>
     </a>
-    <nav class="nav-links" aria-label="Primary">
-      <a href="../">Home</a>
-      <a href="../apps/korkort-hero/" class="hide-sm">Körkort Hero</a>
-      <a href="../#contact">Contact</a>
-    </nav>
+    <div class="crumb">
+      <a href="../index.html">Studio</a>
+      <span class="sep">/</span>
+      <span>Legal</span>
+      <span class="sep">/</span>
+      <span class="cur">Terms</span>
+    </div>
+    <div class="nav-meta">
+      <span class="pulse"></span>
+      <span>STOCKHOLM · <span id="clock">--:--</span></span>
+    </div>
   </div>
 </header>
 
-<main>
-<article class="container article">
-  <div class="lang-bar">
+<style>
+.ntl-lang-bar { display:flex; flex-wrap:wrap; gap:6px; padding:10px 20px; justify-content:center;
+  background:rgba(0,0,0,0.025); border-bottom:1px solid rgba(0,0,0,0.06);
+  font-family:'JetBrains Mono', ui-monospace, monospace; }
+.ntl-lang-bar a { font-size:11px; font-weight:500; letter-spacing:0.04em; padding:4px 10px;
+  border-radius:999px; text-decoration:none; color:var(--ink, #111); background:transparent;
+  border:1px solid rgba(0,0,0,0.12); transition:background .15s, color .15s, border-color .15s; }
+.ntl-lang-bar a:hover, .ntl-lang-bar a.active {
+  background:var(--ink, #111); color:var(--paper, #fbfbfd); border-color:var(--ink, #111);
+}
+</style>
+<div class="ntl-lang-bar">
   <a href="index.html" class="active">English</a>
-  <a href="tr.html">Türkçe</a>
-  <a href="sv.html">Svenska</a>
-  <a href="ar.html">العربية</a>
-  <a href="fa.html">فارسی</a>
-  <a href="so.html">Soomaali</a>
-  <a href="ku.html">Kurdî</a>
-  <a href="pl.html">Polski</a>
-  <a href="fi.html">Suomi</a>
-  <a href="bs.html">Bosanski</a>
-  <a href="es.html">Español</a>
-  <a href="ru.html">Русский</a>
+  <a href="sv.html">Svenska</a><a href="tr.html">Türkçe</a><a href="ar.html">العربية</a>
+  <a href="fa.html">فارسی</a><a href="so.html">Soomaali</a><a href="ku.html">Kurdî</a>
+  <a href="pl.html">Polski</a><a href="fi.html">Suomi</a><a href="bs.html">Bosanski</a>
+  <a href="es.html">Español</a><a href="ru.html">Русский</a>
 </div>
-  <div class="badge">Nordic Theory Labs</div>
-  <h1>Terms of Use and Disclaimer</h1>
-  <p class="meta">Körkort Hero &nbsp;·&nbsp; Terms Version 2026.04 &nbsp;·&nbsp; Last Updated: April 14, 2026</p>
-  <div class="summary-box">The provisions below describe the conditions of use, the limitations of liability, and the categories of prohibited conduct in a clear and professional way.</div>
-  <div class="intro-box">By downloading, installing, registering for, or continuing to use this application, you agree to the Terms of Use, the Privacy Policy, and the Prohibited Use Rules.</div>
-  <section><h2>Terms of Use</h2><ul><li>The application is provided as is, without any express or implied warranty that it will be error free, uninterrupted, or continuously available.</li><li>All content is provided only for general informational and supportive use and does not constitute official authority guidance, legal advice, or professional advice.</li><li>The developer may modify, restrict, suspend, or update features, content, access conditions, and these terms whenever deemed necessary and without prior notice.</li><li>If the terms are updated, your continued use of the application means that you accept the current version of the terms.</li></ul></section>
-<section><h2>Disclaimer</h2><ul><li>No guarantee is given that any information, explanation, question, suggestion, or reminder in the application is complete, current, or fully aligned with official sources.</li><li>The user remains solely responsible for their decisions, actions, device security, and compliance with applicable laws when using the application.</li><li>To the maximum extent permitted by law, the company, developer, and related parties are not liable for direct, indirect, incidental, consequential, or special damages arising from the use of or inability to use the application.</li><li>Users are responsible for independently verifying current laws, official rules, and notices issued by the relevant authorities in their jurisdiction.</li></ul></section>
-<section><h2>Prohibited Use</h2><ul><li>Users may not engage in unlawful, harmful, abusive, fraudulent, deceptive, or rights infringing conduct, or any activity that violates applicable law or third party rights.</li><li>Reverse engineering, attempts to access source code, unauthorized copying, redistribution, unlicensed commercial use, security bypass attempts, and conduct intended to overload systems are prohibited.</li><li>Automated abuse, bulk requests, scraping, fake account creation, access manipulation, and any attempt to misuse the service or circumvent controls are prohibited.</li><li>Access may be suspended, limited, or terminated without prior notice if suspicious or violating use is detected.</li></ul></section>
-  <footer class="legal-footer">
-    &copy; 2026 Nordic Theory Labs &nbsp;·&nbsp;
-    <a href="../privacy/">Privacy Policy</a>
-  </footer>
-</article>
-</main>
+
+<section class="hero" data-screen-label="01 Terms Hero">
+  <div class="wrap">
+    <div class="hero-eyebrow">
+      <span class="bar"></span>
+      <span>Legal · 02 of 02</span>
+      <span class="dot"></span>
+      <span>Terms of Service</span>
+    </div>
+    <h1 class="hero-title">
+      A short <em>handshake</em>,<br/>between us and you.
+    </h1>
+    <p class="hero-sub">
+      These are the terms that govern your use of our website and apps.
+      We've tried to keep them as direct as a passport stamp — the studio agrees to build well,
+      you agree to use it kindly, and Swedish courts have the final say if we disagree.
+    </p>
+
+    <div class="hero-meta">
+      <div class="cell">
+        <span class="k">Effective</span>
+        <span class="v">20 May 2026</span>
+      </div>
+      <div class="cell">
+        <span class="k">Version</span>
+        <span class="v">v1.4 · current</span>
+      </div>
+      <div class="cell">
+        <span class="k">Provider</span>
+        <span class="v"><em>Nordic Theory Labs AB</em><br/>Stockholm, SE</span>
+      </div>
+      <div class="cell">
+        <span class="k">Governing law</span>
+        <span class="v">Swedish law<br/>Stockholm tingsrätt</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="doc">
+  <div class="wrap">
+    <div class="doc-grid">
+
+      <aside class="toc" aria-label="Table of contents">
+        <div class="toc-label">
+          <span>On this page</span>
+          <span>11</span>
+        </div>
+        <ol id="toc-list">
+          <li><a href="#agree"><span class="num">01</span><span>The agreement</span></a></li>
+          <li><a href="#svc"><span class="num">02</span><span>What we provide</span></a></li>
+          <li><a href="#acct"><span class="num">03</span><span>Your account</span></a></li>
+          <li><a href="#use"><span class="num">04</span><span>Acceptable use</span></a></li>
+          <li><a href="#pay"><span class="num">05</span><span>Subscriptions &amp; payments</span></a></li>
+          <li><a href="#ip"><span class="num">06</span><span>Intellectual property</span></a></li>
+          <li><a href="#dis"><span class="num">07</span><span>Disclaimers</span></a></li>
+          <li><a href="#liab"><span class="num">08</span><span>Limitation of liability</span></a></li>
+          <li><a href="#end"><span class="num">09</span><span>Termination</span></a></li>
+          <li><a href="#law"><span class="num">10</span><span>Governing law</span></a></li>
+          <li><a href="#changes"><span class="num">11</span><span>Changes &amp; contact</span></a></li>
+        </ol>
+        <div class="toc-foot">
+          <a href="../privacy/index.html">→ Privacy Policy</a>
+          <a href="../index.html">← Back to studio</a>
+        </div>
+      </aside>
+
+      <main class="doc-main">
+
+        <details class="toc-mobile">
+          <summary>
+            <span>Jump to section</span>
+            <svg class="chev" width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 4l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </summary>
+          <ol>
+            <li><a href="#agree"><span class="num">01</span>The agreement</a></li>
+            <li><a href="#svc"><span class="num">02</span>What we provide</a></li>
+            <li><a href="#acct"><span class="num">03</span>Your account</a></li>
+            <li><a href="#use"><span class="num">04</span>Acceptable use</a></li>
+            <li><a href="#pay"><span class="num">05</span>Subscriptions &amp; payments</a></li>
+            <li><a href="#ip"><span class="num">06</span>Intellectual property</a></li>
+            <li><a href="#dis"><span class="num">07</span>Disclaimers</a></li>
+            <li><a href="#liab"><span class="num">08</span>Limitation of liability</a></li>
+            <li><a href="#end"><span class="num">09</span>Termination</a></li>
+            <li><a href="#law"><span class="num">10</span>Governing law</a></li>
+            <li><a href="#changes"><span class="num">11</span>Changes &amp; contact</a></li>
+          </ol>
+        </details>
+
+        <section class="sec" id="agree">
+          <div class="sec-head">
+            <span class="sec-num">01</span>
+            <h2>Who is agreeing to <em>what</em>.</h2>
+          </div>
+          <div class="summary">
+            <div class="summary-label">In short</div>
+            <p>By using our website or downloading our apps, you agree to these terms. If you don't, please don't. Both halves of that sentence matter.</p>
+          </div>
+          <p>These Terms of Service ("Terms") form a binding agreement between you and <strong>Nordic Theory Labs AB</strong> ("we", "us", "studio"), a Swedish limited company with Stockholm, Sweden — organisation details available on request.</p>
+          <p>They govern your use of:</p>
+          <ul>
+            <li>The <strong>nordictheorylabs.com</strong> website and any subdomains.</li>
+            <li>The <strong>Körkort Hero</strong> iOS application and any future apps we publish.</li>
+            <li>Any future products explicitly linked to these Terms.</li>
+          </ul>
+          <p>If you are using the service on behalf of an organisation, you confirm you have authority to bind that organisation. If you are under 18, your parent or guardian agrees on your behalf.</p>
+        </section>
+
+        <section class="sec" id="svc">
+          <div class="sec-head">
+            <span class="sec-num">02</span>
+            <h2>What we provide, <em>and what we don't promise</em>.</h2>
+          </div>
+          <div class="summary">
+            <div class="summary-label">In short</div>
+            <p>We build educational software, designed thoughtfully. We try very hard for it to be available, accurate and useful — but we don't guarantee perfection, uptime, or your exam result.</p>
+          </div>
+          <p>The studio designs and operates educational and productivity software. Our flagship product, <strong>Körkort Hero</strong>, is a study aid for the Swedish theory driving test (<em>Trafikverkets kunskapsprov</em>). It is <strong>not</strong> a substitute for the official Transportstyrelsen materials, nor for time spent with a licensed instructor.</p>
+
+          <div class="callout">
+            <span class="glyph">!</span>
+            <div class="body">
+              <span class="ttl">No exam guarantee</span>
+              <p>Passing the Swedish theory test depends on study, attention and luck on the day. We build Körkort Hero to maximise your chances — we cannot, and do not, guarantee any specific result. Refunds are not issued because a test was failed.</p>
+            </div>
+          </div>
+
+          <h3>Availability</h3>
+          <p>We aim for high availability but provide the service on an <strong>"as is" and "as available"</strong> basis. Maintenance windows, third-party outages, or unforeseen events may interrupt the service. We will publish status updates at <em>status.nordictheorylabs.com</em> where practical.</p>
+
+          <h3>Beta features</h3>
+          <p>Features marked "beta", "lab", or "experimental" are provided for testing and may change or be removed without notice. They are excluded from any uptime expectation.</p>
+        </section>
+
+        <section class="sec" id="acct">
+          <div class="sec-head">
+            <span class="sec-num">03</span>
+            <h2>Your account, and your <em>device</em>.</h2>
+          </div>
+          <div class="summary">
+            <div class="summary-label">In short</div>
+            <p>Körkort Hero is tied to your Apple ID, not to a separate Nordic Theory Labs login. Keep your Apple ID safe; we never ask you for it.</p>
+          </div>
+          <p>We do not operate our own user accounts. Subscriptions, sync, and family sharing are handled by Apple through your Apple ID. You are responsible for:</p>
+          <ul>
+            <li>Keeping your Apple ID and device secure.</li>
+            <li>The activity that happens under your Apple ID.</li>
+            <li>Configuring Family Sharing and "Ask to Buy" if children use your device.</li>
+          </ul>
+          <p>If you suspect your Apple ID has been compromised, contact Apple Support directly. We have no ability to recover, reset, or transfer Apple-managed subscriptions.</p>
+        </section>
+
+        <section class="sec" id="use">
+          <div class="sec-head">
+            <span class="sec-num">04</span>
+            <h2>Acceptable <em>use</em>.</h2>
+          </div>
+          <div class="summary">
+            <div class="summary-label">In short</div>
+            <p>Use the service the way you'd use a quiet library. Don't break it, don't resell it, don't use it to do things that hurt people.</p>
+          </div>
+
+          <div class="duck-row">
+            <div class="duck do">
+              <div class="duck-head"><span class="glyph">✓</span><span>You may</span></div>
+              <ul>
+                <li>Use Körkort Hero to prepare for your theory test.</li>
+                <li>Share screenshots on social media — credit appreciated.</li>
+                <li>Quote short passages from our website for review or commentary.</li>
+                <li>Write to us with feedback, bug reports, or feature requests.</li>
+              </ul>
+            </div>
+            <div class="duck dont">
+              <div class="duck-head"><span class="glyph">×</span><span>You may not</span></div>
+              <ul>
+                <li>Reverse-engineer, decompile, or extract the question bank.</li>
+                <li>Resell, sublicense, or commercially redistribute the service.</li>
+                <li>Use the service to bring actual answers into a live exam.</li>
+                <li>Probe, scan, or stress-test our infrastructure without permission.</li>
+                <li>Use the service for anything illegal under Swedish or EU law.</li>
+              </ul>
+            </div>
+          </div>
+
+          <p>Violating these rules may result in suspension of access without refund and, where appropriate, referral to authorities. We will tell you what we found and give you a chance to respond, unless doing so would compromise an investigation.</p>
+        </section>
+
+        <section class="sec" id="pay">
+          <div class="sec-head">
+            <span class="sec-num">05</span>
+            <h2>Subscriptions, payments, <em>refunds</em>.</h2>
+          </div>
+          <div class="summary">
+            <div class="summary-label">In short</div>
+            <p>Apple sells our subscriptions. Apple handles refunds. We don't process your card or see what you spent.</p>
+          </div>
+
+          <h3>What the subscription unlocks</h3>
+          <p>A Körkort Hero subscription unlocks the full question bank, all 6 study modes, all 12 interface languages, and unlimited mock-exam attempts. A free tier covers a sample of the content so you can decide before subscribing.</p>
+
+          <h3>Current pricing</h3>
+          <p>Prices are displayed in your local App Store currency and may change. The most up-to-date prices always live on the <a href="https://apps.apple.com/id/app/driving-license-in-sweden/id6762642524" target="_blank" rel="noopener">App Store listing</a>. The app currently offers a recurring subscription with a free trial; lifetime access may be available depending on region.</p>
+
+          <h3>Auto-renewal</h3>
+          <p>Recurring subscriptions auto-renew through Apple at the end of each period unless cancelled at least 24 hours before renewal. You can cancel at any time in iOS <em>Settings → Apple ID → Subscriptions</em>.</p>
+
+          <h3>Refunds</h3>
+          <p>All payments are processed by Apple. To request a refund, follow Apple's process at <em>reportaproblem.apple.com</em>. We do not have authority to issue refunds for App Store transactions, but we will support reasonable requests when contacted by Apple.</p>
+
+          <h3>Lifetime — what it means</h3>
+          <p>"Lifetime" refers to the lifetime of the Körkort Hero product, not the user's natural lifetime. If we ever discontinue the product, we will give existing lifetime subscribers at least 12 months' notice.</p>
+        </section>
+
+        <section class="sec" id="ip">
+          <div class="sec-head">
+            <span class="sec-num">06</span>
+            <h2>Intellectual <em>property</em>.</h2>
+          </div>
+          <div class="summary">
+            <div class="summary-label">In short</div>
+            <p>The studio owns the design, code, and writing. You own the data you create inside the apps. Logos and names are ours; trademark notices apply.</p>
+          </div>
+          <p>All software, text, design, illustrations, logos, the <strong>Signal</strong> mark, and the <strong>Körkort Hero</strong> name are owned by Nordic Theory Labs AB or licensed to us. They are protected by Swedish and international copyright and trademark law.</p>
+          <p>We grant you a limited, non-exclusive, non-transferable licence to use the service for personal, non-commercial purposes, subject to these Terms.</p>
+          <p>Content you create inside the apps — notes, bookmarks, study tags — remains yours. It is stored on your device and we claim no ownership of it.</p>
+          <p>If you believe content on our service infringes your IP, write to <a href="mailto:support@nordictheorylabs.com">support@nordictheorylabs.com</a> with the details set out in Article 17 of the EU Digital Services Act.</p>
+        </section>
+
+        <section class="sec" id="dis">
+          <div class="sec-head">
+            <span class="sec-num">07</span>
+            <h2>Disclaimers — what we are <em>not</em>.</h2>
+          </div>
+          <div class="summary">
+            <div class="summary-label">In short</div>
+            <p>We're a study aid, not a school. Not a driving instructor. Not Trafikverket. Not your lawyer or your insurer.</p>
+          </div>
+          <p>To the maximum extent permitted by Swedish law, the service is provided <strong>"as is"</strong> without warranties of any kind, whether express or implied, including but not limited to merchantability, fitness for a particular purpose, accuracy, completeness, or non-infringement.</p>
+          <p>Without limiting the generality of the above:</p>
+          <ul>
+            <li>We are not affiliated with <strong>Transportstyrelsen</strong>, <strong>Trafikverket</strong>, or the Swedish state.</li>
+            <li>Question content is written to mirror the official curriculum but may differ in wording, emphasis, or scope.</li>
+            <li>Practical driving — vehicle control, road behaviour — is not taught by the app and requires a licensed instructor.</li>
+            <li>Your statutory rights as a consumer under Swedish law (<em>Konsumentköplagen</em>) are not affected by this clause.</li>
+          </ul>
+        </section>
+
+        <section class="sec" id="liab">
+          <div class="sec-head">
+            <span class="sec-num">08</span>
+            <h2>Limitation of <em>liability</em>.</h2>
+          </div>
+          <div class="summary">
+            <div class="summary-label">In short</div>
+            <p>If we mess up and it costs you money, we'll make it right up to what you paid us in the last 12 months. We don't cover indirect losses — but we never limit liability where the law forbids it.</p>
+          </div>
+
+          <div class="liab">
+            <span class="step">i</span>
+            <div class="body">
+              <p><strong>Direct losses</strong> — to the extent permitted by law, our total liability for any claim arising out of or relating to these Terms or the service is capped at the greater of <strong>500 SEK</strong> or <strong>the amount you paid us in the 12 months before the claim arose</strong>.</p>
+            </div>
+          </div>
+          <div class="liab">
+            <span class="step">ii</span>
+            <div class="body">
+              <p><strong>Indirect losses</strong> — we are not liable for indirect, consequential, special, or incidental damages, including lost time, lost study progress, missed exam slots, or loss of opportunity. This is the part of the contract people care about most; we're flagging it plainly.</p>
+            </div>
+          </div>
+          <div class="liab">
+            <span class="step cap">iii</span>
+            <div class="body">
+              <p><strong>What we never limit</strong> — liability for our own gross negligence or wilful misconduct, for personal injury or death we cause, for our consumer-protection obligations under Swedish law, and for anything else that cannot lawfully be excluded. Those remain fully in force.</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="sec" id="end">
+          <div class="sec-head">
+            <span class="sec-num">09</span>
+            <h2>Ending the <em>agreement</em>.</h2>
+          </div>
+          <div class="summary">
+            <div class="summary-label">In short</div>
+            <p>Stop using the service. Cancel your subscription in iOS Settings. Delete the app. That's it from your side. We may end the agreement only for material reasons, and we'll tell you why.</p>
+          </div>
+          <p>You can end this agreement at any time by uninstalling the app and discontinuing use of the website. Cancelling your subscription is handled in iOS <em>Settings → Apple ID → Subscriptions</em>.</p>
+          <p>We may suspend or end the agreement if you materially breach these Terms, if continued provision would be unlawful, or if we discontinue the service. Unless prevented by law, we'll give you reasonable notice and an opportunity to remedy any breach.</p>
+          <p>Sections about Intellectual Property, Disclaimers, Limitation of Liability, and Governing Law survive termination.</p>
+        </section>
+
+        <section class="sec" id="law">
+          <div class="sec-head">
+            <span class="sec-num">10</span>
+            <h2>Governing law, <em>and where we'd argue</em>.</h2>
+          </div>
+          <div class="summary">
+            <div class="summary-label">In short</div>
+            <p>Swedish law. Stockholm courts. If you're a consumer in the EU, you keep the protections of your home country's law.</p>
+          </div>
+          <p>These Terms are governed by the laws of Sweden, excluding its conflict-of-laws rules and the UN Convention on Contracts for the International Sale of Goods.</p>
+          <p>Disputes will be brought before <strong>Stockholms tingsrätt</strong> as the court of first instance. If you are a consumer resident in another EU member state, you retain the mandatory protections of your home country's consumer law and may bring a claim in your local courts where the law allows.</p>
+          <p>EU consumers may also use the European Commission's <strong>Online Dispute Resolution</strong> platform at <em>ec.europa.eu/consumers/odr</em>. Before formal proceedings, we'd rather talk — write to <a href="mailto:support@nordictheorylabs.com">support@nordictheorylabs.com</a> and we will reply within 14 days.</p>
+        </section>
+
+        <section class="sec" id="changes">
+          <div class="sec-head">
+            <span class="sec-num">11</span>
+            <h2>How these Terms <em>change</em>.</h2>
+          </div>
+          <div class="summary">
+            <div class="summary-label">In short</div>
+            <p>Material changes are announced 30 days before they take effect. Editorial fixes are noted quietly. Every version below.</p>
+          </div>
+
+          <div class="history">
+            <div class="row current">
+              <span class="date">20 May 2026</span>
+              <span class="ver">2026.05</span>
+              <span class="note">Rewritten alongside the v1.0.2 site relaunch. Removed iCloud sync references (not implemented in the app). Pricing strip replaced with a link to the live App Store listing.</span>
+            </div>
+          </div>
+
+          <div class="contact-box">
+            <div>
+              <div class="label">Legal contact</div>
+              <h3>Need to flag something? <em>Write to us.</em></h3>
+              <div class="meta"><a href="mailto:support@nordictheorylabs.com">support@nordictheorylabs.com</a> · 14-day response · EN / SV / TR</div>
+            </div>
+            <a href="mailto:support@nordictheorylabs.com" class="pill">Open mail →</a>
+          </div>
+        </section>
+
+      </main>
+    </div>
+  </div>
+</div>
+
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="col">
+        <h4>Studio</h4>
+        <p><strong>Nordic Theory Labs AB</strong><br/><em>Stockholm, Sweden</em></p>
+      </div>
+      <div class="col">
+        <h4>Legal</h4>
+        <a href="../privacy/index.html">Privacy</a>
+        <a href="../terms/index.html">Terms</a>
+        <a href="../index.html#contact">Imprint</a>
+      </div>
+      <div class="col">
+        <h4>Products</h4>
+        <a href="../apps/korkort-hero/">Körkort Hero</a>
+        <a href="../index.html#lab">Lab Notes</a>
+      </div>
+      <div class="col">
+        <h4>Contact</h4>
+        <a href="mailto:support@nordictheorylabs.com">support@</a>
+        <a href="mailto:hello@nordictheorylabs.com">hello@</a>
+        <a href="mailto:press@nordictheorylabs.com">press@</a>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <div>© 2024–2026 NORDIC THEORY LABS · STOCKHOLM, SWEDEN</div>
+      <div style="text-align:center;">MADE IN STOCKHOLM · SHIPPED FROM HELSINKI</div>
+      <div style="text-align:right;"><a href="../index.html">← Back to studio</a></div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  function tickClock() {
+    const el = document.getElementById('clock');
+    if (!el) return;
+    try {
+      const t = new Date().toLocaleTimeString('sv-SE', { hour: '2-digit', minute: '2-digit', timeZone: 'Europe/Stockholm' });
+      el.textContent = t;
+    } catch(e) {}
+  }
+  tickClock();
+  setInterval(tickClock, 30000);
+
+  const tocLinks = document.querySelectorAll('#toc-list a');
+  const sections = Array.from(tocLinks).map(a => document.querySelector(a.getAttribute('href')));
+  function syncToc() {
+    const y = window.scrollY + 140;
+    let active = sections[0];
+    for (const s of sections) {
+      if (s && s.offsetTop <= y) active = s;
+    }
+    tocLinks.forEach(a => {
+      a.classList.toggle('active', a.getAttribute('href') === '#' + active.id);
+    });
+  }
+  window.addEventListener('scroll', syncToc, { passive: true });
+  syncToc();
+</script>
 
 </body>
 </html>
