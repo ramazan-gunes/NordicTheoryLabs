@@ -2931,9 +2931,94 @@
     });
   }
 
+  function injectStyles() {
+    if (document.getElementById("ntl-i18n-styles")) return;
+    const css = `
+      .lang-picker { position: relative; display: inline-flex; }
+      .lang-btn {
+        display: inline-flex; align-items: center; gap: 6px;
+        padding: 6px 9px 6px 10px;
+        border: 1px solid currentColor;
+        border-radius: 999px;
+        font-family: var(--mono, ui-monospace, monospace); font-size: 11px;
+        letter-spacing: 0.08em;
+        color: currentColor; opacity: 0.7;
+        background: transparent;
+        transition: opacity 0.18s ease, background 0.18s ease;
+        cursor: pointer;
+      }
+      .lang-btn:hover { opacity: 1; }
+      .lang-btn svg { opacity: 0.85; }
+      .lang-btn #langShort { font-weight: 500; }
+      .lang-menu {
+        position: absolute; top: calc(100% + 8px); right: 0;
+        min-width: 200px;
+        padding: 6px;
+        background: var(--paper, #fbfbfd);
+        color: var(--ink, #0b1218);
+        border: 1px solid rgba(0,0,0,0.10);
+        border-radius: 12px;
+        box-shadow: 0 12px 40px -8px rgba(14,22,32,0.25), 0 2px 6px -2px rgba(14,22,32,0.12);
+        opacity: 0; pointer-events: none;
+        transform: translateY(-4px);
+        transition: opacity 0.18s ease, transform 0.18s ease;
+        z-index: 200;
+        display: flex; flex-direction: column; gap: 1px;
+      }
+      html[dir="rtl"] .lang-menu { right: auto; left: 0; }
+      .lang-picker.open .lang-menu { opacity: 1; pointer-events: auto; transform: translateY(0); }
+      .lang-menu button {
+        display: flex; align-items: baseline; gap: 12px;
+        padding: 8px 12px;
+        border-radius: 8px;
+        text-align: left;
+        color: inherit; opacity: 0.7;
+        cursor: pointer;
+        background: transparent; border: 0;
+        transition: background 0.12s ease, opacity 0.12s ease;
+      }
+      html[dir="rtl"] .lang-menu button { text-align: right; }
+      .lang-menu button:hover { background: rgba(0,0,0,0.05); opacity: 1; }
+      .lang-menu button.active { opacity: 1; background: rgba(0,0,0,0.06); }
+      .lang-menu .ll-short {
+        font-family: var(--mono, ui-monospace, monospace); font-size: 10.5px; letter-spacing: 0.1em;
+        opacity: 0.6; min-width: 22px;
+      }
+      .lang-menu button.active .ll-short { opacity: 1; }
+      .lang-menu .ll-label {
+        font-family: var(--sans, system-ui, sans-serif); font-size: 13.5px; letter-spacing: 0;
+        text-transform: none;
+      }
+    `;
+    const style = document.createElement("style");
+    style.id = "ntl-i18n-styles";
+    style.textContent = css;
+    document.head.appendChild(style);
+  }
+
+  function findPickerSlot() {
+    // Preferred: nav-meta (index.html landing)
+    let meta = document.querySelector(".nav-meta");
+    if (meta) return { host: meta, prepend: true };
+    // Apps page fallback: empty middle div of nav-inner
+    const navInner = document.querySelector(".nav-inner");
+    if (navInner) {
+      const emptyDiv = Array.from(navInner.children).find(
+        (c) => c.tagName === "DIV" && c.children.length === 0 && !c.className
+      );
+      if (emptyDiv) return { host: emptyDiv, prepend: false };
+      return { host: navInner, prepend: true };
+    }
+    return null;
+  }
+
   function buildPicker() {
-    const meta = document.querySelector(".nav-meta") || document.querySelector(".nav-inner");
-    if (!meta) return;
+    const slot = findPickerSlot();
+    if (!slot) return;
+    // Only inject default picker CSS on pages that don't supply their own
+    // (index.html already has tuned .lang-picker styles in its <style>).
+    if (!document.querySelector(".nav-meta")) injectStyles();
+    const meta = slot.host;
 
     const wrap = document.createElement("div");
     wrap.className = "lang-picker";
@@ -2959,7 +3044,16 @@
       </div>
     `;
 
-    meta.insertBefore(wrap, meta.firstChild);
+    if (slot.prepend) {
+      meta.insertBefore(wrap, meta.firstChild);
+    } else {
+      meta.appendChild(wrap);
+    }
+    // center the picker if it lives in the middle grid column on apps page
+    if (!slot.prepend) {
+      meta.style.display = "flex";
+      meta.style.justifyContent = "center";
+    }
 
     const btn = wrap.querySelector("#langBtn");
     const menu = wrap.querySelector(".lang-menu");
