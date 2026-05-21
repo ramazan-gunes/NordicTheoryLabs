@@ -1,0 +1,26 @@
+{
+  "name": "Nordic Theory Labs",
+  "short_name": "NTL",
+  "description": "Independent software studio building calm, deliberate apps from Stockholm, Sweden.",
+  "start_url": "/",
+  "display": "browser",
+  "background_color": "#F1EEE6",
+  "theme_color": "#0E1620",
+  "icons": [
+    {
+      "src": "/logos/exports/signal/favicon-16.png",
+      "sizes": "16x16",
+      "type": "image/png"
+    },
+    {
+      "src": "/logos/exports/signal/favicon-32.png",
+      "sizes": "32x32",
+      "type": "image/png"
+    },
+    {
+      "src": "/logos/exports/signal/png/signal-appicon-1024.png",
+      "sizes": "1024x1024",
+      "type": "image/png"
+    }
+  ]
+}
