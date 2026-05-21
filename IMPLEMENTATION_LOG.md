@@ -256,3 +256,75 @@ Generated HTML routes:
 - `blog/ru/prakticheskiy-ekzamen-v-shvetsii.html`
 
 Official driving test guidance was checked on 2026-05-21 against Trafikverket public pages. The English blog archive now includes a card for this topic.
+
+## Driving Licence Process Topic 6
+
+Created the multilingual draft set for "Learner's permit and eye test in Sweden" and regenerated static blog pages.
+
+Draft markdown files:
+
+- `content/blog/en/posts/learner-permit-eye-test-sweden.md`
+- `content/blog/sv/posts/korkortstillstand-syntest.md`
+- `content/blog/tr/posts/isvecte-korkortstillstand-goz-testi.md`
+- `content/blog/ar/posts/learner-permit-eye-test-sweden.md`
+- `content/blog/fa/posts/learner-permit-eye-test-sweden.md`
+- `content/blog/so/posts/learner-permit-eye-test-sweden.md`
+- `content/blog/ku/posts/learner-permit-eye-test-sweden.md`
+- `content/blog/pl/posts/pozwolenie-na-nauke-jazdy-badanie-wzroku-szwecja.md`
+- `content/blog/fi/posts/opetuslupa-nakotesti-ruotsi.md`
+- `content/blog/bs/posts/dozvola-za-vjezbanje-vida-svedska.md`
+- `content/blog/es/posts/permiso-aprendizaje-examen-vista-suecia.md`
+- `content/blog/ru/posts/uchenicheskoe-razreshenie-proverka-zreniya-shvetsiya.md`
+
+Generated HTML routes:
+
+- `blog/learner-permit-eye-test-sweden.html`
+- `blog/sv/korkortstillstand-syntest.html`
+- `blog/tr/isvecte-korkortstillstand-goz-testi.html`
+- `blog/ar/learner-permit-eye-test-sweden.html`
+- `blog/fa/learner-permit-eye-test-sweden.html`
+- `blog/so/learner-permit-eye-test-sweden.html`
+- `blog/ku/learner-permit-eye-test-sweden.html`
+- `blog/pl/pozwolenie-na-nauke-jazdy-badanie-wzroku-szwecja.html`
+- `blog/fi/opetuslupa-nakotesti-ruotsi.html`
+- `blog/bs/dozvola-za-vjezbanje-vida-svedska.html`
+- `blog/es/permiso-aprendizaje-examen-vista-suecia.html`
+- `blog/ru/uchenicheskoe-razreshenie-proverka-zreniya-shvetsiya.html`
+
+Official learner permit and practice guidance was checked on 2026-05-21 against Transportstyrelsen public pages. The English blog archive now includes a card for this topic.
+
+## Driving Licence Process Topic 7
+
+Created the multilingual draft set for "Private driving practice in Sweden" and regenerated static blog pages.
+
+Draft markdown files:
+
+- `content/blog/en/posts/private-practice-supervisor-sweden.md`
+- `content/blog/sv/posts/privat-ovningskorning-handledare.md`
+- `content/blog/tr/posts/isvecte-ozel-direksiyon-calismasi-handledare.md`
+- `content/blog/ar/posts/private-practice-supervisor-sweden.md`
+- `content/blog/fa/posts/private-practice-supervisor-sweden.md`
+- `content/blog/so/posts/private-practice-supervisor-sweden.md`
+- `content/blog/ku/posts/private-practice-supervisor-sweden.md`
+- `content/blog/pl/posts/jazdy-prywatne-opiekun-szwecja.md`
+- `content/blog/fi/posts/yksityinen-ajoharjoittelu-ohjaaja-ruotsi.md`
+- `content/blog/bs/posts/privatna-voznja-handledare-svedska.md`
+- `content/blog/es/posts/practica-privada-supervisor-suecia.md`
+- `content/blog/ru/posts/chastnaya-praktika-vozhdeniya-shvetsiya.md`
+
+Generated HTML routes:
+
+- `blog/private-practice-supervisor-sweden.html`
+- `blog/sv/privat-ovningskorning-handledare.html`
+- `blog/tr/isvecte-ozel-direksiyon-calismasi-handledare.html`
+- `blog/ar/private-practice-supervisor-sweden.html`
+- `blog/fa/private-practice-supervisor-sweden.html`
+- `blog/so/private-practice-supervisor-sweden.html`
+- `blog/ku/private-practice-supervisor-sweden.html`
+- `blog/pl/jazdy-prywatne-opiekun-szwecja.html`
+- `blog/fi/yksityinen-ajoharjoittelu-ohjaaja-ruotsi.html`
+- `blog/bs/privatna-voznja-handledare-svedska.html`
+- `blog/es/practica-privada-supervisor-suecia.html`
+- `blog/ru/chastnaya-praktika-vozhdeniya-shvetsiya.html`
+
+Official private practice and introduction course guidance was checked on 2026-05-21 against Transportstyrelsen public pages. The English blog archive now includes a card for this topic.
