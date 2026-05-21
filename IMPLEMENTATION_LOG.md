@@ -220,3 +220,39 @@ Generated HTML routes:
 - `blog/ru/teoriticheskiy-ekzamen-v-shvetsii.html`
 
 Official theory test guidance was checked on 2026-05-21 against Trafikverket public pages. The English blog archive now includes a card for this topic.
+
+## Driving Licence Process Topic 5
+
+Created the multilingual draft set for "Swedish driving test for category B" and regenerated static blog pages.
+
+Draft markdown files:
+
+- `content/blog/en/posts/swedish-driving-test-category-b.md`
+- `content/blog/sv/posts/korprov-b-korkort.md`
+- `content/blog/tr/posts/isvecte-direksiyon-sinavi-korprov.md`
+- `content/blog/ar/posts/swedish-driving-test-category-b.md`
+- `content/blog/fa/posts/swedish-driving-test-category-b.md`
+- `content/blog/so/posts/swedish-driving-test-category-b.md`
+- `content/blog/ku/posts/swedish-driving-test-category-b.md`
+- `content/blog/pl/posts/egzamin-praktyczny-prawo-jazdy-szwecja.md`
+- `content/blog/fi/posts/ajokoe-b-ajokortti-ruotsi.md`
+- `content/blog/bs/posts/prakticni-ispit-vozacka-svedska.md`
+- `content/blog/es/posts/examen-practico-carnet-suecia.md`
+- `content/blog/ru/posts/prakticheskiy-ekzamen-v-shvetsii.md`
+
+Generated HTML routes:
+
+- `blog/swedish-driving-test-category-b.html`
+- `blog/sv/korprov-b-korkort.html`
+- `blog/tr/isvecte-direksiyon-sinavi-korprov.html`
+- `blog/ar/swedish-driving-test-category-b.html`
+- `blog/fa/swedish-driving-test-category-b.html`
+- `blog/so/swedish-driving-test-category-b.html`
+- `blog/ku/swedish-driving-test-category-b.html`
+- `blog/pl/egzamin-praktyczny-prawo-jazdy-szwecja.html`
+- `blog/fi/ajokoe-b-ajokortti-ruotsi.html`
+- `blog/bs/prakticni-ispit-vozacka-svedska.html`
+- `blog/es/examen-practico-carnet-suecia.html`
+- `blog/ru/prakticheskiy-ekzamen-v-shvetsii.html`
+
+Official driving test guidance was checked on 2026-05-21 against Trafikverket public pages. The English blog archive now includes a card for this topic.
