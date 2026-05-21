@@ -1,0 +1,523 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Changelog — Nordic Theory Labs</title>
+<meta name="description" content="What changed in Körkort Hero and the studio's other software, version by version, in plain language." />
+<link rel="canonical" href="https://nordictheorylabs.com/changelog.html" />
+<link rel="icon" type="image/svg+xml" href="logos/exports/signal/favicon.svg" />
+<link rel="alternate" type="application/rss+xml" title="Changelog" href="changelog.xml" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="assets/site.css" />
+
+<style>
+  /* legend / filter */
+  .legend {
+    display: flex; gap: 22px; flex-wrap: wrap;
+    padding: 18px 0 28px;
+    border-bottom: 1px solid var(--line);
+    align-items: center;
+    font-family: var(--mono); font-size: 11px;
+    letter-spacing: 0.08em; text-transform: uppercase;
+    color: var(--ink-mute);
+  }
+  .legend .pip {
+    display: inline-flex; align-items: center; gap: 8px;
+    color: var(--ink);
+  }
+  .legend .pip .dot {
+    width: 8px; height: 8px; border-radius: 50%;
+  }
+  .dot-new   { background: var(--pos); }
+  .dot-fix   { background: oklch(0.62 0.13 220); }
+  .dot-imp   { background: oklch(0.62 0.13 70); }
+  .dot-rem   { background: oklch(0.55 0.11 30); }
+  .dot-sec   { background: oklch(0.55 0.13 285); }
+
+  .legend .switch {
+    margin-left: auto;
+    display: flex; gap: 6px;
+  }
+  .legend .switch button {
+    padding: 6px 12px;
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    font: inherit; color: var(--ink-soft);
+    background: transparent;
+    cursor: pointer;
+    transition: all 0.15s ease;
+    letter-spacing: 0.06em;
+  }
+  .legend .switch button:hover { color: var(--ink); border-color: var(--ink); }
+  .legend .switch button.active { background: var(--ink); color: var(--paper); border-color: var(--ink); }
+
+  /* release list */
+  .releases {
+    display: grid;
+    gap: 0;
+    margin-top: 40px;
+  }
+  .release {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    gap: 56px;
+    padding: 48px 0;
+    border-bottom: 1px solid var(--line-soft);
+  }
+  .release:first-child { padding-top: 0; }
+  .release:last-child { border-bottom: 0; }
+  .release-side {
+    position: sticky; top: 100px;
+    align-self: start;
+  }
+  .release-side .ver {
+    display: inline-block;
+    padding: 4px 10px;
+    background: var(--ink); color: var(--paper);
+    border-radius: 6px;
+    font-family: var(--mono); font-size: 12px;
+    letter-spacing: 0.04em;
+    margin-bottom: 14px;
+  }
+  .release-side .ver.minor { background: var(--paper-soft); color: var(--ink-soft); border: 1px solid var(--line); }
+  .release-side .date {
+    font-family: var(--mono); font-size: 12px;
+    letter-spacing: 0.08em;
+    color: var(--ink-mute);
+    text-transform: uppercase;
+  }
+  .release-side .product {
+    margin-top: 14px;
+    font-family: var(--mono); font-size: 10.5px;
+    letter-spacing: 0.12em; text-transform: uppercase;
+    color: var(--ink-mute);
+  }
+  .release-side .platforms {
+    margin-top: 8px;
+    display: flex; gap: 6px; flex-wrap: wrap;
+  }
+  .release-side .platforms span {
+    padding: 3px 8px;
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    font-family: var(--mono); font-size: 10px;
+    letter-spacing: 0.06em;
+    color: var(--ink-soft);
+  }
+
+  .release-body h2 {
+    margin: 0 0 16px;
+    font-size: clamp(28px, 3.4vw, 42px);
+    line-height: 1.05;
+    letter-spacing: -0.025em;
+    font-weight: 500;
+  }
+  .release-body h2 em { font-family: var(--serif); font-style: italic; font-weight: 400; }
+  .release-body > p.intro {
+    color: var(--ink-soft); font-size: 16px; line-height: 1.55;
+    margin: 0 0 24px;
+    max-width: 56ch;
+  }
+
+  .changes { display: grid; gap: 10px; }
+  .change {
+    display: grid;
+    grid-template-columns: 70px 1fr;
+    gap: 16px;
+    padding: 14px 0;
+    border-top: 1px solid var(--line-soft);
+    align-items: baseline;
+  }
+  .change .kind {
+    display: inline-flex; align-items: center; gap: 6px;
+    font-family: var(--mono); font-size: 10.5px;
+    letter-spacing: 0.12em; text-transform: uppercase;
+    color: var(--ink-mute);
+  }
+  .change .kind .dot {
+    width: 7px; height: 7px; border-radius: 50%;
+  }
+  .change .text { color: var(--ink-soft); font-size: 15px; line-height: 1.55; }
+  .change .text b { color: var(--ink); font-weight: 600; }
+  .change .text code {
+    font-family: var(--mono); font-size: 12.5px;
+    padding: 2px 6px;
+    background: var(--paper-soft);
+    border: 1px solid var(--line-soft);
+    border-radius: 4px;
+    color: var(--ink);
+  }
+  .change .text em { font-family: var(--serif); font-style: italic; }
+
+  .release-body .stats {
+    margin-top: 20px;
+    padding-top: 18px;
+    border-top: 1px solid var(--line);
+    display: flex; gap: 28px; flex-wrap: wrap;
+    font-family: var(--mono); font-size: 11px;
+    letter-spacing: 0.08em; text-transform: uppercase;
+    color: var(--ink-mute);
+  }
+  .release-body .stats b { color: var(--ink); font-weight: 500; }
+
+  /* subscribe strip */
+  .subscribe {
+    margin: 64px 0 0;
+    padding: 36px;
+    border: 1px solid var(--line);
+    border-radius: 18px;
+    background: var(--paper-soft);
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 24px;
+    align-items: center;
+  }
+  .subscribe h3 { margin: 0 0 6px; font-size: 22px; font-weight: 500; letter-spacing: -0.018em; }
+  .subscribe h3 em { font-family: var(--serif); font-style: italic; font-weight: 400; }
+  .subscribe p { margin: 0; color: var(--ink-soft); font-size: 14px; max-width: 56ch; }
+  .subscribe .pills { display: flex; gap: 10px; }
+
+  @media (max-width: 880px) {
+    .release { grid-template-columns: 1fr; gap: 18px; }
+    .release-side { position: static; }
+    .change { grid-template-columns: 1fr; gap: 4px; }
+    .subscribe { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap nav-inner">
+    <a href="index.html" class="brand">
+      <span class="brand-mark" aria-hidden="true">
+        <svg viewBox="0 0 220 220" xmlns="http://www.w3.org/2000/svg">
+          <rect class="sig-frame" x="20" y="20" width="180" height="180" rx="22" fill="none" stroke-width="6"/>
+          <line class="sig-axis" x1="20" y1="110" x2="200" y2="110" stroke-width="2"/>
+          <path class="sig-wave" d="M 30 130 Q 70 60, 110 110 T 190 90" stroke-width="8" fill="none" stroke-linecap="round"/>
+          <circle class="sig-dot" cx="190" cy="90" r="10"/>
+        </svg>
+      </span>
+      <span class="brand-name">Nordic <em>Theory</em> Labs°</span>
+    </a>
+    <nav class="nav-links">
+      <a href="index.html#apps">Apps</a>
+      <a href="index.html#approach">Approach</a>
+      <a href="blog/index.html">Notes</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <div class="nav-meta">
+      <a href="changelog.xml" style="display:inline-flex; align-items:center; gap:6px; font-family:var(--mono); font-size:11px; letter-spacing:0.08em; color:var(--ink-mute);">
+        <svg width="11" height="11" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4a12 12 0 0 1 12 12M4 10a6 6 0 0 1 6 6"/><circle cx="5" cy="15" r="1.4" fill="currentColor"/></svg>
+        RSS
+      </a>
+      <span class="pulse"></span>
+      <span style="font-family:var(--mono); font-size:11px; color:var(--ink-mute);">Last shipped 14 May</span>
+    </div>
+  </div>
+</header>
+
+<section class="page-head">
+  <div class="aurora" aria-hidden="true"></div>
+  <div class="wrap">
+    <div class="eyebrow"><span class="bar"></span><span>Changelog — 14 releases since v1.0</span></div>
+    <h1 class="page-title">What's <em>changed</em>, version by version.</h1>
+    <p class="page-sub">Honest release notes. We write what we shipped, why, and what we cut — not marketing copy disguised as bullet points. Subscribe via RSS for one entry per release, on average twice a month.</p>
+  </div>
+</section>
+
+<!-- ───── legend / filter ───── -->
+<div class="wrap">
+  <div class="legend">
+    <span class="pip"><span class="dot dot-new"></span>New</span>
+    <span class="pip"><span class="dot dot-imp"></span>Improved</span>
+    <span class="pip"><span class="dot dot-fix"></span>Fixed</span>
+    <span class="pip"><span class="dot dot-rem"></span>Removed</span>
+    <span class="pip"><span class="dot dot-sec"></span>Security</span>
+    <div class="switch">
+      <button class="active">All products</button>
+      <button>Körkort Hero</button>
+      <button>Studio site</button>
+    </div>
+  </div>
+</div>
+
+<!-- ───── releases ───── -->
+<div class="wrap">
+  <div class="releases">
+
+    <!-- v2.2.0 -->
+    <article class="release">
+      <div class="release-side">
+        <span class="ver">v2.2.0</span>
+        <div class="date">14 May 2026</div>
+        <div class="product">Körkort Hero</div>
+        <div class="platforms"><span>iOS 17+</span><span>Android 12+</span><span>Web</span></div>
+      </div>
+      <div class="release-body">
+        <h2>Weekly <em>review</em> mode &amp; faster offline sync.</h2>
+        <p class="intro">A long-requested mode that surfaces the questions you've been wrong about most recently, plus the offline sync rewrite that was overdue. No new chapters in this release — the question pool itself is unchanged.</p>
+
+        <div class="changes">
+          <div class="change">
+            <span class="kind"><span class="dot dot-new"></span>New</span>
+            <span class="text"><b>Weekly review</b> — a new home-screen tile that surfaces your eight most-recent wrong answers from the week. Tap to spaced-rep them. Opt-in, off by default.</span>
+          </div>
+          <div class="change">
+            <span class="kind"><span class="dot dot-new"></span>New</span>
+            <span class="text"><b>Quiet morning mode</b> — a 15-minute calm session for the day of the test. No streaks, no scoreboards, only review.</span>
+          </div>
+          <div class="change">
+            <span class="kind"><span class="dot dot-imp"></span>Improved</span>
+            <span class="text">Offline sync rewritten from the ground up — first sync after install is now ~3× faster on slow trains north of Sundsvall (which is where we noticed).</span>
+          </div>
+          <div class="change">
+            <span class="kind"><span class="dot dot-imp"></span>Improved</span>
+            <span class="text">Arabic typography rebuilt — proper kashida justification and ligature handling. Thanks to <em>R. Hammad</em> for the patch.</span>
+          </div>
+          <div class="change">
+            <span class="kind"><span class="dot dot-fix"></span>Fixed</span>
+            <span class="text">Question 318 (motorway entry / yield) had the wrong correct answer flagged in Tigrinya. <em>Corrected and re-scored for affected users.</em></span>
+          </div>
+          <div class="change">
+            <span class="kind"><span class="dot dot-fix"></span>Fixed</span>
+            <span class="text">Dark mode on iOS no longer flashes white during the initial splash on cold launch.</span>
+          </div>
+          <div class="change">
+            <span class="kind"><span class="dot dot-rem"></span>Removed</span>
+            <span class="text">Daily streak counter removed entirely (was opt-in since v2.0). Internal A/B showed it pushed people to over-study. <a href="blog/index.html" style="color:var(--ink); text-decoration:underline; text-underline-offset:3px;">Post-mortem on the blog ↗</a></span>
+          </div>
+        </div>
+
+        <div class="stats">
+          <span><b>1,420</b> users in beta</span>
+          <span><b>14 days</b> of TestFlight</span>
+          <span><b>3 known issues</b> open</span>
+        </div>
+      </div>
+    </article>
+
+    <!-- v2.1.4 -->
+    <article class="release">
+      <div class="release-side">
+        <span class="ver minor">v2.1.4</span>
+        <div class="date">22 Apr 2026</div>
+        <div class="product">Körkort Hero</div>
+        <div class="platforms"><span>iOS</span><span>Android</span></div>
+      </div>
+      <div class="release-body">
+        <h2>Patch release: <em>iCloud sync conflicts</em> and a tablet layout fix.</h2>
+        <div class="changes">
+          <div class="change">
+            <span class="kind"><span class="dot dot-fix"></span>Fixed</span>
+            <span class="text">iCloud sync conflict when switching between two iOS devices in a row no longer wipes the local question history.</span>
+          </div>
+          <div class="change">
+            <span class="kind"><span class="dot dot-fix"></span>Fixed</span>
+            <span class="text">iPad landscape layout no longer crops the chapter list on the right.</span>
+          </div>
+          <div class="change">
+            <span class="kind"><span class="dot dot-sec"></span>Security</span>
+            <span class="text">Updated <code>libsodium</code> to 1.0.20 (CVE-2025-XXXXX, low severity).</span>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- v2.1 -->
+    <article class="release">
+      <div class="release-side">
+        <span class="ver">v2.1.0</span>
+        <div class="date">02 Apr 2026</div>
+        <div class="product">Körkort Hero</div>
+        <div class="platforms"><span>iOS</span><span>Android</span><span>Web</span></div>
+      </div>
+      <div class="release-body">
+        <h2>Two new <em>languages</em>: Tigrinya &amp; Dari.</h2>
+        <p class="intro">In partnership with <em>Sveriges Stadsmissioner</em> and three local refugee-aid groups. Both languages required a full re-edit of the question pool rather than machine translation — translation took 11 weeks.</p>
+        <div class="changes">
+          <div class="change">
+            <span class="kind"><span class="dot dot-new"></span>New</span>
+            <span class="text"><b>Tigrinya</b> question pool, 823 items, voice-over included.</span>
+          </div>
+          <div class="change">
+            <span class="kind"><span class="dot dot-new"></span>New</span>
+            <span class="text"><b>Dari</b> question pool, 823 items, voice-over included.</span>
+          </div>
+          <div class="change">
+            <span class="kind"><span class="dot dot-imp"></span>Improved</span>
+            <span class="text">Language picker now sorts by script, then by name. Makes Pashto / Dari / Persian easier to tell apart at a glance.</span>
+          </div>
+          <div class="change">
+            <span class="kind"><span class="dot dot-fix"></span>Fixed</span>
+            <span class="text">Right-to-left bug in the "wrong answers" card where the explanation overlapped the question header.</span>
+          </div>
+        </div>
+        <div class="stats">
+          <span><b>12</b> languages total</span>
+          <span><b>11 weeks</b> of translation</span>
+          <span><b>3 NGOs</b> reviewed</span>
+        </div>
+      </div>
+    </article>
+
+    <!-- v2.0 -->
+    <article class="release">
+      <div class="release-side">
+        <span class="ver">v2.0.0</span>
+        <div class="date">11 Mar 2026</div>
+        <div class="product">Körkort Hero</div>
+        <div class="platforms"><span>iOS</span><span>Android</span><span>Web</span></div>
+      </div>
+      <div class="release-body">
+        <h2>The big <em>quiet</em> release.</h2>
+        <p class="intro">One year on from v1.0. The schedule, the question explanations, and the way we measure progress are all new. No new features by count — but most of what's on screen is reworked.</p>
+        <div class="changes">
+          <div class="change">
+            <span class="kind"><span class="dot dot-new"></span>New</span>
+            <span class="text">Adaptive scheduling rewritten on the simplified curve described in our <a href="blog/index.html" style="color:var(--ink); text-decoration:underline;">spaced-repetition essay ↗</a>.</span>
+          </div>
+          <div class="change">
+            <span class="kind"><span class="dot dot-new"></span>New</span>
+            <span class="text">Every wrong answer now opens with a 2–3 sentence explanation written by an examiner, not generated.</span>
+          </div>
+          <div class="change">
+            <span class="kind"><span class="dot dot-new"></span>New</span>
+            <span class="text">iCloud / Google Drive sync, opt-in. End-to-end encrypted with your device passcode.</span>
+          </div>
+          <div class="change">
+            <span class="kind"><span class="dot dot-imp"></span>Improved</span>
+            <span class="text">Progress view rewritten — shows <em>readiness</em> instead of percent completed. We think this is a better signal.</span>
+          </div>
+          <div class="change">
+            <span class="kind"><span class="dot dot-rem"></span>Removed</span>
+            <span class="text">Public leaderboards, deleted entirely. They didn't help anyone pass.</span>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- v1.4 -->
+    <article class="release">
+      <div class="release-side">
+        <span class="ver minor">v1.4.2</span>
+        <div class="date">04 Feb 2026</div>
+        <div class="product">Körkort Hero</div>
+        <div class="platforms"><span>iOS</span><span>Android</span></div>
+      </div>
+      <div class="release-body">
+        <h2>Bug fixes &amp; <em>small mercies.</em></h2>
+        <div class="changes">
+          <div class="change">
+            <span class="kind"><span class="dot dot-fix"></span>Fixed</span>
+            <span class="text">Notification permission prompt no longer appears on the very first launch. (You shouldn't have to opt out of being asked.)</span>
+          </div>
+          <div class="change">
+            <span class="kind"><span class="dot dot-fix"></span>Fixed</span>
+            <span class="text">Quiz timer drifted by ~2 seconds per minute on older Androids. Now exact.</span>
+          </div>
+          <div class="change">
+            <span class="kind"><span class="dot dot-imp"></span>Improved</span>
+            <span class="text">Haptic feedback on correct answers is gentler. We had it set one notch too aggressive.</span>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- studio site -->
+    <article class="release">
+      <div class="release-side">
+        <span class="ver minor">site v1.2</span>
+        <div class="date">14 May 2026</div>
+        <div class="product">Studio site</div>
+        <div class="platforms"><span>nordictheorylabs.com</span></div>
+      </div>
+      <div class="release-body">
+        <h2>Blog, press kit, and the rest of the <em>scaffolding.</em></h2>
+        <div class="changes">
+          <div class="change">
+            <span class="kind"><span class="dot dot-new"></span>New</span>
+            <span class="text"><a href="blog/index.html" style="color:var(--ink); text-decoration:underline; text-underline-offset:3px;">/blog/</a> launches with the full theory-test guide as the first long-form post.</span>
+          </div>
+          <div class="change">
+            <span class="kind"><span class="dot dot-new"></span>New</span>
+            <span class="text"><a href="press.html" style="color:var(--ink); text-decoration:underline; text-underline-offset:3px;">/press/</a> with a downloadable kit, fact sheet, and a single inbox for journalists.</span>
+          </div>
+          <div class="change">
+            <span class="kind"><span class="dot dot-new"></span>New</span>
+            <span class="text"><a href="about.html" style="color:var(--ink); text-decoration:underline; text-underline-offset:3px;">/about/</a>, <a href="contact.html" style="color:var(--ink); text-decoration:underline; text-underline-offset:3px;">/contact/</a>, and this changelog get their own pages, no longer hidden under the homepage anchors.</span>
+          </div>
+          <div class="change">
+            <span class="kind"><span class="dot dot-imp"></span>Improved</span>
+            <span class="text">Shared stylesheet across all subpages — the studio is now visually consistent end-to-end.</span>
+          </div>
+        </div>
+      </div>
+    </article>
+
+  </div>
+
+  <!-- subscribe -->
+  <div class="subscribe">
+    <div>
+      <h3>One email <em>per release.</em></h3>
+      <p>We post a changelog entry roughly twice a month. RSS is the primary channel — email is a thin wrapper around it.</p>
+    </div>
+    <div class="pills">
+      <a href="changelog.xml" class="btn btn-ghost">RSS feed</a>
+      <a href="#" class="btn btn-ink">Email list →</a>
+    </div>
+  </div>
+</div>
+
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="col">
+        <h4>Studio</h4>
+        <p><strong>Nordic Theory Labs AB</strong><br/><em>Götgatan 22, 116 46 Stockholm, SE</em><br/>Org.nr 559-XXX-XXX</p>
+      </div>
+      <div class="col">
+        <h4>Products</h4>
+        <a href="apps/korkort-hero/">Körkort Hero</a>
+        <a href="index.html#apps">All apps</a>
+        <a href="changelog.html">Changelog</a>
+      </div>
+      <div class="col">
+        <h4>Studio</h4>
+        <a href="about.html">About</a>
+        <a href="blog/index.html">Notes</a>
+        <a href="press.html">Press</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div class="col">
+        <h4>Legal</h4>
+        <a href="privacy/index.html">Privacy</a>
+        <a href="terms/index.html">Terms</a>
+        <a href="contact.html#imprint">Imprint</a>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <div>© 2024–2026 NORDIC THEORY LABS AB · ORG.NR 559-XXX-XXX</div>
+      <div class="center">MADE IN STOCKHOLM · SHIPPED FROM HELSINKI</div>
+      <div class="right"><a href="index.html">← Back to studio</a></div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // filter switch (visual)
+  document.querySelectorAll('.legend .switch button').forEach(b => {
+    b.addEventListener('click', () => {
+      document.querySelectorAll('.legend .switch button').forEach(x => x.classList.remove('active'));
+      b.classList.add('active');
+    });
+  });
+</script>
+
+</body>
+</html>

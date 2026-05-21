@@ -1,0 +1,525 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Notes — Writing from Nordic Theory Labs</title>
+<meta name="description" content="Long-form essays from a two-person Stockholm studio: study habits, interface design, the Swedish driving test, and what it costs to ship one app a year." />
+<link rel="canonical" href="https://nordictheorylabs.com/blog/" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Notes — Nordic Theory Labs" />
+<meta property="og:description" content="Essays on study habits, product design, and the Swedish theory test." />
+<link rel="icon" type="image/svg+xml" href="../logos/exports/signal/favicon.svg" />
+<link rel="icon" type="image/png" sizes="32x32" href="../logos/exports/signal/favicon-32.png" />
+<link rel="icon" type="image/png" sizes="16x16" href="../logos/exports/signal/favicon-16.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../assets/site.css" />
+
+<style>
+  /* ───── filter row ───── */
+  .filter-row {
+    display: flex; align-items: center; gap: 10px;
+    flex-wrap: wrap;
+    padding: 20px 0 32px;
+    border-bottom: 1px solid var(--line);
+  }
+  .filter-row .lbl {
+    font-family: var(--mono); font-size: 11px;
+    letter-spacing: 0.12em; text-transform: uppercase;
+    color: var(--ink-mute);
+    margin-right: 4px;
+  }
+  .filter-row .chip {
+    padding: 7px 13px;
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    font-size: 13px;
+    color: var(--ink-soft);
+    background: transparent;
+    cursor: pointer;
+    transition: all 0.15s ease;
+  }
+  .filter-row .chip:hover { border-color: var(--ink); color: var(--ink); }
+  .filter-row .chip.active { background: var(--ink); color: var(--paper); border-color: var(--ink); }
+  .filter-row .search {
+    margin-left: auto;
+    display: flex; align-items: center; gap: 8px;
+    padding: 6px 14px;
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    background: color-mix(in oklab, var(--paper) 70%, transparent);
+  }
+  .filter-row .search input {
+    border: 0; background: transparent;
+    font: inherit; color: var(--ink);
+    width: 180px;
+    outline: 0;
+  }
+  .filter-row .search input::placeholder { color: var(--ink-mute); }
+
+  /* ───── featured row ───── */
+  .feat-row {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 36px;
+    margin: 56px 0 80px;
+  }
+  .feat-card {
+    display: grid;
+    grid-template-rows: auto 1fr;
+    border: 1px solid var(--line);
+    border-radius: 18px;
+    overflow: hidden;
+    background: var(--paper);
+    transition: border-color 0.2s ease, transform 0.25s ease;
+  }
+  .feat-card:hover { border-color: var(--ink); transform: translateY(-3px); }
+  .feat-card .thumb {
+    position: relative;
+    aspect-ratio: 16 / 9;
+    background:
+      linear-gradient(135deg, oklch(0.78 0.10 220) 0%, oklch(0.62 0.18 285) 100%);
+    overflow: hidden;
+  }
+  .feat-card .thumb::before {
+    content: "";
+    position: absolute; inset: 0;
+    background-image: radial-gradient(rgba(255,255,255,0.18) 1px, transparent 1.4px);
+    background-size: 4px 4px;
+    mix-blend-mode: overlay;
+  }
+  .feat-card .thumb .glyph {
+    position: absolute; inset: 0;
+    display: flex; align-items: center; justify-content: center;
+    font-family: var(--serif); font-style: italic;
+    font-size: clamp(80px, 12vw, 200px);
+    color: rgba(255,255,255,0.92);
+    letter-spacing: -0.04em;
+    line-height: 1;
+  }
+  .feat-card .thumb .corner {
+    position: absolute; top: 16px; left: 16px;
+    font-family: var(--mono); font-size: 10.5px;
+    letter-spacing: 0.12em; text-transform: uppercase;
+    color: rgba(255,255,255,0.85);
+    background: rgba(0,0,0,0.18);
+    padding: 5px 10px; border-radius: 999px;
+    backdrop-filter: blur(6px);
+  }
+  .feat-card .body {
+    padding: 32px;
+    display: grid;
+    gap: 14px;
+    align-content: start;
+  }
+  .feat-card .meta {
+    display: flex; gap: 12px; align-items: center;
+    font-family: var(--mono); font-size: 11px;
+    letter-spacing: 0.08em; text-transform: uppercase;
+    color: var(--ink-mute);
+  }
+  .feat-card .meta .dot { width: 3px; height: 3px; border-radius: 50%; background: var(--ink-mute); }
+  .feat-card h2 {
+    margin: 0;
+    font-size: clamp(28px, 3.2vw, 44px);
+    line-height: 1.08;
+    letter-spacing: -0.025em;
+    font-weight: 500;
+  }
+  .feat-card h2 em { font-family: var(--serif); font-style: italic; font-weight: 400; }
+  .feat-card .excerpt {
+    color: var(--ink-soft); font-size: 15px; line-height: 1.55;
+    max-width: 50ch;
+  }
+  .feat-card .read {
+    display: inline-flex; align-items: center; gap: 8px;
+    font-size: 13px; color: var(--ink); font-weight: 500;
+    margin-top: 8px;
+  }
+
+  /* second featured (smaller) */
+  .feat-side {
+    display: grid; gap: 24px;
+  }
+  .feat-side .side-card {
+    display: grid;
+    gap: 14px;
+    padding: 28px;
+    border: 1px solid var(--line);
+    border-radius: 16px;
+    background: var(--paper);
+    transition: border-color 0.2s ease, transform 0.25s ease;
+    align-content: start;
+  }
+  .feat-side .side-card:hover { border-color: var(--ink); transform: translateY(-2px); }
+  .feat-side .side-card h3 {
+    margin: 0;
+    font-size: 22px; line-height: 1.15;
+    letter-spacing: -0.018em;
+    font-weight: 500;
+  }
+  .feat-side .side-card h3 em { font-family: var(--serif); font-style: italic; font-weight: 400; }
+  .feat-side .side-card .excerpt { color: var(--ink-soft); font-size: 14px; line-height: 1.5; }
+
+  /* ───── archive grid ───── */
+  .archive {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1px;
+    background: var(--line);
+    border: 1px solid var(--line);
+    border-radius: 18px;
+    overflow: hidden;
+  }
+  .post {
+    background: var(--paper);
+    padding: 36px 32px;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    gap: 14px;
+    transition: background 0.2s ease;
+  }
+  .post:hover { background: var(--paper-soft); }
+  .post .meta {
+    display: flex; gap: 12px; align-items: center;
+    font-family: var(--mono); font-size: 10.5px;
+    letter-spacing: 0.12em; text-transform: uppercase;
+    color: var(--ink-mute);
+  }
+  .post .meta .dot { width: 3px; height: 3px; border-radius: 50%; background: var(--ink-mute); }
+  .post h3 {
+    margin: 0;
+    font-size: 22px; line-height: 1.15;
+    letter-spacing: -0.018em;
+    font-weight: 500;
+  }
+  .post h3 em { font-family: var(--serif); font-style: italic; font-weight: 400; }
+  .post .excerpt { color: var(--ink-soft); font-size: 14.5px; line-height: 1.55; }
+  .post .foot {
+    display: flex; justify-content: space-between; align-items: center;
+    font-size: 12px;
+    color: var(--ink-mute);
+    font-family: var(--mono); letter-spacing: 0.06em;
+    padding-top: 8px;
+    border-top: 1px solid var(--line-soft);
+  }
+  .post .foot .arrow { color: var(--ink); }
+
+  /* ───── newsletter strip ───── */
+  .newsletter {
+    margin-top: 80px;
+    padding: 56px 48px;
+    background: var(--ink);
+    color: var(--paper);
+    border-radius: 24px;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 40px;
+    align-items: center;
+  }
+  .newsletter h3 {
+    margin: 0;
+    font-size: clamp(28px, 3.2vw, 40px);
+    line-height: 1.08;
+    letter-spacing: -0.025em;
+    font-weight: 500;
+    max-width: 22ch;
+  }
+  .newsletter h3 em { font-family: var(--serif); font-style: italic; font-weight: 400; }
+  .newsletter .sub {
+    color: oklch(0.82 0.02 220);
+    font-size: 14.5px; margin-top: 10px;
+    max-width: 40ch;
+  }
+  .newsletter form {
+    display: flex; align-items: center; gap: 0;
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.16);
+    border-radius: 999px;
+    padding: 5px 5px 5px 18px;
+    min-width: 360px;
+  }
+  .newsletter input {
+    flex: 1;
+    border: 0; background: transparent;
+    font: inherit; color: var(--paper);
+    outline: 0;
+    padding: 10px 12px;
+  }
+  .newsletter input::placeholder { color: oklch(0.72 0.03 220); }
+  .newsletter button {
+    padding: 11px 22px;
+    border-radius: 999px;
+    background: var(--paper); color: var(--ink);
+    font-weight: 500; font-size: 13px;
+    transition: transform 0.15s ease;
+  }
+  .newsletter button:hover { transform: translateY(-1px); }
+  .newsletter .micro {
+    font-family: var(--mono); font-size: 11px;
+    letter-spacing: 0.08em;
+    color: oklch(0.72 0.03 220);
+    margin-top: 14px;
+  }
+
+  @media (max-width: 980px) {
+    .feat-row { grid-template-columns: 1fr; }
+    .archive { grid-template-columns: 1fr; }
+    .newsletter { grid-template-columns: 1fr; padding: 40px 28px; }
+    .newsletter form { min-width: 0; width: 100%; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ───────── NAV ───────── -->
+<header class="nav">
+  <div class="wrap nav-inner">
+    <a href="../index.html" class="brand" aria-label="Nordic Theory Labs">
+      <span class="brand-mark" aria-hidden="true">
+        <svg viewBox="0 0 220 220" xmlns="http://www.w3.org/2000/svg">
+          <rect class="sig-frame" x="20" y="20" width="180" height="180" rx="22" fill="none" stroke-width="6"/>
+          <line class="sig-axis" x1="20" y1="110" x2="200" y2="110" stroke-width="2"/>
+          <path class="sig-wave" d="M 30 130 Q 70 60, 110 110 T 190 90" stroke-width="8" fill="none" stroke-linecap="round"/>
+          <circle class="sig-dot" cx="190" cy="90" r="10"/>
+        </svg>
+      </span>
+      <span class="brand-name">Nordic <em>Theory</em> Labs°</span>
+    </a>
+    <nav class="nav-links">
+      <a href="../index.html#apps">Apps</a>
+      <a href="../index.html#approach">Approach</a>
+      <a href="index.html" class="active">Notes</a>
+      <a href="../about.html">About</a>
+      <a href="../contact.html">Contact</a>
+    </nav>
+    <div class="nav-meta">
+      <span class="pulse"></span>
+      <span>Stockholm · <span id="clock">14:32</span></span>
+    </div>
+  </div>
+</header>
+
+<!-- ───────── PAGE HEAD ───────── -->
+<section class="page-head">
+  <div class="aurora" aria-hidden="true"></div>
+  <div class="wrap">
+    <div class="eyebrow"><span class="bar"></span><span>Lab Notes — Vol. 03 · 2026</span></div>
+    <h1 class="page-title">Slow writing from a <em>two-person</em> studio.</h1>
+    <p class="page-sub">Essays on study habits, interface restraint, the Swedish driving test, and what it costs to ship one app a year. No newsletters about productivity. No SEO listicles. Published when there's something worth saying — roughly once a month.</p>
+  </div>
+</section>
+
+<!-- ───────── FILTER ───────── -->
+<div class="wrap">
+  <div class="filter-row">
+    <span class="lbl">Topics:</span>
+    <button class="chip active">All</button>
+    <button class="chip">Theory test</button>
+    <button class="chip">Product</button>
+    <button class="chip">Design</button>
+    <button class="chip">Studio</button>
+    <button class="chip">Field notes</button>
+    <div class="search">
+      <svg width="14" height="14" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="9" cy="9" r="6"/><path d="m18 18-4-4"/></svg>
+      <input type="search" placeholder="Search notes…" />
+    </div>
+  </div>
+</div>
+
+<!-- ───────── FEATURED ───────── -->
+<div class="wrap">
+  <div class="feat-row">
+
+    <a href="swedish-driving-theory-test-guide.html" class="feat-card">
+      <div class="thumb">
+        <span class="corner">Featured · 18 min</span>
+        <span class="glyph">B</span>
+      </div>
+      <div class="body">
+        <div class="meta">
+          <span>Theory test</span><span class="dot"></span>
+          <span>14 May 2026</span><span class="dot"></span>
+          <span>By S. Lindqvist</span>
+        </div>
+        <h2>The complete guide to passing the Swedish <em>theory test</em> on the first try.</h2>
+        <p class="excerpt">Trafikverket's pass rate sits at 47%. That number includes nervous over-preparers and people who walked in cold. Here's how to land on the right side of it — what's actually on the test, how the questions are scored, and the eight chapters most people underestimate.</p>
+        <span class="read">Read the guide <span class="arrow">→</span></span>
+      </div>
+    </a>
+
+    <div class="feat-side">
+      <a href="#" class="side-card">
+        <span class="tag">Product</span>
+        <h3>What we cut from Körkort Hero's <em>first</em> version</h3>
+        <p class="excerpt">Removing the streak counter doubled the pass rate. A note on the difference between motivation and progress.</p>
+        <div class="meta">
+          <span style="font-family:var(--mono);font-size:11px;letter-spacing:0.08em;text-transform:uppercase;color:var(--ink-mute)">02 May 2026 · 4 min</span>
+        </div>
+      </a>
+      <a href="#" class="side-card">
+        <span class="tag">Studio</span>
+        <h3>What <em>Nordic restraint</em> actually costs</h3>
+        <p class="excerpt">On the one-app-a-year cadence — what you give up, what stays, and how a two-person studio survives a quiet quarter.</p>
+        <div class="meta">
+          <span style="font-family:var(--mono);font-size:11px;letter-spacing:0.08em;text-transform:uppercase;color:var(--ink-mute)">18 Apr 2026 · 5 min</span>
+        </div>
+      </a>
+    </div>
+
+  </div>
+</div>
+
+<!-- ───────── ARCHIVE ───────── -->
+<section style="padding-top:0;">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="section-label">02 — Archive</div>
+      <h2 class="section-title">Earlier <em>notes</em>, by date.</h2>
+    </div>
+
+    <div class="archive">
+
+      <a href="#" class="post">
+        <div class="meta"><span>Design</span><span class="dot"></span><span>Apr 02, 2026</span></div>
+        <h3>The test isn't <em>the goal</em></h3>
+        <p class="excerpt">Notes on designing for drivers, not test-takers. Why the Swedish theory test rewards the wrong kind of memory — and what we did about it in the product.</p>
+        <div class="foot"><span>6 min · S. Lindqvist</span><span class="arrow">Read →</span></div>
+      </a>
+
+      <a href="#" class="post">
+        <div class="meta"><span>Theory test</span><span class="dot"></span><span>Mar 18, 2026</span></div>
+        <h3>Why so many <em>retakes</em> happen on signs &amp; signals</h3>
+        <p class="excerpt">An honest breakdown of the chapter people lose the most points on, with the seven sign families that account for 60% of mistakes.</p>
+        <div class="foot"><span>9 min · M. Eriksson</span><span class="arrow">Read →</span></div>
+      </a>
+
+      <a href="#" class="post">
+        <div class="meta"><span>Field notes</span><span class="dot"></span><span>Mar 04, 2026</span></div>
+        <h3>A week at <em>Trafikverket</em> in Farsta</h3>
+        <p class="excerpt">We sat in the waiting room for five days and watched 312 people walk in for their theory test. Patterns in who passed, who didn't, and what they were carrying.</p>
+        <div class="foot"><span>11 min · M. Eriksson</span><span class="arrow">Read →</span></div>
+      </a>
+
+      <a href="#" class="post">
+        <div class="meta"><span>Product</span><span class="dot"></span><span>Feb 20, 2026</span></div>
+        <h3>Adaptive scheduling, in <em>three lines</em> of math</h3>
+        <p class="excerpt">A walk through the spaced-repetition curve we use, why we abandoned SuperMemo's full algorithm, and the simplification that didn't hurt outcomes.</p>
+        <div class="foot"><span>8 min · S. Lindqvist</span><span class="arrow">Read →</span></div>
+      </a>
+
+      <a href="#" class="post">
+        <div class="meta"><span>Design</span><span class="dot"></span><span>Feb 06, 2026</span></div>
+        <h3>Twelve languages, <em>one</em> grammar</h3>
+        <p class="excerpt">How we structure the question pool so the same item reads naturally in Swedish, Tigrinya, and Pashto — without a translation engineer.</p>
+        <div class="foot"><span>7 min · S. Lindqvist</span><span class="arrow">Read →</span></div>
+      </a>
+
+      <a href="#" class="post">
+        <div class="meta"><span>Studio</span><span class="dot"></span><span>Jan 22, 2026</span></div>
+        <h3>Year One, in <em>numbers</em></h3>
+        <p class="excerpt">48,000 students. €0 in paid acquisition. A quiet but honest look at what worked, what didn't, and what we'd cut if we started over today.</p>
+        <div class="foot"><span>10 min · M. Eriksson</span><span class="arrow">Read →</span></div>
+      </a>
+
+      <a href="#" class="post">
+        <div class="meta"><span>Theory test</span><span class="dot"></span><span>Jan 08, 2026</span></div>
+        <h3>Risk &amp; environment: the <em>missed</em> chapter</h3>
+        <p class="excerpt">The chapter most people skim. Why it matters more than signs, and the four habits Trafikverket examiners actually test for.</p>
+        <div class="foot"><span>6 min · M. Eriksson</span><span class="arrow">Read →</span></div>
+      </a>
+
+      <a href="#" class="post">
+        <div class="meta"><span>Field notes</span><span class="dot"></span><span>Dec 12, 2025</span></div>
+        <h3>Letters from <em>readers</em>, Nov '25</h3>
+        <p class="excerpt">A monthly roundup of the most thoughtful mail we received — from a refugee in Malmö, a Trafikverket instructor in Lund, and a parent in Umeå.</p>
+        <div class="foot"><span>5 min · S. Lindqvist</span><span class="arrow">Read →</span></div>
+      </a>
+
+    </div>
+
+    <!-- pagination -->
+    <div style="display:flex; justify-content:space-between; align-items:center; margin-top:48px; font-family:var(--mono); font-size:12px; letter-spacing:0.08em; color:var(--ink-mute); text-transform:uppercase;">
+      <span>Showing 8 of 27 notes</span>
+      <div style="display:flex; gap:12px;">
+        <a href="#" class="btn btn-ghost" style="padding:10px 18px; font-family:var(--sans); font-size:13px; letter-spacing:0;">Older notes →</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ───────── NEWSLETTER ───────── -->
+<div class="wrap">
+  <div class="newsletter">
+    <div>
+      <h3>One note a month. <em>No tracking, no funnel.</em></h3>
+      <p class="sub">A short letter when something is worth saying. You can unsubscribe with one click and we delete your address the moment you do.</p>
+      <p class="micro">Hosted on Buttondown · 1,420 readers · Last sent 14 May</p>
+    </div>
+    <form onsubmit="event.preventDefault(); this.querySelector('button').textContent='Thank you ✓';">
+      <input type="email" placeholder="you@inbox.com" required />
+      <button type="submit">Subscribe</button>
+    </form>
+  </div>
+</div>
+
+<!-- ───────── FOOTER ───────── -->
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="col">
+        <h4>Studio</h4>
+        <p><strong>Nordic Theory Labs AB</strong><br/><em>Götgatan 22, 116 46 Stockholm, SE</em><br/>Org.nr 559-XXX-XXX</p>
+      </div>
+      <div class="col">
+        <h4>Products</h4>
+        <a href="../apps/korkort-hero/">Körkort Hero</a>
+        <a href="../index.html#apps">All apps</a>
+        <a href="../changelog.html">Changelog</a>
+      </div>
+      <div class="col">
+        <h4>Studio</h4>
+        <a href="../about.html">About</a>
+        <a href="index.html">Notes</a>
+        <a href="../press.html">Press</a>
+        <a href="../contact.html">Contact</a>
+      </div>
+      <div class="col">
+        <h4>Legal</h4>
+        <a href="../privacy/index.html">Privacy</a>
+        <a href="../terms/index.html">Terms</a>
+        <a href="../contact.html#imprint">Imprint</a>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <div>© 2024–2026 NORDIC THEORY LABS AB · ORG.NR 559-XXX-XXX</div>
+      <div class="center">MADE IN STOCKHOLM · SHIPPED FROM HELSINKI</div>
+      <div class="right"><a href="../index.html">← Back to studio</a></div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  function tickClock() {
+    const el = document.getElementById('clock');
+    if (!el) return;
+    try {
+      el.textContent = new Date().toLocaleTimeString('sv-SE', { hour: '2-digit', minute: '2-digit', timeZone: 'Europe/Stockholm' });
+    } catch(e) {}
+  }
+  tickClock(); setInterval(tickClock, 30000);
+
+  // chip toggle (visual only)
+  document.querySelectorAll('.filter-row .chip').forEach(chip => {
+    chip.addEventListener('click', () => {
+      document.querySelectorAll('.filter-row .chip').forEach(c => c.classList.remove('active'));
+      chip.classList.add('active');
+    });
+  });
+</script>
+
+</body>
+</html>

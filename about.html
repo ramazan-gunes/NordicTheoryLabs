@@ -1,0 +1,428 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>About — Nordic Theory Labs</title>
+<meta name="description" content="A two-person software studio in Stockholm. We ship one app a year, write essays in between, and care about restraint." />
+<link rel="canonical" href="https://nordictheorylabs.com/about.html" />
+<link rel="icon" type="image/svg+xml" href="logos/exports/signal/favicon.svg" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="assets/site.css" />
+
+<style>
+  /* manifesto block */
+  .manifesto {
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+    padding: 80px 0;
+    background: var(--paper-soft);
+  }
+  .manifesto-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.6fr;
+    gap: 60px;
+    align-items: start;
+  }
+  .manifesto h2 {
+    font-family: var(--serif);
+    font-style: italic; font-weight: 400;
+    font-size: clamp(40px, 5.6vw, 72px);
+    line-height: 1;
+    letter-spacing: -0.025em;
+    margin: 0;
+  }
+  .manifesto p {
+    font-size: 19px; line-height: 1.55;
+    color: var(--ink-soft);
+    margin: 0 0 20px;
+    max-width: 56ch;
+  }
+  .manifesto p:first-of-type::first-letter {
+    font-family: var(--serif);
+    font-size: 78px;
+    line-height: 0.85;
+    float: left;
+    padding: 6px 10px 0 0;
+    color: var(--ink);
+  }
+  .manifesto p strong { color: var(--ink); font-weight: 600; }
+
+  /* people */
+  .people-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+  }
+  .person {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 22px;
+    padding: 32px;
+    border: 1px solid var(--line);
+    border-radius: 18px;
+    background: var(--paper);
+  }
+  .person .portrait {
+    aspect-ratio: 5 / 4;
+    border-radius: 12px;
+    background:
+      radial-gradient(ellipse 70% 50% at 50% 35%, oklch(0.86 0.06 220) 0%, oklch(0.74 0.08 285) 70%),
+      var(--paper-soft);
+    position: relative;
+    overflow: hidden;
+    display: grid; place-items: center;
+  }
+  .person .portrait::after {
+    content: attr(data-initial);
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: 120px;
+    line-height: 1;
+    color: rgba(255,255,255,0.78);
+    letter-spacing: -0.03em;
+  }
+  .person .meta {
+    font-family: var(--mono); font-size: 10.5px;
+    letter-spacing: 0.12em; text-transform: uppercase;
+    color: var(--ink-mute);
+  }
+  .person h3 {
+    margin: 6px 0 4px;
+    font-size: 26px;
+    letter-spacing: -0.02em;
+    font-weight: 500;
+  }
+  .person h3 em { font-family: var(--serif); font-style: italic; font-weight: 400; }
+  .person .role {
+    font-family: var(--mono); font-size: 11.5px;
+    letter-spacing: 0.06em;
+    color: var(--ink-mute);
+    margin-bottom: 14px;
+  }
+  .person .bio {
+    font-size: 14.5px; color: var(--ink-soft); line-height: 1.55;
+    margin: 0 0 18px;
+  }
+  .person .links {
+    display: flex; gap: 16px;
+    padding-top: 14px;
+    border-top: 1px solid var(--line);
+    font-family: var(--mono); font-size: 11px;
+    letter-spacing: 0.08em; text-transform: uppercase;
+    color: var(--ink);
+  }
+
+  /* principles */
+  .principles {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1px;
+    background: var(--line);
+    border: 1px solid var(--line);
+    border-radius: 18px;
+    overflow: hidden;
+  }
+  .principle {
+    padding: 36px 32px;
+    background: var(--paper);
+  }
+  .principle .num {
+    font-family: var(--mono); font-size: 11px;
+    letter-spacing: 0.16em; color: var(--ink-mute);
+    margin-bottom: 14px;
+  }
+  .principle h3 {
+    margin: 0 0 10px;
+    font-size: 24px; letter-spacing: -0.018em;
+    font-weight: 500;
+  }
+  .principle h3 em { font-family: var(--serif); font-style: italic; font-weight: 400; }
+  .principle p { margin: 0; color: var(--ink-soft); font-size: 15px; line-height: 1.55; }
+
+  /* numbers strip */
+  .numbers {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    border: 1px solid var(--line);
+    border-radius: 18px;
+    overflow: hidden;
+    background: var(--paper);
+  }
+  .numbers > div {
+    padding: 32px 28px;
+    border-right: 1px solid var(--line);
+  }
+  .numbers > div:last-child { border-right: 0; }
+  .numbers b {
+    display: block;
+    font-size: clamp(36px, 4vw, 52px);
+    line-height: 1;
+    letter-spacing: -0.025em;
+    color: var(--ink);
+    font-weight: 500;
+    font-feature-settings: "tnum";
+  }
+  .numbers b em { font-family: var(--serif); font-style: italic; font-weight: 400; }
+  .numbers span {
+    display: block;
+    margin-top: 10px;
+    font-family: var(--mono); font-size: 11px;
+    letter-spacing: 0.1em; text-transform: uppercase;
+    color: var(--ink-mute);
+  }
+
+  /* timeline */
+  .timeline {
+    display: grid;
+    gap: 0;
+    margin-top: 12px;
+  }
+  .tl-row {
+    display: grid;
+    grid-template-columns: 120px 1fr;
+    gap: 32px;
+    padding: 22px 0;
+    border-bottom: 1px solid var(--line-soft);
+  }
+  .tl-row:first-child { border-top: 1px solid var(--line); }
+  .tl-row .year {
+    font-family: var(--mono); font-size: 12px;
+    letter-spacing: 0.12em; color: var(--ink-mute);
+    padding-top: 4px;
+  }
+  .tl-row .what h4 {
+    margin: 0 0 4px; font-size: 17px; font-weight: 600; letter-spacing: -0.012em;
+  }
+  .tl-row .what p { margin: 0; color: var(--ink-soft); font-size: 14.5px; }
+
+  @media (max-width: 880px) {
+    .manifesto-grid { grid-template-columns: 1fr; gap: 28px; }
+    .people-grid, .principles { grid-template-columns: 1fr; }
+    .numbers { grid-template-columns: 1fr 1fr; }
+    .numbers > div { border-right: 0; border-bottom: 1px solid var(--line); }
+  }
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap nav-inner">
+    <a href="index.html" class="brand">
+      <span class="brand-mark" aria-hidden="true">
+        <svg viewBox="0 0 220 220" xmlns="http://www.w3.org/2000/svg">
+          <rect class="sig-frame" x="20" y="20" width="180" height="180" rx="22" fill="none" stroke-width="6"/>
+          <line class="sig-axis" x1="20" y1="110" x2="200" y2="110" stroke-width="2"/>
+          <path class="sig-wave" d="M 30 130 Q 70 60, 110 110 T 190 90" stroke-width="8" fill="none" stroke-linecap="round"/>
+          <circle class="sig-dot" cx="190" cy="90" r="10"/>
+        </svg>
+      </span>
+      <span class="brand-name">Nordic <em>Theory</em> Labs°</span>
+    </a>
+    <nav class="nav-links">
+      <a href="index.html#apps">Apps</a>
+      <a href="index.html#approach">Approach</a>
+      <a href="blog/index.html">Notes</a>
+      <a href="about.html" class="active">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <div class="nav-meta">
+      <span class="pulse"></span>
+      <span>Stockholm · <span id="clock">14:32</span></span>
+    </div>
+  </div>
+</header>
+
+<section class="page-head">
+  <div class="aurora" aria-hidden="true"></div>
+  <div class="wrap">
+    <div class="eyebrow"><span class="bar"></span><span>About — Studio · Est. 2024</span></div>
+    <h1 class="page-title">Two people. One app a year. <em>That's it.</em></h1>
+    <p class="page-sub">Nordic Theory Labs is a Stockholm software studio. We make a small number of products with unreasonable care, write what we learn in between, and try not to ship things we wouldn't use ourselves.</p>
+  </div>
+</section>
+
+<!-- ───── manifesto ───── -->
+<section class="manifesto">
+  <div class="wrap">
+    <div class="manifesto-grid">
+      <h2>Why we made <em>a studio.</em></h2>
+      <div>
+        <p>We met at a company that shipped fast and apologised slowly. We left because we wanted to <strong>spend more time on fewer things</strong> — to take a problem we cared about, study it for as long as it needed, and then put one good thing into the world. Not three okay things. Not a platform. One.</p>
+        <p>The first thing we picked was the Swedish driving theory test. It is a small, well-defined problem with a lot of bad existing software around it, and it personally annoyed both of us. We spent fourteen months on it. <strong>48,000 students have now passed using it.</strong></p>
+        <p>That is the only thing we have shipped. We are okay with that. The studio is built so we never have to ship anything else until it is also worth shipping.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ───── numbers ───── -->
+<section>
+  <div class="wrap">
+    <div class="section-head">
+      <div class="section-label">02 — Studio numbers</div>
+      <h2 class="section-title">Where we are <em>today.</em></h2>
+    </div>
+    <div class="numbers">
+      <div><b>2</b><span>People</span></div>
+      <div><b>1</b><span>App shipped</span></div>
+      <div><b>48,000</b><span>Students passed</span></div>
+      <div><b>0<em> €</em></b><span>Outside funding</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ───── people ───── -->
+<section style="padding-top:0;">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="section-label">03 — Who's here</div>
+      <h2 class="section-title">The <em>two of us.</em></h2>
+    </div>
+    <div class="people-grid">
+      <div class="person">
+        <div class="portrait" data-initial="S" aria-hidden="true"></div>
+        <div>
+          <div class="meta">Co-founder · Product &amp; Design</div>
+          <h3>Sara <em>Lindqvist</em></h3>
+          <div class="role">Stockholm · she/her · sara@</div>
+          <p class="bio">Designs the question pool, the schedule, and almost everything you see on screen. Previously interaction design at Spotify and faculty at Hyper Island. Reads more about pedagogy than is strictly reasonable.</p>
+          <div class="links">
+            <a href="blog/index.html">Notes →</a>
+            <a href="#">Mastodon →</a>
+            <a href="mailto:sara@nordictheorylabs.com">Email →</a>
+          </div>
+        </div>
+      </div>
+      <div class="person">
+        <div class="portrait" data-initial="M" aria-hidden="true"></div>
+        <div>
+          <div class="meta">Co-founder · Engineering &amp; Ops</div>
+          <h3>Mikael <em>Eriksson</em></h3>
+          <div class="role">Helsinki ↔ Stockholm · he/him · mikael@</div>
+          <p class="bio">Writes the code, runs the infrastructure, handles the boring parts of running a company. Previously backend at Klarna and a long detour into civic-tech in Helsinki. Owns the Volvo.</p>
+          <div class="links">
+            <a href="blog/index.html">Notes →</a>
+            <a href="#">GitHub →</a>
+            <a href="mailto:mikael@nordictheorylabs.com">Email →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ───── principles ───── -->
+<section style="padding-top:0;">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="section-label">04 — How we work</div>
+      <h2 class="section-title">Four <em>principles</em> we keep coming back to.</h2>
+    </div>
+    <div class="principles">
+      <div class="principle">
+        <div class="num">01</div>
+        <h3>Ship <em>less.</em></h3>
+        <p>One app a year. No platform, no expansion roadmap, no second product until the first is finished. Restraint is a feature.</p>
+      </div>
+      <div class="principle">
+        <div class="num">02</div>
+        <h3>No <em>dark patterns.</em></h3>
+        <p>No streaks designed to manipulate. No notifications begging for re-engagement. No paywalls behind common sense. You can leave at any time.</p>
+      </div>
+      <div class="principle">
+        <div class="num">03</div>
+        <h3>Write what we <em>learn.</em></h3>
+        <p>If a decision was hard, the post-mortem is published. The blog is not marketing; it is an obligation of the studio.</p>
+      </div>
+      <div class="principle">
+        <div class="num">04</div>
+        <h3>No outside <em>capital.</em></h3>
+        <p>Funded by Körkort Hero, by us, and by a small grant from Vinnova in 2024. We answer to the people who use the app, not to anyone else.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ───── timeline ───── -->
+<section style="padding-top:0;">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="section-label">05 — Timeline</div>
+      <h2 class="section-title">A short <em>history.</em></h2>
+    </div>
+    <div class="timeline">
+      <div class="tl-row"><div class="year">May 2026</div><div class="what"><h4>Theory-test guide goes live</h4><p>The long-form study guide on the blog becomes the studio's most-read piece by week two.</p></div></div>
+      <div class="tl-row"><div class="year">Mar 2026</div><div class="what"><h4>48,000 students</h4><p>Körkort Hero crosses 48,000 passed students with zero paid acquisition.</p></div></div>
+      <div class="tl-row"><div class="year">Nov 2025</div><div class="what"><h4>Twelve languages</h4><p>The pool is translated into Tigrinya, Pashto, and Dari in collaboration with three refugee-aid organisations.</p></div></div>
+      <div class="tl-row"><div class="year">Mar 2025</div><div class="what"><h4>Körkort Hero v1.0</h4><p>Shipped to the App Store and Google Play after a 14-month build.</p></div></div>
+      <div class="tl-row"><div class="year">Jun 2024</div><div class="what"><h4>Vinnova grant</h4><p>A small early-stage grant covers the first six months of the build.</p></div></div>
+      <div class="tl-row"><div class="year">Jan 2024</div><div class="what"><h4>Studio incorporated</h4><p>Nordic Theory Labs AB registered in Stockholm. Two people, one room, one rented Volvo.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ───── CTA ───── -->
+<section style="padding-top:0;">
+  <div class="wrap">
+    <div style="display:grid; grid-template-columns: 1fr auto; gap:40px; align-items:center; padding: 48px 0; border-top: 1px solid var(--line);">
+      <div>
+        <h2 style="margin:0; font-size: clamp(28px, 3.4vw, 44px); line-height:1.05; letter-spacing:-0.025em; font-weight:500;">Want to talk to us? <em style="font-family:var(--serif); font-style:italic; font-weight:400;">Please do.</em></h2>
+        <p style="margin: 12px 0 0; color: var(--ink-soft); max-width: 56ch;">Press, partnerships, work with us, or just a thoughtful email. We read everything. Response time is &lt;48 hours on weekdays.</p>
+      </div>
+      <div style="display:flex; gap:10px;">
+        <a href="contact.html" class="btn btn-ink">Contact us <span class="arrow">→</span></a>
+        <a href="press.html" class="btn btn-ghost">Press kit</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ───── FOOTER (shared) ───── -->
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="col">
+        <h4>Studio</h4>
+        <p><strong>Nordic Theory Labs AB</strong><br/><em>Götgatan 22, 116 46 Stockholm, SE</em><br/>Org.nr 559-XXX-XXX</p>
+      </div>
+      <div class="col">
+        <h4>Products</h4>
+        <a href="apps/korkort-hero/">Körkort Hero</a>
+        <a href="index.html#apps">All apps</a>
+        <a href="changelog.html">Changelog</a>
+      </div>
+      <div class="col">
+        <h4>Studio</h4>
+        <a href="about.html">About</a>
+        <a href="blog/index.html">Notes</a>
+        <a href="press.html">Press</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div class="col">
+        <h4>Legal</h4>
+        <a href="privacy/index.html">Privacy</a>
+        <a href="terms/index.html">Terms</a>
+        <a href="contact.html#imprint">Imprint</a>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <div>© 2024–2026 NORDIC THEORY LABS AB · ORG.NR 559-XXX-XXX</div>
+      <div class="center">MADE IN STOCKHOLM · SHIPPED FROM HELSINKI</div>
+      <div class="right"><a href="index.html">← Back to studio</a></div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  function tickClock() {
+    const el = document.getElementById('clock'); if (!el) return;
+    try { el.textContent = new Date().toLocaleTimeString('sv-SE', { hour: '2-digit', minute: '2-digit', timeZone: 'Europe/Stockholm' }); } catch(e) {}
+  }
+  tickClock(); setInterval(tickClock, 30000);
+</script>
+
+</body>
+</html>

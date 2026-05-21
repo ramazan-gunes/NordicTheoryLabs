@@ -1,0 +1,352 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Page not found — Nordic Theory Labs</title>
+<meta name="description" content="The page you were looking for doesn't exist. Some honest suggestions on where to go next." />
+<meta name="robots" content="noindex" />
+<link rel="icon" type="image/svg+xml" href="logos/exports/signal/favicon.svg" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="assets/site.css" />
+
+<style>
+  /* full-bleed 404 layout */
+  .nf-shell {
+    min-height: calc(100vh - 80px);
+    display: grid;
+    grid-template-columns: 1.1fr 1fr;
+    align-items: stretch;
+  }
+
+  /* left: big number */
+  .nf-left {
+    position: relative;
+    isolation: isolate;
+    padding: clamp(48px, 7vw, 96px) clamp(24px, 5vw, 80px);
+    background: var(--ink);
+    color: var(--paper);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 60px;
+  }
+  .nf-left::before {
+    content: "";
+    position: absolute; inset: -20%;
+    z-index: -1;
+    filter: blur(70px) saturate(1.3);
+    opacity: 0.45;
+    background:
+      radial-gradient(circle at 30% 30%, oklch(0.62 0.18 285), transparent 55%),
+      radial-gradient(circle at 70% 70%, oklch(0.72 0.13 175), transparent 55%);
+    animation: drift1 18s ease-in-out infinite alternate;
+    pointer-events: none;
+  }
+  .nf-left::after {
+    content: "";
+    position: absolute; inset: 0;
+    background-image: radial-gradient(rgba(255,255,255,0.06) 1px, transparent 1.4px);
+    background-size: 4px 4px;
+    pointer-events: none;
+    mix-blend-mode: screen;
+  }
+
+  .nf-eyebrow {
+    display: flex; align-items: center; gap: 12px;
+    font-family: var(--mono); font-size: 11px;
+    letter-spacing: 0.14em; text-transform: uppercase;
+    color: oklch(0.72 0.03 220);
+  }
+  .nf-eyebrow .bar { width: 32px; height: 1px; background: oklch(0.72 0.03 220); }
+  .nf-eyebrow .pulse {
+    background: oklch(0.62 0.18 285);
+    box-shadow: 0 0 0 0 oklch(0.62 0.18 285 / 0.6);
+  }
+  @keyframes pulse-nf {
+    0% { box-shadow: 0 0 0 0 oklch(0.62 0.18 285 / 0.6); }
+    70% { box-shadow: 0 0 0 10px oklch(0.62 0.18 285 / 0); }
+    100% { box-shadow: 0 0 0 0 oklch(0.62 0.18 285 / 0); }
+  }
+
+  .nf-num {
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: clamp(180px, 28vw, 380px);
+    line-height: 0.78;
+    letter-spacing: -0.04em;
+    color: var(--paper);
+    margin: 0;
+    position: relative;
+  }
+  .nf-num .last {
+    color: oklch(0.78 0.10 220);
+  }
+  .nf-num .strike {
+    display: block;
+    width: 80%;
+    height: 4px;
+    background: var(--paper);
+    transform: rotate(-3deg);
+    margin: -0.15em 0 -0.08em;
+    opacity: 0.4;
+  }
+
+  .nf-meta {
+    display: grid;
+    gap: 18px;
+    max-width: 50ch;
+    font-family: var(--mono); font-size: 12px;
+    color: oklch(0.82 0.02 220);
+    letter-spacing: 0.04em;
+  }
+  .nf-meta .row {
+    display: grid;
+    grid-template-columns: 110px 1fr;
+    gap: 16px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+  }
+  .nf-meta .row .k {
+    color: oklch(0.62 0.04 220);
+    letter-spacing: 0.1em; text-transform: uppercase;
+    font-size: 10.5px;
+  }
+  .nf-meta .row .v { color: var(--paper); }
+  .nf-meta .row .v code {
+    font-family: var(--mono);
+    background: rgba(255,255,255,0.08);
+    padding: 1px 6px; border-radius: 3px;
+  }
+
+  /* right: where to go */
+  .nf-right {
+    padding: clamp(48px, 7vw, 96px) clamp(24px, 5vw, 72px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 32px;
+  }
+  .nf-right h2 {
+    margin: 0;
+    font-size: clamp(28px, 3.6vw, 44px);
+    line-height: 1.05;
+    letter-spacing: -0.025em;
+    font-weight: 500;
+    max-width: 18ch;
+  }
+  .nf-right h2 em { font-family: var(--serif); font-style: italic; font-weight: 400; }
+  .nf-right .sub {
+    color: var(--ink-soft);
+    font-size: 16px; line-height: 1.55;
+    max-width: 44ch;
+  }
+
+  /* search */
+  .nf-search {
+    display: flex; align-items: center; gap: 8px;
+    padding: 6px 6px 6px 18px;
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    background: var(--paper);
+    max-width: 420px;
+  }
+  .nf-search svg { color: var(--ink-mute); flex: 0 0 auto; }
+  .nf-search input {
+    flex: 1; border: 0; background: transparent;
+    font: inherit; color: var(--ink);
+    outline: 0; padding: 8px 4px;
+  }
+  .nf-search input::placeholder { color: var(--ink-mute); }
+  .nf-search button {
+    padding: 10px 18px;
+    border-radius: 999px;
+    background: var(--ink); color: var(--paper);
+    font-size: 13px; font-weight: 500;
+  }
+
+  /* suggested links */
+  .nf-links {
+    display: grid; gap: 0;
+    border-top: 1px solid var(--line);
+  }
+  .nf-link {
+    display: grid;
+    grid-template-columns: 24px 1fr auto;
+    align-items: baseline;
+    gap: 20px;
+    padding: 18px 4px;
+    border-bottom: 1px solid var(--line-soft);
+    transition: padding 0.2s ease;
+  }
+  .nf-link:hover { padding-left: 12px; }
+  .nf-link .n {
+    font-family: var(--mono); font-size: 10.5px;
+    letter-spacing: 0.12em; color: var(--ink-mute);
+  }
+  .nf-link .label {
+    font-size: 17px;
+    color: var(--ink);
+    font-weight: 500;
+    letter-spacing: -0.012em;
+  }
+  .nf-link .label em { font-family: var(--serif); font-style: italic; font-weight: 400; }
+  .nf-link .label small {
+    display: block; margin-top: 3px;
+    font-family: var(--sans); font-weight: 400;
+    color: var(--ink-soft); font-size: 13.5px;
+  }
+  .nf-link .arr {
+    font-family: var(--mono); font-size: 11px;
+    letter-spacing: 0.1em; text-transform: uppercase;
+    color: var(--ink-mute);
+    transition: transform 0.2s ease, color 0.2s ease;
+  }
+  .nf-link:hover .arr { color: var(--ink); transform: translateX(4px); }
+
+  .nf-foot {
+    margin-top: 16px;
+    padding-top: 16px;
+    border-top: 1px solid var(--line);
+    display: flex; justify-content: space-between; align-items: center;
+    font-family: var(--mono); font-size: 11px;
+    letter-spacing: 0.08em;
+    color: var(--ink-mute);
+    flex-wrap: wrap; gap: 12px;
+  }
+  .nf-foot a:hover { color: var(--ink); }
+
+  @media (max-width: 920px) {
+    .nf-shell { grid-template-columns: 1fr; min-height: 0; }
+    .nf-left { padding: 56px 28px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ───────── NAV ───────── -->
+<header class="nav">
+  <div class="wrap nav-inner">
+    <a href="index.html" class="brand">
+      <span class="brand-mark" aria-hidden="true">
+        <svg viewBox="0 0 220 220" xmlns="http://www.w3.org/2000/svg">
+          <rect class="sig-frame" x="20" y="20" width="180" height="180" rx="22" fill="none" stroke-width="6"/>
+          <line class="sig-axis" x1="20" y1="110" x2="200" y2="110" stroke-width="2"/>
+          <path class="sig-wave" d="M 30 130 Q 70 60, 110 110 T 190 90" stroke-width="8" fill="none" stroke-linecap="round"/>
+          <circle class="sig-dot" cx="190" cy="90" r="10"/>
+        </svg>
+      </span>
+      <span class="brand-name">Nordic <em>Theory</em> Labs°</span>
+    </a>
+    <nav class="nav-links">
+      <a href="index.html#apps">Apps</a>
+      <a href="index.html#approach">Approach</a>
+      <a href="blog/index.html">Notes</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <div class="nav-meta">
+      <span class="pulse"></span>
+      <span>Stockholm · <span id="clock">14:32</span></span>
+    </div>
+  </div>
+</header>
+
+<!-- ───────── 404 SHELL ───────── -->
+<div class="nf-shell">
+
+  <!-- left -->
+  <div class="nf-left">
+    <div>
+      <div class="nf-eyebrow"><span class="bar"></span><span>Error · Page not found</span><span class="pulse" style="animation-name:pulse-nf;"></span></div>
+      <h1 class="nf-num">4<span class="last">0</span><span class="last">4</span></h1>
+    </div>
+
+    <div class="nf-meta">
+      <div class="row">
+        <span class="k">Requested</span>
+        <span class="v"><code id="nf-path">/wherever-you-typed</code></span>
+      </div>
+      <div class="row">
+        <span class="k">Status</span>
+        <span class="v">404 — Not Found</span>
+      </div>
+      <div class="row">
+        <span class="k">Server</span>
+        <span class="v">nordictheorylabs.com · <em style="font-family:var(--serif); font-style:italic;">Stockholm</em></span>
+      </div>
+      <div class="row" style="border-bottom:0;">
+        <span class="k">Suggestion</span>
+        <span class="v">Probably a stale link. Try one of the panels →</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- right -->
+  <div class="nf-right">
+    <div>
+      <p style="font-family:var(--mono); font-size:11px; letter-spacing:0.14em; text-transform:uppercase; color:var(--ink-mute); margin:0 0 14px;">Where you might have meant to go</p>
+      <h2>This page <em>moved, or never existed.</em></h2>
+      <p class="sub">Either we broke a link (it happens — let us know if it was us), or the URL is from an older version of the site. Here's the same map, smaller, in case it helps.</p>
+    </div>
+
+    <div class="nf-search">
+      <svg width="14" height="14" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="9" cy="9" r="6"/><path d="m18 18-4-4"/></svg>
+      <input type="search" placeholder="Search the site…" />
+      <button>Search</button>
+    </div>
+
+    <div class="nf-links">
+      <a href="index.html" class="nf-link">
+        <span class="n">01</span>
+        <span class="label">Studio <em>home</em><small>The landing page, with the apps grid and the studio overview.</small></span>
+        <span class="arr">Open →</span>
+      </a>
+      <a href="apps/korkort-hero/" class="nf-link">
+        <span class="n">02</span>
+        <span class="label">Körkort <em>Hero</em><small>Our shipping product — the Swedish theory test prep app.</small></span>
+        <span class="arr">Open →</span>
+      </a>
+      <a href="blog/index.html" class="nf-link">
+        <span class="n">03</span>
+        <span class="label">Lab <em>Notes</em><small>Long-form essays on design, the test, and running a small studio.</small></span>
+        <span class="arr">Open →</span>
+      </a>
+      <a href="about.html" class="nf-link">
+        <span class="n">04</span>
+        <span class="label">About the <em>studio</em><small>Who we are, why we work this way, and the timeline.</small></span>
+        <span class="arr">Open →</span>
+      </a>
+      <a href="contact.html" class="nf-link">
+        <span class="n">05</span>
+        <span class="label">Get in <em>touch</em><small>Send us a note. We read everything within 48 hours.</small></span>
+        <span class="arr">Open →</span>
+      </a>
+    </div>
+
+    <div class="nf-foot">
+      <div>If we broke this, please <a href="mailto:hello@nordictheorylabs.com" style="color:var(--ink); text-decoration:underline; text-underline-offset:3px;">tell us where you came from →</a></div>
+      <div><a href="javascript:history.back()">← Or go back</a></div>
+    </div>
+  </div>
+
+</div>
+
+<script>
+  function tickClock() { const el = document.getElementById('clock'); if (!el) return;
+    try { el.textContent = new Date().toLocaleTimeString('sv-SE', { hour: '2-digit', minute: '2-digit', timeZone: 'Europe/Stockholm' }); } catch(e) {} }
+  tickClock(); setInterval(tickClock, 30000);
+
+  // show what they tried to reach
+  try {
+    const path = decodeURIComponent(window.location.pathname + (window.location.search || ''));
+    const el = document.getElementById('nf-path');
+    if (el && path && path !== '/') el.textContent = path;
+  } catch(e) {}
+</script>
+
+</body>
+</html>

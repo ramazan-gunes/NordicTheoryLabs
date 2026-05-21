@@ -1,0 +1,428 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Contact — Nordic Theory Labs</title>
+<meta name="description" content="Get in touch with Nordic Theory Labs — support, press, partnerships, and the studio imprint." />
+<link rel="canonical" href="https://nordictheorylabs.com/contact.html" />
+<link rel="icon" type="image/svg+xml" href="logos/exports/signal/favicon.svg" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="assets/site.css" />
+
+<style>
+  /* main contact split */
+  .contact-grid {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: clamp(40px, 5vw, 80px);
+    align-items: start;
+    margin-top: 24px;
+  }
+
+  /* contact rows (left) */
+  .reach-rows {
+    display: grid;
+    border-top: 1px solid var(--line);
+  }
+  .reach {
+    display: grid;
+    grid-template-columns: 140px 1fr auto;
+    gap: 24px;
+    padding: 26px 0;
+    border-bottom: 1px solid var(--line-soft);
+    align-items: start;
+  }
+  .reach .lbl {
+    font-family: var(--mono); font-size: 11px;
+    letter-spacing: 0.14em; text-transform: uppercase;
+    color: var(--ink-mute);
+    padding-top: 4px;
+  }
+  .reach .body h3 {
+    margin: 0 0 6px; font-size: 19px; font-weight: 500;
+    letter-spacing: -0.015em;
+  }
+  .reach .body h3 em { font-family: var(--serif); font-style: italic; font-weight: 400; }
+  .reach .body p { margin: 0 0 8px; color: var(--ink-soft); font-size: 14.5px; line-height: 1.5; max-width: 44ch; }
+  .reach .body a.mail {
+    font-family: var(--mono); font-size: 13px;
+    color: var(--ink); text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+  .reach .sla {
+    font-family: var(--mono); font-size: 10.5px;
+    letter-spacing: 0.1em; text-transform: uppercase;
+    color: var(--ink-mute);
+    padding-top: 4px;
+    text-align: right;
+  }
+
+  /* form (right) */
+  .form-card {
+    padding: 32px;
+    border: 1px solid var(--line);
+    border-radius: 20px;
+    background: var(--paper);
+  }
+  .form-card h2 {
+    margin: 0 0 6px; font-size: 26px; letter-spacing: -0.02em; font-weight: 500;
+  }
+  .form-card h2 em { font-family: var(--serif); font-style: italic; font-weight: 400; }
+  .form-card .sub {
+    color: var(--ink-soft); font-size: 14px; margin: 0 0 24px;
+  }
+  .field { display: grid; gap: 6px; margin-bottom: 16px; }
+  .field label {
+    font-family: var(--mono); font-size: 10.5px;
+    letter-spacing: 0.12em; text-transform: uppercase;
+    color: var(--ink-mute);
+  }
+  .field input, .field textarea, .field select {
+    font: inherit; color: var(--ink);
+    padding: 12px 14px;
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    background: var(--paper);
+    outline: 0;
+    transition: border-color 0.15s ease;
+  }
+  .field input:focus, .field textarea:focus, .field select:focus { border-color: var(--ink); }
+  .field textarea { min-height: 130px; resize: vertical; }
+  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  .form-actions {
+    display: flex; justify-content: space-between; align-items: center;
+    margin-top: 8px;
+  }
+  .form-actions .micro {
+    font-family: var(--mono); font-size: 10.5px;
+    letter-spacing: 0.08em; color: var(--ink-mute);
+    max-width: 24ch;
+  }
+
+  /* studio block */
+  .studio-block {
+    margin-top: 60px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1px;
+    background: var(--line);
+    border: 1px solid var(--line);
+    border-radius: 18px;
+    overflow: hidden;
+  }
+  .studio-block > div { background: var(--paper); padding: 32px; }
+  .studio-block h3 { margin: 0 0 8px; font-size: 19px; font-weight: 500; letter-spacing: -0.015em; }
+  .studio-block h3 em { font-family: var(--serif); font-style: italic; font-weight: 400; }
+  .studio-block p { margin: 0 0 6px; color: var(--ink-soft); font-size: 14.5px; line-height: 1.55; }
+  .studio-block .lbl {
+    font-family: var(--mono); font-size: 11px;
+    letter-spacing: 0.12em; text-transform: uppercase;
+    color: var(--ink-mute);
+    margin-bottom: 12px;
+  }
+  .studio-block .hours {
+    display: grid; gap: 4px; margin-top: 10px;
+    font-family: var(--mono); font-size: 12.5px;
+    color: var(--ink-soft);
+  }
+  .studio-block .hours .row { display: grid; grid-template-columns: 90px 1fr; }
+  .studio-block .hours .row b { color: var(--ink); font-weight: 500; }
+
+  /* map placeholder */
+  .map {
+    margin-top: 0;
+    aspect-ratio: 21 / 9;
+    border-radius: 18px;
+    overflow: hidden;
+    border: 1px solid var(--line);
+    position: relative;
+    background:
+      radial-gradient(circle at 30% 60%, oklch(0.78 0.05 220) 0%, transparent 28%),
+      radial-gradient(circle at 65% 35%, oklch(0.82 0.04 175) 0%, transparent 25%),
+      var(--paper-soft);
+  }
+  .map::after {
+    content: "";
+    position: absolute; inset: 0;
+    background-image:
+      linear-gradient(rgba(14,22,32,0.06) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(14,22,32,0.06) 1px, transparent 1px);
+    background-size: 38px 38px;
+    mix-blend-mode: multiply;
+  }
+  .map .pin {
+    position: absolute; left: 48%; top: 44%;
+    width: 20px; height: 20px; border-radius: 50%;
+    background: var(--ink);
+    border: 3px solid var(--paper);
+    box-shadow: 0 6px 18px -4px rgba(14,22,32,0.4);
+  }
+  .map .label {
+    position: absolute; left: calc(48% + 24px); top: calc(44% - 12px);
+    background: var(--paper);
+    padding: 8px 12px; border-radius: 8px;
+    border: 1px solid var(--line);
+    font-family: var(--mono); font-size: 11px; letter-spacing: 0.06em;
+    color: var(--ink);
+    box-shadow: 0 4px 12px -4px rgba(14,22,32,0.2);
+  }
+
+  @media (max-width: 980px) {
+    .contact-grid, .studio-block { grid-template-columns: 1fr; }
+    .reach { grid-template-columns: 1fr; gap: 6px; }
+    .reach .sla { text-align: left; }
+    .form-row { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap nav-inner">
+    <a href="index.html" class="brand">
+      <span class="brand-mark" aria-hidden="true">
+        <svg viewBox="0 0 220 220" xmlns="http://www.w3.org/2000/svg">
+          <rect class="sig-frame" x="20" y="20" width="180" height="180" rx="22" fill="none" stroke-width="6"/>
+          <line class="sig-axis" x1="20" y1="110" x2="200" y2="110" stroke-width="2"/>
+          <path class="sig-wave" d="M 30 130 Q 70 60, 110 110 T 190 90" stroke-width="8" fill="none" stroke-linecap="round"/>
+          <circle class="sig-dot" cx="190" cy="90" r="10"/>
+        </svg>
+      </span>
+      <span class="brand-name">Nordic <em>Theory</em> Labs°</span>
+    </a>
+    <nav class="nav-links">
+      <a href="index.html#apps">Apps</a>
+      <a href="index.html#approach">Approach</a>
+      <a href="blog/index.html">Notes</a>
+      <a href="about.html">About</a>
+      <a href="contact.html" class="active">Contact</a>
+    </nav>
+    <div class="nav-meta">
+      <span class="pulse"></span>
+      <span>Stockholm · <span id="clock">14:32</span></span>
+    </div>
+  </div>
+</header>
+
+<section class="page-head">
+  <div class="aurora" aria-hidden="true"></div>
+  <div class="wrap">
+    <div class="eyebrow"><span class="bar"></span><span>Contact — Average response under 48 h</span></div>
+    <h1 class="page-title">Write to us. <em>We read everything.</em></h1>
+    <p class="page-sub">No chatbots, no triage queue, no ticket numbers. Mail goes directly to a founder and gets a reply within two working days. If it doesn't, it means we're on a train somewhere north of Sundsvall — try again the day after.</p>
+  </div>
+</section>
+
+<!-- ───── contact split ───── -->
+<section style="padding-top:32px;">
+  <div class="wrap">
+    <div class="contact-grid">
+
+      <!-- left: routed addresses -->
+      <div>
+        <div class="section-label" style="margin-bottom:16px;">01 — Who to write to</div>
+
+        <div class="reach-rows">
+          <div class="reach">
+            <div class="lbl">Support</div>
+            <div class="body">
+              <h3>Stuck inside Körkort <em>Hero</em>?</h3>
+              <p>Bug reports, payment issues, account recovery, refund requests. Include your device model if you can.</p>
+              <a class="mail" href="mailto:help@nordictheorylabs.com">help@nordictheorylabs.com</a>
+            </div>
+            <div class="sla">~24 h<br/>Mon – Fri</div>
+          </div>
+
+          <div class="reach">
+            <div class="lbl">Press</div>
+            <div class="body">
+              <h3>Working on a <em>story</em>?</h3>
+              <p>Interview requests, fact-checks, embargo enquiries. <a href="press.html" style="color:var(--ink); text-decoration:underline;">Press kit ↗</a></p>
+              <a class="mail" href="mailto:press@nordictheorylabs.com">press@nordictheorylabs.com</a>
+            </div>
+            <div class="sla">&lt;48 h<br/>EN / SV</div>
+          </div>
+
+          <div class="reach">
+            <div class="lbl">Partnerships</div>
+            <div class="body">
+              <h3>School, NGO, <em>employer</em>?</h3>
+              <p>Bulk licences, refugee-aid integrations, classroom installs. Tell us how many seats and we'll quote within a day.</p>
+              <a class="mail" href="mailto:partners@nordictheorylabs.com">partners@nordictheorylabs.com</a>
+            </div>
+            <div class="sla">~48 h</div>
+          </div>
+
+          <div class="reach">
+            <div class="lbl">Privacy</div>
+            <div class="body">
+              <h3>Data requests <em>under GDPR</em></h3>
+              <p>Access, export, deletion. We respond inside 30 days as per regulation, usually inside 7.</p>
+              <a class="mail" href="mailto:privacy@nordictheorylabs.com">privacy@nordictheorylabs.com</a>
+            </div>
+            <div class="sla">≤ 30 days</div>
+          </div>
+
+          <div class="reach">
+            <div class="lbl">Studio</div>
+            <div class="body">
+              <h3>Anything <em>else</em></h3>
+              <p>A note about a blog post, a kind word, a complaint, a job pitch (we're not hiring but read every CV).</p>
+              <a class="mail" href="mailto:hello@nordictheorylabs.com">hello@nordictheorylabs.com</a>
+            </div>
+            <div class="sla">When we get to it</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- right: short form -->
+      <div>
+        <div class="form-card">
+          <h2>Or use the <em>form.</em></h2>
+          <p class="sub">It routes to the right inbox based on the subject you pick. Same humans, slightly less typing.</p>
+
+          <form onsubmit="event.preventDefault(); document.getElementById('formMsg').textContent='Thank you — we have it. You\\'ll hear back within 48h.'; this.querySelectorAll('input, textarea, select, button').forEach(el => el.disabled = true);">
+            <div class="form-row">
+              <div class="field">
+                <label for="f-name">Your name</label>
+                <input id="f-name" type="text" placeholder="Anna Berg" required />
+              </div>
+              <div class="field">
+                <label for="f-email">Email</label>
+                <input id="f-email" type="email" placeholder="anna@example.com" required />
+              </div>
+            </div>
+
+            <div class="field">
+              <label for="f-subject">Subject area</label>
+              <select id="f-subject">
+                <option>Support — something is broken</option>
+                <option>Press / media enquiry</option>
+                <option>Partnership / bulk licence</option>
+                <option>Privacy / GDPR request</option>
+                <option>Other (general)</option>
+              </select>
+            </div>
+
+            <div class="field">
+              <label for="f-msg">Message</label>
+              <textarea id="f-msg" placeholder="Tell us briefly what's going on." required></textarea>
+            </div>
+
+            <div class="form-actions">
+              <span class="micro" id="formMsg">By writing, you accept our <a href="privacy/index.html" style="color:var(--ink); text-decoration:underline;">privacy notice</a>. We never share your email.</span>
+              <button type="submit" class="btn btn-ink">Send <span class="arrow">→</span></button>
+            </div>
+          </form>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ───── studio block ───── -->
+<section style="padding-top: 0;">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="section-label">02 — Studio</div>
+      <h2 class="section-title">Where to <em>find us.</em></h2>
+    </div>
+
+    <div class="map" aria-hidden="true">
+      <div class="pin"></div>
+      <div class="label">Götgatan 22 · Stockholm</div>
+    </div>
+
+    <div class="studio-block" id="imprint">
+      <div>
+        <div class="lbl">Postal address</div>
+        <h3>Nordic Theory <em>Labs AB</em></h3>
+        <p>Götgatan 22, 5 tr</p>
+        <p>116 46 Stockholm, SE</p>
+        <p style="margin-top:14px;"><em>Visits by appointment only. We share the floor with two other studios, so just ring the bell labelled "Nordic Theory."</em></p>
+      </div>
+      <div>
+        <div class="lbl">Hours</div>
+        <h3>Quiet hours, kept <em>quietly.</em></h3>
+        <div class="hours">
+          <div class="row"><span>Mon – Thu</span><b>09:00 – 17:00</b></div>
+          <div class="row"><span>Fri</span><b>09:00 – 14:00</b></div>
+          <div class="row"><span>Sat – Sun</span><b>Closed</b></div>
+          <div class="row" style="margin-top:8px;"><span>Holiday</span><b>Aug 15 – Aug 30 (closed)</b></div>
+        </div>
+        <p style="margin-top:14px;">Outside hours: emergencies only, via press@. We do not answer phones — email is the contract.</p>
+      </div>
+
+      <div>
+        <div class="lbl">Legal imprint</div>
+        <h3>For the <em>record.</em></h3>
+        <p><strong>Nordic Theory Labs AB</strong> · Org.nr 559-XXX-XXX · VAT SE559XXXXXX01</p>
+        <p>Bolagsverket-registered, Stockholm 2024.</p>
+        <p>Authorised representative: M. Eriksson (CEO), S. Lindqvist (CTO).</p>
+        <p style="margin-top:14px;">Dispute resolution: ARN (Allmänna reklamationsnämnden), <em>arn.se</em>. EU ODR platform also available.</p>
+      </div>
+      <div>
+        <div class="lbl">Social &amp; feeds</div>
+        <h3>Where else <em>we are.</em></h3>
+        <p style="margin-bottom:12px;">We don't run any other accounts beyond these — anyone else using the studio name is not us.</p>
+        <div style="display: grid; grid-template-columns: auto 1fr; gap: 8px 14px; font-family: var(--mono); font-size: 12.5px; align-items: baseline;">
+          <span style="color: var(--ink-mute); letter-spacing:0.08em; text-transform:uppercase; font-size: 10.5px;">Mastodon</span>
+          <a href="#" style="color:var(--ink); text-decoration:underline; text-underline-offset:3px;">@nordictheory@hachyderm.io</a>
+          <span style="color: var(--ink-mute); letter-spacing:0.08em; text-transform:uppercase; font-size: 10.5px;">GitHub</span>
+          <a href="#" style="color:var(--ink); text-decoration:underline; text-underline-offset:3px;">github.com/nordic-theory-labs</a>
+          <span style="color: var(--ink-mute); letter-spacing:0.08em; text-transform:uppercase; font-size: 10.5px;">RSS</span>
+          <a href="blog/index.html" style="color:var(--ink); text-decoration:underline; text-underline-offset:3px;">/blog/feed.xml</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="col">
+        <h4>Studio</h4>
+        <p><strong>Nordic Theory Labs AB</strong><br/><em>Götgatan 22, 116 46 Stockholm, SE</em><br/>Org.nr 559-XXX-XXX</p>
+      </div>
+      <div class="col">
+        <h4>Products</h4>
+        <a href="apps/korkort-hero/">Körkort Hero</a>
+        <a href="index.html#apps">All apps</a>
+        <a href="changelog.html">Changelog</a>
+      </div>
+      <div class="col">
+        <h4>Studio</h4>
+        <a href="about.html">About</a>
+        <a href="blog/index.html">Notes</a>
+        <a href="press.html">Press</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div class="col">
+        <h4>Legal</h4>
+        <a href="privacy/index.html">Privacy</a>
+        <a href="terms/index.html">Terms</a>
+        <a href="contact.html#imprint">Imprint</a>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <div>© 2024–2026 NORDIC THEORY LABS AB · ORG.NR 559-XXX-XXX</div>
+      <div class="center">MADE IN STOCKHOLM · SHIPPED FROM HELSINKI</div>
+      <div class="right"><a href="index.html">← Back to studio</a></div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  function tickClock() { const el = document.getElementById('clock'); if (!el) return;
+    try { el.textContent = new Date().toLocaleTimeString('sv-SE', { hour: '2-digit', minute: '2-digit', timeZone: 'Europe/Stockholm' }); } catch(e) {} }
+  tickClock(); setInterval(tickClock, 30000);
+</script>
+
+</body>
+</html>

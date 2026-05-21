@@ -1,0 +1,330 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Subpages overview — Nordic Theory Labs</title>
+<link rel="icon" type="image/svg+xml" href="logos/exports/signal/favicon.svg" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="assets/site.css" />
+
+<style>
+  .ov-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 28px;
+    margin-top: 40px;
+  }
+  .ov-card {
+    border: 1px solid var(--line);
+    border-radius: 18px;
+    overflow: hidden;
+    background: var(--paper);
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    transition: border-color 0.2s ease, transform 0.25s ease;
+  }
+  .ov-card:hover { border-color: var(--ink); transform: translateY(-3px); }
+  .ov-card .frame-wrap {
+    position: relative;
+    aspect-ratio: 16 / 11;
+    overflow: hidden;
+    background: var(--paper-soft);
+    border-bottom: 1px solid var(--line);
+  }
+  .ov-card iframe {
+    position: absolute;
+    top: 0; left: 0;
+    width: 1440px; height: 990px;
+    transform: scale(0.42);
+    transform-origin: top left;
+    border: 0;
+    pointer-events: none;
+  }
+  .ov-card .frame-wrap::after {
+    content: "";
+    position: absolute; inset: 0;
+    pointer-events: none;
+    box-shadow: inset 0 -40px 80px -20px rgba(241, 238, 230, 0.6);
+  }
+  .ov-card .head {
+    padding: 22px 26px 6px;
+    display: flex; align-items: baseline; justify-content: space-between; gap: 16px;
+  }
+  .ov-card .head .n {
+    font-family: var(--mono); font-size: 11px;
+    letter-spacing: 0.14em; color: var(--ink-mute);
+    text-transform: uppercase;
+  }
+  .ov-card .head .status {
+    font-family: var(--mono); font-size: 10px;
+    letter-spacing: 0.1em; color: var(--pos);
+  }
+  .ov-card .body { padding: 0 26px 18px; }
+  .ov-card h3 {
+    margin: 0 0 8px;
+    font-size: 22px; font-weight: 500;
+    letter-spacing: -0.018em;
+  }
+  .ov-card h3 em { font-family: var(--serif); font-style: italic; font-weight: 400; }
+  .ov-card p {
+    margin: 0;
+    color: var(--ink-soft);
+    font-size: 14px; line-height: 1.5;
+    max-width: 48ch;
+  }
+  .ov-card .actions {
+    padding: 16px 26px 22px;
+    border-top: 1px solid var(--line-soft);
+    display: flex; justify-content: space-between; align-items: center;
+    margin-top: 14px;
+  }
+  .ov-card .actions code {
+    font-family: var(--mono); font-size: 12px;
+    color: var(--ink-mute);
+  }
+  .ov-card .actions a {
+    font-family: var(--mono); font-size: 11px;
+    letter-spacing: 0.08em; text-transform: uppercase;
+    color: var(--ink);
+  }
+
+  /* full-width hero card */
+  .ov-card.feature { grid-column: span 2; }
+  .ov-card.feature .frame-wrap { aspect-ratio: 21 / 9; }
+
+  .legend-strip {
+    display: flex; gap: 24px; align-items: center; flex-wrap: wrap;
+    padding: 18px 0 0;
+    font-family: var(--mono); font-size: 11px;
+    letter-spacing: 0.08em; color: var(--ink-mute);
+  }
+  .legend-strip b { color: var(--ink); font-weight: 500; }
+
+  @media (max-width: 880px) {
+    .ov-grid { grid-template-columns: 1fr; }
+    .ov-card.feature { grid-column: span 1; }
+  }
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap nav-inner">
+    <a href="index.html" class="brand">
+      <span class="brand-mark" aria-hidden="true">
+        <svg viewBox="0 0 220 220" xmlns="http://www.w3.org/2000/svg">
+          <rect class="sig-frame" x="20" y="20" width="180" height="180" rx="22" fill="none" stroke-width="6"/>
+          <line class="sig-axis" x1="20" y1="110" x2="200" y2="110" stroke-width="2"/>
+          <path class="sig-wave" d="M 30 130 Q 70 60, 110 110 T 190 90" stroke-width="8" fill="none" stroke-linecap="round"/>
+          <circle class="sig-dot" cx="190" cy="90" r="10"/>
+        </svg>
+      </span>
+      <span class="brand-name">Nordic <em>Theory</em> Labs°</span>
+    </a>
+    <div class="crumb">
+      <a href="index.html">Studio</a>
+      <span class="sep">/</span>
+      <span class="cur">Subpages overview</span>
+    </div>
+    <div class="nav-meta">
+      <span class="pulse"></span>
+      <span>7 templates · Draft v1</span>
+    </div>
+  </div>
+</header>
+
+<section class="page-head">
+  <div class="aurora" aria-hidden="true"></div>
+  <div class="wrap">
+    <div class="eyebrow"><span class="bar"></span><span>Subpages — Draft templates · 2026</span></div>
+    <h1 class="page-title">The site, <em>beyond</em> the landing page.</h1>
+    <p class="page-sub">Seven new pages to slot in around the existing studio site &amp; Körkort Hero page. Two are finished SEO-ready content (blog index + flagship long-form post); five are templates ready to fill with real material later. Click any card to open it full-page.</p>
+    <div class="legend-strip">
+      <span>Shared styles: <b>assets/site.css</b></span>
+      <span>Fonts: Manrope + Instrument Serif + JetBrains Mono</span>
+      <span>Palette: paper / ink + aurora accents</span>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top: 24px;">
+  <div class="wrap">
+
+    <div class="ov-grid">
+
+      <!-- featured: blog post -->
+      <a href="blog/swedish-driving-theory-test-guide.html" class="ov-card feature">
+        <div class="frame-wrap"><iframe src="blog/swedish-driving-theory-test-guide.html" loading="lazy" aria-hidden="true"></iframe></div>
+        <div class="head">
+          <span class="n">01 · Blog post (sample)</span>
+          <span class="status">● SEO-ready · written</span>
+        </div>
+        <div class="body">
+          <h3>The complete guide to passing the Swedish <em>theory test</em></h3>
+          <p>A 3,200-word, examiner-reviewed long-form post. Includes TOC, reading-progress bar, callouts, stat blocks, checklists, FAQ, author bio and schema.org Article markup. Use this as the template for every future blog post.</p>
+        </div>
+        <div class="actions">
+          <code>blog/swedish-driving-theory-test-guide.html</code>
+          <span>Open full →</span>
+        </div>
+      </a>
+
+      <!-- blog index -->
+      <a href="blog/index.html" class="ov-card">
+        <div class="frame-wrap"><iframe src="blog/index.html" loading="lazy" aria-hidden="true"></iframe></div>
+        <div class="head">
+          <span class="n">02 · Blog index</span>
+          <span class="status">● Ready</span>
+        </div>
+        <div class="body">
+          <h3>Notes — blog <em>landing</em></h3>
+          <p>Featured post + sidebar + filterable archive grid + newsletter capture. Topic chips and search work visually; wire to real data when you have a CMS.</p>
+        </div>
+        <div class="actions">
+          <code>blog/index.html</code>
+          <span>Open →</span>
+        </div>
+      </a>
+
+      <!-- about -->
+      <a href="about.html" class="ov-card">
+        <div class="frame-wrap"><iframe src="about.html" loading="lazy" aria-hidden="true"></iframe></div>
+        <div class="head">
+          <span class="n">03 · About</span>
+          <span class="status">● Template</span>
+        </div>
+        <div class="body">
+          <h3>About the <em>studio</em></h3>
+          <p>Manifesto block, founder cards, four principles, numbers strip, and a vertical timeline. Swap copy + portraits to make it real.</p>
+        </div>
+        <div class="actions">
+          <code>about.html</code>
+          <span>Open →</span>
+        </div>
+      </a>
+
+      <!-- press -->
+      <a href="press.html" class="ov-card">
+        <div class="frame-wrap"><iframe src="press.html" loading="lazy" aria-hidden="true"></iframe></div>
+        <div class="head">
+          <span class="n">04 · Press kit</span>
+          <span class="status">● Template</span>
+        </div>
+        <div class="body">
+          <h3>Press &amp; <em>media</em></h3>
+          <p>Fact sheet table, six asset-download cards, a pull-quote, coverage list, and a press-contact CTA. Drop real ZIP links in <code style="font-family:var(--mono);font-size:12px;background:var(--paper-soft);padding:1px 5px;border-radius:3px;">.actions a</code>.</p>
+        </div>
+        <div class="actions">
+          <code>press.html</code>
+          <span>Open →</span>
+        </div>
+      </a>
+
+      <!-- contact -->
+      <a href="contact.html" class="ov-card">
+        <div class="frame-wrap"><iframe src="contact.html" loading="lazy" aria-hidden="true"></iframe></div>
+        <div class="head">
+          <span class="n">05 · Contact</span>
+          <span class="status">● Template</span>
+        </div>
+        <div class="body">
+          <h3>Get in <em>touch</em></h3>
+          <p>Routed inboxes on the left (support / press / partners / privacy / studio), short form on the right, studio block with imprint &amp; hours, decorative map. Hook the form up to Formspree / Plunk / Resend.</p>
+        </div>
+        <div class="actions">
+          <code>contact.html</code>
+          <span>Open →</span>
+        </div>
+      </a>
+
+      <!-- changelog -->
+      <a href="changelog.html" class="ov-card">
+        <div class="frame-wrap"><iframe src="changelog.html" loading="lazy" aria-hidden="true"></iframe></div>
+        <div class="head">
+          <span class="n">06 · Changelog</span>
+          <span class="status">● Template</span>
+        </div>
+        <div class="body">
+          <h3>What's <em>changed</em>, version by version</h3>
+          <p>Sticky version pill on the left, change list with kind-tags (New / Improved / Fixed / Removed / Security) on the right. Six sample releases included. RSS link in the nav.</p>
+        </div>
+        <div class="actions">
+          <code>changelog.html</code>
+          <span>Open →</span>
+        </div>
+      </a>
+
+      <!-- 404 -->
+      <a href="404.html" class="ov-card">
+        <div class="frame-wrap"><iframe src="404.html" loading="lazy" aria-hidden="true"></iframe></div>
+        <div class="head">
+          <span class="n">07 · 404</span>
+          <span class="status">● Template</span>
+        </div>
+        <div class="body">
+          <h3>Page <em>not found</em></h3>
+          <p>Split layout: dark left panel with the big italic "404" and a fake server-trace; right panel with search, five suggested destinations, and a "go back" link. Auto-fills the requested path from <code style="font-family:var(--mono);font-size:12px;background:var(--paper-soft);padding:1px 5px;border-radius:3px;">window.location</code>.</p>
+        </div>
+        <div class="actions">
+          <code>404.html</code>
+          <span>Open →</span>
+        </div>
+      </a>
+
+    </div>
+
+    <!-- notes -->
+    <div style="margin-top: 56px; padding: 32px; border: 1px dashed var(--line); border-radius: 16px; background: var(--paper-soft);">
+      <p style="margin:0 0 10px; font-family: var(--mono); font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--ink-mute);">Notes / next steps</p>
+      <ul style="margin:0; padding-left: 20px; color: var(--ink-soft); font-size: 14.5px; line-height: 1.6;">
+        <li>All seven pages share <b><code>assets/site.css</code></b> — edit it once to retune nav, footer, typography or aurora colours everywhere.</li>
+        <li>Each page already links to all the others through the same nav + footer; cross-linking is consistent.</li>
+        <li>The blog post uses real semantic HTML (<code>article</code>, <code>aside</code>, <code>nav</code>), proper meta tags, OpenGraph, and JSON-LD <code>Article</code> schema — should index well.</li>
+        <li>To add more blog posts: copy <code>blog/swedish-driving-theory-test-guide.html</code>, swap title / meta / lede / sections, and add a card to <code>blog/index.html</code>'s archive grid.</li>
+        <li>The 404 needs server config (Netlify <code>_redirects</code>, Vercel <code>vercel.json</code>, or <code>.htaccess</code>) to actually return 404 status &amp; serve this file.</li>
+      </ul>
+    </div>
+
+  </div>
+</section>
+
+<footer class="foot" style="margin-top: 60px;">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="col">
+        <h4>Studio</h4>
+        <p><strong>Nordic Theory Labs AB</strong><br/><em>Götgatan 22, 116 46 Stockholm, SE</em><br/>Org.nr 559-XXX-XXX</p>
+      </div>
+      <div class="col">
+        <h4>Products</h4>
+        <a href="apps/korkort-hero/">Körkort Hero</a>
+        <a href="index.html#apps">All apps</a>
+        <a href="changelog.html">Changelog</a>
+      </div>
+      <div class="col">
+        <h4>Studio</h4>
+        <a href="about.html">About</a>
+        <a href="blog/index.html">Notes</a>
+        <a href="press.html">Press</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div class="col">
+        <h4>Legal</h4>
+        <a href="privacy/index.html">Privacy</a>
+        <a href="terms/index.html">Terms</a>
+        <a href="contact.html#imprint">Imprint</a>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <div>© 2024–2026 NORDIC THEORY LABS AB · ORG.NR 559-XXX-XXX</div>
+      <div class="center">MADE IN STOCKHOLM · SHIPPED FROM HELSINKI</div>
+      <div class="right"><a href="index.html">← Back to studio</a></div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
