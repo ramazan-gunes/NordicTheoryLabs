@@ -24,6 +24,105 @@ const languages = [
 
 const langByCode = new Map(languages.map((lang) => [lang.code, lang]));
 
+const indexCopy = {
+  en: {
+    title: "English Notes",
+    heading: "English",
+    noteWord: "notes",
+    archive: "Blog archive - en",
+    meta: "English notes from Nordic Theory Labs.",
+    subtitle: "Articles from Nordic Theory Labs about Swedish driving theory, study habits and building calm learning software.",
+  },
+  sv: {
+    title: "Svenska artiklar",
+    heading: "Svenska",
+    noteWord: "artiklar",
+    archive: "Bloggarkiv - sv",
+    meta: "Svenska artiklar från Nordic Theory Labs.",
+    subtitle: "Artiklar från Nordic Theory Labs om svensk körkortsteori, studievanor och hur vi bygger lugn lärprogramvara.",
+  },
+  tr: {
+    title: "Türkçe yazılar",
+    heading: "Türkçe",
+    noteWord: "yazılar",
+    archive: "Blog arşivi - tr",
+    meta: "Nordic Theory Labs'tan Türkçe yazılar.",
+    subtitle: "Nordic Theory Labs'tan İsveç ehliyet teorisi, çalışma alışkanlıkları ve sakin öğrenme yazılımları geliştirme üzerine yazılar.",
+  },
+  ar: {
+    title: "مقالات عربية",
+    heading: "العربية",
+    noteWord: "مقالات",
+    archive: "أرشيف المدونة - ar",
+    meta: "مقالات عربية من Nordic Theory Labs.",
+    subtitle: "مقالات من Nordic Theory Labs عن نظرية القيادة في السويد، عادات الدراسة، وبناء برامج تعلم هادئة.",
+  },
+  fa: {
+    title: "مقاله‌های فارسی",
+    heading: "فارسی",
+    noteWord: "مقاله‌ها",
+    archive: "آرشیو وبلاگ - fa",
+    meta: "مقاله‌های فارسی از Nordic Theory Labs.",
+    subtitle: "مقاله‌هایی از Nordic Theory Labs درباره تئوری رانندگی در سوئد، عادت‌های مطالعه و ساخت نرم‌افزارهای آموزشی آرام.",
+  },
+  so: {
+    title: "Maqaallo Soomaali ah",
+    heading: "Soomaali",
+    noteWord: "maqaallo",
+    archive: "Kaydka blogga - so",
+    meta: "Maqaallo Soomaali ah oo ka socda Nordic Theory Labs.",
+    subtitle: "Maqaallo ka socda Nordic Theory Labs oo ku saabsan aragtida wadista Sweden, caadooyinka waxbarashada iyo dhisidda software waxbarasho oo deggan.",
+  },
+  ku: {
+    title: "Nivîsên Kurdî",
+    heading: "Kurdî",
+    noteWord: "nivîs",
+    archive: "Arşîva blogê - ku",
+    meta: "Nivîsên Kurdî ji Nordic Theory Labs.",
+    subtitle: "Nivîsên Nordic Theory Labs li ser teorîya ajotina Swêdê, adetan xwendinê û çêkirina nermalava hînbûnê ya aram.",
+  },
+  pl: {
+    title: "Polskie artykuły",
+    heading: "Polskie",
+    noteWord: "artykuły",
+    archive: "Archiwum bloga - pl",
+    meta: "Polskie artykuły od Nordic Theory Labs.",
+    subtitle: "Artykuły Nordic Theory Labs o szwedzkiej teorii jazdy, nawykach nauki i tworzeniu spokojnego oprogramowania edukacyjnego.",
+  },
+  fi: {
+    title: "Suomenkieliset artikkelit",
+    heading: "Suomenkieliset",
+    noteWord: "artikkelit",
+    archive: "Blogiarkisto - fi",
+    meta: "Suomenkieliset artikkelit Nordic Theory Labsilta.",
+    subtitle: "Nordic Theory Labsin artikkeleita Ruotsin ajoteoriasta, opiskelutavoista ja rauhallisten oppimisohjelmistojen rakentamisesta.",
+  },
+  bs: {
+    title: "Bosanski članci",
+    heading: "Bosanski",
+    noteWord: "članci",
+    archive: "Arhiva bloga - bs",
+    meta: "Bosanski članci iz Nordic Theory Labs.",
+    subtitle: "Članci iz Nordic Theory Labs o švedskoj teoriji vožnje, navikama učenja i izgradnji mirnog softvera za učenje.",
+  },
+  es: {
+    title: "Artículos en español",
+    heading: "Artículos en",
+    noteWord: "español",
+    archive: "Archivo del blog - es",
+    meta: "Artículos en español de Nordic Theory Labs.",
+    subtitle: "Artículos de Nordic Theory Labs sobre la teoría de conducción sueca, hábitos de estudio y software de aprendizaje tranquilo.",
+  },
+  ru: {
+    title: "Русские статьи",
+    heading: "Русские",
+    noteWord: "статьи",
+    archive: "Архив блога - ru",
+    meta: "Русские статьи от Nordic Theory Labs.",
+    subtitle: "Статьи Nordic Theory Labs о шведской теории вождения, привычках обучения и создании спокойного учебного ПО.",
+  },
+};
+
 function escapeHtml(value = "") {
   return String(value)
     .replaceAll("&", "&amp;")
@@ -152,6 +251,10 @@ function indexHrefFor(langCode, fromLang) {
 
 function displayDate(iso, lang = "en") {
   const date = new Date(`${iso}T12:00:00Z`);
+  if (lang === "ku") {
+    const months = ["çile", "sibat", "adar", "nîsan", "glna", "hezîran", "tîrmeh", "tebax", "îlon", "cotmeh", "mijdar", "berfanbar"];
+    return `${date.getUTCDate()}ê ${months[date.getUTCMonth()]} ${date.getUTCFullYear()}an`;
+  }
   try {
     return new Intl.DateTimeFormat(lang, { day: "2-digit", month: "short", year: "numeric" }).format(date);
   } catch {
@@ -324,6 +427,7 @@ ${footer(prefix, post.meta.language)}
 
 function indexPage(langCode, posts) {
   const lang = langByCode.get(langCode) || languages[0];
+  const copy = indexCopy[langCode] || indexCopy.en;
   const prefix = "../../";
   const cards = posts
     .map((post) => `<a class="post-card" href="${post.meta.slug}.html">
@@ -344,8 +448,8 @@ function indexPage(langCode, posts) {
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>${escapeHtml(lang.name)} Notes - Nordic Theory Labs</title>
-<meta name="description" content="Localized ${escapeHtml(lang.name)} notes from Nordic Theory Labs." />
+<title>${escapeHtml(copy.title)} - Nordic Theory Labs</title>
+<meta name="description" content="${escapeHtml(copy.meta)}" />
 <link rel="canonical" href="https://nordictheorylabs.com/blog/${langCode}/" />
 <link rel="icon" type="image/svg+xml" href="../../logos/exports/signal/favicon.svg" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -360,9 +464,9 @@ ${nav(prefix, langCode, lang.name)}
   <section class="page-head">
     <div class="aurora" aria-hidden="true"></div>
     <div class="wrap">
-      <div class="eyebrow"><span class="bar"></span><span>Blog archive - ${escapeHtml(langCode)}</span></div>
-      <h1 class="page-title">${escapeHtml(lang.name)} <em>notes</em>.</h1>
-      <p class="page-sub">Localized articles from Nordic Theory Labs about Swedish driving theory, study habits and building calm learning software.</p>
+      <div class="eyebrow"><span class="bar"></span><span>${escapeHtml(copy.archive)}</span></div>
+      <h1 class="page-title">${escapeHtml(copy.heading)} <em>${escapeHtml(copy.noteWord)}</em>.</h1>
+      <p class="page-sub">${escapeHtml(copy.subtitle)}</p>
       <nav class="lang-list" style="margin-top:28px;">${languageLinks}</nav>
     </div>
   </section>
@@ -440,5 +544,6 @@ async function main() {
 
 main().catch((error) => {
   console.error(error);
-  process.exitCode = 1;
+  if (typeof process !== "undefined") process.exitCode = 1;
+  else throw error;
 });
