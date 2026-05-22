@@ -11,7 +11,7 @@ updated_at: "2026-05-21"
 canonical: "https://nordictheorylabs.com/blog/so/risk-1-risk-2-sweden.html"
 translation_of: "risk-1-risk-2-sweden"
 summary: "Hagitaan ku saabsan tababarka khatarta ee khasabka ah ee laysanka B ee Sweden: waxa Risk 1 iyo Risk 2 ka kooban yihiin, goorta la ballansado iyo sida looga fogaado khaladaadka waqtiga."
-seo_description: "Baro Risk 1 iyo Risk 2 ee laysanka B ee Sweden, waxa ay ka kooban yihiin, muddada ay ansax yihiin iyo sida loo qorsheeyo ka hor imtixaannada."
+seo_description: "Risk 1 iyo Risk 2 ee Sweden: waxa ardaygu u baahan yahay inuu ogaado: Hage waxbarasho oo liisanka B ee Sweden ah, oo leh talooyin, badbaado taraafiko iyo."
 reading_time: "7 min"
 ---
 
@@ -78,3 +78,34 @@ Khaladka saddexaad waa in la ilaawo waqtiga iyo diiwaangelinta. Haddii tababarku
 Ku dar Risk 1 iyo Risk 2 qorshahaaga bilowga. Haddii aad leedahay dugsi wadis, weydii goorta kugu habboon heerkaaga. Haddii aad si gaar ah u tababarato, raadso bixiye la oggol yahay oo wakhti fiican hore u ballanso.
 
 Tababarka khatartu ma aha kaliya shuruud la saxayo. Haddii waqtigiisa la qaato, wuxuu kaa caawinayaa inaad fahamto sababta Sweden ay xoogga u saarto xawaare, masaafo badbaado, go'aan sax ah iyo mas'uuliyad.
+
+<!-- quality-pass:2026-05-22 -->
+
+## Liiska hubinta tayada tababarka
+
+Maqaalkani wuxuu waxtar badan leeyahay marka lagu xiro tababar wadis dhab ah. Diiradda ugu weyn ha ahaato: Hagitaan ku saabsan tababarka khatarta ee khasabka ah ee laysanka B ee Sweden: waxa Risk 1 iyo Risk 2 ka kooban yihiin, goorta la ballansado iyo sida looga fogaado khaladaadka waqtiga.
+
+- Kahor intaadan bilaabin, sheeg khatarta aad maanta tababaranayso iyo meesha ay badanaa ka muuqato taraafikada Sweden.
+- Inta lagu jiro tababarka, xeerka ku xiriiri fiirinta, xawaaraha, booska waddada iyo xiriirka dadka kale ee waddada isticmaala.
+- Tababarka ka dib, qor xaalad kaa daahday ama aan kuu caddayn, kadib dooro calaamadda aad marka xigta hore u arki doonto.
+- Markaad eegayso su’aalaha tijaabada, sharax sababta jawaabta ammaan ahi u tahay ammaan halkii aad kaliya xafidi lahayd doorashada saxda ah.
+
+## Tusaale tababar gaaban
+
+Dooro waddo caadi ah oo u dhow guriga, iskuulka wadista ama meel u eg aagga imtixaanka Trafikverket. Marka hore si deggan u wad adigoo fiirinaya Hagitaan ku saabsan tababarka khatarta ee khasabka ah ee laysanka B ee Sweden: waxa Risk 1 iyo Risk 2 ka kooban yihiin, goorta la ballansado iyo sida looga fogaado khaladaadka waqtiga. Kadib isla waddada ku celi oo eeg in go’aamadaadu noqdeen kuwo hore, deggan oo si fudud loo sharxi karo.
+
+## Hubin rasmi ah
+
+Maqaalkan u isticmaal taageero waxbarasho, ma aha ilo sharci. Xeerarka, ballamaha, khidmadaha, muddada ansaxnimada iyo shuruudaha maalinta imtixaanka ka hubi Trafikverket and Transportstyrelsen ka hor intaadan tallaabo qaadin.
+
+<!-- seo-related:2026-05-22 -->
+
+## Hagayaal la xiriira liisanka Sweden
+
+Ku sii wad mowduucyadan la xiriira ee isla luqadda ah:
+
+- [Qorshe waxbarasho imtixaanka theory-ga Sweden](theory-study-plan-sweden.html)
+- [Imtixaanka teori-ga Sweden ee B: sida Kunskapsprov u shaqeeyo](swedish-theory-test-category-b.html)
+- [Sida loo eego imtixaanada tijaabada theory-ga Sweden](practice-test-review-sweden.html)
+- [Khaladaadka caadiga ah ee imtixaanka teori-ga Sweden](theory-test-common-mistakes-sweden.html)
+

@@ -11,7 +11,7 @@ updated_at: "2026-05-21"
 canonical: "https://nordictheorylabs.com/blog/bs/prakticni-ispit-vozacka-svedska.html"
 translation_of: "swedish-driving-test-category-b"
 summary: "Praktičan vodič za švedski praktični ispit B kategorije: sigurnosna provjera, manevri, vožnja u saobraćaju, jezik, automatik i ocjenjivanje."
-seo_description: "Saznajte kako izgleda praktični ispit B kategorije u Švedskoj: sigurnosna provjera, manevri, saobraćaj, švedske upute i automatik kod 78."
+seo_description: "Praktični ispit u Švedskoj za B kategoriju: šta se dešava na Körprov?: Praktičan vodič za B vozačku u Švedskoj: učenje, sigurnost u saobraćaju i priprema za."
 reading_time: "7 min"
 ---
 
@@ -62,3 +62,34 @@ Drugi problem je pasivna vožnja. Ne čekajte da ispitivač riješi saobraćaj u
 Vježbajte u različitom saobraćaju, ne samo na poznatim ulicama. Radite kružne tokove, promjene trake, parkiranje, puteve van grada, gradski saobraćaj, prilagođavanje brzine i odnos s biciklistima i pješacima.
 
 Zamolite instruktora ili nadzornika da napravi vožnje slične ispitu, gdje manje govori, a vi vozite samostalnije. Cilj nije savršena vožnja. Cilj je sigurna, mirna i odgovorna vožnja i kada je situacija nova.
+
+<!-- quality-pass:2026-05-22 -->
+
+## Praktična lista kvaliteta
+
+Ovaj tekst je najkorisniji kada ga povežeš sa stvarnom vožnjom. Glavni fokus ove teme je: Praktičan vodič za švedski praktični ispit B kategorije: sigurnosna provjera, manevri, vožnja u saobraćaju, jezik, automatik i ocjenjivanje.
+
+- Prije početka imenuj tačan rizik koji danas vježbaš i gdje se on obično pojavljuje u švedskom saobraćaju.
+- Tokom vježbe poveži pravilo s posmatranjem, brzinom, položajem vozila i komunikacijom s drugim učesnicima u saobraćaju.
+- Nakon vježbe zapiši jednu situaciju koja je bila kasna ili nesigurna i odluči koji znak trebaš ranije primijetiti sljedeći put.
+- Kada pregledaš probna pitanja, objasni zašto je siguran odgovor siguran umjesto da samo pamtiš tačnu opciju.
+
+## Kratak scenarij vježbe
+
+Izaberi običnu rutu blizu kuće, autoškole ili područja sličnog Trafikverket ispitu. Prvo je vozi mirno s ciljem da primijetiš Praktičan vodič za švedski praktični ispit B kategorije: sigurnosna provjera, manevri, vožnja u saobraćaju, jezik, automatik i ocjenjivanje. Zatim ponovi istu rutu i provjeri jesu li odluke postale ranije, mirnije i lakše za objasniti.
+
+## Službena provjera
+
+Koristi članak kao podršku učenju, ne kao pravni izvor. Pravila, rezervacije, naknade, rokove važenja i uslove na dan ispita provjeri kod Trafikverket prije nego što djeluješ.
+
+<!-- seo-related:2026-05-22 -->
+
+## Povezani vodiči za vozačku u Švedskoj
+
+Nastavi s ovim povezanim temama na istom jeziku:
+
+- [Teorijski ispit u Švedskoj za B kategoriju: kako radi Kunskapsprov](teorijski-ispit-vozacka-svedska.html)
+- [Kako analizirati probne testove za teorijski ispit](analiza-probnih-testova.html)
+- [Najčešće greške na praktičnom ispitu u Švedskoj](najcesce-greske-prakticni-ispit-svedska.html)
+- [Najčešće greške na teorijskom ispitu u Švedskoj](najcesce-greske-teorijski-ispit-svedska.html)
+

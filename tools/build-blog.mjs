@@ -134,6 +134,7 @@ function escapeHtml(value = "") {
 function inlineMarkdown(value = "") {
   const escaped = escapeHtml(value);
   return escaped
+    .replace(/\[([^\]]+)\]\(([^)\s]+)\)/g, '<a href="$2">$1</a>')
     .replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>")
     .replace(/\*(.+?)\*/g, "<em>$1</em>")
     .replace(/`(.+?)`/g, "<code>$1</code>")
@@ -242,6 +243,39 @@ function publicHrefFor(post, fromLang) {
   return post.meta.language === "en"
     ? `../${post.meta.slug}.html`
     : `../${post.meta.language}/${post.meta.slug}.html`;
+}
+
+function absoluteUrlFor(post) {
+  if (post.meta.language === "en") return `https://nordictheorylabs.com/blog/${post.meta.slug}.html`;
+  return `https://nordictheorylabs.com/blog/${post.meta.language}/${post.meta.slug}.html`;
+}
+
+function alternateLinksFor(post, allPosts) {
+  const related = allPosts
+    .filter((item) => item.meta.translation_of === post.meta.translation_of)
+    .sort((a, b) => a.meta.language.localeCompare(b.meta.language));
+  const links = related
+    .map((item) => `<link rel="alternate" hreflang="${item.meta.language}" href="${absoluteUrlFor(item)}" />`)
+    .join("\n");
+  const english = related.find((item) => item.meta.language === "en") || related[0];
+  const fallback = english ? `\n<link rel="alternate" hreflang="x-default" href="${absoluteUrlFor(english)}" />` : "";
+  return `${links}${fallback}`;
+}
+
+function socialMetaTags({ title, description, url, langCode, type = "website" }) {
+  return `<meta property="og:type" content="${type}" />
+<meta property="og:site_name" content="Nordic Theory Labs" />
+<meta property="og:title" content="${title}" />
+<meta property="og:description" content="${description}" />
+<meta property="og:url" content="${escapeHtml(url)}" />
+<meta property="og:locale" content="${escapeHtml(langCode)}" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="${title}" />
+<meta name="twitter:description" content="${description}" />`;
+}
+
+function jsonLd(data) {
+  return `<script type="application/ld+json">${JSON.stringify(data).replaceAll("</", "<\\/")}</script>`;
 }
 
 function indexHrefFor(langCode, fromLang) {
@@ -354,6 +388,7 @@ function articlePage(post, allPosts) {
   const rendered = addHeadingIds(markdownToHtml(post.body));
   const title = escapeHtml(post.meta.title);
   const description = escapeHtml(post.meta.seo_description || post.meta.summary);
+  const canonicalUrl = post.meta.canonical || absoluteUrlFor(post);
   const related = allPosts.filter((item) => item.meta.translation_of === post.meta.translation_of);
   const languageLinks = related
     .map((item) => {
@@ -375,7 +410,22 @@ function articlePage(post, allPosts) {
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>${title}</title>
 <meta name="description" content="${description}" />
-<link rel="canonical" href="${escapeHtml(post.meta.canonical)}" />
+<link rel="canonical" href="${escapeHtml(canonicalUrl)}" />
+${alternateLinksFor(post, allPosts)}
+${socialMetaTags({ title, description, url: canonicalUrl, langCode: post.meta.language, type: "article" })}
+${jsonLd({
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  headline: post.meta.title,
+  description: post.meta.seo_description || post.meta.summary,
+  author: { "@type": "Organization", name: post.meta.author || "Nordic Theory Labs" },
+  publisher: { "@type": "Organization", name: "Nordic Theory Labs" },
+  datePublished: post.meta.published_at,
+  dateModified: post.meta.updated_at || post.meta.published_at,
+  inLanguage: post.meta.language,
+  mainEntityOfPage: canonicalUrl,
+  url: canonicalUrl
+})}
 <link rel="icon" type="image/svg+xml" href="${prefix}logos/exports/signal/favicon.svg" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -429,6 +479,9 @@ function indexPage(langCode, posts) {
   const lang = langByCode.get(langCode) || languages[0];
   const copy = indexCopy[langCode] || indexCopy.en;
   const prefix = "../../";
+  const canonicalUrl = `https://nordictheorylabs.com/blog/${langCode}/`;
+  const pageTitle = `${copy.title} - Nordic Theory Labs`;
+  const pageDescription = copy.subtitle || copy.meta;
   const cards = posts
     .map((post) => `<a class="post-card" href="${post.meta.slug}.html">
       <div class="tag">${escapeHtml(post.meta.category)} - ${escapeHtml(post.meta.reading_time)}</div>
@@ -448,9 +501,21 @@ function indexPage(langCode, posts) {
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>${escapeHtml(copy.title)} - Nordic Theory Labs</title>
-<meta name="description" content="${escapeHtml(copy.meta)}" />
-<link rel="canonical" href="https://nordictheorylabs.com/blog/${langCode}/" />
+<title>${escapeHtml(pageTitle)}</title>
+<meta name="description" content="${escapeHtml(pageDescription)}" />
+<link rel="canonical" href="${canonicalUrl}" />
+${languages.map((item) => `<link rel="alternate" hreflang="${item.code}" href="https://nordictheorylabs.com/blog/${item.code}/" />`).join("\n")}
+<link rel="alternate" hreflang="x-default" href="https://nordictheorylabs.com/blog/" />
+${socialMetaTags({ title: escapeHtml(pageTitle), description: escapeHtml(pageDescription), url: canonicalUrl, langCode })}
+${jsonLd({
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  name: pageTitle,
+  description: pageDescription,
+  inLanguage: langCode,
+  url: canonicalUrl,
+  isPartOf: { "@type": "WebSite", name: "Nordic Theory Labs", url: "https://nordictheorylabs.com/" }
+})}
 <link rel="icon" type="image/svg+xml" href="../../logos/exports/signal/favicon.svg" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -487,6 +552,7 @@ function redirectPage(target, title = "Redirecting") {
 <html lang="en">
 <head>
 <meta charset="utf-8" />
+<meta name="robots" content="noindex,follow" />
 <meta http-equiv="refresh" content="0; url=${target}" />
 <script>location.replace('${target}' + location.hash);</script>
 <title>${escapeHtml(title)}</title>

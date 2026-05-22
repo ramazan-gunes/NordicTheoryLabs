@@ -11,7 +11,7 @@ updated_at: "2026-05-21"
 canonical: "https://nordictheorylabs.com/blog/sv/korprov-b-korkort.html"
 translation_of: "swedish-driving-test-category-b"
 summary: "En praktisk guide till körprovet för B-körkort: säkerhetskontroll, manövrering, körning i trafik, språk, automatvillkor och vad förarprövaren bedömer."
-seo_description: "Lär dig hur körprovet för B-körkort fungerar i Sverige: säkerhetskontroll, manövrer, trafikkörning, språkregler, automatvillkor 78 och förberedelser."
+seo_description: "Körprov för B-körkort: vad händer under uppkörningen?: Praktisk körkortsguide med studietips, trafiksäkerhet och provförberedelse för B-körkort i Sverige."
 reading_time: "7 min"
 ---
 
@@ -62,3 +62,34 @@ Ett annat problem är passiv körning. Du ska inte vänta på att förarprövare
 Öva i varierad trafik, inte bara på kända gator. Träna rondeller, filbyten, parkering, landsväg, stadstrafik, hastighetsanpassning och samspel med cyklister och gående.
 
 Be din trafiklärare eller handledare om provliknande körningar där de pratar mindre och du kör mer självständigt. Målet är inte perfekt körning. Målet är säker, lugn och ansvarstagande körning även när situationen är ny.
+
+<!-- quality-pass:2026-05-22 -->
+
+## Praktisk kvalitetschecklista
+
+Sidan fungerar bäst när du kopplar innehållet till verklig övningskörning. Håll huvudfokus tydligt: En praktisk guide till körprovet för B-körkort: säkerhetskontroll, manövrering, körning i trafik, språk, automatvillkor och vad förarprövaren bedömer.
+
+- Innan du börjar, säg vilken risk du tränar och var den brukar dyka upp i svensk trafik.
+- Under övningen ska regeln kopplas till observation, hastighet, placering och kommunikation med andra trafikanter.
+- Efter övningen skriver du ned en situation som kändes sen eller osäker och vilken ledtråd du ska se tidigare nästa gång.
+- När du går igenom övningsfrågor, förklara varför det säkra svaret är säkert i stället för att bara minnas rätt alternativ.
+
+## Kort övningsscenario
+
+Välj en vanlig sträcka nära hemmet, trafikskolan eller ett område som liknar en körprovsrutt. Kör först lugnt med målet att upptäcka En praktisk guide till körprovet för B-körkort: säkerhetskontroll, manövrering, körning i trafik, språk, automatvillkor och vad förarprövaren bedömer. Kör sedan samma sträcka igen och se om besluten blev tidigare, lugnare och lättare att förklara.
+
+## Officiell kontroll
+
+Använd artikeln som stöd i inlärningen, inte som juridisk källa. Kontrollera alltid aktuella regler, bokning, avgifter, giltighetstider och provkrav hos Trafikverket innan du agerar.
+
+<!-- seo-related:2026-05-22 -->
+
+## Relaterade körkortsguider
+
+Fortsätt med närliggande ämnen på samma språk:
+
+- [Kunskapsprov för B-körkort: så fungerar teoriprovet](kunskapsprov-b-korkort.html)
+- [Så granskar du övningsprov inför teoriprovet](granska-ovningsprov-teori.html)
+- [Vanliga misstag på körprovet](vanliga-misstag-pa-korprovet.html)
+- [Studieplan för svenskt teoriprov](studieplan-teoriprov.html)
+

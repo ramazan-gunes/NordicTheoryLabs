@@ -5,27 +5,11 @@ import { fileURLToPath } from "node:url";
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const root = path.resolve(__dirname, "..");
 const siteUrl = "https://nordictheorylabs.com";
-const lastmod = "2026-05-21";
-
-const redirectPages = new Set([
-  "ar.html",
-  "bs.html",
-  "es.html",
-  "fa.html",
-  "fi.html",
-  "ku.html",
-  "pl.html",
-  "ru.html",
-  "so.html",
-  "sv.html",
-  "tr.html",
-  "terms.html",
-]);
+const lastmod = "2026-05-22";
 
 const excluded = new Set([
   "404.html",
   "subpages-overview.html",
-  "blog/en/index.html",
 ]);
 
 async function walk(dir, files = []) {
@@ -52,6 +36,15 @@ function pageUrl(relativePath) {
   return `${siteUrl}/${relativePath}`;
 }
 
+function escapeXml(value) {
+  return String(value)
+    .replaceAll("&", "&amp;")
+    .replaceAll("<", "&lt;")
+    .replaceAll(">", "&gt;")
+    .replaceAll('"', "&quot;")
+    .replaceAll("'", "&apos;");
+}
+
 function metaFor(relativePath) {
   if (relativePath === "index.html") return { changefreq: "weekly", priority: "1.0" };
   if (relativePath === "apps/korkort-hero/index.html") return { changefreq: "weekly", priority: "0.9" };
@@ -64,21 +57,29 @@ function metaFor(relativePath) {
   return { changefreq: "monthly", priority: "0.5" };
 }
 
-function shouldInclude(relativePath) {
-  if (redirectPages.has(relativePath) || excluded.has(relativePath)) return false;
+async function shouldInclude(relativePath) {
+  if (excluded.has(relativePath)) return false;
   if (relativePath.startsWith("blog/en/")) return false;
+  const html = await fs.readFile(path.join(root, relativePath), "utf8");
+  if (/http-equiv=["']refresh["']/i.test(html)) return false;
+  if (/<meta\s+name=["']robots["'][^>]+content=["'][^"']*noindex/i.test(html)) return false;
   return true;
 }
 
 const htmlFiles = await walk(root);
-const urls = htmlFiles
-  .map((file) => toPosix(path.relative(root, file)))
-  .filter(shouldInclude)
+const relativePaths = [];
+
+for (const file of htmlFiles) {
+  const relativePath = toPosix(path.relative(root, file));
+  if (await shouldInclude(relativePath)) relativePaths.push(relativePath);
+}
+
+const urls = relativePaths
   .sort((a, b) => pageUrl(a).localeCompare(pageUrl(b), "en"))
   .map((relativePath) => {
     const { changefreq, priority } = metaFor(relativePath);
     return `  <url>
-    <loc>${pageUrl(relativePath)}</loc>
+    <loc>${escapeXml(pageUrl(relativePath))}</loc>
     <lastmod>${lastmod}</lastmod>
     <changefreq>${changefreq}</changefreq>
     <priority>${priority}</priority>

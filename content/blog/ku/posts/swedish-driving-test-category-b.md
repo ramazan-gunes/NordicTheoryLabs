@@ -11,7 +11,7 @@ updated_at: "2026-05-21"
 canonical: "https://nordictheorylabs.com/blog/ku/swedish-driving-test-category-b.html"
 translation_of: "swedish-driving-test-category-b"
 summary: "Rêberek praktîk ji bo ezmûna ajotinê ya B li Swêdê: kontrola ewlehiyê, manevra, ajotin di trafîkê de, ziman, otomotîk û tiştên ku tên nirxandin."
-seo_description: "Fêm bike ezmûna ajotinê ya B li Swêdê çawa ye: kontrola ewlehiyê, manevra, trafîk, fermana swêdî, şertê otomotîk 78 û amadekirin."
+seo_description: "Ezmûna ajotinê ya Swêdê ji bo B: di Körprov de çi dibe?: Rêbera pratîk ji bo lîsansa B li Swêdê, bi şîretên xwendinê, ewlehiyê û amadekariya ezmûnê."
 reading_time: "7 min"
 ---
 
@@ -62,3 +62,34 @@ Pirsgirêka din ajotina pasîf e. Divê tu li bendê nemînî ku nirxîner traf�
 Di trafîka cihêreng de pratîk bike, ne tenê li kolanên nas. Rond, guhertina xetê, parkirin, rêya derveyî bajarê, trafîka bajarê, guncandina lezê û têkiliya bi bisîkletvan û peyayan re pratîk bike.
 
 Ji mamoste an handledare bipirse ku ajotina wek ezmûnê bike û kêmtir biaxive. Armanc ajotina bêkêmasî nîne. Armanc ajotina ewle, aram û berpirsiyar e, heta dema rewş nû be.
+
+<!-- quality-pass:2026-05-22 -->
+
+## Lîsteya kontrola pratîkê
+
+Ev nivîs dema herî baş kar dike ku tu wê bi pratîka ajotina rast ve girê bidî. Bala sereke zelal bihêle: Rêberek praktîk ji bo ezmûna ajotinê ya B li Swêdê: kontrola ewlehiyê, manevra, ajotin di trafîkê de, ziman, otomotîk û tiştên ku tên nirxandin.
+
+- Berî destpêkê, metirsîya ku îro pratîk dikî û cihê ku ew di trafîka Swêdê de xuya dibe bi nav bike.
+- Di pratîkê de, qanûnê bi temaşe, lez, cihê erebeyê û peywendiya bi bikarhênerên din ên rê ve girê bide.
+- Piştî pratîkê, rewşeke ku dereng an nezelal bû binivîse û biryar bide cara din kîjan nîşanê zûtir bibînî.
+- Dema pirsên pratîkê dinirxînî, tenê bersiva rast ji ber neke; rave bike çima bersiva ewle ewle ye.
+
+## Senaryoya pratîkê ya kurt
+
+Rêyek asayî nêzî malê, dibistana ajotinê an herêmeke wek rêya ezmûna Trafikverket hilbijêre. Cara yekem hêdî ajot û armanc bike ku Rêberek praktîk ji bo ezmûna ajotinê ya B li Swêdê: kontrola ewlehiyê, manevra, ajotin di trafîkê de, ziman, otomotîk û tiştên ku tên nirxandin bibînî. Paşê heman rê dubare bike û bibîne gelo biryarên te zûtir, aramtir û hêsantir hatin ravekirin.
+
+## Kontrola fermî
+
+Ev nivîs wek piştgiriya hînbûnê bi kar bîne, ne wek çavkaniya qanûnî. Ji bo rêzik, rezervasyon, xerc, demên derbasdarî û şertên roja ezmûnê berî kiryarê agahiyên niha li Trafikverket kontrol bike.
+
+<!-- seo-related:2026-05-22 -->
+
+## Rêberên têkildar ên lîsansa Swêdê
+
+Bi van mijarên nêzîk ên bi heman zimanî bidomîne:
+
+- [Ezmûna teoriyê ya Swêdê ji bo B: Kunskapsprov çawa ye?](swedish-theory-test-category-b.html)
+- [Çewtiyên gelemperî di ezmûna ajotinê ya Swêdê de](driving-test-common-mistakes-sweden.html)
+- [Çawa testên pratîkê yên teorî were nirxandin](practice-test-review-sweden.html)
+- [Plana xwendinê ji bo ezmûna teorî ya Swêdê](theory-study-plan-sweden.html)
+

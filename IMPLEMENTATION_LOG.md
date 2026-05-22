@@ -328,3 +328,286 @@ Generated HTML routes:
 - `blog/ru/chastnaya-praktika-vozhdeniya-shvetsiya.html`
 
 Official private practice and introduction course guidance was checked on 2026-05-21 against Transportstyrelsen public pages. The English blog archive now includes a card for this topic.
+
+## Driving Licence Process Topic 8
+
+Created the multilingual draft set for "Foreign driving licence in Sweden" and regenerated static blog pages.
+
+Draft markdown files:
+
+- `content/blog/en/posts/foreign-driving-licence-sweden.md`
+- `content/blog/sv/posts/utlandskt-korkort-i-sverige.md`
+- `content/blog/tr/posts/isvecte-yabanci-ehliyet.md`
+- `content/blog/ar/posts/foreign-driving-licence-sweden.md`
+- `content/blog/fa/posts/foreign-driving-licence-sweden.md`
+- `content/blog/so/posts/foreign-driving-licence-sweden.md`
+- `content/blog/ku/posts/foreign-driving-licence-sweden.md`
+- `content/blog/pl/posts/zagraniczne-prawo-jazdy-w-szwecji.md`
+- `content/blog/fi/posts/ulkomainen-ajokortti-ruotsissa.md`
+- `content/blog/bs/posts/strana-vozacka-dozvola-u-svedskoj.md`
+- `content/blog/es/posts/carnet-extranjero-en-suecia.md`
+- `content/blog/ru/posts/inostrannye-voditelskie-prava-v-shvetsii.md`
+
+Generated HTML routes:
+
+- `blog/foreign-driving-licence-sweden.html`
+- `blog/sv/utlandskt-korkort-i-sverige.html`
+- `blog/tr/isvecte-yabanci-ehliyet.html`
+- `blog/ar/foreign-driving-licence-sweden.html`
+- `blog/fa/foreign-driving-licence-sweden.html`
+- `blog/so/foreign-driving-licence-sweden.html`
+- `blog/ku/foreign-driving-licence-sweden.html`
+- `blog/pl/zagraniczne-prawo-jazdy-w-szwecji.html`
+- `blog/fi/ulkomainen-ajokortti-ruotsissa.html`
+- `blog/bs/strana-vozacka-dozvola-u-svedskoj.html`
+- `blog/es/carnet-extranjero-en-suecia.html`
+- `blog/ru/inostrannye-voditelskie-prava-v-shvetsii.html`
+
+Official foreign licence guidance was checked on 2026-05-22 against Transportstyrelsen public pages. The English blog archive now includes a card for this topic.
+
+## Driving Licence Process Topic 9
+
+Created the multilingual draft set for "Automatic or manual driving test in Sweden" and regenerated static blog pages.
+
+Draft markdown files:
+
+- `content/blog/en/posts/automatic-vs-manual-licence-sweden.md`
+- `content/blog/sv/posts/automat-eller-manuell-korkort.md`
+- `content/blog/tr/posts/isvecte-otomatik-mi-manuel-mi.md`
+- `content/blog/ar/posts/automatic-vs-manual-licence-sweden.md`
+- `content/blog/fa/posts/automatic-vs-manual-licence-sweden.md`
+- `content/blog/so/posts/automatic-vs-manual-licence-sweden.md`
+- `content/blog/ku/posts/automatic-vs-manual-licence-sweden.md`
+- `content/blog/pl/posts/automat-czy-manual-prawo-jazdy-szwecja.md`
+- `content/blog/fi/posts/automaatti-vai-manuaali-ajokortti-ruotsi.md`
+- `content/blog/bs/posts/automatik-ili-manual-vozacka-svedska.md`
+- `content/blog/es/posts/automatico-o-manual-carnet-suecia.md`
+- `content/blog/ru/posts/avtomat-ili-mekhanika-prava-shvetsiya.md`
+
+Generated HTML routes include `blog/automatic-vs-manual-licence-sweden.html` plus localized routes under `blog/<lang>/`. Official code 78 guidance was checked on 2026-05-22 against Trafikverket public pages.
+
+## Driving Licence Process Topic 10
+
+Created the multilingual draft set for "Booking theory and driving tests in Sweden" and regenerated static blog pages.
+
+Draft markdown files:
+
+- `content/blog/en/posts/book-theory-driving-test-sweden.md`
+- `content/blog/sv/posts/boka-kunskapsprov-korprov.md`
+- `content/blog/tr/posts/trafikverket-teori-direksiyon-randevusu.md`
+- `content/blog/ar/posts/book-theory-driving-test-sweden.md`
+- `content/blog/fa/posts/book-theory-driving-test-sweden.md`
+- `content/blog/so/posts/book-theory-driving-test-sweden.md`
+- `content/blog/ku/posts/book-theory-driving-test-sweden.md`
+- `content/blog/pl/posts/rezerwacja-egzaminu-teoretycznego-praktycznego-szwecja.md`
+- `content/blog/fi/posts/teoria-ajokoe-varaus-ruotsi.md`
+- `content/blog/bs/posts/rezervacija-teorijskog-prakticnog-ispita-svedska.md`
+- `content/blog/es/posts/reservar-examen-teorico-practico-suecia.md`
+- `content/blog/ru/posts/zapis-na-teoriyu-i-vozhdenie-shvetsiya.md`
+
+Generated HTML routes include `blog/book-theory-driving-test-sweden.html` plus localized routes under `blog/<lang>/`. Official theory and driving test planning guidance was checked on 2026-05-22 against Trafikverket public pages.
+
+## Driving Licence Process Topic 11
+
+Created the multilingual draft set for "Failed the theory or driving test in Sweden" and regenerated static blog pages.
+
+Draft markdown files include:
+
+- `content/blog/en/posts/what-to-do-if-you-fail-driving-test-sweden.md`
+- `content/blog/sv/posts/underkand-pa-teoriprov-eller-korprov.md`
+- `content/blog/tr/posts/isvecte-sinavdan-kalinca-ne-yapilir.md`
+- localized equivalents under `content/blog/<lang>/posts/`
+
+Generated HTML routes include `blog/what-to-do-if-you-fail-driving-test-sweden.html` plus localized routes under `blog/<lang>/`. Official retake/timing guidance was checked on 2026-05-22 against Trafikverket public pages.
+
+## Driving Licence Process Topic 12
+
+Created the multilingual draft set for "Common mistakes on the Swedish theory test" and regenerated static blog pages.
+
+Draft markdown files include:
+
+- `content/blog/en/posts/theory-test-common-mistakes-sweden.md`
+- `content/blog/sv/posts/vanliga-misstag-pa-kunskapsprovet.md`
+- `content/blog/tr/posts/isvec-teori-sinavi-sik-hatalar.md`
+- localized equivalents under `content/blog/<lang>/posts/`
+
+Generated HTML routes include `blog/theory-test-common-mistakes-sweden.html` plus localized routes under `blog/<lang>/`. Content is based on the Trafikverket category B test format and practical study guidance.
+
+## Driving Licence Process Topic 13
+
+Created the multilingual draft set for "Common mistakes on the Swedish driving test" and regenerated static blog pages.
+
+Draft markdown files include:
+
+- `content/blog/en/posts/driving-test-common-mistakes-sweden.md`
+- `content/blog/sv/posts/vanliga-misstag-pa-korprovet.md`
+- `content/blog/tr/posts/isvec-direksiyon-sinavi-sik-hatalar.md`
+- localized equivalents under `content/blog/<lang>/posts/`
+
+Generated HTML routes include `blog/driving-test-common-mistakes-sweden.html` plus localized routes under `blog/<lang>/`. Content is based on the Trafikverket category B driving test structure and assessment themes.
+
+## Driving Licence Process Topic 14
+
+Created the multilingual draft set for "Winter driving in Sweden" and regenerated static blog pages.
+
+Draft markdown files include:
+
+- `content/blog/en/posts/winter-driving-sweden.md`
+- `content/blog/sv/posts/vinterkorning-for-korkort.md`
+- `content/blog/tr/posts/isvecte-kis-surusu.md`
+- localized equivalents under `content/blog/<lang>/posts/`
+
+Generated HTML routes include `blog/winter-driving-sweden.html` plus localized routes under `blog/<lang>/`. Official winter tyre and seasonal safety guidance was checked on 2026-05-22 against Transportstyrelsen and Trafikverket public pages.
+
+## Driving Licence Process Topic 15
+
+Created the multilingual draft set for "Driving school or private practice in Sweden" and regenerated static blog pages.
+
+Draft markdown files include:
+
+- `content/blog/en/posts/driving-school-private-practice-balance-sweden.md`
+- `content/blog/sv/posts/trafikskola-eller-privat-ovningskorning.md`
+- `content/blog/tr/posts/surucu-kursu-mu-ozel-pratik-mi.md`
+- localized equivalents under `content/blog/<lang>/posts/`
+
+Generated HTML routes include `blog/driving-school-private-practice-balance-sweden.html` plus localized routes under `blog/<lang>/`. Official learner permit, supervisor and practice guidance was checked on 2026-05-22 against Transportstyrelsen public pages.
+
+## Driving Licence Process Topic 16
+
+Created the multilingual draft set for "Eco-driving in Sweden" and regenerated static blog pages.
+
+Draft markdown files include:
+
+- `content/blog/en/posts/eco-driving-sweden.md`
+- `content/blog/sv/posts/sparsam-korning-korkort.md`
+- `content/blog/tr/posts/isvecte-eco-driving.md`
+- localized equivalents under `content/blog/<lang>/posts/`
+
+Generated HTML routes include `blog/eco-driving-sweden.html` plus localized routes under `blog/<lang>/`. Content follows Trafikverket-style safe, planned and environmentally aware driving themes.
+
+## Driving Licence Process Topic 17
+
+Created the multilingual draft set for "Priority rules in Sweden" and regenerated static blog pages.
+
+Draft markdown files include:
+
+- `content/blog/en/posts/priority-rules-sweden.md`
+- `content/blog/sv/posts/vajninsregler-hogerregeln.md`
+- `content/blog/tr/posts/isvec-oncelik-kurallari.md`
+- localized equivalents under `content/blog/<lang>/posts/`
+
+Generated HTML routes include `blog/priority-rules-sweden.html` plus localized routes under `blog/<lang>/`. Content covers give-way signs, stop signs, signals, the right-hand rule and junction planning.
+
+## Driving Licence Process Topic 18
+
+Created the multilingual draft set for "Pedestrians and cyclists in Sweden" and regenerated static blog pages.
+
+Draft markdown files include:
+
+- `content/blog/en/posts/pedestrians-cyclists-sweden.md`
+- `content/blog/sv/posts/gaende-och-cyklister-korkort.md`
+- `content/blog/tr/posts/isvecte-yayalar-bisikletliler.md`
+- localized equivalents under `content/blog/<lang>/posts/`
+
+Generated HTML routes include `blog/pedestrians-cyclists-sweden.html` plus localized routes under `blog/<lang>/`. Content focuses on vulnerable road users, crossings, residential areas, darkness, parked vehicles and city driving observation.
+
+## Driving Licence Process Topics 20-39
+
+Created the remaining multilingual draft sets for the Swedish category B driving licence content plan and regenerated static blog pages.
+
+New topic sets:
+
+- Test day documents, photo and ID
+- Traffic signs and road markings
+- Speed limits and speed adaptation
+- Safety distance and braking distance
+- Roundabouts and junctions
+- Motorway driving
+- Rural roads and wildlife
+- Parking and reversing
+- Vehicle safety check before driving
+- Alcohol, drugs and fatigue in traffic
+- Accidents and emergencies
+- Railway crossings, buses and trams
+- Overtaking and lane changes
+- Darkness driving and vehicle lights
+- Theory study plan
+- Practice test review
+- After passing the driving test
+- Driving in rain and aquaplaning
+- Roadworks and temporary signs
+- Children, school zones and residential areas
+
+Draft markdown files were generated for all 12 supported languages under `content/blog/<lang>/posts/`. Generated HTML routes include the English canonical pages under `blog/` and localized equivalents under `blog/<lang>/`.
+
+Also added `CONTENT_WORKLIST.md` to track the full 39-topic content scope. Official process and traffic guidance was checked on 2026-05-22 against Trafikverket and Transportstyrelsen public pages before generating the batch.
+
+## Multilingual Blog Quality Pass
+
+Improved all generated markdown posts with an editorial quality layer on 2026-05-22.
+
+Scope:
+
+- Added a localized practical quality checklist to every post.
+- Added a localized mini practice scenario to connect each topic to real driving practice.
+- Added a localized official-check reminder pointing readers back to Trafikverket and/or Transportstyrelsen for current legal and process details.
+- Cleaned generated double punctuation from the latest batch.
+- Localized agency conjunctions in multilingual official-check text.
+
+Result:
+
+- `468` markdown posts contain the `<!-- quality-pass:2026-05-22 -->` marker.
+- Shortest post body after the pass is approximately `197` words.
+- HTML must be regenerated with `node tools/build-blog.mjs` after this pass.
+
+## SEO Pass
+
+Completed a full SEO pass across markdown content, generated blog HTML and non-blog static HTML on 2026-05-22.
+
+Markdown updates:
+
+- Rewrote `seo_description` for all `468` blog posts.
+- All post meta descriptions are unique and within the 120-160 character target range.
+- Replaced generated "this guide explains" style introductions with more natural opening text where present.
+- Added same-language related guide links to all `468` posts using the `<!-- seo-related:2026-05-22 -->` marker.
+
+Generator updates:
+
+- `tools/build-blog.mjs` now renders markdown links.
+- Article pages now include canonical, hreflang alternates, Open Graph, Twitter card metadata and BlogPosting JSON-LD.
+- Localized blog index pages now include longer SEO descriptions, alternate hreflang links, Open Graph, Twitter card metadata and CollectionPage JSON-LD.
+- Generated redirect pages now include `noindex,follow`.
+
+Static HTML updates:
+
+- Added or corrected title/description/canonical/social metadata for non-blog static HTML pages.
+- Added `noindex,follow` to static redirect pages.
+- Updated `blog/index.html` with canonical, hreflang, Open Graph, Twitter card metadata and CollectionPage JSON-LD.
+- Shortened the legacy `blog/swedish-driving-theory-test-guide.html` meta description and added missing Twitter metadata.
+
+Validation:
+
+- `node tools/build-blog.mjs` built `468` article pages and `11` localized indexes.
+- Audited `566` HTML files with `0` SEO head issues.
+- Checked `521` blog HTML files with `0` missing relative link targets.
+- HTTP smoke-tested homepage, blog index, English/Turkish/Swedish/Arabic articles and the legacy theory guide with SEO metadata present.
+
+## Sitemap Pass
+
+Updated sitemap generation on 2026-05-22 after the multilingual content and SEO pass.
+
+Changes:
+
+- Updated `tools/build-sitemap.mjs` to use `2026-05-22` as `lastmod`.
+- Replaced the old hard-coded redirect exclusion list with HTML-aware checks.
+- Sitemap generation now excludes pages that contain `http-equiv="refresh"` or `robots` `noindex`.
+- Added XML escaping for sitemap locations.
+- Regenerated `sitemap.xml`.
+- Verified `robots.txt` still points to `https://nordictheorylabs.com/sitemap.xml`.
+
+Validation:
+
+- `node tools/build-sitemap.mjs` built `515` sitemap URLs.
+- Sitemap has `0` duplicate URLs.
+- Sitemap has `0` missing-file entries.
+- Sitemap has `0` redirect or noindex entries.

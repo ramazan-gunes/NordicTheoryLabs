@@ -11,7 +11,7 @@ updated_at: "2026-05-21"
 canonical: "https://nordictheorylabs.com/blog/so/learner-permit-eye-test-sweden.html"
 translation_of: "learner-permit-eye-test-sweden"
 summary: "Hagitaan ku saabsan bilowga laysanka B ee Sweden: oggolaanshaha barashada, caddeynta caafimaadka, baaritaanka indhaha iyo shuruudaha tababarka gaarka ah."
-seo_description: "Baro sida loo bilaabo laysanka B ee Sweden: körkortstillstånd, caddeyn caafimaad, baaritaan indho, da'da tababarka iyo handledare la oggolaaday."
+seo_description: "Oggolaanshaha barashada iyo baaritaanka indhaha Sweden: tallaabada koowaad ee laysanka B: Hage waxbarasho oo liisanka B ee Sweden ah, oo leh talooyin,."
 reading_time: "6 min"
 ---
 
@@ -52,3 +52,34 @@ Khaladka saddexaad waa in la isku khaldo dugsi wadis iyo tababar gaar ah. Tababa
 Codso körkortstillstånd, buuxi caddeynta caafimaadka, samee baaritaanka indhaha, sug oggolaanshaha kadibna qorshee tababarka. Haddii aad si gaar ah u tababaranayso, hubi handledare-ga iyo koorsada hordhaca ah.
 
 Marka tallaabadan koowaad hagaagto, habka laysanka Sweden si badan ayuu u fududaadaa.
+
+<!-- quality-pass:2026-05-22 -->
+
+## Liiska hubinta tayada tababarka
+
+Maqaalkani wuxuu waxtar badan leeyahay marka lagu xiro tababar wadis dhab ah. Diiradda ugu weyn ha ahaato: Hagitaan ku saabsan bilowga laysanka B ee Sweden: oggolaanshaha barashada, caddeynta caafimaadka, baaritaanka indhaha iyo shuruudaha tababarka gaarka ah.
+
+- Kahor intaadan bilaabin, sheeg khatarta aad maanta tababaranayso iyo meesha ay badanaa ka muuqato taraafikada Sweden.
+- Inta lagu jiro tababarka, xeerka ku xiriiri fiirinta, xawaaraha, booska waddada iyo xiriirka dadka kale ee waddada isticmaala.
+- Tababarka ka dib, qor xaalad kaa daahday ama aan kuu caddayn, kadib dooro calaamadda aad marka xigta hore u arki doonto.
+- Markaad eegayso su’aalaha tijaabada, sharax sababta jawaabta ammaan ahi u tahay ammaan halkii aad kaliya xafidi lahayd doorashada saxda ah.
+
+## Tusaale tababar gaaban
+
+Dooro waddo caadi ah oo u dhow guriga, iskuulka wadista ama meel u eg aagga imtixaanka Trafikverket. Marka hore si deggan u wad adigoo fiirinaya Hagitaan ku saabsan bilowga laysanka B ee Sweden: oggolaanshaha barashada, caddeynta caafimaadka, baaritaanka indhaha iyo shuruudaha tababarka gaarka ah. Kadib isla waddada ku celi oo eeg in go’aamadaadu noqdeen kuwo hore, deggan oo si fudud loo sharxi karo.
+
+## Hubin rasmi ah
+
+Maqaalkan u isticmaal taageero waxbarasho, ma aha ilo sharci. Xeerarka, ballamaha, khidmadaha, muddada ansaxnimada iyo shuruudaha maalinta imtixaanka ka hubi Trafikverket ka hor intaadan tallaabo qaadin.
+
+<!-- seo-related:2026-05-22 -->
+
+## Hagayaal la xiriira liisanka Sweden
+
+Ku sii wad mowduucyadan la xiriira ee isla luqadda ah:
+
+- [Imtixaanka teori-ga Sweden ee B: sida Kunskapsprov u shaqeeyo](swedish-theory-test-category-b.html)
+- [Sida loo eego imtixaanada tijaabada theory-ga Sweden](practice-test-review-sweden.html)
+- [Qorshe waxbarasho imtixaanka theory-ga Sweden](theory-study-plan-sweden.html)
+- [Khaladaadka caadiga ah ee imtixaanka teori-ga Sweden](theory-test-common-mistakes-sweden.html)
+

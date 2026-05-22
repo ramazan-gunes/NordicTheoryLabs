@@ -11,7 +11,7 @@ updated_at: "2026-05-21"
 canonical: "https://nordictheorylabs.com/blog/ku/swedish-theory-test-category-b.html"
 translation_of: "swedish-theory-test-category-b"
 summary: "Rêberek praktîk ji bo ezmûna teoriyê ya B li Swêdê: hejmara pirsan, dem, sînorê derbasbûnê, derbasdarî, alîkariya ziman û amadekirin."
-seo_description: "Fêm bike ezmûna teoriyê ya B li Swêdê çawa ye: 70 pirs, 50 xulek, 52 rast, 4 meh derbasdarî, ziman û şîretên amadekirinê."
+seo_description: "Ezmûna teoriyê ya Swêdê ji bo B: Kunskapsprov çawa ye?: Rêbera pratîk ji bo lîsansa B li Swêdê, bi şîretên xwendinê, ewlehiyê û amadekariya ezmûnê."
 reading_time: "7 min"
 ---
 
@@ -62,3 +62,34 @@ Heke du bersiv rast xuya bikin, ya ewletir û ya herî li gor rêzikê bibijêre
 Heke derbas bibî, ezmûna ajotinê di nava demê derbasdar de plan bike. Heke derbas nebî, encamê wek vegerandina agahiyê bikar bîne. Tenê demek nû negire. Pêşî bibîne çima derbas nebûyî: ziman, rêzik, stres, xwendina pirsê an fêmkirina xeterê.
 
 Ezmûna teoriyê hêsantir dibe dema ku tu wê wek lîstika jibîrkirinê nebînî. Pergalê fêr bibe, zimanê pirsan pratîk bike û rêzikan bi reftara ajokarek ewle ve girê bide.
+
+<!-- quality-pass:2026-05-22 -->
+
+## Lîsteya kontrola pratîkê
+
+Ev nivîs dema herî baş kar dike ku tu wê bi pratîka ajotina rast ve girê bidî. Bala sereke zelal bihêle: Rêberek praktîk ji bo ezmûna teoriyê ya B li Swêdê: hejmara pirsan, dem, sînorê derbasbûnê, derbasdarî, alîkariya ziman û amadekirin.
+
+- Berî destpêkê, metirsîya ku îro pratîk dikî û cihê ku ew di trafîka Swêdê de xuya dibe bi nav bike.
+- Di pratîkê de, qanûnê bi temaşe, lez, cihê erebeyê û peywendiya bi bikarhênerên din ên rê ve girê bide.
+- Piştî pratîkê, rewşeke ku dereng an nezelal bû binivîse û biryar bide cara din kîjan nîşanê zûtir bibînî.
+- Dema pirsên pratîkê dinirxînî, tenê bersiva rast ji ber neke; rave bike çima bersiva ewle ewle ye.
+
+## Senaryoya pratîkê ya kurt
+
+Rêyek asayî nêzî malê, dibistana ajotinê an herêmeke wek rêya ezmûna Trafikverket hilbijêre. Cara yekem hêdî ajot û armanc bike ku Rêberek praktîk ji bo ezmûna teoriyê ya B li Swêdê: hejmara pirsan, dem, sînorê derbasbûnê, derbasdarî, alîkariya ziman û amadekirin bibînî. Paşê heman rê dubare bike û bibîne gelo biryarên te zûtir, aramtir û hêsantir hatin ravekirin.
+
+## Kontrola fermî
+
+Ev nivîs wek piştgiriya hînbûnê bi kar bîne, ne wek çavkaniya qanûnî. Ji bo rêzik, rezervasyon, xerc, demên derbasdarî û şertên roja ezmûnê berî kiryarê agahiyên niha li Trafikverket kontrol bike.
+
+<!-- seo-related:2026-05-22 -->
+
+## Rêberên têkildar ên lîsansa Swêdê
+
+Bi van mijarên nêzîk ên bi heman zimanî bidomîne:
+
+- [Plana xwendinê ji bo ezmûna teorî ya Swêdê](theory-study-plan-sweden.html)
+- [Çewtiyên gelemperî di ezmûna teoriyê ya Swêdê de](theory-test-common-mistakes-sweden.html)
+- [Çawa testên pratîkê yên teorî were nirxandin](practice-test-review-sweden.html)
+- [Ezmûna ajotinê ya Swêdê ji bo B: di Körprov de çi dibe?](swedish-driving-test-category-b.html)
+

@@ -11,7 +11,7 @@ updated_at: "2026-05-21"
 canonical: "https://nordictheorylabs.com/blog/ku/risk-1-risk-2-sweden.html"
 translation_of: "risk-1-risk-2-sweden"
 summary: "Rêberek praktîk li ser perwerdeya mecbûrî ya xetereyê ji bo lîsansa B li Swêdê: Risk 1 û Risk 2 çi ne, kengî werin girtin û çawa plan were kirin."
-seo_description: "Fêr bibin Risk 1 û Risk 2 ji bo lîsansa B li Swêdê çi ne, çiqas derbasdar in û berî ezmûnan çawa bêne plan kirin."
+seo_description: "Risk 1 û Risk 2 li Swêdê: rêber ji bo xwendekarên ajotinê: Rêbera pratîk ji bo lîsansa B li Swêdê, bi şîretên xwendinê, ewlehiyê û amadekariya ezmûnê."
 reading_time: "7 min"
 ---
 
@@ -78,3 +78,34 @@ Lê perwerdeyê bi giranî bigire. Heke tu pir westiyayî bî, beşdar nebî an 
 Risk 1 û Risk 2 ji destpêkê bike nav plana xwe. Heke tu bi dibistana ajotinê re dixebitî, bipirse kengî li gor asta te baş e. Heke tu bi awayê taybet pratîk dikî, pêşkêşkarek destûrdar bibîne û bi demek têr berî ezmûnê tomar bike.
 
 Perwerdeya xetereyê tenê karekî îdarî nîne. Heke di demê xwe de were girtin, ew alîkarî dike ku tu fêm bikî çima perwerdeya ajotinê li Swêdê li ser lez, qada ewlehiyê, biryar û berpirsiyarî radiweste.
+
+<!-- quality-pass:2026-05-22 -->
+
+## Lîsteya kontrola pratîkê
+
+Ev nivîs dema herî baş kar dike ku tu wê bi pratîka ajotina rast ve girê bidî. Bala sereke zelal bihêle: Rêberek praktîk li ser perwerdeya mecbûrî ya xetereyê ji bo lîsansa B li Swêdê: Risk 1 û Risk 2 çi ne, kengî werin girtin û çawa plan were kirin.
+
+- Berî destpêkê, metirsîya ku îro pratîk dikî û cihê ku ew di trafîka Swêdê de xuya dibe bi nav bike.
+- Di pratîkê de, qanûnê bi temaşe, lez, cihê erebeyê û peywendiya bi bikarhênerên din ên rê ve girê bide.
+- Piştî pratîkê, rewşeke ku dereng an nezelal bû binivîse û biryar bide cara din kîjan nîşanê zûtir bibînî.
+- Dema pirsên pratîkê dinirxînî, tenê bersiva rast ji ber neke; rave bike çima bersiva ewle ewle ye.
+
+## Senaryoya pratîkê ya kurt
+
+Rêyek asayî nêzî malê, dibistana ajotinê an herêmeke wek rêya ezmûna Trafikverket hilbijêre. Cara yekem hêdî ajot û armanc bike ku Rêberek praktîk li ser perwerdeya mecbûrî ya xetereyê ji bo lîsansa B li Swêdê: Risk 1 û Risk 2 çi ne, kengî werin girtin û çawa plan were kirin bibînî. Paşê heman rê dubare bike û bibîne gelo biryarên te zûtir, aramtir û hêsantir hatin ravekirin.
+
+## Kontrola fermî
+
+Ev nivîs wek piştgiriya hînbûnê bi kar bîne, ne wek çavkaniya qanûnî. Ji bo rêzik, rezervasyon, xerc, demên derbasdarî û şertên roja ezmûnê berî kiryarê agahiyên niha li Trafikverket and Transportstyrelsen kontrol bike.
+
+<!-- seo-related:2026-05-22 -->
+
+## Rêberên têkildar ên lîsansa Swêdê
+
+Bi van mijarên nêzîk ên bi heman zimanî bidomîne:
+
+- [Plana xwendinê ji bo ezmûna teorî ya Swêdê](theory-study-plan-sweden.html)
+- [Ezmûna teoriyê ya Swêdê ji bo B: Kunskapsprov çawa ye?](swedish-theory-test-category-b.html)
+- [Çawa testên pratîkê yên teorî were nirxandin](practice-test-review-sweden.html)
+- [Çewtiyên gelemperî di ezmûna teoriyê ya Swêdê de](theory-test-common-mistakes-sweden.html)
+

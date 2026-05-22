@@ -11,7 +11,7 @@ updated_at: "2026-05-21"
 canonical: "https://nordictheorylabs.com/blog/so/swedish-theory-test-category-b.html"
 translation_of: "swedish-theory-test-category-b"
 summary: "Hagitaan ku saabsan imtixaanka teori-ga ee laysanka B ee Sweden: tirada su'aalaha, waqtiga, dhibcaha lagu baaso, ansaxnimada, luqadaha iyo sida loo diyaargaroobo."
-seo_description: "Baro sida imtixaanka teori-ga B ee Sweden u shaqeeyo: 70 su'aalood, 50 daqiiqo, 52 sax ah, 4 bilood ansax, taageero luqadeed iyo talooyin."
+seo_description: "Imtixaanka teori-ga Sweden ee B: sida Kunskapsprov u shaqeeyo: Hage waxbarasho oo liisanka B ee Sweden ah, oo leh talooyin, badbaado taraafiko iyo diyaar."
 reading_time: "7 min"
 ---
 
@@ -62,3 +62,34 @@ Haddii laba jawaabood u muuqdaan suuragal, dooro tan ugu ammaan badan uguna dhow
 Haddii aad baasto, qorshee imtixaanka wadista intii natiijadu ansax tahay. Haddii aad dhacdo, natiijada u isticmaal jawaab celin. Ha ballansan oo keliya waqtiga xiga. Marka hore ogow sababta: luqad, sharci, stress, akhrinta su'aasha ama fahamka khatarta.
 
 Imtixaanka teori-gu wuu fududaadaa marka aan loo arkin ciyaar xafidid. Baro nidaamka, ku tababar luqadda su'aalaha, kuna xir sharciyada dhaqanka darawal ammaan ah.
+
+<!-- quality-pass:2026-05-22 -->
+
+## Liiska hubinta tayada tababarka
+
+Maqaalkani wuxuu waxtar badan leeyahay marka lagu xiro tababar wadis dhab ah. Diiradda ugu weyn ha ahaato: Hagitaan ku saabsan imtixaanka teori-ga ee laysanka B ee Sweden: tirada su'aalaha, waqtiga, dhibcaha lagu baaso, ansaxnimada, luqadaha iyo sida loo diyaargaroobo.
+
+- Kahor intaadan bilaabin, sheeg khatarta aad maanta tababaranayso iyo meesha ay badanaa ka muuqato taraafikada Sweden.
+- Inta lagu jiro tababarka, xeerka ku xiriiri fiirinta, xawaaraha, booska waddada iyo xiriirka dadka kale ee waddada isticmaala.
+- Tababarka ka dib, qor xaalad kaa daahday ama aan kuu caddayn, kadib dooro calaamadda aad marka xigta hore u arki doonto.
+- Markaad eegayso su’aalaha tijaabada, sharax sababta jawaabta ammaan ahi u tahay ammaan halkii aad kaliya xafidi lahayd doorashada saxda ah.
+
+## Tusaale tababar gaaban
+
+Dooro waddo caadi ah oo u dhow guriga, iskuulka wadista ama meel u eg aagga imtixaanka Trafikverket. Marka hore si deggan u wad adigoo fiirinaya Hagitaan ku saabsan imtixaanka teori-ga ee laysanka B ee Sweden: tirada su'aalaha, waqtiga, dhibcaha lagu baaso, ansaxnimada, luqadaha iyo sida loo diyaargaroobo. Kadib isla waddada ku celi oo eeg in go’aamadaadu noqdeen kuwo hore, deggan oo si fudud loo sharxi karo.
+
+## Hubin rasmi ah
+
+Maqaalkan u isticmaal taageero waxbarasho, ma aha ilo sharci. Xeerarka, ballamaha, khidmadaha, muddada ansaxnimada iyo shuruudaha maalinta imtixaanka ka hubi Trafikverket ka hor intaadan tallaabo qaadin.
+
+<!-- seo-related:2026-05-22 -->
+
+## Hagayaal la xiriira liisanka Sweden
+
+Ku sii wad mowduucyadan la xiriira ee isla luqadda ah:
+
+- [Qorshe waxbarasho imtixaanka theory-ga Sweden](theory-study-plan-sweden.html)
+- [Khaladaadka caadiga ah ee imtixaanka teori-ga Sweden](theory-test-common-mistakes-sweden.html)
+- [Sida loo eego imtixaanada tijaabada theory-ga Sweden](practice-test-review-sweden.html)
+- [Imtixaanka wadista Sweden ee B: waxa ka dhaca Körprov](swedish-driving-test-category-b.html)
+
