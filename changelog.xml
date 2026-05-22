@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+  <channel>
+    <title>Nordic Theory Labs Changelog</title>
+    <link>https://nordictheorylabs.com/changelog.html</link>
+    <description>Product and website updates from Nordic Theory Labs.</description>
+    <language>en</language>
+    <lastBuildDate>Fri, 22 May 2026 00:00:00 +0200</lastBuildDate>
+    <item>
+      <title>SEO operations launch readiness</title>
+      <link>https://nordictheorylabs.com/changelog.html</link>
+      <guid>https://nordictheorylabs.com/changelog.html#seo-operations-launch-readiness</guid>
+      <pubDate>Fri, 22 May 2026 00:00:00 +0200</pubDate>
+      <description>Added production operations, indexing, analytics, crawlability, and launch readiness workflows.</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,28 @@
+{
+  "generated_pages": 29,
+  "programmatic_pages": 8,
+  "failure_intent_pages": 3,
+  "cost_intent_pages": 3,
+  "time_intent_pages": 2,
+  "comparison_intent_pages": 2,
+  "schema_types": [
+    "Organization",
+    "WebSite",
+    "WebPage",
+    "BreadcrumbList",
+    "FAQPage",
+    "QAPage",
+    "LearningResource",
+    "MobileApplication",
+    "Review",
+    "SpeakableSpecification"
+  ],
+  "conversion_components": [
+    "sticky mobile install bar",
+    "floating CTA",
+    "review card",
+    "students passed/statistics",
+    "before-after comparison",
+    "theory test simulation"
+  ]
+}

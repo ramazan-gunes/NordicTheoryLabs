@@ -1,0 +1,68 @@
+{
+  "updated": "2026-05-22",
+  "safety_rules": [
+    "unique intro",
+    "local or scenario-specific example",
+    "no reused FAQ answers",
+    "entity links required",
+    "minimum 750 words"
+  ],
+  "templates": {
+    "city_page": {
+      "slug": "/korkortsteori-{stad}/",
+      "required_sections": [
+        "local traffic",
+        "pricing",
+        "körprov",
+        "riskettan",
+        "FAQ"
+      ]
+    },
+    "theory_topic": {
+      "slug": "/korkortsteori-{amne}/",
+      "required_sections": [
+        "definition",
+        "example",
+        "mistakes",
+        "practice CTA"
+      ]
+    },
+    "weather_condition": {
+      "slug": "/korning-i-{vader}/",
+      "required_sections": [
+        "risk",
+        "speed",
+        "visibility",
+        "tires",
+        "quiz CTA"
+      ]
+    },
+    "vehicle_specific": {
+      "slug": "/korkortsteori-{fordon}/",
+      "required_sections": [
+        "rules",
+        "risk",
+        "parking",
+        "environment"
+      ]
+    },
+    "parking_rule": {
+      "slug": "/parkering-{regel}/",
+      "required_sections": [
+        "sign",
+        "time",
+        "exceptions",
+        "local example"
+      ]
+    },
+    "seasonal_driving": {
+      "slug": "/{sasong}-korning-korkort/",
+      "required_sections": [
+        "seasonal risk",
+        "equipment",
+        "common mistakes",
+        "checklist"
+      ]
+    }
+  }
+}

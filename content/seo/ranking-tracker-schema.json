@@ -1,0 +1,35 @@
+{
+  "updated": "2026-05-22",
+  "storage": "content/seo/ranking-observations.json",
+  "cadence": "weekly",
+  "privacy": "No personal data. SERP observations are keyword, country, device and URL only.",
+  "fields": {
+    "keyword": "string",
+    "locale": "sv-SE",
+    "device": [
+      "mobile",
+      "desktop"
+    ],
+    "engine": [
+      "google",
+      "bing"
+    ],
+    "observed_at": "ISO-8601 date",
+    "position": "number|null",
+    "url": "canonical URL",
+    "title": "SERP title",
+    "description": "SERP description",
+    "pixel_rank_estimate": "number|null",
+    "serp_features": [
+      "faq",
+      "review",
+      "video",
+      "ai_overview",
+      "paa"
+    ],
+    "competitor_urls": [
+      "string"
+    ],
+    "notes": "string"
+  }
+}

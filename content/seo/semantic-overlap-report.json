@@ -1,0 +1,83 @@
+{
+  "updated": "2026-05-22",
+  "pages_checked": 29,
+  "highest_overlap_pairs": [
+    {
+      "a": "https://nordictheorylabs.com/vagmarken/forbudsmarken/",
+      "b": "https://nordictheorylabs.com/vagmarken/vajningsregler/",
+      "overlap": 0.52
+    },
+    {
+      "a": "https://nordictheorylabs.com/vagmarken/forbudsmarken/",
+      "b": "https://nordictheorylabs.com/vagmarken/pabudsmarken/",
+      "overlap": 0.496
+    },
+    {
+      "a": "https://nordictheorylabs.com/vagmarken/varningsmarken/",
+      "b": "https://nordictheorylabs.com/vagmarken/pabudsmarken/",
+      "overlap": 0.494
+    },
+    {
+      "a": "https://nordictheorylabs.com/vagmarken/pabudsmarken/",
+      "b": "https://nordictheorylabs.com/vagmarken/vajningsregler/",
+      "overlap": 0.494
+    },
+    {
+      "a": "https://nordictheorylabs.com/gratis-teoriprov/",
+      "b": "https://nordictheorylabs.com/teoriprov-gratis-online/",
+      "overlap": 0.492
+    },
+    {
+      "a": "https://nordictheorylabs.com/korkort-tidsplan/",
+      "b": "https://nordictheorylabs.com/snabbaste-sattet-att-ta-korkort/",
+      "overlap": 0.492
+    },
+    {
+      "a": "https://nordictheorylabs.com/korkort-kostnad-kalkylator/",
+      "b": "https://nordictheorylabs.com/billigaste-korkortet-sverige/",
+      "overlap": 0.484
+    },
+    {
+      "a": "https://nordictheorylabs.com/vagmarken/",
+      "b": "https://nordictheorylabs.com/vagmarken/vajningsregler/",
+      "overlap": 0.481
+    },
+    {
+      "a": "https://nordictheorylabs.com/vad-kostar-riskettan/",
+      "b": "https://nordictheorylabs.com/hur-lange-galler-riskettan/",
+      "overlap": 0.467
+    },
+    {
+      "a": "https://nordictheorylabs.com/vagmarken/varningsmarken/",
+      "b": "https://nordictheorylabs.com/vagmarken/vajningsregler/",
+      "overlap": 0.466
+    },
+    {
+      "a": "https://nordictheorylabs.com/korkort-fragor-online/",
+      "b": "https://nordictheorylabs.com/basta-korkort-appen/",
+      "overlap": 0.456
+    },
+    {
+      "a": "https://nordictheorylabs.com/vad-kostar-korkort-stockholm/",
+      "b": "https://nordictheorylabs.com/trafikskola-vs-privat/",
+      "overlap": 0.452
+    },
+    {
+      "a": "https://nordictheorylabs.com/faq/",
+      "b": "https://nordictheorylabs.com/korkortsteori-online/",
+      "overlap": 0.44
+    },
+    {
+      "a": "https://nordictheorylabs.com/teoriprov-gratis-online/",
+      "b": "https://nordictheorylabs.com/underkand-teoriprov/",
+      "overlap": 0.437
+    },
+    {
+      "a": "https://nordictheorylabs.com/vagmarken/varningsmarken/",
+      "b": "https://nordictheorylabs.com/vagmarken/forbudsmarken/",
+      "overlap": 0.434
+    }
+  ],
+  "risk_threshold": 0.62,
+  "risky_pairs": []
+}

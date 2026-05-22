@@ -1,0 +1,412 @@
+{
+  "market": "sv-SE",
+  "updated": "2026-05-22",
+  "coverage": [
+    {
+      "url": "https://nordictheorylabs.com/korkortsteori/",
+      "primary_keyword": "körkortsteori",
+      "title": "Körkortsteori 2026 - plugga smart inför teoriprovet",
+      "intent": "learn",
+      "secondary_keywords": [
+        "körkortsteori",
+        "Trafikregler och väjningsregler",
+        "Vägmärken och vägmarkeringar",
+        "Riskettan, risktvåan och säker körning",
+        "Miljö, hastighet och bromssträcka"
+      ],
+      "cta": "Starta gratis teoriprov"
+    },
+    {
+      "url": "https://nordictheorylabs.com/teoriprov/",
+      "primary_keyword": "teoriprov",
+      "title": "Teoriprov B - frågor, regler och övning inför kunskapsprovet",
+      "intent": "practice",
+      "secondary_keywords": [
+        "teoriprov",
+        "Provstrategi för svenska frågor",
+        "Vanliga fällor i teoriprovet",
+        "Kort repetition före provdagen",
+        "Länkar till gratis övning"
+      ],
+      "cta": "Gör gratis prov"
+    },
+    {
+      "url": "https://nordictheorylabs.com/gratis-teoriprov/",
+      "primary_keyword": "gratis teoriprov",
+      "title": "Gratis teoriprov - testa körkortsfrågor direkt",
+      "intent": "tool",
+      "secondary_keywords": [
+        "gratis teoriprov",
+        "Slumpade svenska frågor",
+        "Kategori: regler, vägmärken, risk och miljö",
+        "Poäng sparas lokalt",
+        "App-CTA efter resultat"
+      ],
+      "cta": "Starta testet"
+    },
+    {
+      "url": "https://nordictheorylabs.com/korkort-kostnad-kalkylator/",
+      "primary_keyword": "körkort kostnad kalkylator",
+      "title": "Körkort kostnad kalkylator - räkna pris för B-körkort",
+      "intent": "tool-cost",
+      "secondary_keywords": [
+        "körkort kostnad kalkylator",
+        "Körlektioner",
+        "Riskettan och risktvåan",
+        "Provavgifter",
+        "Omprov och extra träning"
+      ],
+      "cta": "Räkna priset"
+    },
+    {
+      "url": "https://nordictheorylabs.com/korkort-tidsplan/",
+      "primary_keyword": "körkort tidsplan",
+      "title": "Körkort tidsplan - planera teori, riskutbildning och prov",
+      "intent": "tool-time",
+      "secondary_keywords": [
+        "körkort tidsplan",
+        "Tillstånd först",
+        "Teori varje vecka",
+        "Körning parallellt",
+        "Riskutbildning i rätt tid"
+      ],
+      "cta": "Planera veckorna"
+    },
+    {
+      "url": "https://nordictheorylabs.com/faq/",
+      "primary_keyword": "körkort frågor",
+      "title": "Körkort FAQ - frågor om teori, prov och övningskörning",
+      "intent": "faq",
+      "secondary_keywords": [
+        "körkort frågor",
+        "Körkortstillstånd",
+        "Teoriprov",
+        "Riskutbildning",
+        "Kostnad"
+      ],
+      "cta": "Öva gratis prov"
+    },
+    {
+      "url": "https://nordictheorylabs.com/teoriprov-gratis-online/",
+      "primary_keyword": "teoriprov gratis online",
+      "title": "Teoriprov gratis online - öva inför körkortet",
+      "intent": "programmatic-practice",
+      "secondary_keywords": [
+        "teoriprov gratis online",
+        "Ingen registrering",
+        "Mobilvänligt test",
+        "Frågor från flera kategorier",
+        "Tydlig app-CTA efter resultat"
+      ],
+      "cta": "Gör gratis onlineprov"
+    },
+    {
+      "url": "https://nordictheorylabs.com/gratis-korkort-fragor/",
+      "primary_keyword": "gratis körkortsfrågor",
+      "title": "Gratis körkortsfrågor - svenska frågor för B-körkort",
+      "intent": "programmatic-question",
+      "secondary_keywords": [
+        "gratis körkortsfrågor",
+        "Körkortsfrågor gratis",
+        "Svenska provord",
+        "Kategori-filter",
+        "Poäng sparas i webbläsaren"
+      ],
+      "cta": "Öva frågor gratis"
+    },
+    {
+      "url": "https://nordictheorylabs.com/korkort-fragor-online/",
+      "primary_keyword": "körkortsfrågor online",
+      "title": "Körkortsfrågor online - träna teori på svenska",
+      "intent": "programmatic-question",
+      "secondary_keywords": [
+        "körkortsfrågor online",
+        "Onlinefrågor på svenska",
+        "Kategori-filter",
+        "Progress i mobilen",
+        "Fortsätt i app efter resultat"
+      ],
+      "cta": "Träna online"
+    },
+    {
+      "url": "https://nordictheorylabs.com/teoriprov-online/",
+      "primary_keyword": "teoriprov online",
+      "title": "Teoriprov online - simulera provkänsla på mobilen",
+      "intent": "programmatic-practice",
+      "secondary_keywords": [
+        "teoriprov online",
+        "Provliknande flöde",
+        "Slumpade frågor",
+        "Kategorier",
+        "Mobil-first"
+      ],
+      "cta": "Simulera prov"
+    },
+    {
+      "url": "https://nordictheorylabs.com/teoriprov-pa-engelska/",
+      "primary_keyword": "teoriprov på engelska",
+      "title": "Teoriprov på engelska - körkortsteori för Sverige",
+      "intent": "language-support",
+      "secondary_keywords": [
+        "teoriprov på engelska",
+        "Svenska trafikord",
+        "Engelsk studieväg",
+        "Provlogik i Sverige",
+        "App med flera språk"
+      ],
+      "cta": "Öva engelska guider"
+    },
+    {
+      "url": "https://nordictheorylabs.com/korkort-app-gratis/",
+      "primary_keyword": "körkort app gratis",
+      "title": "Körkort app gratis - börja öva teori utan konto",
+      "intent": "app-conversion",
+      "secondary_keywords": [
+        "körkort app gratis",
+        "Gratis start",
+        "Mobil teoriövning",
+        "Statistik",
+        "Flera språk"
+      ],
+      "cta": "Öppna App Store"
+    },
+    {
+      "url": "https://nordictheorylabs.com/basta-korkort-appen/",
+      "primary_keyword": "bästa körkort appen",
+      "title": "Bästa körkort appen - vad du ska jämföra innan du väljer",
+      "intent": "comparison",
+      "secondary_keywords": [
+        "bästa körkort appen",
+        "Förklaringar",
+        "Statistik",
+        "Vägmärken",
+        "Lugn design"
+      ],
+      "cta": "Se Körkort Hero"
+    },
+    {
+      "url": "https://nordictheorylabs.com/korkortsteori-online/",
+      "primary_keyword": "körkortsteori online",
+      "title": "Körkortsteori online - plugga teori var du vill",
+      "intent": "online-learning",
+      "secondary_keywords": [
+        "körkortsteori online",
+        "Plugga på mobilen",
+        "Teori + frågor",
+        "Svenska begrepp",
+        "Repetition över tid"
+      ],
+      "cta": "Börja med gratis prov"
+    },
+    {
+      "url": "https://nordictheorylabs.com/underkand-teoriprov/",
+      "primary_keyword": "underkänd teoriprov",
+      "title": "Underkänd på teoriprov - så kommer du tillbaka",
+      "intent": "failure",
+      "secondary_keywords": [
+        "underkänd teoriprov",
+        "Felanalys",
+        "Ny studieplan",
+        "Svaga kategorier",
+        "Provredo igen"
+      ],
+      "cta": "Gör felanalys med prov"
+    },
+    {
+      "url": "https://nordictheorylabs.com/klara-teoriprovet/",
+      "primary_keyword": "klara teoriprovet",
+      "title": "Klara teoriprovet - plan, frågor och vanliga misstag",
+      "intent": "success",
+      "secondary_keywords": [
+        "klara teoriprovet",
+        "Provstrategi",
+        "Fellista",
+        "Sista veckan",
+        "Provdag"
+      ],
+      "cta": "Starta gratis prov"
+    },
+    {
+      "url": "https://nordictheorylabs.com/varfor-underkand-korprov/",
+      "primary_keyword": "varför underkänd körprov",
+      "title": "Varför underkänd på körprov - vanliga orsaker och åtgärder",
+      "intent": "failure-driving",
+      "secondary_keywords": [
+        "varför underkänd körprov",
+        "Uppsikt",
+        "Placering",
+        "Hastighet",
+        "Väjningsregler"
+      ],
+      "cta": "Läs körprovsguiden"
+    },
+    {
+      "url": "https://nordictheorylabs.com/vad-kostar-riskettan/",
+      "primary_keyword": "vad kostar riskettan",
+      "title": "Vad kostar riskettan - pris, innehåll och planering",
+      "intent": "cost",
+      "secondary_keywords": [
+        "vad kostar riskettan",
+        "Obligatorisk",
+        "Teoretisk utbildning",
+        "Pris varierar",
+        "Boka i god tid"
+      ],
+      "cta": "Räkna total kostnad"
+    },
+    {
+      "url": "https://nordictheorylabs.com/vad-kostar-korkort-stockholm/",
+      "primary_keyword": "vad kostar körkort stockholm",
+      "title": "Vad kostar körkort i Stockholm - realistisk prisbild",
+      "intent": "cost-local",
+      "secondary_keywords": [
+        "vad kostar körkort stockholm",
+        "Stockholmstrafik",
+        "Lektionspris",
+        "Privat övning",
+        "Omprov"
+      ],
+      "cta": "Räkna din kostnad"
+    },
+    {
+      "url": "https://nordictheorylabs.com/billigaste-korkortet-sverige/",
+      "primary_keyword": "billigaste körkortet Sverige",
+      "title": "Billigaste körkortet i Sverige - så minskar du kostnaden",
+      "intent": "cost-saving",
+      "secondary_keywords": [
+        "billigaste körkortet Sverige",
+        "Privat övning",
+        "Färre omprov",
+        "Smart teori",
+        "Rätt trafikskola"
+      ],
+      "cta": "Räkna totalpris"
+    },
+    {
+      "url": "https://nordictheorylabs.com/snabbaste-sattet-att-ta-korkort/",
+      "primary_keyword": "snabbaste sättet att ta körkort",
+      "title": "Snabbaste sättet att ta körkort - utan att slarva",
+      "intent": "time",
+      "secondary_keywords": [
+        "snabbaste sättet att ta körkort",
+        "Tillstånd tidigt",
+        "Teori varje dag",
+        "Körning parallellt",
+        "Riskutbildning i tid"
+      ],
+      "cta": "Skapa tidsplan"
+    },
+    {
+      "url": "https://nordictheorylabs.com/hur-lange-galler-riskettan/",
+      "primary_keyword": "hur länge gäller riskettan",
+      "title": "Hur länge gäller riskettan - giltighet och planering",
+      "intent": "time-risk",
+      "secondary_keywords": [
+        "hur länge gäller riskettan",
+        "Giltighet",
+        "Bokning",
+        "Riskettan",
+        "Risktvåan"
+      ],
+      "cta": "Planera körkortet"
+    },
+    {
+      "url": "https://nordictheorylabs.com/trafikskola-vs-privat/",
+      "primary_keyword": "trafikskola vs privat",
+      "title": "Trafikskola vs privat övningskörning - vad är bäst?",
+      "intent": "comparison",
+      "secondary_keywords": [
+        "trafikskola vs privat",
+        "Kostnad",
+        "Feedback",
+        "Mängdträning",
+        "Körprov"
+      ],
+      "cta": "Räkna kostnad"
+    },
+    {
+      "url": "https://nordictheorylabs.com/automat-vs-manuell-korkort/",
+      "primary_keyword": "automat vs manuell körkort",
+      "title": "Automat vs manuell körkort - vilket ska du välja?",
+      "intent": "comparison",
+      "secondary_keywords": [
+        "automat vs manuell körkort",
+        "Automat",
+        "Manuell",
+        "Kostnad",
+        "Flexibilitet"
+      ],
+      "cta": "Räkna kostnad"
+    },
+    {
+      "url": "https://nordictheorylabs.com/vagmarken/",
+      "primary_keyword": "vägmärken",
+      "title": "Vägmärken 2026 - lär dig svenska trafikskyltar",
+      "intent": "signs",
+      "secondary_keywords": [
+        "vägmärken",
+        "Varningsmärken",
+        "Förbudsmärken",
+        "Påbudsmärken",
+        "Väjningsregler"
+      ],
+      "cta": "Öva skyltfrågor"
+    },
+    {
+      "url": "https://nordictheorylabs.com/vagmarken/varningsmarken/",
+      "primary_keyword": "varningsmärken",
+      "title": "Varningsmärken - teori inför körkort och prov",
+      "intent": "sign-cluster",
+      "secondary_keywords": [
+        "varningsmärken",
+        "Barn",
+        "Vilt",
+        "Halt väglag",
+        "Vägarbete"
+      ],
+      "cta": "Öva skyltfrågor"
+    },
+    {
+      "url": "https://nordictheorylabs.com/vagmarken/forbudsmarken/",
+      "primary_keyword": "förbudsmärken",
+      "title": "Förbudsmärken - teori inför körkort och prov",
+      "intent": "sign-cluster",
+      "secondary_keywords": [
+        "förbudsmärken",
+        "Infart förbjuden",
+        "Omkörningsförbud",
+        "Parkeringsförbud",
+        "Hastighet"
+      ],
+      "cta": "Öva skyltfrågor"
+    },
+    {
+      "url": "https://nordictheorylabs.com/vagmarken/pabudsmarken/",
+      "primary_keyword": "påbudsmärken",
+      "title": "Påbudsmärken - teori inför körkort och prov",
+      "intent": "sign-cluster",
+      "secondary_keywords": [
+        "påbudsmärken",
+        "Körriktning",
+        "Cykelbana",
+        "Gångbana",
+        "Rondell"
+      ],
+      "cta": "Öva skyltfrågor"
+    },
+    {
+      "url": "https://nordictheorylabs.com/vagmarken/vajningsregler/",
+      "primary_keyword": "väjningsregler",
+      "title": "Väjningsregler - teori inför körkort och prov",
+      "intent": "sign-cluster",
+      "secondary_keywords": [
+        "väjningsregler",
+        "Högerregeln",
+        "Väjningsplikt",
+        "Stopplikt",
+        "Huvudled"
+      ],
+      "cta": "Öva skyltfrågor"
+    }
+  ]
+}

@@ -1,0 +1,90 @@
+{
+  "updated": "2026-05-22",
+  "targets": [
+    {
+      "url": "https://nordictheorylabs.com/authority/",
+      "asset_type": "resource hub",
+      "pitch_audiences": [
+        "trafikskolor",
+        "handledarutbildare",
+        "lokala nyhetssidor",
+        "studentbloggar",
+        "kommunala trafiksäkerhetssidor"
+      ],
+      "suggested_anchor_text": [
+        "körkortsresurser som andra kan länka till",
+        "körkortsresurs",
+        "teoriprov guide"
+      ],
+      "outreach_angle": "Länkbart material från Nordic Theory Labs: kuggfrågor, vinterkörning, körkortsstatistik och resurser för utbildare."
+    },
+    {
+      "url": "https://nordictheorylabs.com/authority/teoriprov-kuggfragor-rapport/",
+      "asset_type": "downloadable report",
+      "pitch_audiences": [
+        "trafikskolor",
+        "handledarutbildare",
+        "lokala nyhetssidor",
+        "studentbloggar",
+        "kommunala trafiksäkerhetssidor"
+      ],
+      "suggested_anchor_text": [
+        "vanligaste kuggfrågorna på teoriprovet",
+        "körkortsresurs",
+        "teoriprov guide"
+      ],
+      "outreach_angle": "Länkbar rapport om frågetyper som ofta fäller körkortselever: väjning, risk, skyltar, miljö och provstress."
+    },
+    {
+      "url": "https://nordictheorylabs.com/authority/svensk-korkortsstatistik/",
+      "asset_type": "downloadable report",
+      "pitch_audiences": [
+        "trafikskolor",
+        "handledarutbildare",
+        "lokala nyhetssidor",
+        "studentbloggar",
+        "kommunala trafiksäkerhetssidor"
+      ],
+      "suggested_anchor_text": [
+        "svensk körkortsstatistik för innehåll och research",
+        "körkortsresurs",
+        "teoriprov guide"
+      ],
+      "outreach_angle": "Körkortssiffror och pedagogiska benchmarkmått för teori, körprov, riskutbildning och appbaserad repetition."
+    },
+    {
+      "url": "https://nordictheorylabs.com/authority/vinterkorning-overlevnadsguide/",
+      "asset_type": "downloadable report",
+      "pitch_audiences": [
+        "trafikskolor",
+        "handledarutbildare",
+        "lokala nyhetssidor",
+        "studentbloggar",
+        "kommunala trafiksäkerhetssidor"
+      ],
+      "suggested_anchor_text": [
+        "vinterkörning: överlevnadsguide för nya förare",
+        "körkortsresurs",
+        "teoriprov guide"
+      ],
+      "outreach_angle": "Länkbar vinterkörningsguide för körkortselever: vinterdäck, dubbdäck, halka, bromssträcka, mörker och riskfrågor."
+    },
+    {
+      "url": "https://nordictheorylabs.com/authority/utbildarresurser/",
+      "asset_type": "downloadable report",
+      "pitch_audiences": [
+        "trafikskolor",
+        "handledarutbildare",
+        "lokala nyhetssidor",
+        "studentbloggar",
+        "kommunala trafiksäkerhetssidor"
+      ],
+      "suggested_anchor_text": [
+        "resurser för trafiklärare och handledare",
+        "körkortsresurs",
+        "teoriprov guide"
+      ],
+      "outreach_angle": "Nedladdningsbara resurser för trafiklärare, handledare och utbildare som vill ge elever bättre struktur inför teoriprovet."
+    }
+  ]
+}

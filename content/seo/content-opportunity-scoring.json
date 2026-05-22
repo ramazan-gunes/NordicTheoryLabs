@@ -1,0 +1,68 @@
+{
+  "updated": "2026-05-22",
+  "formula": {
+    "ranking_probability": "100 - difficulty + topical support count * 4",
+    "ctr_probability": "CTR potential + emotional trigger fit",
+    "indexing_priority": "internal links + recent sitemap + freshness",
+    "backlink_probability": "asset usefulness + outreach audience fit",
+    "engagement_probability": "interactive elements + app continuation + search path"
+  },
+  "scores": [
+    {
+      "keyword": "teoriprov gratis",
+      "ranking_probability": 40,
+      "ctr_probability": 91,
+      "indexing_priority": 92,
+      "backlink_probability": 76,
+      "engagement_probability": 90
+    },
+    {
+      "keyword": "körkort frågor",
+      "ranking_probability": 44,
+      "ctr_probability": 84,
+      "indexing_priority": 92,
+      "backlink_probability": 76,
+      "engagement_probability": 82
+    },
+    {
+      "keyword": "körkort app",
+      "ranking_probability": 48,
+      "ctr_probability": 82,
+      "indexing_priority": 92,
+      "backlink_probability": 64,
+      "engagement_probability": 90
+    },
+    {
+      "keyword": "teoriprov online",
+      "ranking_probability": 42,
+      "ctr_probability": 88,
+      "indexing_priority": 92,
+      "backlink_probability": 76,
+      "engagement_probability": 82
+    },
+    {
+      "keyword": "bästa körkort appen",
+      "ranking_probability": 53,
+      "ctr_probability": 79,
+      "indexing_priority": 92,
+      "backlink_probability": 64,
+      "engagement_probability": 90
+    },
+    {
+      "keyword": "teoriprov engelska",
+      "ranking_probability": 59,
+      "ctr_probability": 74,
+      "indexing_priority": 92,
+      "backlink_probability": 64,
+      "engagement_probability": 82
+    },
+    {
+      "keyword": "körkort test gratis",
+      "ranking_probability": 46,
+      "ctr_probability": 87,
+      "indexing_priority": 92,
+      "backlink_probability": 64,
+      "engagement_probability": 90
+    }
+  ]
+}

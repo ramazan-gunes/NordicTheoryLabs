@@ -1,0 +1,144 @@
+{
+  "updated": "2026-05-22",
+  "entities": [
+    {
+      "entity": "Trafikverket",
+      "related": [
+        "Kunskapsprov",
+        "Körprov",
+        "provbokning",
+        "förarprov",
+        "trafiksäkerhet"
+      ],
+      "recommended_pages": [
+        "/teoriprov/",
+        "/varfor-underkand-korprov/"
+      ]
+    },
+    {
+      "entity": "Transportstyrelsen",
+      "related": [
+        "Körkortstillstånd",
+        "syntest",
+        "handledare",
+        "fordonsregler",
+        "miljözon"
+      ],
+      "recommended_pages": [
+        "/faq/",
+        "/korkort-tidsplan/"
+      ]
+    },
+    {
+      "entity": "Körkortstillstånd",
+      "related": [
+        "syntest",
+        "övningskörning",
+        "handledare",
+        "Transportstyrelsen"
+      ],
+      "recommended_pages": [
+        "/korkort-tidsplan/",
+        "/snabbaste-sattet-att-ta-korkort/"
+      ]
+    },
+    {
+      "entity": "Riskettan",
+      "related": [
+        "alkohol",
+        "droger",
+        "trötthet",
+        "riskbeteende",
+        "B-körkort"
+      ],
+      "recommended_pages": [
+        "/vad-kostar-riskettan/",
+        "/hur-lange-galler-riskettan/"
+      ]
+    },
+    {
+      "entity": "Halkbana",
+      "related": [
+        "Risk 2",
+        "halka",
+        "bromssträcka",
+        "vinterväglag",
+        "fart"
+      ],
+      "recommended_pages": [
+        "/resurser/vinterkorning-guide/",
+        "/authority/vinterkorning-overlevnadsguide/"
+      ]
+    },
+    {
+      "entity": "EcoDriving",
+      "related": [
+        "miljö",
+        "bränsle",
+        "planering",
+        "motorbroms",
+        "miljözon"
+      ],
+      "recommended_pages": [
+        "/korkortsteori-online/",
+        "/authority/teoriprov-kuggfragor-rapport/"
+      ]
+    },
+    {
+      "entity": "Väjningsplikt",
+      "related": [
+        "högerregel",
+        "stopplikt",
+        "cirkulationsplats",
+        "cykelpassage",
+        "körprov"
+      ],
+      "recommended_pages": [
+        "/vagmarken/vajningsregler/",
+        "/gratis-korkort-fragor/"
+      ]
+    },
+    {
+      "entity": "Motorväg",
+      "related": [
+        "påfart",
+        "avfart",
+        "säkerhetsavstånd",
+        "filbyte",
+        "hastighet"
+      ],
+      "recommended_pages": [
+        "/korkortsteori-stockholm/",
+        "/authority/vinterkorning-overlevnadsguide/"
+      ]
+    },
+    {
+      "entity": "Vinterdäck",
+      "related": [
+        "dubbdäck",
+        "halka",
+        "bromssträcka",
+        "vinterkörning",
+        "Risk 2"
+      ],
+      "recommended_pages": [
+        "/resurser/vinterkorning-guide/",
+        "/authority/vinterkorning-overlevnadsguide/"
+      ]
+    },
+    {
+      "entity": "Miljözon",
+      "related": [
+        "EcoDriving",
+        "Transportstyrelsen",
+        "stadstrafik",
+        "fordon",
+        "utsläpp"
+      ],
+      "recommended_pages": [
+        "/korkortsteori-goteborg/",
+        "/korkortsteori-malmo/"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,152 @@
+{
+  "updated": "2026-05-22",
+  "keywords": [
+    {
+      "keyword": "teoriprov gratis",
+      "difficulty": 72,
+      "intent": "free practice / exam anxiety",
+      "ctr_potential": 91,
+      "topical_cluster": "teoriprov",
+      "supporting_pages": [
+        "/gratis-teoriprov/",
+        "/teoriprov-gratis-online/",
+        "/klara-teoriprovet/"
+      ],
+      "internal_link_targets": [
+        "/gratis-korkort-fragor/",
+        "/teoriprov-online/",
+        "/basta-korkort-appen/"
+      ],
+      "growth_action": "Test title with pass/fail anxiety and short free-test promise.",
+      "priority_score": 74,
+      "measurement_url": "/gratis-teoriprov/",
+      "status": "active"
+    },
+    {
+      "keyword": "körkort frågor",
+      "difficulty": 68,
+      "intent": "question bank / learning",
+      "ctr_potential": 84,
+      "topical_cluster": "questions",
+      "supporting_pages": [
+        "/gratis-korkort-fragor/",
+        "/korkort-fragor-online/",
+        "/faq/"
+      ],
+      "internal_link_targets": [
+        "/vagmarken/",
+        "/korkortsteori/",
+        "/gratis-teoriprov/"
+      ],
+      "growth_action": "Push quick-answer snippets and failed-question resource links.",
+      "priority_score": 67,
+      "measurement_url": "/gratis-korkort-fragor/",
+      "status": "active"
+    },
+    {
+      "keyword": "körkort app",
+      "difficulty": 64,
+      "intent": "app install / comparison",
+      "ctr_potential": 82,
+      "topical_cluster": "app",
+      "supporting_pages": [
+        "/korkort-app-gratis/",
+        "/basta-korkort-appen/",
+        "/apps/korkort-hero/"
+      ],
+      "internal_link_targets": [
+        "/gratis-teoriprov/",
+        "/teoriprov-online/",
+        "/resurser/teoriprov-checklista/"
+      ],
+      "growth_action": "Use App Store social proof, streak continuation and free-start copy.",
+      "priority_score": 63,
+      "measurement_url": "/korkort-app-gratis/",
+      "status": "active"
+    },
+    {
+      "keyword": "teoriprov online",
+      "difficulty": 70,
+      "intent": "practice test online",
+      "ctr_potential": 88,
+      "topical_cluster": "teoriprov",
+      "supporting_pages": [
+        "/teoriprov-online/",
+        "/teoriprov/",
+        "/teoriprov-gratis-online/"
+      ],
+      "internal_link_targets": [
+        "/underkand-teoriprov/",
+        "/klara-teoriprovet/",
+        "/korkortsteori-online/"
+      ],
+      "growth_action": "Add exam-simulation and avoid-stress angle above fold.",
+      "priority_score": 58,
+      "measurement_url": "/teoriprov-online/",
+      "status": "active"
+    },
+    {
+      "keyword": "bästa körkort appen",
+      "difficulty": 59,
+      "intent": "comparison / install",
+      "ctr_potential": 79,
+      "topical_cluster": "app",
+      "supporting_pages": [
+        "/basta-korkort-appen/",
+        "/korkort-app-gratis/",
+        "/apps/korkort-hero/"
+      ],
+      "internal_link_targets": [
+        "/gratis-teoriprov/",
+        "/korkort-fragor-online/",
+        "/resurser/vanligaste-kuggfragorna/"
+      ],
+      "growth_action": "Use comparison proof, reviews and continuation prompts.",
+      "priority_score": 53,
+      "measurement_url": "/basta-korkort-appen/",
+      "status": "active"
+    },
+    {
+      "keyword": "teoriprov engelska",
+      "difficulty": 53,
+      "intent": "language support",
+      "ctr_potential": 74,
+      "topical_cluster": "multilingual",
+      "supporting_pages": [
+        "/teoriprov-pa-engelska/",
+        "/apps/korkort-hero/",
+        "/korkortsteori-online/"
+      ],
+      "internal_link_targets": [
+        "/vagmarken/",
+        "/gratis-korkort-fragor/",
+        "/sok/"
+      ],
+      "growth_action": "Clarify Swedish traffic words + English learning bridge.",
+      "priority_score": 48,
+      "measurement_url": "/teoriprov-pa-engelska/",
+      "status": "active"
+    },
+    {
+      "keyword": "körkort test gratis",
+      "difficulty": 66,
+      "intent": "free test / ready check",
+      "ctr_potential": 87,
+      "topical_cluster": "free-test",
+      "supporting_pages": [
+        "/gratis-teoriprov/",
+        "/teoriprov-gratis-online/",
+        "/gratis-korkort-fragor/"
+      ],
+      "internal_link_targets": [
+        "/korkort-app-gratis/",
+        "/latest-content/",
+        "/resurser/teoriprov-checklista/"
+      ],
+      "growth_action": "Prioritize free-test CTA and quiz-result app prompt.",
+      "priority_score": 44,
+      "measurement_url": "/gratis-teoriprov/",
+      "status": "active"
+    }
+  ]
+}

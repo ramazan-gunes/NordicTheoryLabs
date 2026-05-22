@@ -1,0 +1,244 @@
+{
+  "updated": "2026-05-22",
+  "framework": "manual controlled metadata experiments",
+  "variants": {
+    "teoriprov gratis": {
+      "control": "/gratis-teoriprov/",
+      "manual_rotation": "Update title/meta in generator, deploy, hold 14 days, compare Search Console CTR and position.",
+      "seasonal_rules": {
+        "winter": "Lägg till vinter, halka eller mörker om sidan har relevant sektion.",
+        "exam_season": "Prioritize pass/fail and stress-reduction copy in May-June and August-September."
+      },
+      "titles": [
+        "teoriprov gratis - slipp vanliga misstag",
+        "teoriprov gratis inför provet - testa nivån idag",
+        "Klara teoriprov gratis: lugnare plugg och tydlig nästa steg",
+        "teoriprov gratis 2026 - svenska tips som faktiskt hjälper"
+      ],
+      "descriptions": [
+        "Träna smartare med korta svar, vanliga fel och nästa steg. Bygg trygghet innan provet.",
+        "För dig som vill veta vad som saknas innan provdagen. Praktiska exempel, FAQ och appträning.",
+        "Minska stressen, hitta svaga kategorier och fortsätt plugga där poängen faller."
+      ],
+      "emotional_triggers": [
+        "slipp onödiga fel",
+        "känn dig redo",
+        "mindre provstress"
+      ],
+      "urgency_variants": [
+        "testa nivån idag",
+        "sista veckan före provet",
+        "innan du bokar prov"
+      ],
+      "pass_fail_variants": [
+        "undvik underkänt",
+        "klara fler frågor",
+        "hitta kuggfällorna"
+      ]
+    },
+    "körkort frågor": {
+      "control": "/gratis-korkort-fragor/",
+      "manual_rotation": "Update title/meta in generator, deploy, hold 14 days, compare Search Console CTR and position.",
+      "seasonal_rules": {
+        "winter": "Use only where winter intent exists.",
+        "exam_season": "Prioritize pass/fail and stress-reduction copy in May-June and August-September."
+      },
+      "titles": [
+        "körkort frågor - slipp vanliga misstag",
+        "körkort frågor inför provet - testa nivån idag",
+        "Klara körkort frågor: lugnare plugg och tydlig nästa steg",
+        "körkort frågor 2026 - svenska tips som faktiskt hjälper"
+      ],
+      "descriptions": [
+        "Träna smartare med korta svar, vanliga fel och nästa steg. Bygg trygghet innan provet.",
+        "För dig som vill veta vad som saknas innan provdagen. Praktiska exempel, FAQ och appträning.",
+        "Minska stressen, hitta svaga kategorier och fortsätt plugga där poängen faller."
+      ],
+      "emotional_triggers": [
+        "slipp onödiga fel",
+        "känn dig redo",
+        "mindre provstress"
+      ],
+      "urgency_variants": [
+        "testa nivån idag",
+        "sista veckan före provet",
+        "innan du bokar prov"
+      ],
+      "pass_fail_variants": [
+        "undvik underkänt",
+        "klara fler frågor",
+        "hitta kuggfällorna"
+      ]
+    },
+    "körkort app": {
+      "control": "/korkort-app-gratis/",
+      "manual_rotation": "Update title/meta in generator, deploy, hold 14 days, compare Search Console CTR and position.",
+      "seasonal_rules": {
+        "winter": "Use only where winter intent exists.",
+        "exam_season": "Prioritize pass/fail and stress-reduction copy in May-June and August-September."
+      },
+      "titles": [
+        "körkort app - slipp vanliga misstag",
+        "körkort app inför provet - testa nivån idag",
+        "Klara körkort app: lugnare plugg och tydlig nästa steg",
+        "körkort app 2026 - svenska tips som faktiskt hjälper"
+      ],
+      "descriptions": [
+        "Träna smartare med korta svar, vanliga fel och nästa steg. Bygg trygghet innan provet.",
+        "För dig som vill veta vad som saknas innan provdagen. Praktiska exempel, FAQ och appträning.",
+        "Minska stressen, hitta svaga kategorier och fortsätt plugga där poängen faller."
+      ],
+      "emotional_triggers": [
+        "slipp onödiga fel",
+        "känn dig redo",
+        "mindre provstress"
+      ],
+      "urgency_variants": [
+        "testa nivån idag",
+        "sista veckan före provet",
+        "innan du bokar prov"
+      ],
+      "pass_fail_variants": [
+        "undvik underkänt",
+        "klara fler frågor",
+        "hitta kuggfällorna"
+      ]
+    },
+    "teoriprov online": {
+      "control": "/teoriprov-online/",
+      "manual_rotation": "Update title/meta in generator, deploy, hold 14 days, compare Search Console CTR and position.",
+      "seasonal_rules": {
+        "winter": "Lägg till vinter, halka eller mörker om sidan har relevant sektion.",
+        "exam_season": "Prioritize pass/fail and stress-reduction copy in May-June and August-September."
+      },
+      "titles": [
+        "teoriprov online - slipp vanliga misstag",
+        "teoriprov online inför provet - testa nivån idag",
+        "Klara teoriprov online: lugnare plugg och tydlig nästa steg",
+        "teoriprov online 2026 - svenska tips som faktiskt hjälper"
+      ],
+      "descriptions": [
+        "Träna smartare med korta svar, vanliga fel och nästa steg. Bygg trygghet innan provet.",
+        "För dig som vill veta vad som saknas innan provdagen. Praktiska exempel, FAQ och appträning.",
+        "Minska stressen, hitta svaga kategorier och fortsätt plugga där poängen faller."
+      ],
+      "emotional_triggers": [
+        "slipp onödiga fel",
+        "känn dig redo",
+        "mindre provstress"
+      ],
+      "urgency_variants": [
+        "testa nivån idag",
+        "sista veckan före provet",
+        "innan du bokar prov"
+      ],
+      "pass_fail_variants": [
+        "undvik underkänt",
+        "klara fler frågor",
+        "hitta kuggfällorna"
+      ]
+    },
+    "bästa körkort appen": {
+      "control": "/basta-korkort-appen/",
+      "manual_rotation": "Update title/meta in generator, deploy, hold 14 days, compare Search Console CTR and position.",
+      "seasonal_rules": {
+        "winter": "Use only where winter intent exists.",
+        "exam_season": "Prioritize pass/fail and stress-reduction copy in May-June and August-September."
+      },
+      "titles": [
+        "bästa körkort appen - slipp vanliga misstag",
+        "bästa körkort appen inför provet - testa nivån idag",
+        "Klara bästa körkort appen: lugnare plugg och tydlig nästa steg",
+        "bästa körkort appen 2026 - svenska tips som faktiskt hjälper"
+      ],
+      "descriptions": [
+        "Träna smartare med korta svar, vanliga fel och nästa steg. Bygg trygghet innan provet.",
+        "För dig som vill veta vad som saknas innan provdagen. Praktiska exempel, FAQ och appträning.",
+        "Minska stressen, hitta svaga kategorier och fortsätt plugga där poängen faller."
+      ],
+      "emotional_triggers": [
+        "slipp onödiga fel",
+        "känn dig redo",
+        "mindre provstress"
+      ],
+      "urgency_variants": [
+        "testa nivån idag",
+        "sista veckan före provet",
+        "innan du bokar prov"
+      ],
+      "pass_fail_variants": [
+        "undvik underkänt",
+        "klara fler frågor",
+        "hitta kuggfällorna"
+      ]
+    },
+    "teoriprov engelska": {
+      "control": "/teoriprov-pa-engelska/",
+      "manual_rotation": "Update title/meta in generator, deploy, hold 14 days, compare Search Console CTR and position.",
+      "seasonal_rules": {
+        "winter": "Lägg till vinter, halka eller mörker om sidan har relevant sektion.",
+        "exam_season": "Prioritize pass/fail and stress-reduction copy in May-June and August-September."
+      },
+      "titles": [
+        "teoriprov engelska - slipp vanliga misstag",
+        "teoriprov engelska inför provet - testa nivån idag",
+        "Klara teoriprov engelska: lugnare plugg och tydlig nästa steg",
+        "teoriprov engelska 2026 - svenska tips som faktiskt hjälper"
+      ],
+      "descriptions": [
+        "Träna smartare med korta svar, vanliga fel och nästa steg. Bygg trygghet innan provet.",
+        "För dig som vill veta vad som saknas innan provdagen. Praktiska exempel, FAQ och appträning.",
+        "Minska stressen, hitta svaga kategorier och fortsätt plugga där poängen faller."
+      ],
+      "emotional_triggers": [
+        "slipp onödiga fel",
+        "känn dig redo",
+        "mindre provstress"
+      ],
+      "urgency_variants": [
+        "testa nivån idag",
+        "sista veckan före provet",
+        "innan du bokar prov"
+      ],
+      "pass_fail_variants": [
+        "undvik underkänt",
+        "klara fler frågor",
+        "hitta kuggfällorna"
+      ]
+    },
+    "körkort test gratis": {
+      "control": "/gratis-teoriprov/",
+      "manual_rotation": "Update title/meta in generator, deploy, hold 14 days, compare Search Console CTR and position.",
+      "seasonal_rules": {
+        "winter": "Lägg till vinter, halka eller mörker om sidan har relevant sektion.",
+        "exam_season": "Prioritize pass/fail and stress-reduction copy in May-June and August-September."
+      },
+      "titles": [
+        "körkort test gratis - slipp vanliga misstag",
+        "körkort test gratis inför provet - testa nivån idag",
+        "Klara körkort test gratis: lugnare plugg och tydlig nästa steg",
+        "körkort test gratis 2026 - svenska tips som faktiskt hjälper"
+      ],
+      "descriptions": [
+        "Träna smartare med korta svar, vanliga fel och nästa steg. Bygg trygghet innan provet.",
+        "För dig som vill veta vad som saknas innan provdagen. Praktiska exempel, FAQ och appträning.",
+        "Minska stressen, hitta svaga kategorier och fortsätt plugga där poängen faller."
+      ],
+      "emotional_triggers": [
+        "slipp onödiga fel",
+        "känn dig redo",
+        "mindre provstress"
+      ],
+      "urgency_variants": [
+        "testa nivån idag",
+        "sista veckan före provet",
+        "innan du bokar prov"
+      ],
+      "pass_fail_variants": [
+        "undvik underkänt",
+        "klara fler frågor",
+        "hitta kuggfällorna"
+      ]
+    }
+  }
+}

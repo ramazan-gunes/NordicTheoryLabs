@@ -1,0 +1,147 @@
+{
+  "generatedAt": "2026-05-22",
+  "htmlCount": 618,
+  "seoPageCount": 53,
+  "sitemap": {
+    "indexExists": true,
+    "refs": [
+      "https://nordictheorylabs.com/sitemaps/sitemap-core.xml",
+      "https://nordictheorylabs.com/sitemaps/sitemap-seo.xml",
+      "https://nordictheorylabs.com/sitemaps/sitemap-local.xml",
+      "https://nordictheorylabs.com/sitemaps/sitemap-authority.xml",
+      "https://nordictheorylabs.com/sitemaps/sitemap-assets.xml",
+      "https://nordictheorylabs.com/sitemaps/sitemap-blog.xml",
+      "https://nordictheorylabs.com/sitemaps/sitemap-legal.xml",
+      "https://nordictheorylabs.com/sitemaps/sitemap-recent.xml"
+    ],
+    "segmentCounts": {
+      "sitemaps/sitemap-core.xml": 9,
+      "sitemaps/sitemap-seo.xml": 29,
+      "sitemaps/sitemap-local.xml": 5,
+      "sitemaps/sitemap-authority.xml": 5,
+      "sitemaps/sitemap-assets.xml": 13,
+      "sitemaps/sitemap-blog.xml": 481,
+      "sitemaps/sitemap-legal.xml": 25,
+      "sitemaps/sitemap-recent.xml": 61
+    },
+    "missingKnownSeoUrls": [],
+    "suspicious": []
+  },
+  "robots": {
+    "exists": true,
+    "sitemapReference": true,
+    "disallows": [
+      "/content/",
+      "/tools/",
+      "/.git/",
+      "/.vs/"
+    ]
+  },
+  "canonicalIssues": [],
+  "hreflangIssues": [],
+  "accidentalNoindex": [],
+  "blockedSeoPages": [],
+  "duplicateMeta": {
+    "titles": [],
+    "descriptions": []
+  },
+  "linkErrors": [],
+  "jsonLdErrors": [],
+  "pdfChecks": [
+    {
+      "rel": "assets/downloads/svensk-korkortsstatistik.pdf",
+      "bytes": 1474,
+      "inSitemap": true,
+      "blocked": false,
+      "hasPdfHeader": true
+    },
+    {
+      "rel": "assets/downloads/teoriprov-checklista.pdf",
+      "bytes": 1556,
+      "inSitemap": true,
+      "blocked": false,
+      "hasPdfHeader": true
+    },
+    {
+      "rel": "assets/downloads/teoriprov-kuggfragor-rapport.pdf",
+      "bytes": 1472,
+      "inSitemap": true,
+      "blocked": false,
+      "hasPdfHeader": true
+    },
+    {
+      "rel": "assets/downloads/utbildarresurser-korkort.pdf",
+      "bytes": 1485,
+      "inSitemap": true,
+      "blocked": false,
+      "hasPdfHeader": true
+    },
+    {
+      "rel": "assets/downloads/vagmarken-fuskblad.pdf",
+      "bytes": 1467,
+      "inSitemap": true,
+      "blocked": false,
+      "hasPdfHeader": true
+    },
+    {
+      "rel": "assets/downloads/vanligaste-kuggfragorna.pdf",
+      "bytes": 1473,
+      "inSitemap": true,
+      "blocked": false,
+      "hasPdfHeader": true
+    },
+    {
+      "rel": "assets/downloads/vinterkorning-guide.pdf",
+      "bytes": 1495,
+      "inSitemap": true,
+      "blocked": false,
+      "hasPdfHeader": true
+    },
+    {
+      "rel": "assets/downloads/vinterkorning-overlevnadsguide-authority.pdf",
+      "bytes": 1499,
+      "inSitemap": true,
+      "blocked": false,
+      "hasPdfHeader": true
+    }
+  ],
+  "assets": {
+    "cacheHeaders": {
+      "css": true,
+      "js": true,
+      "pdf": true,
+      "sitemap": true
+    },
+    "compressionNote": "Compression is edge/runtime controlled; static headers are present and assets are cacheable. Verify Brotli/Gzip after deploy with curl -I --compressed."
+  },
+  "analytics": {
+    "privacyFirst": true,
+    "ctaClicks": true,
+    "quizCompletion": true,
+    "pdfDownloads": true,
+    "internalLinks": true,
+    "appClicks": true,
+    "searchUsage": true,
+    "faqExpansion": true,
+    "toolUsage": true
+  },
+  "indexNow": {
+    "keyFileExists": true,
+    "keyFileContentOk": true,
+    "submitToolExists": true,
+    "endpointConfigured": true,
+    "updatedPagesExists": true
+  },
+  "lighthousePreflight": {
+    "cssFiles": 7,
+    "jsFiles": 4,
+    "deferredScriptsOnSeo": true,
+    "noSourceMaps": true,
+    "stableImageDimensions": true,
+    "cacheHeadersOk": true
+  },
+  "stagingHits": [],
+  "debugHits": [],
+  "sourceMaps": [],
+  "sensitiveFiles": []
+}

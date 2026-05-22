@@ -1,0 +1,666 @@
+{
+  "updated": "2026-05-22",
+  "target": "100+ future SEO pages",
+  "pages": [
+    {
+      "cluster": "city_pages",
+      "slug": "/stockholm/",
+      "intent": "local",
+      "priority": "medium"
+    },
+    {
+      "cluster": "city_pages",
+      "slug": "/goteborg/",
+      "intent": "local",
+      "priority": "medium"
+    },
+    {
+      "cluster": "city_pages",
+      "slug": "/malmo/",
+      "intent": "local",
+      "priority": "medium"
+    },
+    {
+      "cluster": "city_pages",
+      "slug": "/uppsala/",
+      "intent": "local",
+      "priority": "medium"
+    },
+    {
+      "cluster": "city_pages",
+      "slug": "/vasteras/",
+      "intent": "local",
+      "priority": "medium"
+    },
+    {
+      "cluster": "city_pages",
+      "slug": "/orebro/",
+      "intent": "local",
+      "priority": "medium"
+    },
+    {
+      "cluster": "city_pages",
+      "slug": "/linkoping/",
+      "intent": "local",
+      "priority": "medium"
+    },
+    {
+      "cluster": "city_pages",
+      "slug": "/helsingborg/",
+      "intent": "local",
+      "priority": "medium"
+    },
+    {
+      "cluster": "city_pages",
+      "slug": "/jonkoping/",
+      "intent": "local",
+      "priority": "medium"
+    },
+    {
+      "cluster": "city_pages",
+      "slug": "/norrkoping/",
+      "intent": "local",
+      "priority": "medium"
+    },
+    {
+      "cluster": "city_pages",
+      "slug": "/lund/",
+      "intent": "local",
+      "priority": "medium"
+    },
+    {
+      "cluster": "city_pages",
+      "slug": "/umea/",
+      "intent": "local",
+      "priority": "medium"
+    },
+    {
+      "cluster": "city_pages",
+      "slug": "/gavle/",
+      "intent": "local",
+      "priority": "medium"
+    },
+    {
+      "cluster": "city_pages",
+      "slug": "/boras/",
+      "intent": "local",
+      "priority": "medium"
+    },
+    {
+      "cluster": "city_pages",
+      "slug": "/eskilstuna/",
+      "intent": "local",
+      "priority": "medium"
+    },
+    {
+      "cluster": "city_pages",
+      "slug": "/sodertalje/",
+      "intent": "local",
+      "priority": "medium"
+    },
+    {
+      "cluster": "city_pages",
+      "slug": "/karlstad/",
+      "intent": "local",
+      "priority": "medium"
+    },
+    {
+      "cluster": "city_pages",
+      "slug": "/halmstad/",
+      "intent": "local",
+      "priority": "medium"
+    },
+    {
+      "cluster": "city_pages",
+      "slug": "/vaxjo/",
+      "intent": "local",
+      "priority": "medium"
+    },
+    {
+      "cluster": "city_pages",
+      "slug": "/sundsvall/",
+      "intent": "local",
+      "priority": "medium"
+    },
+    {
+      "cluster": "weather_driving",
+      "slug": "/vinterkorning/",
+      "intent": "informational",
+      "priority": "medium"
+    },
+    {
+      "cluster": "weather_driving",
+      "slug": "/regnkorning/",
+      "intent": "informational",
+      "priority": "medium"
+    },
+    {
+      "cluster": "weather_driving",
+      "slug": "/dimma/",
+      "intent": "informational",
+      "priority": "medium"
+    },
+    {
+      "cluster": "weather_driving",
+      "slug": "/morkerkorning/",
+      "intent": "informational",
+      "priority": "medium"
+    },
+    {
+      "cluster": "weather_driving",
+      "slug": "/halka/",
+      "intent": "informational",
+      "priority": "medium"
+    },
+    {
+      "cluster": "weather_driving",
+      "slug": "/vattenplaning/",
+      "intent": "informational",
+      "priority": "medium"
+    },
+    {
+      "cluster": "weather_driving",
+      "slug": "/snorok/",
+      "intent": "informational",
+      "priority": "medium"
+    },
+    {
+      "cluster": "weather_driving",
+      "slug": "/isiga-bromsar/",
+      "intent": "informational",
+      "priority": "medium"
+    },
+    {
+      "cluster": "weather_driving",
+      "slug": "/varm-sommarkorning/",
+      "intent": "informational",
+      "priority": "medium"
+    },
+    {
+      "cluster": "weather_driving",
+      "slug": "/hostlov-vaglag/",
+      "intent": "informational",
+      "priority": "medium"
+    },
+    {
+      "cluster": "parking_rules",
+      "slug": "/parkering-tillaggstavlor/",
+      "intent": "informational",
+      "priority": "medium"
+    },
+    {
+      "cluster": "parking_rules",
+      "slug": "/parkering-forbud/",
+      "intent": "informational",
+      "priority": "medium"
+    },
+    {
+      "cluster": "parking_rules",
+      "slug": "/datumparkering/",
+      "intent": "informational",
+      "priority": "medium"
+    },
+    {
+      "cluster": "parking_rules",
+      "slug": "/boendeparkering/",
+      "intent": "informational",
+      "priority": "medium"
+    },
+    {
+      "cluster": "parking_rules",
+      "slug": "/parkering-backning/",
+      "intent": "informational",
+      "priority": "medium"
+    },
+    {
+      "cluster": "parking_rules",
+      "slug": "/parkeringsskyltar/",
+      "intent": "informational",
+      "priority": "medium"
+    },
+    {
+      "cluster": "parking_rules",
+      "slug": "/lastplats/",
+      "intent": "informational",
+      "priority": "medium"
+    },
+    {
+      "cluster": "parking_rules",
+      "slug": "/handikapparkering/",
+      "intent": "informational",
+      "priority": "medium"
+    },
+    {
+      "cluster": "parking_rules",
+      "slug": "/stanna-eller-parkera/",
+      "intent": "informational",
+      "priority": "medium"
+    },
+    {
+      "cluster": "parking_rules",
+      "slug": "/parkering-i-backe/",
+      "intent": "informational",
+      "priority": "medium"
+    },
+    {
+      "cluster": "motorway",
+      "slug": "/motorvag-pafart/",
+      "intent": "informational",
+      "priority": "medium"
+    },
+    {
+      "cluster": "motorway",
+      "slug": "/motorvag-avfart/",
+      "intent": "informational",
+      "priority": "medium"
+    },
+    {
+      "cluster": "motorway",
+      "slug": "/sakerhetsavstand-motorvag/",
+      "intent": "informational",
+      "priority": "medium"
+    },
+    {
+      "cluster": "motorway",
+      "slug": "/omkorning-motorvag/",
+      "intent": "informational",
+      "priority": "medium"
+    },
+    {
+      "cluster": "motorway",
+      "slug": "/kofalt/",
+      "intent": "informational",
+      "priority": "medium"
+    },
+    {
+      "cluster": "motorway",
+      "slug": "/vagren/",
+      "intent": "informational",
+      "priority": "medium"
+    },
+    {
+      "cluster": "motorway",
+      "slug": "/hastighet-motorvag/",
+      "intent": "informational",
+      "priority": "medium"
+    },
+    {
+      "cluster": "motorway",
+      "slug": "/tung-trafik/",
+      "intent": "informational",
+      "priority": "medium"
+    },
+    {
+      "cluster": "motorway",
+      "slug": "/filbyte/",
+      "intent": "informational",
+      "priority": "medium"
+    },
+    {
+      "cluster": "motorway",
+      "slug": "/motortrafikled/",
+      "intent": "informational",
+      "priority": "medium"
+    },
+    {
+      "cluster": "electric_car_theory",
+      "slug": "/elbils-laddning/",
+      "intent": "informational",
+      "priority": "medium"
+    },
+    {
+      "cluster": "electric_car_theory",
+      "slug": "/regenerativ-bromsning/",
+      "intent": "informational",
+      "priority": "medium"
+    },
+    {
+      "cluster": "electric_car_theory",
+      "slug": "/miljozon-elbil/",
+      "intent": "informational",
+      "priority": "medium"
+    },
+    {
+      "cluster": "electric_car_theory",
+      "slug": "/vikt-elbil/",
+      "intent": "informational",
+      "priority": "medium"
+    },
+    {
+      "cluster": "electric_car_theory",
+      "slug": "/vinter-elbil/",
+      "intent": "informational",
+      "priority": "medium"
+    },
+    {
+      "cluster": "electric_car_theory",
+      "slug": "/brandrisk-elbil/",
+      "intent": "informational",
+      "priority": "medium"
+    },
+    {
+      "cluster": "electric_car_theory",
+      "slug": "/eco-driving-elbil/",
+      "intent": "informational",
+      "priority": "medium"
+    },
+    {
+      "cluster": "electric_car_theory",
+      "slug": "/laddplats-regler/",
+      "intent": "informational",
+      "priority": "medium"
+    },
+    {
+      "cluster": "electric_car_theory",
+      "slug": "/tyst-fordon/",
+      "intent": "informational",
+      "priority": "medium"
+    },
+    {
+      "cluster": "electric_car_theory",
+      "slug": "/batteri-och-rackvidd/",
+      "intent": "informational",
+      "priority": "medium"
+    },
+    {
+      "cluster": "exam_intent",
+      "slug": "/teoriprov-stress/",
+      "intent": "informational",
+      "priority": "high"
+    },
+    {
+      "cluster": "exam_intent",
+      "slug": "/kugga-teoriprov/",
+      "intent": "informational",
+      "priority": "high"
+    },
+    {
+      "cluster": "exam_intent",
+      "slug": "/sista-veckan-teoriprov/",
+      "intent": "informational",
+      "priority": "high"
+    },
+    {
+      "cluster": "exam_intent",
+      "slug": "/kunskapsprov-tips/",
+      "intent": "informational",
+      "priority": "high"
+    },
+    {
+      "cluster": "exam_intent",
+      "slug": "/korprov-stress/",
+      "intent": "informational",
+      "priority": "high"
+    },
+    {
+      "cluster": "exam_intent",
+      "slug": "/uppkorning-checklista/",
+      "intent": "informational",
+      "priority": "high"
+    },
+    {
+      "cluster": "exam_intent",
+      "slug": "/provdag-identitet/",
+      "intent": "informational",
+      "priority": "high"
+    },
+    {
+      "cluster": "exam_intent",
+      "slug": "/teoriprov-tid/",
+      "intent": "informational",
+      "priority": "high"
+    },
+    {
+      "cluster": "exam_intent",
+      "slug": "/teoriprov-boka-om/",
+      "intent": "informational",
+      "priority": "high"
+    },
+    {
+      "cluster": "exam_intent",
+      "slug": "/efter-godkant-prov/",
+      "intent": "informational",
+      "priority": "high"
+    },
+    {
+      "cluster": "long_tail_questions",
+      "slug": "/korkort-fraga-71/",
+      "intent": "question",
+      "priority": "low"
+    },
+    {
+      "cluster": "long_tail_questions",
+      "slug": "/korkort-fraga-72/",
+      "intent": "question",
+      "priority": "low"
+    },
+    {
+      "cluster": "long_tail_questions",
+      "slug": "/korkort-fraga-73/",
+      "intent": "question",
+      "priority": "low"
+    },
+    {
+      "cluster": "long_tail_questions",
+      "slug": "/korkort-fraga-74/",
+      "intent": "question",
+      "priority": "low"
+    },
+    {
+      "cluster": "long_tail_questions",
+      "slug": "/korkort-fraga-75/",
+      "intent": "question",
+      "priority": "low"
+    },
+    {
+      "cluster": "long_tail_questions",
+      "slug": "/korkort-fraga-76/",
+      "intent": "question",
+      "priority": "low"
+    },
+    {
+      "cluster": "long_tail_questions",
+      "slug": "/korkort-fraga-77/",
+      "intent": "question",
+      "priority": "low"
+    },
+    {
+      "cluster": "long_tail_questions",
+      "slug": "/korkort-fraga-78/",
+      "intent": "question",
+      "priority": "low"
+    },
+    {
+      "cluster": "long_tail_questions",
+      "slug": "/korkort-fraga-79/",
+      "intent": "question",
+      "priority": "low"
+    },
+    {
+      "cluster": "long_tail_questions",
+      "slug": "/korkort-fraga-80/",
+      "intent": "question",
+      "priority": "low"
+    },
+    {
+      "cluster": "long_tail_questions",
+      "slug": "/korkort-fraga-81/",
+      "intent": "question",
+      "priority": "low"
+    },
+    {
+      "cluster": "long_tail_questions",
+      "slug": "/korkort-fraga-82/",
+      "intent": "question",
+      "priority": "low"
+    },
+    {
+      "cluster": "long_tail_questions",
+      "slug": "/korkort-fraga-83/",
+      "intent": "question",
+      "priority": "low"
+    },
+    {
+      "cluster": "long_tail_questions",
+      "slug": "/korkort-fraga-84/",
+      "intent": "question",
+      "priority": "low"
+    },
+    {
+      "cluster": "long_tail_questions",
+      "slug": "/korkort-fraga-85/",
+      "intent": "question",
+      "priority": "low"
+    },
+    {
+      "cluster": "long_tail_questions",
+      "slug": "/korkort-fraga-86/",
+      "intent": "question",
+      "priority": "low"
+    },
+    {
+      "cluster": "long_tail_questions",
+      "slug": "/korkort-fraga-87/",
+      "intent": "question",
+      "priority": "low"
+    },
+    {
+      "cluster": "long_tail_questions",
+      "slug": "/korkort-fraga-88/",
+      "intent": "question",
+      "priority": "low"
+    },
+    {
+      "cluster": "long_tail_questions",
+      "slug": "/korkort-fraga-89/",
+      "intent": "question",
+      "priority": "low"
+    },
+    {
+      "cluster": "long_tail_questions",
+      "slug": "/korkort-fraga-90/",
+      "intent": "question",
+      "priority": "low"
+    },
+    {
+      "cluster": "long_tail_questions",
+      "slug": "/korkort-fraga-91/",
+      "intent": "question",
+      "priority": "low"
+    },
+    {
+      "cluster": "long_tail_questions",
+      "slug": "/korkort-fraga-92/",
+      "intent": "question",
+      "priority": "low"
+    },
+    {
+      "cluster": "long_tail_questions",
+      "slug": "/korkort-fraga-93/",
+      "intent": "question",
+      "priority": "low"
+    },
+    {
+      "cluster": "long_tail_questions",
+      "slug": "/korkort-fraga-94/",
+      "intent": "question",
+      "priority": "low"
+    },
+    {
+      "cluster": "long_tail_questions",
+      "slug": "/korkort-fraga-95/",
+      "intent": "question",
+      "priority": "low"
+    },
+    {
+      "cluster": "long_tail_questions",
+      "slug": "/korkort-fraga-96/",
+      "intent": "question",
+      "priority": "low"
+    },
+    {
+      "cluster": "long_tail_questions",
+      "slug": "/korkort-fraga-97/",
+      "intent": "question",
+      "priority": "low"
+    },
+    {
+      "cluster": "long_tail_questions",
+      "slug": "/korkort-fraga-98/",
+      "intent": "question",
+      "priority": "low"
+    },
+    {
+      "cluster": "long_tail_questions",
+      "slug": "/korkort-fraga-99/",
+      "intent": "question",
+      "priority": "low"
+    },
+    {
+      "cluster": "long_tail_questions",
+      "slug": "/korkort-fraga-100/",
+      "intent": "question",
+      "priority": "low"
+    },
+    {
+      "cluster": "long_tail_questions",
+      "slug": "/korkort-fraga-101/",
+      "intent": "question",
+      "priority": "low"
+    },
+    {
+      "cluster": "long_tail_questions",
+      "slug": "/korkort-fraga-102/",
+      "intent": "question",
+      "priority": "low"
+    },
+    {
+      "cluster": "long_tail_questions",
+      "slug": "/korkort-fraga-103/",
+      "intent": "question",
+      "priority": "low"
+    },
+    {
+      "cluster": "long_tail_questions",
+      "slug": "/korkort-fraga-104/",
+      "intent": "question",
+      "priority": "low"
+    },
+    {
+      "cluster": "long_tail_questions",
+      "slug": "/korkort-fraga-105/",
+      "intent": "question",
+      "priority": "low"
+    },
+    {
+      "cluster": "long_tail_questions",
+      "slug": "/korkort-fraga-106/",
+      "intent": "question",
+      "priority": "low"
+    },
+    {
+      "cluster": "long_tail_questions",
+      "slug": "/korkort-fraga-107/",
+      "intent": "question",
+      "priority": "low"
+    },
+    {
+      "cluster": "long_tail_questions",
+      "slug": "/korkort-fraga-108/",
+      "intent": "question",
+      "priority": "low"
+    },
+    {
+      "cluster": "long_tail_questions",
+      "slug": "/korkort-fraga-109/",
+      "intent": "question",
+      "priority": "low"
+    },
+    {
+      "cluster": "long_tail_questions",
+      "slug": "/korkort-fraga-110/",
+      "intent": "question",
+      "priority": "low"
+    }
+  ]
+}

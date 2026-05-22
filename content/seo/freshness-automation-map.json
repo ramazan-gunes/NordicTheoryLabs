@@ -1,0 +1,30 @@
+{
+  "updated": "2026-05-22",
+  "triggers": [
+    {
+      "trigger": "new year",
+      "action": "Update titles containing year, refresh lastmod, rebuild recent sitemap.",
+      "month": "January"
+    },
+    {
+      "trigger": "Trafikverket change",
+      "action": "Review prov, booking and terminology pages; add note to latest-content.",
+      "source": "manual monitoring"
+    },
+    {
+      "trigger": "Transportstyrelsen regulation",
+      "action": "Review körkortstillstånd, handledare and vehicle pages.",
+      "source": "manual monitoring"
+    },
+    {
+      "trigger": "winter tire season",
+      "action": "Promote vinterdäck, dubbdäck, halka and Risk 2 content.",
+      "month": "October-April"
+    },
+    {
+      "trigger": "exam season",
+      "action": "Rotate CTR variants toward pass/fail and stress-reduction copy.",
+      "month": "May-June, August-September"
+    }
+  ]
+}

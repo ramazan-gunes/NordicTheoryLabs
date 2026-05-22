@@ -1,0 +1,35 @@
+{
+  "updated": "2026-05-22",
+  "flows": [
+    {
+      "entry": "/gratis-teoriprov/",
+      "interaction": "quiz_completion",
+      "prompt": "continue in app",
+      "target": "https://apps.apple.com/id/app/driving-license-in-sweden/id6762642524"
+    },
+    {
+      "entry": "/sok/",
+      "interaction": "search_result_click",
+      "prompt": "related guide",
+      "target": "/korkortsteori/"
+    },
+    {
+      "entry": "/resurser/*",
+      "interaction": "pdf_download",
+      "prompt": "study streak",
+      "target": "/gratis-teoriprov/"
+    },
+    {
+      "entry": "/teoriprov/",
+      "interaction": "scroll_75",
+      "prompt": "exam simulation",
+      "target": "/teoriprov-online/"
+    },
+    {
+      "entry": "/authority/*",
+      "interaction": "internal_link_click",
+      "prompt": "linkable resource chain",
+      "target": "/authority/"
+    }
+  ]
+}
