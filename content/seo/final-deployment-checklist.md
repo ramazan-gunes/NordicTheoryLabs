@@ -4,7 +4,7 @@ Generated: 2026-05-22
 
 - Production assets generated: yes
 - Segmented sitemap index generated: yes
-- URL records: 563
+- URL records: 559
 - Compression/cache headers: _headers generated
 - robots.txt points to sitemap index: yes
 - Canonical consistency: validated by production script

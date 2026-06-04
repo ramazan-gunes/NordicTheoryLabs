@@ -272,23 +272,23 @@
     "url": "https://nordictheorylabs.com/korkortsteori-vasteras/"
   },
   {
-    "title": "Körkortsresurser PDF - checklistor och fuskblad",
-    "description": "Ladda ner svenska körkortsresurser: teoriprov-checklista, vägmärken, vinterkörning och vanligaste kuggfrågorna.",
-    "answer": "Ladda ner korta PDF:er för teoriprov, vägmärken, vinterkörning och frågetyper som ofta fäller elever.",
+    "title": "Korkortsresurser - checklistor och guider",
+    "description": "Svenska korkortsresurser: teoriprov-checklista, vagmarken, vinterkorning och vanligaste kuggfragorna.",
+    "answer": "Oppna korta resurser for teoriprov, vagmarken, vinterkorning och fragetyper som ofta faller elever.",
     "keywords": "resurser Trafikverket Transportstyrelsen Körkortstillstånd Riskettan Halkbana EcoDriving Väjningsplikt Motorväg Vinterdäck Miljözon",
     "intent": "assets",
     "url": "https://nordictheorylabs.com/resurser/"
   },
   {
-    "title": "Teoriprov checklista PDF - sista veckan före provet",
-    "description": "Ladda ner en utskrivbar teoriprov-checklista med fokus på vanliga fel, provdag, sömn, repetition och trygg provstrategi.",
+    "title": "Teoriprov checklista - sista veckan före provet",
+    "description": "Oppna en utskrivbar teoriprov-checklista med fokus på vanliga fel, provdag, sömn, repetition och trygg provstrategi.",
     "answer": "teoriprov checklista hör ihop med svensk körkortsteori, provförberedelse och praktiska beslut i trafik. Börja med det korta svaret, kontrollera vanliga fel och gå vidare till ett övningspass.",
     "keywords": "resurser/teoriprov checklista Trafikverket Transportstyrelsen Körkortstillstånd Riskettan Halkbana EcoDriving Väjningsplikt Motorväg Vinterdäck Miljözon",
     "intent": "assets",
     "url": "https://nordictheorylabs.com/resurser/teoriprov-checklista/"
   },
   {
-    "title": "Vägmärken fuskblad PDF - skyltgrupper inför teoriprovet",
+    "title": "Vägmärken fuskblad - skyltgrupper inför teoriprovet",
     "description": "Skriv ut ett tydligt fuskblad för vägmärken: varning, förbud, påbud, väjning och tilläggstavlor.",
     "answer": "vagmarken fuskblad hör ihop med svensk körkortsteori, provförberedelse och praktiska beslut i trafik. Börja med det korta svaret, kontrollera vanliga fel och gå vidare till ett övningspass.",
     "keywords": "resurser/vagmarken fuskblad Trafikverket Transportstyrelsen Körkortstillstånd Riskettan Halkbana EcoDriving Väjningsplikt Motorväg Vinterdäck Miljözon",
@@ -296,16 +296,16 @@
     "url": "https://nordictheorylabs.com/resurser/vagmarken-fuskblad/"
   },
   {
-    "title": "Vinterkörning guide PDF - halka, vinterdäck och mörker",
-    "description": "Ladda ner en svensk vinterkörningsguide med bromssträcka, vinterdäck, dubbdäck, mörker och riskfrågor.",
+    "title": "Vinterkörning - halka, vinterdäck och mörker",
+    "description": "Oppna en svensk vinterkörningsguide med bromssträcka, vinterdäck, dubbdäck, mörker och riskfrågor.",
     "answer": "vinterkorning guide hör ihop med svensk körkortsteori, provförberedelse och praktiska beslut i trafik. Börja med det korta svaret, kontrollera vanliga fel och gå vidare till ett övningspass.",
     "keywords": "resurser/vinterkorning guide Trafikverket Transportstyrelsen Körkortstillstånd Riskettan Halkbana EcoDriving Väjningsplikt Motorväg Vinterdäck Miljözon",
     "intent": "assets",
     "url": "https://nordictheorylabs.com/resurser/vinterkorning-guide/"
   },
   {
-    "title": "Vanligaste kuggfrågorna PDF - teoriprovets fällor",
-    "description": "Ladda ner en sammanfattning av frågetyper som ofta fäller elever: väjning, risk, vägmärken, miljö och stress.",
+    "title": "Vanligaste kuggfrågorna - teoriprovets fällor",
+    "description": "Oppna en sammanfattning av frågetyper som ofta fäller elever: väjning, risk, vägmärken, miljö och stress.",
     "answer": "vanligaste kuggfragorna hör ihop med svensk körkortsteori, provförberedelse och praktiska beslut i trafik. Börja med det korta svaret, kontrollera vanliga fel och gå vidare till ett övningspass.",
     "keywords": "resurser/vanligaste kuggfragorna Trafikverket Transportstyrelsen Körkortstillstånd Riskettan Halkbana EcoDriving Väjningsplikt Motorväg Vinterdäck Miljözon",
     "intent": "assets",
@@ -345,8 +345,8 @@
   },
   {
     "title": "Körkortsresurser för utbildare - checklistor och övningar",
-    "description": "Nedladdningsbara resurser för trafiklärare, handledare och utbildare som vill ge elever bättre struktur inför teoriprovet.",
-    "answer": "Nedladdningsbara resurser för trafiklärare, handledare och utbildare som vill ge elever bättre struktur inför teoriprovet. Den är gjord för elever, utbildare, journalister och andra som behöver tydliga svenska körkortsbegrepp.",
+    "description": "Pedagogiska resurser för trafiklärare, handledare och utbildare som vill ge elever bättre struktur inför teoriprovet.",
+    "answer": "Pedagogiska resurser för trafiklärare, handledare och utbildare som vill ge elever bättre struktur inför teoriprovet. Den är gjord för elever, utbildare, journalister och andra som behöver tydliga svenska körkortsbegrepp.",
     "keywords": "authority/utbildarresurser Trafikverket Transportstyrelsen Körkortstillstånd Riskettan Halkbana EcoDriving Väjningsplikt Motorväg Vinterdäck Miljözon",
     "intent": "authority",
     "url": "https://nordictheorylabs.com/authority/utbildarresurser/"
@@ -369,7 +369,7 @@
   },
   {
     "title": "Latest content - uppdaterade körkortssidor",
-    "description": "Senast uppdaterade sidor om teoriprov, körkortsteori, lokala guider, vägmärken och nedladdningsbara resurser.",
+    "description": "Senast uppdaterade sidor om teoriprov, körkortsteori, lokala guider, vägmärken och guidesbara resurser.",
     "answer": "Den här sidan lyfter nytt och uppdaterat innehåll för elever och crawlers. Den hjälper Google att hitta färska sidor via intern länkning.",
     "keywords": "latest content Trafikverket Transportstyrelsen Körkortstillstånd Riskettan Halkbana EcoDriving Väjningsplikt Motorväg Vinterdäck Miljözon",
     "intent": "core",

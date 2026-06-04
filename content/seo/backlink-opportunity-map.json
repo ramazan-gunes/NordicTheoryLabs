@@ -20,7 +20,7 @@
     },
     {
       "url": "https://nordictheorylabs.com/authority/teoriprov-kuggfragor-rapport/",
-      "asset_type": "downloadable report",
+      "asset_type": "resource hub",
       "pitch_audiences": [
         "trafikskolor",
         "handledarutbildare",
@@ -37,7 +37,7 @@
     },
     {
       "url": "https://nordictheorylabs.com/authority/svensk-korkortsstatistik/",
-      "asset_type": "downloadable report",
+      "asset_type": "resource hub",
       "pitch_audiences": [
         "trafikskolor",
         "handledarutbildare",
@@ -54,7 +54,7 @@
     },
     {
       "url": "https://nordictheorylabs.com/authority/vinterkorning-overlevnadsguide/",
-      "asset_type": "downloadable report",
+      "asset_type": "resource hub",
       "pitch_audiences": [
         "trafikskolor",
         "handledarutbildare",
@@ -71,7 +71,7 @@
     },
     {
       "url": "https://nordictheorylabs.com/authority/utbildarresurser/",
-      "asset_type": "downloadable report",
+      "asset_type": "resource hub",
       "pitch_audiences": [
         "trafikskolor",
         "handledarutbildare",
@@ -84,7 +84,7 @@
         "körkortsresurs",
         "teoriprov guide"
       ],
-      "outreach_angle": "Nedladdningsbara resurser för trafiklärare, handledare och utbildare som vill ge elever bättre struktur inför teoriprovet."
+      "outreach_angle": "Pedagogiska resurser för trafiklärare, handledare och utbildare som vill ge elever bättre struktur inför teoriprovet."
     }
   ]
 }

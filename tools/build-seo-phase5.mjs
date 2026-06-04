@@ -159,7 +159,6 @@ const authorityPages = [
     description: "Länkbar rapport om frågetyper som ofta fäller körkortselever: väjning, risk, skyltar, miljö och provstress.",
     h1: "Vanligaste kuggfrågorna på teoriprovet.",
     intro: "Den här rapporten samlar återkommande mönster från övningsfrågor och elevbeteende. Den är pedagogisk, inte officiell statistik.",
-    pdf: "teoriprov-kuggfragor-rapport.pdf",
     bullets: ["Väjningsplikt i korsningar", "Tilläggstavlor", "Risk och trötthet", "Miljö och EcoDriving", "Stressläsning på provdagen"],
   },
   {
@@ -168,7 +167,6 @@ const authorityPages = [
     description: "Körkortssiffror och pedagogiska benchmarkmått för teori, körprov, riskutbildning och appbaserad repetition.",
     h1: "Svensk körkortsstatistik för innehåll och research.",
     intro: "En redaktionell statistikresurs som hjälper skribenter och utbildare prata tydligare om körkort, prov och studievanor.",
-    pdf: "svensk-korkortsstatistik.pdf",
     bullets: ["Teoriprov och körprov", "Studietid och repetition", "Riskettan och Risk 2", "Appbaserad träning", "Säsongseffekter"],
   },
   {
@@ -177,16 +175,14 @@ const authorityPages = [
     description: "Länkbar vinterkörningsguide för körkortselever: vinterdäck, dubbdäck, halka, bromssträcka, mörker och riskfrågor.",
     h1: "Vinterkörning: överlevnadsguide för nya förare.",
     intro: "Svensk vinter kräver mer än att känna till datum för vinterdäck. Du behöver förstå avstånd, grepp, sikt och trötthet.",
-    pdf: "vinterkorning-overlevnadsguide-authority.pdf",
     bullets: ["Vinterdäck och dubbdäck", "Halka och bromssträcka", "Mörker och möten", "Motorväg i vinterväglag", "Risk 2 och halkbana"],
   },
   {
     slug: "authority/utbildarresurser",
     title: "Körkortsresurser för utbildare - checklistor och övningar",
-    description: "Nedladdningsbara resurser för trafiklärare, handledare och utbildare som vill ge elever bättre struktur inför teoriprovet.",
+    description: "Pedagogiska resurser för trafiklärare, handledare och utbildare som vill ge elever bättre struktur inför teoriprovet.",
     h1: "Resurser för trafiklärare och handledare.",
     intro: "Materialet är gjort för lektioner, handledarpass och repetition. Det hjälper elever prata om fel på ett konkret sätt.",
-    pdf: "utbildarresurser-korkort.pdf",
     bullets: ["Lektionschecklista", "Fellista för teorifrågor", "Handledarsamtal", "Riskfrågor", "Progress för återbesök"],
   },
 ];
@@ -282,11 +278,8 @@ function authorityPage(page) {
       { "@type": "Question", name: "Är det officiell myndighetsstatistik?", acceptedAnswer: { "@type": "Answer", text: "Nej. Sidorna är pedagogiska sammanställningar. Kontrollera alltid myndighetsinformation hos Trafikverket eller Transportstyrelsen." } },
     ] },
   ];
-  if (page.pdf) {
-    schema.push({ "@type": "MediaObject", "@id": `${url}#pdf`, name: page.title, contentUrl: `${site}/assets/downloads/${page.pdf}`, encodingFormat: "application/pdf" });
-  }
   const related = authorityPages.filter((item) => item.slug !== page.slug).slice(0, 4).map((item) => `<a href="${prefix}${item.slug}/"><strong>${esc(item.h1)}</strong><span>Länkbart material</span></a>`).join("");
-  const download = page.pdf ? `<div class="seo-actions"><a class="seo-btn primary" href="${prefix}assets/downloads/${page.pdf}" download data-growth-event="pdf-download">Ladda ner PDF</a><a class="seo-btn secondary" href="${prefix}gratis-teoriprov/">Testa frågor</a></div>` : `<div class="seo-actions"><a class="seo-btn primary" href="${prefix}authority/teoriprov-kuggfragor-rapport/">Se kuggfrågor</a><a class="seo-btn secondary" href="${prefix}authority/vinterkorning-overlevnadsguide/">Vinterguide</a></div>`;
+  const download = `<div class="seo-actions"><a class="seo-btn primary" href="${prefix}authority/teoriprov-kuggfragor-rapport/">Se kuggfrågor</a><a class="seo-btn secondary" href="${prefix}authority/vinterkorning-overlevnadsguide/">Vinterguide</a></div>`;
   return `<!doctype html>
 <html lang="sv-SE">
 ${pageHead(page, schema)}
@@ -294,39 +287,16 @@ ${pageHead(page, schema)}
 ${nav(prefix)}
 <main>
   <nav class="breadcrumb wrap" aria-label="Brödsmulor"><a href="${prefix}">Hem</a><span>/</span><span>${esc(page.h1.replace(/\.$/, ""))}</span></nav>
-  <section class="seo-hero"><div class="wrap seo-grid"><div><p class="seo-kicker">Authority asset · länkbart material</p><h1 class="seo-h1">${esc(page.h1)}</h1><p class="seo-lede">${esc(page.intro)}</p>${download}</div><aside class="seo-trust"><span>PDF</span><span>Research</span><span>Sverige</span><span>2026</span></aside></div></section>
+  <section class="seo-hero"><div class="wrap seo-grid"><div><p class="seo-kicker">Authority asset · länkbart material</p><h1 class="seo-h1">${esc(page.h1)}</h1><p class="seo-lede">${esc(page.intro)}</p>${download}</div><aside class="seo-trust"><span>Guide</span><span>Research</span><span>Sverige</span><span>2026</span></aside></div></section>
   <section class="seo-section growth-ai-answer"><div class="wrap"><p class="micro-label">Kort citatvänligt svar</p><h2>Vad sidan ger</h2><p class="definition-block">${esc(page.description)} Den är gjord för elever, utbildare, journalister och andra som behöver tydliga svenska körkortsbegrepp.</p></div></section>
   <section class="seo-section alt"><div class="wrap content-with-sidebar"><article><h2>Innehåll</h2><ul class="seo-list">${page.bullets.map((item) => `<li>${esc(item)}</li>`).join("")}</ul><div class="mini-table"><table><tbody><tr><th>Målgrupp</th><td>Körkortselever, handledare, trafiklärare och redaktioner.</td></tr><tr><th>Användning</th><td>Länka, skriv ut, dela i lektionsmaterial eller använd som checklista.</td></tr><tr><th>Källkontroll</th><td>Verifiera alltid regler och bokning hos Trafikverket eller Transportstyrelsen.</td></tr></tbody></table></div></article><aside class="topic-sidebar"><h3>Relaterade assets</h3><div class="related-grid">${related}</div></aside></div></section>
-  <section class="seo-section growth-streak-section" data-growth-checkpoint><div class="wrap"><p class="micro-label">Återbesök</p><h2>Bygg en studie-streak</h2><div class="growth-streak"><strong data-study-streak>0</strong><span>dagars pluggstreak sparad lokalt i din webbläsare.</span></div><label><input type="checkbox" /> Jag har sparat eller laddat ner resursen.</label><label><input type="checkbox" /> Jag vet vilken guide jag ska öppna härnäst.</label><p data-growth-checkpoint-result>Markera punkterna för att fortsätta.</p></div></section>
-  <section class="seo-section alt faq-section" id="faq"><div class="wrap"><h2>Frågor om resursen</h2><div class="faq-list"><details class="faq-item"><summary>Kan jag använda sidan som källa?</summary><p>Ja, länka till sidan och ange Nordic Theory Labs. För officiella regler ska Trafikverket eller Transportstyrelsen kontrolleras.</p></details><details class="faq-item"><summary>Finns PDF?</summary><p>${page.pdf ? "Ja, PDF finns som nedladdning på sidan." : "Hubben länkar vidare till PDF-resurserna."}</p></details></div></div></section>
+  <section class="seo-section growth-streak-section" data-growth-checkpoint><div class="wrap"><p class="micro-label">Återbesök</p><h2>Bygg en studie-streak</h2><div class="growth-streak"><strong data-study-streak>0</strong><span>dagars pluggstreak sparad lokalt i din webbläsare.</span></div><label><input type="checkbox" /> Jag har sparat eller last igenom resursen.</label><label><input type="checkbox" /> Jag vet vilken guide jag ska öppna härnäst.</label><p data-growth-checkpoint-result>Markera punkterna för att fortsätta.</p></div></section>
+  <section class="seo-section alt faq-section" id="faq"><div class="wrap"><h2>Frågor om resursen</h2><div class="faq-list"><details class="faq-item"><summary>Kan jag använda sidan som källa?</summary><p>Ja, länka till sidan och ange Nordic Theory Labs. För officiella regler ska Trafikverket eller Transportstyrelsen kontrolleras.</p></details><details class="faq-item"><summary>Kan jag anvanda materialet direkt?</summary><p>Ja. Sidan ar byggd som en direkt lasbar guide med relaterade nasta steg.</p></details></div></div></section>
 </main>
 <script src="${prefix}assets/seo-growth.js" defer></script>
 </body>
 </html>
 `;
-}
-
-function simplePdf(title, lines, meta) {
-  const escapePdf = (value) => String(value).replace(/[()\\]/g, "\\$&").replace(/[^\x00-\x7F]/g, "?");
-  const bodyLines = [title, "", ...lines].slice(0, 48);
-  const content = `BT /F1 15 Tf 50 790 Td (${escapePdf(title)}) Tj /F1 10 Tf ${bodyLines.slice(2).map((line) => `T* (${escapePdf(line)}) Tj`).join(" ")} ET`;
-  const objects = [
-    "<< /Type /Catalog /Pages 2 0 R >>",
-    "<< /Type /Pages /Kids [3 0 R] /Count 1 >>",
-    "<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 4 0 R >> >> /Contents 5 0 R >>",
-    "<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica /Encoding /WinAnsiEncoding >>",
-    `<< /Length ${Buffer.byteLength(content, "latin1")} >>\nstream\n${content}\nendstream`,
-    `<< /Title (${escapePdf(meta.title)}) /Author (${escapePdf("Nordic Theory Labs")}) /Subject (${escapePdf(meta.subject)}) /Keywords (${escapePdf(meta.keywords)}) /CreationDate (D:20260522120000+02'00') >>`,
-  ];
-  let pdf = "%PDF-1.4\n";
-  const offsets = [0];
-  objects.forEach((obj, index) => {
-    offsets.push(Buffer.byteLength(pdf, "latin1"));
-    pdf += `${index + 1} 0 obj\n${obj}\nendobj\n`;
-  });
-  const xref = Buffer.byteLength(pdf, "latin1");
-  pdf += `xref\n0 ${objects.length + 1}\n0000000000 65535 f \n${offsets.slice(1).map((offset) => `${String(offset).padStart(10, "0")} 00000 n `).join("\n")}\ntrailer\n<< /Size ${objects.length + 1} /Root 1 0 R /Info 6 0 R >>\nstartxref\n${xref}\n%%EOF`;
-  return Buffer.from(pdf, "latin1");
 }
 
 function growthCss() {
@@ -382,7 +352,6 @@ function growthJs() {
     if (link) {
       const href = link.getAttribute("href") || "";
       if (href.includes("apps.apple.com")) track("app_store_click", { source: link.dataset.installSource || "link" });
-      else if (href.endsWith(".pdf")) track("pdf_download", { href });
       else if (href.startsWith("/") || href.startsWith("../") || href.startsWith("./") || href.startsWith(location.origin)) track("internal_link_click", { href });
       if (link.classList.contains("seo-btn")) track("cta_click", { href, text: link.textContent.trim().slice(0, 80) });
     }
@@ -515,7 +484,7 @@ async function injectGrowth(slug) {
     const prefix = prefixFor(slug);
     html = html.replace(/\n?<link rel="stylesheet" href="[^"]*seo-growth\.css" \/>/gi, "");
     html = html.replace(/\n?<script src="[^"]*seo-growth\.js" defer><\/script>/gi, "");
-    html = html.replace(/<section class="seo-section phase5-(?:ai-summary|user-loop|fail-block)"[\s\S]*?<\/section>\n?/gi, "");
+    html = html.replace(/<section class="seo-section(?:\s+alt)?\s+phase5-(?:ai-summary|user-loop|fail-block)"[\s\S]*?<\/section>\n?/gi, "");
     if (!html.includes("seo-growth.css")) {
       html = html.replace(/<link rel="stylesheet" href="([^"]*seo-phase4\.css)" \/>/i, `<link rel="stylesheet" href="$1" />\n<link rel="stylesheet" href="${prefix}assets/seo-growth.css" />`);
     }
@@ -528,20 +497,9 @@ async function injectGrowth(slug) {
 }
 
 async function writeAuthorityAssets() {
-  await fs.mkdir(path.join(root, "assets", "downloads"), { recursive: true });
   for (const page of authorityPages) {
     await fs.mkdir(path.dirname(path.join(root, page.slug, "index.html")), { recursive: true });
     await fs.writeFile(path.join(root, page.slug, "index.html"), authorityPage(page), "utf8");
-    if (page.pdf) {
-      await fs.writeFile(
-        path.join(root, "assets", "downloads", page.pdf),
-        simplePdf(page.h1, [page.description, "", ...page.bullets.map((item) => `- ${item}`), "", "Pedagogisk resurs från Nordic Theory Labs. Kontrollera officiella regler hos ansvarig myndighet."], {
-          title: page.title,
-          subject: page.description,
-          keywords: page.bullets.join(", "),
-        }),
-      );
-    }
   }
 }
 
@@ -626,7 +584,6 @@ function analyticsEventsMap() {
       quiz_completion: ["result text excerpt"],
       scroll_depth: ["25", "50", "75", "90"],
       internal_link_click: ["href"],
-      pdf_download: ["href"],
       app_store_click: ["source"],
       search_usage: ["query length only in generic tracker"],
       faq_expand: ["summary excerpt"],
@@ -642,7 +599,6 @@ function engagementFlowMap() {
     flows: [
       { entry: "/gratis-teoriprov/", interaction: "quiz_completion", prompt: "continue in app", target: appStoreUrl },
       { entry: "/sok/", interaction: "search_result_click", prompt: "related guide", target: "/korkortsteori/" },
-      { entry: "/resurser/*", interaction: "pdf_download", prompt: "study streak", target: "/gratis-teoriprov/" },
       { entry: "/teoriprov/", interaction: "scroll_75", prompt: "exam simulation", target: "/teoriprov-online/" },
       { entry: "/authority/*", interaction: "internal_link_click", prompt: "linkable resource chain", target: "/authority/" },
     ],
@@ -654,7 +610,7 @@ function backlinkOpportunityMap() {
     updated: today,
     targets: authorityPages.map((page) => ({
       url: pageUrl(page.slug),
-      asset_type: page.pdf ? "downloadable report" : "resource hub",
+      asset_type: "resource hub",
       pitch_audiences: ["trafikskolor", "handledarutbildare", "lokala nyhetssidor", "studentbloggar", "kommunala trafiksäkerhetssidor"],
       suggested_anchor_text: [page.h1.replace(/\.$/, "").toLowerCase(), "körkortsresurs", "teoriprov guide"],
       outreach_angle: page.description,
@@ -754,7 +710,7 @@ function authorityAssetsReport() {
 
 Generated: ${today}
 
-${authorityPages.map((page) => `- ${pageUrl(page.slug)} — ${page.description}${page.pdf ? ` PDF: /assets/downloads/${page.pdf}` : ""}`).join("\n")}
+${authorityPages.map((page) => `- ${pageUrl(page.slug)} — ${page.description}`).join("\n")}
 
 Acquisition angle: pitch these as free Swedish driving-theory resources for traffic schools, local education sites, student guides and journalists writing about driving tests.
 `;
@@ -828,7 +784,7 @@ Generated: ${today}
 2. Publish 10 city pages beyond the current local layer.
 3. Expand winter, parking and motorway clusters.
 4. Run CTR tests on teoriprov, gratis test and app terms.
-5. Pitch authority PDFs to traffic schools and education blogs.
+5. Pitch authority guides to traffic schools and education blogs.
 
 ## 12-Month Authority Roadmap
 
@@ -949,13 +905,6 @@ async function buildRecords() {
     const segment = segmentFor(rel);
     const title = stripTags((/<title>([\s\S]*?)<\/title>/i.exec(html) || [])[1] || rel).replace(/\s*\|\s*Nordic Theory Labs$/, "");
     records.push({ loc: urlForRel(rel), rel, segment, title, lastmod: today, changefreq: freqFor(segment), priority: priorityFor(segment, rel) });
-  }
-  const pdfDir = path.join(root, "assets", "downloads");
-  try {
-    const pdfs = (await fs.readdir(pdfDir)).filter((name) => name.endsWith(".pdf"));
-    for (const pdf of pdfs) records.push({ loc: `${site}/assets/downloads/${pdf}`, rel: `assets/downloads/${pdf}`, segment: "assets", title: pdf, lastmod: today, changefreq: "monthly", priority: "0.60" });
-  } catch {
-    // No downloads directory yet.
   }
   return records.sort((a, b) => a.loc.localeCompare(b.loc, "sv"));
 }

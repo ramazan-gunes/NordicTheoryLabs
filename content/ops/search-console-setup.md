@@ -33,7 +33,7 @@ References:
 2. Inspect `/teoriprov/`.
 3. Inspect `/gratis-teoriprov/`.
 4. Inspect `/sok/`.
-5. Inspect one authority page and one PDF.
+5. Inspect one authority page.
 6. Request indexing only for freshly deployed priority URLs, not every URL.
 
 ## Coverage Issue Workflow

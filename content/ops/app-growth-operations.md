@@ -7,7 +7,7 @@ Generated: 2026-05-22
 - Landing page to App Store click rate.
 - Quiz completion to App Store click rate.
 - Search page to app click rate.
-- PDF download to app click rate.
+- resource page to app click rate.
 
 ## CTR Monitoring
 

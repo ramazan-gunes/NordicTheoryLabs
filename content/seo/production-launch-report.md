@@ -8,7 +8,7 @@ Generated: 2026-05-22
 - Latest content hub: https://nordictheorylabs.com/latest-content/
 - Search page: https://nordictheorylabs.com/sok/
 - Local Sweden pages: 5
-- Linkable PDF assets: 4
-- Indexed URL records across sitemaps: 563
-- Recent recrawl URLs: 57
+- Linkable resource assets: 4
+- Indexed URL records across sitemaps: 559
+- Recent recrawl URLs: 53
 - CTR title groups generated: 5

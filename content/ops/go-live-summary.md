@@ -10,7 +10,7 @@ Generated: 2026-05-22
 - hreflang: ready.
 - IndexNow: ready.
 - Analytics events: ready.
-- PDFs: ready.
+- guides: ready.
 - Production freeze: ready.
 
 ## Remaining Low-Priority Improvements
@@ -24,7 +24,7 @@ Generated: 2026-05-22
 1. Get sitemap index processed in Search Console and Bing.
 2. Inspect priority URLs manually.
 3. Track CTR for the seven priority keywords.
-4. Promote authority PDFs to traffic schools and communities.
+4. Promote authority guides to traffic schools and communities.
 5. Review search failures and update content.
 
 ## First Backlink Priorities

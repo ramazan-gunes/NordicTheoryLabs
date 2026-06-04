@@ -14,7 +14,7 @@ Generated: 2026-05-22
 ## Swedish Driving Forums
 
 - Share only useful resources, never spam exact-match anchors.
-- Use PDF assets when answering real questions.
+- Use guide assets when answering real questions.
 - Prioritize vinterkörning, kuggfrågor and handledarresurser.
 
 ## Reddit Workflow
@@ -28,9 +28,9 @@ Generated: 2026-05-22
 - 20-40 second clips.
 - One mistake per clip.
 - CTA: free checklist or app practice.
-- Reuse authority PDFs as visual scripts.
+- Reuse authority guides as visual scripts.
 
-## PDF Asset Promotion
+## Guide Asset Promotion
 
 - Pitch `/authority/teoriprov-kuggfragor-rapport/`.
 - Pitch `/authority/vinterkorning-overlevnadsguide/` before winter.

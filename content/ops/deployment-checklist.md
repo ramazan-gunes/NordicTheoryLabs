@@ -14,7 +14,7 @@ Generated: 2026-05-22
 | hreflang present | PASS |
 | No accidental noindex | PASS |
 | No blocked SEO pages | PASS |
-| PDF files readable and crawlable | PASS |
+| No guide download assets submitted | PASS |
 | Cache headers present | PASS |
 
 ## Deploy Steps
@@ -23,6 +23,6 @@ Generated: 2026-05-22
 2. Review `content/ops/production-freeze-report.md`.
 3. Commit all production files.
 4. Deploy to production.
-5. Verify `https://nordictheorylabs.com/robots.txt`, `https://nordictheorylabs.com/sitemap.xml`, `https://nordictheorylabs.com/sitemaps/sitemap-recent.xml`, `https://nordictheorylabs.com/sok/`, and one PDF asset.
+5. Verify `https://nordictheorylabs.com/robots.txt`, `https://nordictheorylabs.com/sitemap.xml`, `https://nordictheorylabs.com/sitemaps/sitemap-recent.xml`, `https://nordictheorylabs.com/sok/`.
 6. Submit sitemap index in Search Console and Bing Webmaster Tools.
 7. Run IndexNow dry run, then submit only if deployment URL is live.

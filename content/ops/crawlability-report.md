@@ -5,7 +5,7 @@ Generated: 2026-05-22
 ## Results
 
 - Sitemap index refs: 8
-- Segment counts: sitemaps/sitemap-core.xml: 9, sitemaps/sitemap-seo.xml: 29, sitemaps/sitemap-local.xml: 5, sitemaps/sitemap-authority.xml: 5, sitemaps/sitemap-assets.xml: 13, sitemaps/sitemap-blog.xml: 481, sitemaps/sitemap-legal.xml: 25, sitemaps/sitemap-recent.xml: 61
+- Segment counts: sitemaps/sitemap-core.xml: 9, sitemaps/sitemap-seo.xml: 29, sitemaps/sitemap-local.xml: 5, sitemaps/sitemap-authority.xml: 5, sitemaps/sitemap-assets.xml: 5, sitemaps/sitemap-blog.xml: 481, sitemaps/sitemap-legal.xml: 25, sitemaps/sitemap-recent.xml: 53
 - Missing known SEO URLs: 0
 - Suspicious sitemap URLs: 0
 - Blocked SEO pages: 0

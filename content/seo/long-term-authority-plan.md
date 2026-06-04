@@ -8,7 +8,7 @@ Generated: 2026-05-22
 2. Publish 10 city pages beyond the current local layer.
 3. Expand winter, parking and motorway clusters.
 4. Run CTR tests on teoriprov, gratis test and app terms.
-5. Pitch authority PDFs to traffic schools and education blogs.
+5. Pitch authority guides to traffic schools and education blogs.
 
 ## 12-Month Authority Roadmap
 

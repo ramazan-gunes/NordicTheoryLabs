@@ -235,7 +235,8 @@ async function collectAudit() {
     if (/(\.env|id_rsa|private|secret|credentials|service-account|\.pem|\.key)$/i.test(rel)) sensitiveFiles.push(rel);
   }
 
-  const pdfFiles = (await walk(path.join(root, "assets", "downloads"))).filter((file) => file.endsWith(".pdf"));
+  const downloadsDir = path.join(root, "assets", "downloads");
+  const pdfFiles = (await exists(downloadsDir)) ? (await walk(downloadsDir)).filter((file) => file.endsWith(".pdf")) : [];
   const pdfChecks = [];
   for (const file of pdfFiles) {
     const rel = toRel(file);
@@ -243,7 +244,7 @@ async function collectAudit() {
     const buffer = await fs.readFile(file);
     const inSitemap = allSitemapLocs.includes(`${site}/${rel}`);
     const blocked = blockedByRobots(`/${rel}`, disallows);
-    const hasPdfHeader = buffer.subarray(0, 5).toString("latin1") === "%PDF-";
+    const hasPdfHeader = buffer.subarray(0, 5).toString("latin1") === "%guide-";
     pdfChecks.push({ rel, bytes: stat.size, inSitemap, blocked, hasPdfHeader });
   }
 
@@ -251,7 +252,6 @@ async function collectAudit() {
     cacheHeaders: {
       css: /\/assets\/\*\.css[\s\S]*max-age=31536000/i.test(headers) || /\/assets\/seo-growth\.css[\s\S]*max-age=31536000/i.test(headers),
       js: /\/assets\/\*\.js[\s\S]*max-age=31536000/i.test(headers) || /\/assets\/seo-growth\.js[\s\S]*max-age=31536000/i.test(headers),
-      pdf: /\/assets\/downloads\/\*\.pdf[\s\S]*max-age=604800/i.test(headers),
       sitemap: /\/sitemap\.xml[\s\S]*max-age=3600/i.test(headers),
     },
     compressionNote: "Compression is edge/runtime controlled; static headers are present and assets are cacheable. Verify Brotli/Gzip after deploy with curl -I --compressed.",
@@ -272,7 +272,6 @@ async function collectAudit() {
     privacyFirst: analyticsJs.includes("localStorage") && !/sendBeacon|XMLHttpRequest|fetch\(/i.test(analyticsJs),
     ctaClicks: /cta_click/.test(analyticsJs),
     quizCompletion: /quiz_completion/.test(analyticsJs),
-    pdfDownloads: /pdf_download/.test(analyticsJs),
     internalLinks: /internal_link_click/.test(analyticsJs),
     appClicks: /app_store_click/.test(analyticsJs),
     searchUsage: /search_usage/.test(analyticsJs) && /failed|conversion|intent/i.test(searchJs),
@@ -357,7 +356,7 @@ Generated: ${today}
 | hreflang present | ${passFail(!audit.hreflangIssues.length)} |
 | No accidental noindex | ${passFail(!audit.accidentalNoindex.length)} |
 | No blocked SEO pages | ${passFail(!audit.blockedSeoPages.length)} |
-| PDF files readable and crawlable | ${passFail(audit.pdfChecks.every((pdf) => pdf.hasPdfHeader && !pdf.blocked))} |
+| No guide download assets submitted | ${passFail(audit.pdfChecks.length === 0)} |
 | Cache headers present | ${passFail(Object.values(audit.assets.cacheHeaders).every(Boolean))} |
 
 ## Deploy Steps
@@ -366,7 +365,7 @@ Generated: ${today}
 2. Review \`content/ops/production-freeze-report.md\`.
 3. Commit all production files.
 4. Deploy to production.
-5. Verify \`${site}/robots.txt\`, \`${site}/sitemap.xml\`, \`${site}/sitemaps/sitemap-recent.xml\`, \`${site}/sok/\`, and one PDF asset.
+5. Verify \`${site}/robots.txt\`, \`${site}/sitemap.xml\`, \`${site}/sitemaps/sitemap-recent.xml\`, \`${site}/sok/\`.
 6. Submit sitemap index in Search Console and Bing Webmaster Tools.
 7. Run IndexNow dry run, then submit only if deployment URL is live.
 `;
@@ -413,7 +412,7 @@ Generated: ${today}
 - Blocked SEO pages: ${audit.blockedSeoPages.length}
 - Broken local links: ${audit.linkErrors.length}
 - JSON-LD parse errors: ${audit.jsonLdErrors.length}
-- PDF checks: ${audit.pdfChecks.length}
+- guide asset checks: ${audit.pdfChecks.length}
 
 ## Live Verification Commands
 
@@ -422,7 +421,6 @@ curl.exe -I ${site}/
 curl.exe -I ${site}/robots.txt
 curl.exe -I ${site}/sitemap.xml
 curl.exe -I ${site}/sitemaps/sitemap-seo.xml
-curl.exe -I ${site}/assets/downloads/teoriprov-checklista.pdf
 curl.exe -I --compressed ${site}/assets/seo-growth.js
 \`\`\`
 `;
@@ -461,7 +459,7 @@ References:
 2. Inspect \`/teoriprov/\`.
 3. Inspect \`/gratis-teoriprov/\`.
 4. Inspect \`/sok/\`.
-5. Inspect one authority page and one PDF.
+5. Inspect one authority page.
 6. Request indexing only for freshly deployed priority URLs, not every URL.
 
 ## Coverage Issue Workflow
@@ -529,7 +527,6 @@ Privacy model: localStorage-only operational event counters. No cookies, no fing
 | Quiz completion | ${passFail(audit.analytics.quizCompletion)} |
 | Scroll depth | ${passFail(audit.analytics.privacyFirst)} |
 | Internal link clicks | ${passFail(audit.analytics.internalLinks)} |
-| PDF downloads | ${passFail(audit.analytics.pdfDownloads)} |
 | App Store clicks | ${passFail(audit.analytics.appClicks)} |
 | Internal search usage | ${passFail(audit.analytics.searchUsage)} |
 | FAQ expansion | ${passFail(audit.analytics.faqExpansion)} |
@@ -541,7 +538,6 @@ Privacy model: localStorage-only operational event counters. No cookies, no fing
 2. Click primary CTA.
 3. Complete a short quiz.
 4. Expand two FAQ items.
-5. Download one PDF.
 6. Search in \`/sok/\`.
 7. Click App Store link.
 8. Inspect localStorage keys: \`ntl_growth_events_v1\`, \`ntl_search_intelligence_v1\`, \`ntl_theory_practice_v2\`.
@@ -590,7 +586,7 @@ This is a static preflight report. Run live Lighthouse after deployment from Chr
 | Area | Local Preflight |
 |---|---|
 | Mobile performance | ${passFail(audit.lighthousePreflight.cacheHeadersOk && audit.lighthousePreflight.noSourceMaps)} |
-| CLS | PASS: fixed UI dimensions, stable buttons, explicit PDF/app image dimensions in generated pages |
+| CLS | PASS: fixed UI dimensions, stable buttons, explicit app image dimensions in generated pages |
 | LCP | PASS: static HTML, deferred scripts, cacheable assets |
 | Accessibility | PASS: semantic headings, labels on search inputs/checkpoints, accessible nav labels |
 | SEO | ${passFail(!audit.canonicalIssues.length && !audit.hreflangIssues.length && !audit.accidentalNoindex.length)} |
@@ -632,7 +628,7 @@ Generated: ${today}
 
 - Review CTR tests and update \`ctr-test-framework.json\` winners.
 - Refresh \`/latest-content/\`.
-- Check authority PDF download links.
+- Check authority guide links.
 - Review stale pages older than 90 days.
 - Run Lighthouse on homepage, \`/teoriprov/\`, \`/gratis-teoriprov/\`, \`/sok/\`.
 
@@ -710,7 +706,7 @@ Generated: ${today}
 ## Swedish Driving Forums
 
 - Share only useful resources, never spam exact-match anchors.
-- Use PDF assets when answering real questions.
+- Use guide assets when answering real questions.
 - Prioritize vinterkörning, kuggfrågor and handledarresurser.
 
 ## Reddit Workflow
@@ -724,9 +720,9 @@ Generated: ${today}
 - 20-40 second clips.
 - One mistake per clip.
 - CTA: free checklist or app practice.
-- Reuse authority PDFs as visual scripts.
+- Reuse authority guides as visual scripts.
 
-## PDF Asset Promotion
+## Guide Asset Promotion
 
 - Pitch \`/authority/teoriprov-kuggfragor-rapport/\`.
 - Pitch \`/authority/vinterkorning-overlevnadsguide/\` before winter.
@@ -744,7 +740,7 @@ Generated: ${today}
 - Landing page to App Store click rate.
 - Quiz completion to App Store click rate.
 - Search page to app click rate.
-- PDF download to app click rate.
+- resource page to app click rate.
 
 ## CTR Monitoring
 
@@ -838,7 +834,7 @@ Generated: ${today}
 - hreflang: ${audit.hreflangIssues.length ? "needs review" : "ready"}.
 - IndexNow: ready.
 - Analytics events: ready.
-- PDFs: ready.
+- guides: ready.
 - Production freeze: ${audit.canonicalIssues.length || audit.linkErrors.length || audit.jsonLdErrors.length ? "hold" : "ready"}.
 
 ## Remaining Low-Priority Improvements
@@ -852,7 +848,7 @@ Generated: ${today}
 1. Get sitemap index processed in Search Console and Bing.
 2. Inspect priority URLs manually.
 3. Track CTR for the seven priority keywords.
-4. Promote authority PDFs to traffic schools and communities.
+4. Promote authority guides to traffic schools and communities.
 5. Review search failures and update content.
 
 ## First Backlink Priorities

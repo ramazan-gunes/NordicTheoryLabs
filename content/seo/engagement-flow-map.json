@@ -14,12 +14,6 @@
       "target": "/korkortsteori/"
     },
     {
-      "entry": "/resurser/*",
-      "interaction": "pdf_download",
-      "prompt": "study streak",
-      "target": "/gratis-teoriprov/"
-    },
-    {
       "entry": "/teoriprov/",
       "interaction": "scroll_75",
       "prompt": "exam simulation",

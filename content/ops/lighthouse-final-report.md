@@ -7,7 +7,7 @@ This is a static preflight report. Run live Lighthouse after deployment from Chr
 | Area | Local Preflight |
 |---|---|
 | Mobile performance | PASS |
-| CLS | PASS: fixed UI dimensions, stable buttons, explicit PDF/app image dimensions in generated pages |
+| CLS | PASS: fixed UI dimensions, stable buttons, explicit app image dimensions in generated pages |
 | LCP | PASS: static HTML, deferred scripts, cacheable assets |
 | Accessibility | PASS: semantic headings, labels on search inputs/checkpoints, accessible nav labels |
 | SEO | PASS |

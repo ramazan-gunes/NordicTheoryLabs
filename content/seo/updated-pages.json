@@ -21,34 +21,6 @@
     "recrawl_priority": "0.82"
   },
   {
-    "url": "https://nordictheorylabs.com/assets/downloads/teoriprov-checklista.pdf",
-    "lastmod": "2026-05-22",
-    "segment": "recent",
-    "reason": "Downloadable PDF asset.",
-    "recrawl_priority": "0.82"
-  },
-  {
-    "url": "https://nordictheorylabs.com/assets/downloads/vagmarken-fuskblad.pdf",
-    "lastmod": "2026-05-22",
-    "segment": "recent",
-    "reason": "Downloadable PDF asset.",
-    "recrawl_priority": "0.82"
-  },
-  {
-    "url": "https://nordictheorylabs.com/assets/downloads/vanligaste-kuggfragorna.pdf",
-    "lastmod": "2026-05-22",
-    "segment": "recent",
-    "reason": "Downloadable PDF asset.",
-    "recrawl_priority": "0.82"
-  },
-  {
-    "url": "https://nordictheorylabs.com/assets/downloads/vinterkorning-guide.pdf",
-    "lastmod": "2026-05-22",
-    "segment": "recent",
-    "reason": "Downloadable PDF asset.",
-    "recrawl_priority": "0.82"
-  },
-  {
     "url": "https://nordictheorylabs.com/authority/",
     "lastmod": "2026-05-22",
     "segment": "recent",
@@ -248,35 +220,35 @@
     "url": "https://nordictheorylabs.com/resurser/",
     "lastmod": "2026-05-22",
     "segment": "recent",
-    "reason": "Körkortsresurser PDF - checklistor och fuskblad uppdaterad för Phase 4.",
+    "reason": "Korkortsresurser - checklistor och guider uppdaterad för Phase 4.",
     "recrawl_priority": "0.82"
   },
   {
     "url": "https://nordictheorylabs.com/resurser/teoriprov-checklista/",
     "lastmod": "2026-05-22",
     "segment": "recent",
-    "reason": "Teoriprov checklista PDF - sista veckan före provet uppdaterad för Phase 4.",
+    "reason": "Teoriprov checklista - sista veckan före provet uppdaterad för Phase 4.",
     "recrawl_priority": "0.82"
   },
   {
     "url": "https://nordictheorylabs.com/resurser/vagmarken-fuskblad/",
     "lastmod": "2026-05-22",
     "segment": "recent",
-    "reason": "Vägmärken fuskblad PDF - skyltgrupper inför teoriprovet uppdaterad för Phase 4.",
+    "reason": "Vägmärken fuskblad - skyltgrupper inför teoriprovet uppdaterad för Phase 4.",
     "recrawl_priority": "0.82"
   },
   {
     "url": "https://nordictheorylabs.com/resurser/vanligaste-kuggfragorna/",
     "lastmod": "2026-05-22",
     "segment": "recent",
-    "reason": "Vanligaste kuggfrågorna PDF - teoriprovets fällor uppdaterad för Phase 4.",
+    "reason": "Vanligaste kuggfrågorna - teoriprovets fällor uppdaterad för Phase 4.",
     "recrawl_priority": "0.82"
   },
   {
     "url": "https://nordictheorylabs.com/resurser/vinterkorning-guide/",
     "lastmod": "2026-05-22",
     "segment": "recent",
-    "reason": "Vinterkörning guide PDF - halka, vinterdäck och mörker uppdaterad för Phase 4.",
+    "reason": "Vinterkörning - halka, vinterdäck och mörker uppdaterad för Phase 4.",
     "recrawl_priority": "0.82"
   },
   {

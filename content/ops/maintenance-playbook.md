@@ -14,7 +14,7 @@ Generated: 2026-05-22
 
 - Review CTR tests and update `ctr-test-framework.json` winners.
 - Refresh `/latest-content/`.
-- Check authority PDF download links.
+- Check authority guide links.
 - Review stale pages older than 90 days.
 - Run Lighthouse on homepage, `/teoriprov/`, `/gratis-teoriprov/`, `/sok/`.
 

@@ -9,6 +9,6 @@ Generated: 2026-05-22
 - Ranking scalability: ranking tracker schema and keyword priority map generated.
 - App conversion scalability: privacy-first events, streaks and deferred prompts implemented.
 - Authority acquisition: linkable assets and backlink map generated.
-- Current sitemap URL count: 567
+- Current sitemap URL count: 559
 
 Status: growth-ready.

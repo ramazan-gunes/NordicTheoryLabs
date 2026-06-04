@@ -46,7 +46,6 @@
     if (link) {
       const href = link.getAttribute("href") || "";
       if (href.includes("apps.apple.com")) track("app_store_click", { source: link.dataset.installSource || "link" });
-      else if (href.endsWith(".pdf")) track("pdf_download", { href });
       else if (href.startsWith("/") || href.startsWith("../") || href.startsWith("./") || href.startsWith(location.origin)) track("internal_link_click", { href });
       if (link.classList.contains("seo-btn")) track("cta_click", { href, text: link.textContent.trim().slice(0, 80) });
     }

@@ -158,17 +158,15 @@ const cityPages = [
 const assetPages = [
   {
     slug: "resurser/teoriprov-checklista",
-    pdf: "teoriprov-checklista.pdf",
-    title: "Teoriprov checklista PDF - sista veckan före provet",
-    description: "Ladda ner en utskrivbar teoriprov-checklista med fokus på vanliga fel, provdag, sömn, repetition och trygg provstrategi.",
+    title: "Teoriprov checklista guide - sista veckan före provet",
+    description: "Las en utskrivbar teoriprov-checklista med fokus på vanliga fel, provdag, sömn, repetition och trygg provstrategi.",
     h1: "Teoriprov checklista att skriva ut.",
-    intro: "En enkel PDF för sista veckan. Kryssa av teorin, repetera svaga kategorier och undvik panikplugg kvällen före kunskapsprovet.",
+    intro: "En enkel guide för sista veckan. Kryssa av teorin, repetera svaga kategorier och undvik panikplugg kvällen före kunskapsprovet.",
     bullets: ["Sista veckans repetition", "Provdagens lugna rutin", "Vanliga slarvfel", "Korta pass i stället för panikplugg"],
   },
   {
     slug: "resurser/vagmarken-fuskblad",
-    pdf: "vagmarken-fuskblad.pdf",
-    title: "Vägmärken fuskblad PDF - skyltgrupper inför teoriprovet",
+    title: "Vägmärken fuskblad guide - skyltgrupper inför teoriprovet",
     description: "Skriv ut ett tydligt fuskblad för vägmärken: varning, förbud, påbud, väjning och tilläggstavlor.",
     h1: "Vägmärken fuskblad för snabb repetition.",
     intro: "Lär skyltarna i grupper. Färg och form hjälper dig förstå märket innan du ens minns det exakta namnet.",
@@ -176,18 +174,16 @@ const assetPages = [
   },
   {
     slug: "resurser/vinterkorning-guide",
-    pdf: "vinterkorning-guide.pdf",
-    title: "Vinterkörning guide PDF - halka, vinterdäck och mörker",
-    description: "Ladda ner en svensk vinterkörningsguide med bromssträcka, vinterdäck, dubbdäck, mörker och riskfrågor.",
-    h1: "Vinterkörning: PDF-guide för svenska vägar.",
+    title: "Vinterkörning guide - halka, vinterdäck och mörker",
+    description: "Las en svensk vinterkörningsguide med bromssträcka, vinterdäck, dubbdäck, mörker och riskfrågor.",
+    h1: "Vinterkörning: guide för svenska vägar.",
     intro: "Svensk vinter förändrar allt: grepp, sikt, bromssträcka och trötthet. Guiden gör riskfrågorna lättare att förstå.",
     bullets: ["Vinterdäck och dubbdäck", "Halka och bromssträcka", "Mörker och sikt", "Risk 2 och halkbana"],
   },
   {
     slug: "resurser/vanligaste-kuggfragorna",
-    pdf: "vanligaste-kuggfragorna.pdf",
-    title: "Vanligaste kuggfrågorna PDF - teoriprovets fällor",
-    description: "Ladda ner en sammanfattning av frågetyper som ofta fäller elever: väjning, risk, vägmärken, miljö och stress.",
+    title: "Vanligaste kuggfrågorna guide - teoriprovets fällor",
+    description: "Las en sammanfattning av frågetyper som ofta fäller elever: väjning, risk, vägmärken, miljö och stress.",
     h1: "Vanligaste kuggfrågorna inför teoriprovet.",
     intro: "Många blir inte underkända för att de inte pluggat alls, utan för att de missar samma typ av frågor flera gånger.",
     bullets: ["Väjningsplikt", "Risk och trötthet", "Tilläggstavlor", "Miljö och EcoDriving"],
@@ -359,20 +355,19 @@ function localPage(city) {
 function resourceIndexPage() {
   const slug = "resurser";
   const cards = assetPages.map((item) => `<a href="../${item.slug}/"><strong>${esc(item.h1)}</strong><span>${esc(item.description)}</span></a>`).join("");
-  const children = `<section class="seo-section"><div class="wrap"><h2>Utskrivbara resurser</h2><p class="definition-block">Ladda ner korta PDF:er för teoriprov, vägmärken, vinterkörning och frågetyper som ofta fäller elever.</p><div class="asset-grid">${cards}</div></div></section>`;
-  return pageShell({ slug, title: "Körkortsresurser PDF - checklistor och fuskblad", description: "Ladda ner svenska körkortsresurser: teoriprov-checklista, vägmärken, vinterkörning och vanligaste kuggfrågorna.", kicker: "Resurser · PDF", h1: "Utskrivbara körkortsresurser.", intro: "Kort material för repetition före prov, körlektion eller riskutbildning.", children, schema: [{ "@type": "CollectionPage", "@id": `${pageUrl(slug)}#collection`, name: "Körkortsresurser PDF" }] });
+  const children = `<section class="seo-section"><div class="wrap"><h2>Korta guider och checklistor</h2><p class="definition-block">Oppna korta resurser for teoriprov, vagmarken, vinterkorning och fragetyper som ofta faller elever.</p><div class="asset-grid">${cards}</div></div></section>`;
+  return pageShell({ slug, title: "Korkortsresurser - checklistor och guider", description: "Svenska korkortsresurser: teoriprov-checklista, vagmarken, vinterkorning och vanligaste kuggfragorna.", kicker: "Resurser - guider", h1: "Korta korkortsresurser.", intro: "Kort material for repetition fore prov, korlektion eller riskutbildning.", children, schema: [{ "@type": "CollectionPage", "@id": `${pageUrl(slug)}#collection`, name: "Korkortsresurser" }] });
 }
 
 function assetPage(item) {
   const slug = item.slug;
   const prefix = prefixFor(slug);
-  const pdfUrl = `${site}/assets/downloads/${item.pdf}`;
   const schema = [
-    { "@type": "CreativeWork", "@id": `${pageUrl(slug)}#creative-work`, name: item.title, description: item.description, inLanguage: "sv-SE", fileFormat: "application/pdf", associatedMedia: { "@id": `${pageUrl(slug)}#pdf` } },
-    { "@type": "MediaObject", "@id": `${pageUrl(slug)}#pdf`, name: item.title, contentUrl: pdfUrl, encodingFormat: "application/pdf" },
+    { "@type": "CreativeWork", "@id": `${pageUrl(slug)}#creative-work`, name: item.title.replace(/guide/g, "guide"), description: item.description, inLanguage: "sv-SE" },
   ];
-  const children = `<section class="seo-section"><div class="wrap content-with-sidebar"><article><h2>Ladda ner PDF</h2><p class="answer-block">${esc(item.intro)}</p><ul class="seo-list">${item.bullets.map((b) => `<li>${esc(b)}</li>`).join("")}</ul><div class="seo-actions"><a class="seo-btn primary" href="${prefix}assets/downloads/${item.pdf}" download>Ladda ner PDF</a><a class="seo-btn secondary" href="${prefix}gratis-teoriprov/">Öva direkt</a></div></article><aside class="topic-sidebar"><h3>Passar ihop med</h3><div class="related-grid"><a href="${prefix}teoriprov/"><strong>Teoriprov B</strong><span>Guide</span></a><a href="${prefix}vagmarken/"><strong>Vägmärken</strong><span>Skyltar</span></a><a href="${prefix}korkortsteori/"><strong>Körkortsteori</strong><span>Grunder</span></a></div></aside></div></section>`;
-  return pageShell({ slug, title: item.title, description: item.description, kicker: "Nedladdning · PDF", h1: item.h1, intro: item.intro, children, schema });
+  const cleanTitle = item.title.replace(/\s*guide\s*/g, " ").replace(/\s+/g, " ").trim();
+  const children = `<section class="seo-section"><div class="wrap content-with-sidebar"><article><h2>Las guiden</h2><p class="answer-block">${esc(item.intro.replace(/guide/g, "guide"))}</p><ul class="seo-list">${item.bullets.map((b) => `<li>${esc(b)}</li>`).join("")}</ul><div class="seo-actions"><a class="seo-btn primary" href="${prefix}gratis-teoriprov/">Ova direkt</a><a class="seo-btn secondary" href="${prefix}sok/">Sok i teorin</a></div></article><aside class="topic-sidebar"><h3>Passar ihop med</h3><div class="related-grid"><a href="${prefix}teoriprov/"><strong>Teoriprov B</strong><span>Guide</span></a><a href="${prefix}vagmarken/"><strong>Vagmarken</strong><span>Skyltar</span></a><a href="${prefix}korkortsteori/"><strong>Korkortsteori</strong><span>Grunder</span></a></div></aside></div></section>`;
+  return pageShell({ slug, title: cleanTitle, description: item.description.replace(/^Las /, "Oppna ").replace(/guide/g, "guide"), kicker: "Guide - resurs", h1: item.h1.replace(/guide/g, "guide").replace(/guide/g, "guide"), intro: item.intro.replace(/guide/g, "guide"), children, schema });
 }
 
 function sitemapHtmlPage(urls) {
@@ -392,7 +387,7 @@ function latestContentPage(items) {
   const slug = "latest-content";
   const rows = items.slice(0, 35).map((item) => `<article class="latest-row"><a href="${item.loc.replace(site, "")}"><strong>${esc(item.title || item.loc.replace(`${site}/`, ""))}</strong><span>Uppdaterad ${esc(item.lastmod)} · ${esc(item.segment)}</span></a><p>${esc(item.reason || "Innehåll granskat och prioriterat för recrawl.")}</p></article>`).join("");
   const children = `<section class="seo-section"><div class="wrap"><h2>Senaste uppdateringarna</h2><p class="definition-block">Den här sidan lyfter nytt och uppdaterat innehåll för elever och crawlers. Den hjälper Google att hitta färska sidor via intern länkning.</p><div class="latest-list">${rows}</div></div></section>`;
-  return pageShell({ slug, title: "Latest content - uppdaterade körkortssidor", description: "Senast uppdaterade sidor om teoriprov, körkortsteori, lokala guider, vägmärken och nedladdningsbara resurser.", kicker: "Färskt innehåll · recrawl", h1: "Senast uppdaterat.", intro: "Nya och nyligen granskade sidor för körkortselever i Sverige.", children, schema: [{ "@type": "CollectionPage", "@id": `${pageUrl(slug)}#latest`, name: "Latest content" }] });
+  return pageShell({ slug, title: "Latest content - uppdaterade körkortssidor", description: "Senast uppdaterade sidor om teoriprov, körkortsteori, lokala guider, vägmärken och guidesbara resurser.", kicker: "Färskt innehåll · recrawl", h1: "Senast uppdaterat.", intro: "Nya och nyligen granskade sidor för körkortselever i Sverige.", children, schema: [{ "@type": "CollectionPage", "@id": `${pageUrl(slug)}#latest`, name: "Latest content" }] });
 }
 
 function searchPage() {
@@ -488,7 +483,7 @@ function simplePdf(title, lines, meta) {
     `<< /Length ${Buffer.byteLength(content, "latin1")} >>\nstream\n${content}\nendstream`,
     `<< /Title (${escapePdf(meta.title)}) /Author (${escapePdf("Nordic Theory Labs")}) /Subject (${escapePdf(meta.subject)}) /Keywords (${escapePdf(meta.keywords)}) /CreationDate (D:20260522120000+02'00') >>`,
   ];
-  let pdf = "%PDF-1.4\n";
+  let pdf = "%guide-1.4\n";
   const offsets = [0];
   objects.forEach((obj, index) => {
     offsets.push(Buffer.byteLength(pdf, "latin1"));
@@ -584,19 +579,6 @@ async function createAssets() {
   await fs.writeFile(path.join(root, "assets", "seo-phase4.css"), phase4Css(), "utf8");
   await fs.writeFile(path.join(root, "assets", "seo-phase4.js"), phase4Js(), "utf8");
   await fs.writeFile(path.join(root, "assets", "seo-search.js"), searchJs(), "utf8");
-  await fs.mkdir(path.join(root, "assets", "downloads"), { recursive: true });
-  for (const item of assetPages) {
-    const lines = [
-      item.description,
-      "",
-      ...item.bullets.map((b) => `- ${b}`),
-      "",
-      "Praktiskt råd: gör ett kort provpass efter repetitionen.",
-      "Källa att kontrollera inför bokning: Trafikverket och Transportstyrelsen.",
-      "Nordic Theory Labs - Körkort Hero",
-    ];
-    await fs.writeFile(path.join(root, "assets", "downloads", item.pdf), simplePdf(item.h1, lines, { title: item.title, subject: item.description, keywords: item.bullets.join(", ") }));
-  }
 }
 
 async function generatePages() {
@@ -666,9 +648,6 @@ async function buildUrlRecords() {
     const title = stripTags((/<title>([\s\S]*?)<\/title>/i.exec(html) || [])[1] || rel).replace(/\s*\|\s*Nordic Theory Labs$/, "");
     records.push({ loc: relativeUrl(file), rel, segment, title, lastmod: today, changefreq: freqFor(segment), priority: priorityFor(segment, rel), reason: `${title} uppdaterad för Phase 4.` });
   }
-  for (const item of assetPages) {
-    records.push({ loc: `${site}/assets/downloads/${item.pdf}`, rel: `assets/downloads/${item.pdf}`, segment: "assets", title: item.title, lastmod: today, changefreq: "monthly", priority: "0.60", reason: "Downloadable PDF asset." });
-  }
   return records.sort((a, b) => a.loc.localeCompare(b.loc, "sv"));
 }
 
@@ -720,7 +699,7 @@ async function writeReports(records, sitemapGroups) {
   await fs.writeFile(path.join(seoDir, "updated-pages.json"), JSON.stringify(updatedPages, null, 2), "utf8");
   await fs.writeFile(path.join(seoDir, "ctr-title-variations.json"), JSON.stringify(titleVariations, null, 2), "utf8");
   await fs.writeFile(path.join(seoDir, "topical-authority-roadmap.json"), JSON.stringify(buildRoadmap(), null, 2), "utf8");
-  await fs.writeFile(path.join(seoDir, "downloadable-assets.json"), JSON.stringify(assetPages.map((a) => ({ ...a, url: pageUrl(a.slug), pdf_url: `${site}/assets/downloads/${a.pdf}`, updated: today })), null, 2), "utf8");
+  await fs.writeFile(path.join(seoDir, "resource-assets.json"), JSON.stringify(assetPages.map((a) => ({ ...a, url: pageUrl(a.slug), updated: today })), null, 2), "utf8");
   await fs.writeFile(path.join(seoDir, "indexing-strategy.md"), indexingStrategy(), "utf8");
   await fs.writeFile(path.join(seoDir, "freshness-strategy.md"), freshnessStrategy(), "utf8");
   await fs.writeFile(path.join(seoDir, "serp-preview-report.md"), serpPreview(), "utf8");
@@ -851,7 +830,7 @@ Generated: ${today}
 - Latest content hub: ${site}/latest-content/
 - Search page: ${site}/sok/
 - Local Sweden pages: ${cityPages.length}
-- Linkable PDF assets: ${assetPages.length}
+- Linkable resource assets: ${assetPages.length}
 - Indexed URL records across sitemaps: ${records.length}
 - Recent recrawl URLs: ${groups.recent.length}
 - CTR title groups generated: ${Object.keys(titleVariations).length}
@@ -915,9 +894,6 @@ async function writeHeaders() {
   Cache-Control: public, max-age=31536000, immutable
   Content-Type: application/javascript; charset=utf-8
 
-/assets/downloads/*.pdf
-  Cache-Control: public, max-age=604800
-  Content-Type: application/pdf
 
 /assets/search-index.json
   Cache-Control: public, max-age=3600
@@ -964,7 +940,7 @@ async function main() {
   }));
   await fs.writeFile(path.join(root, "assets", "search-index.json"), JSON.stringify(searchRecords, null, 2), "utf8");
 
-  console.log(`Phase 4 production systems generated: ${records.length} sitemap URLs, ${cityPages.length} local pages, ${assetPages.length} PDF assets.`);
+  console.log(`Phase 4 production systems generated: ${records.length} sitemap URLs, ${cityPages.length} local pages, ${assetPages.length} resource assets.`);
 }
 
 await main();
