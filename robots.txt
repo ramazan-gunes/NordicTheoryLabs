@@ -2,7 +2,10 @@ User-agent: *
 Allow: /
 Disallow: /content/
 Disallow: /tools/
+Disallow: /logos/
 Disallow: /.git/
 Disallow: /.vs/
+
+Crawl-delay: 1
 
 Sitemap: https://nordictheorylabs.com/sitemap.xml
