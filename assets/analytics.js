@@ -2,7 +2,24 @@
  * analytics.js — Körkort Hero / Nordic Theory Labs
  * Tracks key engagement and conversion events via gtag (if available),
  * falls back to console.log in development.
+ *
+ * GA4 SETUP: Replace GA4_MEASUREMENT_ID below with your real ID (e.g. G-XXXXXXXXXX)
+ * Then uncomment the gtag loader block.
  */
+
+// ── GA4 Auto-loader (uncomment + replace ID when ready) ──────────────────
+// var GA4_ID = 'G-XXXXXXXXXX';
+// if (!document.querySelector('script[src*="googletagmanager"]')) {
+//   var s = document.createElement('script');
+//   s.src = 'https://www.googletagmanager.com/gtag/js?id=' + GA4_ID;
+//   s.async = true;
+//   document.head.appendChild(s);
+//   window.dataLayer = window.dataLayer || [];
+//   window.gtag = function(){ dataLayer.push(arguments); };
+//   gtag('js', new Date());
+//   gtag('config', GA4_ID, { send_page_view: true });
+// }
+
 (function () {
   'use strict';
 
