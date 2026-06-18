@@ -21,7 +21,7 @@
 <link rel="apple-touch-icon" href="logos/exports/signal/png/signal-appicon-1024.png" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&family=Manrope:wght@300;400;500;600;700;800&family=Noto+Naskh+Arabic:wght@400;500;600&display=swap" rel="stylesheet" />
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&family=Manrope:wght@300;400;500;600;700;800&family=Noto+Naskh+Arabic:wght@400;500;600&display=swap" onload="this.onload=null;this.rel='stylesheet'" /><noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&family=Manrope:wght@300;400;500;600;700;800&family=Noto+Naskh+Arabic:wght@400;500;600&display=swap" /></noscript>
 
 <style>
   :root {
@@ -1140,7 +1140,7 @@
         <span class="feat-flag" data-i18n="feat.flag">Now shipping · v1.0.2</span>
         <img src="images/kh-01-home.jpg" alt="Körkort Hero — home screen with 8-step journey"
              style="width: 78%; height: auto; border-radius: 36px; position: relative; z-index: 1;
-                    filter: drop-shadow(0 50px 80px rgba(14,22,32,0.35)) drop-shadow(0 12px 24px rgba(14,22,32,0.2));" />
+                    filter: drop-shadow(0 50px 80px rgba(14,22,32,0.35)) drop-shadow(0 12px 24px rgba(14,22,32,0.2));" / loading="lazy">
       </div>
     </div>
   </div>
@@ -1158,7 +1158,7 @@
 
       <a class="app shipping" href="apps/korkort-hero/">
         <div class="app-row1"><span><span class="status-dot live"></span><span data-i18n="apps.kh.tag">SHIPPING · KH</span></span><span>v1.0.2 · 2026</span></div>
-        <div class="app-icon ic-1 has-img"><img src="images/kh-app-icon.png" alt="Körkort Hero app icon" /></div>
+        <div class="app-icon ic-1 has-img"><img src="images/kh-app-icon.png" alt="Körkort Hero app icon" / loading="lazy"></div>
         <h3 class="app-title">Körkort <em>Hero</em></h3>
         <p class="app-desc" data-i18n="apps.kh.desc">Calm, adaptive prep for the Swedish theory test. 1,287 questions, 154 chapters, 12 languages — our first and only shipping product.</p>
         <div class="app-foot"><span data-i18n="apps.kh.platforms">iOS · Android · Web · 12 langs</span><span class="open" data-i18n="apps.open">Open →</span></div>
@@ -1309,7 +1309,7 @@
 <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
 <script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
 <script type="text/babel" src="tweaks-panel.jsx"></script>
-<script src="i18n.js"></script>
+<script src="i18n.js" defer></script>
 
 <div id="tweaks-root"></div>
 

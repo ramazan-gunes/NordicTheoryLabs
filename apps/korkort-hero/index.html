@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Körkort Hero — Swedish Driving Theory App | Pass Your Theory Test | Nordic Theory Labs</title>
-<meta name="description" content="Körkort Hero is Sweden's calmest driving theory app. 1,287 official-format questions, 154 theory chapters, 12 languages. Practice Riskettan, Swedish road signs, and pass the Trafikverket theory test with confidence." />
+<title>Körkort Hero — Klara teoriprov på första försöket | Gratis att prova</title>
+<meta name="description" content="Öva körkortsteorin med Körkort Hero. 1 287 frågor i Trafikverket-format, 154 teorikapitel, 12 språk. Gratis att prova — ingen kortuppgift. Klara kunskapsprovet på första försöket." />
 <link rel="canonical" href="https://nordictheorylabs.com/apps/korkort-hero/" />
 
 <!-- Open Graph -->
@@ -22,12 +22,13 @@
 <meta name="twitter:description" content="Pass the Swedish driving theory test with 1,287 practice questions in 12 languages. No streaks, no gamification — just calm, effective study." />
 <meta name="twitter:image" content="https://nordictheorylabs.com/images/kh-app-icon.png" />
 
+<link rel="preload" as="image" href="../../images/kh-01-home.jpg" />
 <link rel="stylesheet" href="../../assets/mobile-fixes.css" />
 <link rel="icon" type="image/png" href="../../images/kh-app-icon.png" />
 <link rel="apple-touch-icon" href="../../images/kh-app-icon.png" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&family=Manrope:wght@300;400;500;600;700;800&display=swap" onload="this.onload=null;this.rel='stylesheet'" /><noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&family=Manrope:wght@300;400;500;600;700;800&display=swap" /></noscript>
 
 <style>
   :root {
@@ -811,7 +812,7 @@
 
       <div class="hero-shot">
         <div class="sun"></div>
-        <img loading="lazy" src="../../images/kh-01-home.jpg" alt="Körkort Hero — home screen with 8-step journey" loading="eager" />
+        <img loading="eager" fetchpriority="high" src="../../images/kh-01-home.jpg" alt="Körkort Hero — home screen with 8-step journey" />
       </div>
     </div>
   </div>
@@ -1378,7 +1379,7 @@
   });
 })();
 </script>
-<script src="../../i18n.js"></script>
+<script src="../../i18n.js" defer></script>
 <script src="../../assets/install-banner.js"></script>
 <script src="../../assets/schema.js"></script>
 <script src="../../assets/analytics.js"></script>

@@ -379,4 +379,13 @@
     <priority>0.6</priority>
   </url>
 
+
+  <!-- Price / info pages -->
+  <url>
+    <loc>https://nordictheorylabs.com/vad-kostar-riskettan/</loc>
+    <lastmod>2026-06-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
 </urlset>
